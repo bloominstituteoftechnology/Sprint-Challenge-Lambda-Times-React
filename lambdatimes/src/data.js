@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'design'];
 
 export const cardData = [
   {
@@ -89,10 +89,22 @@ export const cardData = [
     author: "FIDO WALKSALOT"
   },
   {
-    headline: "The Hottest New Bootstrap 4 Components Every Developer Needs to Know About",
-    tab: "bootstrap",
+    headline: "Why visual design is still important",
+    tab: "design",
+    img: "./assets/puppers.jpg",
+    author: "PUPPER S. DOGGO"
+  },
+  {
+    headline: "Can you create great design in MS Paint?",
+    tab: "design",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "UI vs. UX: The Ten Things that make a difference",
+    tab: "design",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
   }
 ]
 
