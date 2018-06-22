@@ -25,7 +25,8 @@ export default class Content extends Component {
   changeSelected = (tab) => {
     return () => {
       // Finish this function, reflecting the new selected tab in the state
-    }
+      this.setState({selected: tab});
+    };
   }
 
   handleSearch = (e) => {
@@ -43,6 +44,11 @@ export default class Content extends Component {
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
+    const cards = this.state.cards.filter(card => {
+      if(card.tab.includes(this.state.selected)) {
+        return card;
+      }
+    })
     return this.state.cards;
   }
 
