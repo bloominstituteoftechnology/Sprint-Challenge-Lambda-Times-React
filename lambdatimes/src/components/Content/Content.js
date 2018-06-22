@@ -34,10 +34,10 @@ export default class Content extends Component {
   filterCards = () => {
     let cards = this.state.cards.slice();
     if (this.state.selected !== 'all') {
-      let newCard = cards.filter(post => {
+      let newCards = cards.filter(post => {
         return post.tab === this.state.selected;
       })
-      return newCard;
+      return newCards;
     }
     return cards;
   }
