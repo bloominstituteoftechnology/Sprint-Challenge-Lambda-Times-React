@@ -1,5 +1,5 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 const TopBarWrapper = styled.div`
   width: 100%;
@@ -86,14 +86,14 @@ const TopBar = () => {
           <TopBarLeftSpan>TOPICS</TopBarLeftSpan><TopBarLeftSpan>SEARCH</TopBarLeftSpan>
         </TopBarLeft>
         <TopBarCenter>
-          <TopBarCenter>GENERAL</TopBarCenter><TopBarCenter>BROWNBAG</TopBarCenter><TopBarCenter>RANDOM</TopBarCenter><TopBarCenter>MUSIC</TopBarCenter><TopBarCenter>ANNOUNCEMENTS</TopBarCenter>
+          <TopBarCenterSpan>GENERAL</TopBarCenterSpan><TopBarCenterSpan>BROWNBAG</TopBarCenterSpan><TopBarCenterSpan>RANDOM</TopBarCenterSpan><TopBarCenterSpan>MUSIC</TopBarCenterSpan><TopBarCenterSpan>ANNOUNCEMENTS</TopBarCenterSpan>
         </TopBarCenter>
         <TopBarRight>
           <TopBarRightSpan>LOG IN</TopBarRightSpan>
         </TopBarRight>
       </TopBarContainer>
     </TopBarWrapper>
-  )
-}
+  );
+};
 
 export default TopBar;
