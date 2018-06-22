@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 
 const Cards = props => {
-  console.log('cards data: ', props)
+  // console.log('cards data:/ ', props)
   return (
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
