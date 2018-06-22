@@ -11,14 +11,14 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 'all',
       tabs: [],
       cards: []
     }
   }
 
   componentDidMount() {
-    this.setState({ selected: 'all', tabs: tabData, cards: cardData });
+    this.setState({ tabs: tabData, cards: cardData });
     // Once the component has mounted, get the data and reflect that data on the state
   }
 
@@ -33,7 +33,7 @@ export default class Content extends Component {
     if (this.state.selected === 'all') {
       return this.state.cards;
     } else {
-      return this.state.cards;
+      return this.state.cards.filter(name => name.tab === this.state.selected);
     }
   }
 
