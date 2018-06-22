@@ -5,7 +5,7 @@ const Cards = props => {
   return (
     <div className="cards-container">
       {props.cards.map(card => {
-        return (<Card card={card}/>)
+        return (<Card key={Math.random()} card={card}/>)
       })}
         
     </div>

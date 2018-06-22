@@ -20,22 +20,27 @@ export default class Content extends Component {
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
     this.setState({tabs: tabData, cards: cardData})
-    console.log("cardData: " + this.state.cardData)
   }
 
   changeSelected = (tab) => {
-    console.log("selected")
-    return () => {
-      this.setState({selected: tab})
+    this.setState({selected: tab})
+    console.log("selected: " + this.state.selected)
       // Finish this function, reflecting the new selected tab in the state
-    }    
+        
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
-    return this.state.cards;
+    if (this.state.selected === "all" || !this.state.selected) {
+      console.log("all selected")
+      return this.state.cards;
+    }
+    let cards = this.state.cards.slice();
+    cards = cards.filter(card => (card.tab === this.state.selected));
+    console.log("cards: " + cards);
+    return cards;
   }
 
   render(){
