@@ -24,6 +24,8 @@ export default class Content extends Component {
 
   changeSelected = (tab) => {
     console.log("changeSelected:", tab)
+    this.setState({selected: tab})
+    console.log("selected tab:", this.state.selected)
     this.filterCards()
   }
 
@@ -35,7 +37,7 @@ export default class Content extends Component {
     if(selected === 'all') {
       return cards
     }
-    return cards.filter(card => card === selected )
+    return cards.filter(card => card.tab === selected )
   }
 
   render(){
