@@ -29,6 +29,7 @@ export default class Carousel extends Component {
     return (
       <img
         src={this.state.images[this.state.image]}
+        alt={this.state.images[this.state.image]}
         style={{ display: 'block' }}
       />
     );
