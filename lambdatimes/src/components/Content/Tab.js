@@ -3,7 +3,13 @@ import React from 'react';
 const Tab = props => {
   /* Using your props, determine if this tab is selected, if it is, the className 
     should be: 'tab active-tab', if it is not it should just be 'tab' */
-  const selectedClass = 'tab'
+  let selectedClass = 'tab active-tab' ;
+  let notSelectedClass ='tab' ;
+
+  if (props.tab === props.selectedTab) {
+    notSelectedClass = selectedClass ;    
+  }  
+
   return (
     <div
       className={"tab"}
