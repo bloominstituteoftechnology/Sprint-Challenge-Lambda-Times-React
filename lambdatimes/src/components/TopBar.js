@@ -81,6 +81,28 @@ const TopBarRightSpan = styled.span`
   cursor: pointer;
 `
 
+const StyledForm = styled(Form)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+
+const StyledFormGroup = styled(FormGroup)`
+  width: 60%;
+`
+
+const StyledButton = styled(Button)`
+  width: 60%;
+  margin-bottom: 30px;
+`
+
+const StyledModalHeader = styled(ModalHeader)`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`
+
 class TopBar extends React.Component {
   constructor() {
     super();
@@ -99,7 +121,6 @@ class TopBar extends React.Component {
 
       window.location.reload();
     } else {
-      console.log(this.loggedIn());
       this.setState({ modal: !this.state.modal });
     }
   }
@@ -129,7 +150,7 @@ class TopBar extends React.Component {
   }
 
   loggedIn = () => {
-    if(localStorage.getItem('username') && localStorage.getItem('password')) {
+    if (localStorage.getItem('username') && localStorage.getItem('password')) {
       return true;
     }
     return false;
@@ -155,23 +176,23 @@ class TopBar extends React.Component {
 
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
 
-              <ModalHeader toggle={this.toggle}>Log in</ModalHeader>
+              <StyledModalHeader toggle={this.toggle}>Log in</StyledModalHeader>
 
-              <Form>
+              <StyledForm>
 
-                <FormGroup>
+                <StyledFormGroup>
                   <Label for="exampleUsername">Username</Label>
                   <Input onChange={this.handleInput} autoComplete='off' type="username" name="username" id="exampleUsername" placeholder="Username" />
-                </FormGroup>
+                </StyledFormGroup>
 
-                <FormGroup>
+                <StyledFormGroup>
                   <Label for="examplePassword">Password</Label>
                   <Input onChange={this.handleInput} type="password" name="password" id="examplePassword" placeholder="Password" />
-                </FormGroup>
+                </StyledFormGroup>
 
-                <Button onClick={this.loginButton}>Log in</Button>
+                <StyledButton onClick={this.loginButton}>Log in</StyledButton>
 
-              </Form>
+              </StyledForm>
 
             </Modal>
 
