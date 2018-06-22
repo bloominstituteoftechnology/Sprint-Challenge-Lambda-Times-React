@@ -53,7 +53,7 @@ flex: 1;
 const Header = () => {
   return (
     <HeaderDiv>
-      <HeaderDate>SMARCH 32, 2018</HeaderDate>
+      <HeaderDate>MARCH 32, 2018</HeaderDate>
       <HeaderH1>Lambda Times</HeaderH1>
       <HeaderTemp>98°</HeaderTemp>
     </HeaderDiv>
