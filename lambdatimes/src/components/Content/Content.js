@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 'all',
       tabs: [], //took out [] and put tabsdata
       cards: [] //took out [] and put carddata
     }
@@ -22,19 +22,61 @@ export default class Content extends Component {
     this.setState({tabs:tabData});
     this.setState({cards:cardData});
   }
-
+// changeTodo = e => this.setState({ [e.target.name]: e.target.value });
   changeSelected = (tab) => {
     return () => {
+      this.setState({[tab.target.name]: tab.target.value});
       // Finish this function, reflecting the new selected tab in the state
     }
-  }
+  };
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
-  filterCards = () => {
-    return this.state.cards;
-  }
+  // filterCards = () => {
+  //   let tabs = this.state.tabs.slice();
+  //   tabs = tabs.filter(tabs => {
+  //     if(tabs.id === 'all'){
+  //       return this.state.cards;
+  //     } else{
+  //     return this.state.id;
+  //     }
+
+      filterCards = () => {
+        // let cards = this.state.cards.slice();
+        // cards = cards.filter(cards => {
+        //   if(cards.tab === 'all'){
+        //     return this.state.cards;
+        //   } else{
+        //   return cards;
+        //   }
+      
+    
+     return this.state.cards;
+  // });
+  // this.setState({cards:cards});
+};
+// toggleTodoComplete = id => {
+//   let todos = this.state.todos.slice();
+//   todos = todos.map(todo => {
+//     if (todo.id === id) { 
+//       todo.completed = !todo.completed;
+//       return todo;
+//     } else {
+//       return todo;
+//     }
+//   });
+//   this.setState({ todos });
+// };
+
+  // newSearch = event => {
+  //   event.preventDefault();
+  //   let dummyData = this.state.dummyData.slice();
+  //   dummyData = dummyData.filter(dummyData => {
+  //       return dummyData.username === this.state.input});
+  //   this.setState({dummyData: dummyData})
+  //   // search =search.filter();
+  //   alert("searched")
 
   render(){
     return (
@@ -50,3 +92,24 @@ export default class Content extends Component {
     )
   }
 }
+// addTodo = e => {
+//   e.preventDefault();
+//   const todos = this.state.todos.slice();
+//   todos.push({ task: this.state.todo, completed: false, id: Date.now() });
+//   this.setState({ todos, todo: '' });
+// };
+
+// changeTodo = e => this.setState({ [e.target.name]: e.target.value });
+
+// toggleTodoComplete = id => {
+//   let todos = this.state.todos.slice();
+//   todos = todos.map(todo => {
+//     if (todo.id === id) { 
+//       todo.completed = !todo.completed;
+//       return todo;
+//     } else {
+//       return todo;
+//     }
+//   });
+//   this.setState({ todos });
+// };

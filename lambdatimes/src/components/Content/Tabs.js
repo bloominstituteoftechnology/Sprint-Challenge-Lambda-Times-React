@@ -11,7 +11,7 @@ const Tabs = props => {
            {props.tabs.map(tab => (
         <Tab
           
-          key={tab.id}
+          // key={tab.id}
           tab={tab}
         />))}
            

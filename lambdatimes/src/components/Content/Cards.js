@@ -13,6 +13,7 @@ const Cards = props => {
           key={card.id}
           card={card}
           img={card.img}
+          tab={card.tab}
 
         />))}
     </div>

@@ -66,15 +66,15 @@ cursor: pointer;
 
 const TopBar = () => {
   return (
-    <TopBarStyle className="top-bar">
-      <TopBarCont className="container">
-        <TopBarContL className="container-left">
+    <TopBarStyle > 
+      <TopBarCont >
+        <TopBarContL >
           <TopBarContLSpan>TOPICS</TopBarContLSpan><TopBarContLSpan>SEARCH</TopBarContLSpan>
         </TopBarContL>
-        <TopBarContC className="container-center">
+        <TopBarContC >
           <TopBarContCSpan>GENERAL</TopBarContCSpan><TopBarContCSpan>BROWNBAG</TopBarContCSpan><TopBarContCSpan>RANDOM</TopBarContCSpan><TopBarContCSpan>MUSIC</TopBarContCSpan><TopBarContCSpan>ANNOUNCEMENTS</TopBarContCSpan>
         </TopBarContC>
-        <TopBarContR className="container-right">
+        <TopBarContR >
           <TopBarContRSpan>LOG IN</TopBarContRSpan>
         </TopBarContR>
       </TopBarCont>
