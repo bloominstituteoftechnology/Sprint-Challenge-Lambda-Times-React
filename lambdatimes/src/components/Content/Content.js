@@ -27,13 +27,9 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    alert('hello negger')
-    return () => {
-      // Finish this function, reflecting the new selected tab in the state
-      this.setState({
-        selected: tab
-      })
-    }
+    this.setState({
+      selected: tab
+    })
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all
@@ -52,16 +48,12 @@ export default class Content extends Component {
   render () {
     return (
       <div className='content-container'>
-        {/*
-          Add 2 props to the Tabs component,
-          `selectedTab` that includes the currently selected tab
-          and `selectTabHandler` that includes the function to change the selected tab
-        */}
         <Tabs
           tabs={this.state.tabs}
           changeSelected={this.changeSelected}
           selectedTab={this.state.selected}
         />
+
         <Cards cards={this.filterCards()} />
       </div>
     )
