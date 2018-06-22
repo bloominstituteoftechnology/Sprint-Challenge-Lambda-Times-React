@@ -44,10 +44,6 @@ export const HeaderContainer =styled.div`
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-  ${HeaderH1}
-  ${HeaderSpan}
-  ${SpanTime}
-  ${SpanDate}
 
   @media (min-width: 1280px) {
     width: 1280px;
