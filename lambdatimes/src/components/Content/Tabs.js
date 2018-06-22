@@ -1,5 +1,7 @@
 import React from 'react';
-import Tab from './Tab'
+import Tab from './Tab';
+
+
 const Tabs = props => {
   return (
     <div className="tabs">
@@ -7,10 +9,19 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/ }
+            <div>
+              {props.tabs.map(tab => (
+                <div key={Math.random()} selectedTab={props.selected} selectTabHandler={props.changeSelected} tabs={tab}>{tab}</div>
+              ))}
+            </div>
       </div>
     </div>
   )
 }
+
+// Tabs.propTypes = {
+
+// }
 
 // Make sure to use PropTypes to validate your types!
 export default Tabs
