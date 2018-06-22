@@ -31,7 +31,7 @@ export default class Content extends Component {
       // Finish this function, reflecting the new selected tab in the statethis,
 
       this.setState({
-        
+        selected: tab;
       })
     }
   }
@@ -41,9 +41,9 @@ export default class Content extends Component {
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
     if (this.state.selected === 'all') {
-      return this.sate.cards;
+      return this.state.cards;
     } else {
-    return this.state.cards;
+    return this.state.cards.filter();
     }
   }
 

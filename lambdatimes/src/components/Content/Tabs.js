@@ -5,9 +5,10 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {props.tabs.map(tab =>)
-          return <Tab key={Date.now()} tab={tab}
-        })
+        {props.tabs.map( tab => {
+          return <Tab key={Date.now()} tab={tab} 
+          selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab}/>
+        })}
       </div>
     </div>
   )
