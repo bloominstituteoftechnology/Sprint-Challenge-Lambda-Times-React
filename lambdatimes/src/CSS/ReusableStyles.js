@@ -119,6 +119,76 @@ const Temp = styled.div`
     flex: 1;
 `;
 
+const ContentContainer = styled.div`
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+`;
+
+const TabsBox = styled.div`
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 47px;
+    background-color: #fff;
+    }
+
+    @media (min-width: 1280px) {
+        width: 1280px;
+    }
+`;
+
+const Topics = styled.div`
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+`;
+
+const Title = styled.div`
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+`;
+
+const TabBox = styled.div`
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+    background-color: #333;
+    margin: 0 5px;
+    padding: 2px 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    .active-tab {
+        background-color: #fff;
+        color: #333;
+        border: 2px solid #333;
+    }
+`;
+
+const CardsContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: none;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 16px;
+    flex-wrap: wrap;
+`;
+
 export {
     TopBarBox,
     Container,
@@ -127,5 +197,11 @@ export {
     ContainerRight,
     HeaderBox,
     Date,
-    Temp
+    Temp,
+    ContentContainer,
+    TabsBox,
+    Topics,
+    Title,
+    TabBox,
+    CardsContainer
 };
