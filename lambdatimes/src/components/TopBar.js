@@ -94,13 +94,21 @@ const StyledFormGroup = styled(FormGroup)`
 
 const StyledButton = styled(Button)`
   width: 60%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `
 
 const StyledModalHeader = styled(ModalHeader)`
   display: flex;
   justify-content: center;
   text-align: center;
+`
+
+const StyledModal = styled(Modal)`
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 class TopBar extends React.Component {
@@ -156,7 +164,6 @@ class TopBar extends React.Component {
     return false;
   }
 
-
   render() {
     return (
       <TopBarWrapper>
@@ -174,7 +181,7 @@ class TopBar extends React.Component {
 
           <TopBarRight>
 
-            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+            <StyledModal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
 
               <StyledModalHeader toggle={this.toggle}>Log in</StyledModalHeader>
 
@@ -194,9 +201,10 @@ class TopBar extends React.Component {
 
               </StyledForm>
 
-            </Modal>
+            </StyledModal>
 
             <TopBarRightSpan onClick={this.toggle}>{this.loggedIn() ? 'LOG OUT' : 'LOG IN'}</TopBarRightSpan>
+
           </TopBarRight>
 
         </TopBarContainer>
