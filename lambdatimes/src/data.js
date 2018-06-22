@@ -5,8 +5,8 @@ export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', '
 
 export const cardData = [
   {
-    headline: "The Newest Bootstrap data brought by William",
-    tab: "bootstrap",
+    headline: "The Newest stuff  brought by William",
+    tab: "William",
     img: "./assets/max.jpg",
     author: "William DiFulvio"
   },
