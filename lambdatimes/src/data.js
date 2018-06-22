@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "How Coming Up With Fake Titles is Often the Hardest Part of Work",
+    tab: "bootstrap",
+    img: "./assets/schmup.jpg",
+    author: "The Indomitable Schmup"
+  },
+  {
+    headline: "I like Java, and I like scripting, but this Javascript thing??",
+    tab: "javascript",
+    img: "./assets/schmup.jpg",
+    author: "The Indomitable Schmup"
+  },
+  {
+    headline: "How Amazon, Facebook, Google and yes, even I, am watching you",
+    tab: "technology",
+    img: "./assets/schmup.jpg",
+    author: "The Indomitable Schmup"
   }
 ]
 
