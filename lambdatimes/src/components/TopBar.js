@@ -79,7 +79,7 @@ const RightSpan = styled.span`
 `
 
 
-const TopBar = () => {
+const TopBar = props => {
   return (
     <Bar>
       <TopContainer>
@@ -90,7 +90,7 @@ const TopBar = () => {
           <CenterSpan>GENERAL</CenterSpan><CenterSpan>BROWNBAG</CenterSpan><CenterSpan>RANDOM</CenterSpan><CenterSpan>MUSIC</CenterSpan><CenterSpan>ANNOUNCEMENTS</CenterSpan>
         </TopContainerCenter>
         <TopContainerRight>
-          <RightSpan>LOG IN</RightSpan>
+          <RightSpan onClick={props.logout}>LOG OUT</RightSpan>
         </TopContainerRight>
       </TopContainer>
     </Bar>

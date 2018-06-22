@@ -2,15 +2,27 @@ import React from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
+import Authenticate from './Authentication/Authenticate';
 
-const App = () => {
-  return (
-    <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  logout = event => {
+    localStorage.clear();
+    window.location.reload();
+}  
+  render() {
+    return (
+      <div className="App">
+        <TopBar logout={this.logout}/>
+        <Header />
+        <Content />
+      </div>
+    );
+  }
+  
 }
 
-export default App;
+export default Authenticate(App);
