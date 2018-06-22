@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 'all',
       tabs: [],
       cards: []
     }
@@ -36,6 +36,7 @@ export default class Content extends Component {
   }
 
   render(){
+    const {tabs, selected} = this.state
     return (
       <div className="content-container">
         {/* 
@@ -43,7 +44,10 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}/>
+        <Tabs tabs={tabs} 
+              selected={selected} 
+              selectTabHandler={this.changeSelected}
+        />
         <Cards cards={this.filterCards()}/>
       </div>
     )
