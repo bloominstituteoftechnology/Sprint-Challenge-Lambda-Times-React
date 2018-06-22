@@ -28,7 +28,7 @@ export default class Content extends Component {
     this.setState({selected: tab});
     setTimeout(() => {
       this.filterCards();
-    }, 50)
+    })
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
