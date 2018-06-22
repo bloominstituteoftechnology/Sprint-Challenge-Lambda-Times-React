@@ -12,14 +12,15 @@ export default class Content extends Component {
     this.state = {
       // Set this to an initial value
       selected: '',
-      tabs: [],
-      cards: []
+      tabs: [], //took out [] and put tabsdata
+      cards: [] //took out [] and put carddata
     }
   }
 
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
-
+    this.setState({tabs:tabData});
+    this.setState({cards:cardData});
   }
 
   changeSelected = (tab) => {
