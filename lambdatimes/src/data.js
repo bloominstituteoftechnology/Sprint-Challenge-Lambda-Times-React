@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'Futurism'];
 
 export const cardData = [
   {
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Contact Lenses Made Out of Aluminum Foil by 2020",
+    tab: "Futurism",
+    img: "./assets/norlander.jpg",
+    author: "Shwift Norlander"
+  },
+  {
+    headline: "Pejorative Language Will Be Obsolete by Tuesday, says Leading Kingergarten Teacher",
+    tab: "Futurism",
+    img: "./assets/corpuscle.jpg",
+    author: "Ruddy Corpuscle"
+  },
+  {
+    headline: "No Time Like The Present, States Futurist",
+    tab: "Futurism",
+    img: "./assets/juke.jpg",
+    author: "Shakely Juke"
   }
 ]
 
