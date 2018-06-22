@@ -24,8 +24,10 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
+    this.setState({selected: tab});
     return () => {
       // Finish this function, reflecting the new selected tab in the state
+
     }
   }
 
@@ -35,6 +37,14 @@ export default class Content extends Component {
   filterCards = () => {
     if(this.state.selected === "all")
       return this.state.cards;
+    else{
+      const nuCards =  this.state.cards.filter(card => {
+        if(card.tab.includes(this.state.selected)){
+          return card;
+        }
+      });
+      return nuCards;
+    }
   }
 
   render(){
@@ -45,7 +55,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.state.changeSelected}/>
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
         <Cards cards={this.filterCards()}/>
       </div>
     )
