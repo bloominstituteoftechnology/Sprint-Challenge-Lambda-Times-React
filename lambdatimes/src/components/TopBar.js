@@ -23,6 +23,9 @@ const TopBarContainer = styled.div`
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
 `;
 const ContainerLeft = styled.div`  
   display: flex;

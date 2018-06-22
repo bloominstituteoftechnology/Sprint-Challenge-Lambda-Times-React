@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
@@ -44,7 +45,7 @@ export default class Content extends Component {
 
   render(){
     return (
-      <div className="content-container">
+      <ContentContainer>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
@@ -52,7 +53,13 @@ export default class Content extends Component {
         */}
         <Tabs selectedTab={this.state.selected} selectTabHandler={this.changeSelected} tabs={this.state.tabs}/>
         <Cards cards={this.filterCards()}/>
-      </div>
+      </ContentContainer>
     )
   }
 }
+
+const ContentContainer = styled.div`
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+`
