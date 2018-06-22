@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'data privacy'];
 
 export const cardData = [
   {
@@ -93,7 +93,26 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Is Your Data Safe with Google?",
+    tab: "data privacy",
+    img: "./assets/puppers.jpg",
+    author: "PUPPER S. DOGGO"
+  },
+  {
+    headline: "GDPR and How It Affects Business",
+    tab: "data privacy",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "How You Can Profit Off Your Client's Data",
+    tab: "data privacy",
+    img: "./assets/bones.jpg",
+    author: "BONES R. LIFE"
   }
+
 ]
 
 export const carouselData = [
