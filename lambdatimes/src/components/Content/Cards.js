@@ -19,6 +19,6 @@ Card.propTypes = PropTypes.arrayOf(PropTypes.shape({
   tab: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-}))
+}).isRequired).isRequired
 
 export default Cards;

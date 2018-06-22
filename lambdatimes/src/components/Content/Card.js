@@ -22,6 +22,6 @@ Card.proptypes = PropTypes.shape({
   tab: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired
-})
+}).isRequired
 
 export default Card;

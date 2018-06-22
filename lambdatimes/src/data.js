@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap','twitch'];
 
 export const cardData = [
   {
@@ -91,6 +91,12 @@ export const cardData = [
   {
     headline: "The Hottest New Bootstrap 4 Components Every Developer Needs to Know About",
     tab: "bootstrap",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Streamer banned for 24 hours!",
+    tab: "twitch",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
   }
