@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Tab = props => {
   /* Using your props, determine if this tab is selected, if it is, the className 
     should be: 'tab active-tab', if it is not it should just be 'tab' */
-  let selectedClass = tab;
+  let selectedClass = "tab";
   if (props.tab === props.selectedTab) {
     selectedClass = "tab active-tab";
   } else {
