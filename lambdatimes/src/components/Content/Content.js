@@ -29,13 +29,15 @@ export default class Content extends Component {
     });
   }
 
+// Finish this function, reflecting the new selected tab in the state K
   changeSelected = (tab) => {
-    return () => {
-      // Finish this function, reflecting the new selected tab in the state K
+    {/*return () => {
+        
+    } Why is this in here?????? Highly confusing*/}
       this.setState({
         selected: tab
       });
-    }
+
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all

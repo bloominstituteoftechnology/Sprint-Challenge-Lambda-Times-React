@@ -13,11 +13,8 @@ const Tab = props => {
     <div
       className={selectedClass}
       onClick={() => {
-        console.log(props.selectTabHandler)
-        console.log(props.selectTabHandler());
         props.selectTabHandler(props.tab);
-      }}
-    >
+      }}>
       {props.tab.toUpperCase()}
     </div>
   )

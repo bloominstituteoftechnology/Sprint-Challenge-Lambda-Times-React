@@ -24,5 +24,5 @@ Tabs.propTypes = {
   tabsObject: PropTypes.shape({
     selected: PropTypes.string
   })
-}; 
+};
 export default Tabs
