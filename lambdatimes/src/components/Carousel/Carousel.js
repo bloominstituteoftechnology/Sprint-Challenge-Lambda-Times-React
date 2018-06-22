@@ -1,33 +1,52 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
-// Complete this Carousel 
+// Complete this Carousel
 export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      imagePaths: [],
+      displayedImage: "",
+      imageIndex: 0
     }
   }
   componentDidMount(){
-
+    this.setState({ imagePaths: carouselData, displayedImage: this.selectedImage(carouselData[0]) });
   }
 
   leftClick = () => {
+    let newImageIndex;
 
+    if (this.state.imageIndex === 0) {
+      newImageIndex = 3;
+    } else {
+      newImageIndex = this.state.imageIndex - 1;
+    }
+
+    this.setState({ imageIndex: newImageIndex, displayedImage: this.selectedImage(this.state.imagePaths[newImageIndex]) });
   }
 
   rightClick = () => {
+    let newImageIndex;
 
+    if (this.state.imageIndex === 3) {
+      newImageIndex = 0;
+    } else {
+      newImageIndex = this.state.imageIndex + 1;
+    }
+
+    this.setState({ imageIndex: newImageIndex, displayedImage: this.selectedImage(this.state.imagePaths[newImageIndex]) });
   }
 
-  selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+  selectedImage = (imagePath) => {
+    return <img src={imagePath} style={{display: 'block'}} alt={"Carousel."}/>
   }
-  
+
   render(){
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
+        {this.state.displayedImage}
         <div className="right-button" onClick={this.rightClick}>{">"}</div>
       </div>
     )
