@@ -2,6 +2,8 @@ import React from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
+import Login from './components/Login';
+import Authenticate from './components/Authentication/Authenticate';
 import styled from 'styled-components';
 
 const AppDiv = styled.div`
@@ -16,9 +18,10 @@ const AppDiv = styled.div`
 const App = () => {
   return (
     <AppDiv>
+      <Login />
       <TopBar />
       <Header />
-      <Content />
+      <Authenticate app={Content} />
     </AppDiv>
   );
 }
