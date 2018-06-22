@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 
 const HeaderDiv = styled.div`
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +14,7 @@ const HeaderDiv = styled.div`
   padding-bottom: 15px;
 
 @media (min-width: 1280px) {
-  .header {
+ 
     width: 1280px;
   }
 `;
@@ -47,10 +46,6 @@ letter-spacing: 1px;
 margin-left: 25px;
 flex: 1;
 `;
-
-
-
-
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
