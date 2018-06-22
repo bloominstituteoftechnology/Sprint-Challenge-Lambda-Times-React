@@ -1,18 +1,19 @@
 import React from 'react';
 
 const Card = props => {
-  const { article } = props
   return (
     <div className="card">
-      <div className="headline">{article.headline}</div>
+      <div className="headline">{/* headline goes here */}</div>
       <div className="author">
         <div className="img-container">
-          <img src={article.img} />
+          <img src={""/* image source goes here */} />
         </div>
-        <span>By {article.author}</span>
+        <span>By {/* author goes here */}</span>
       </div>
     </div>
   )
 }
 
-export default Card
+// Make sure to include PropTypes.
+
+export default Card;
