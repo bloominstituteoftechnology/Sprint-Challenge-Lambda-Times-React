@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 
 const TopBarWrapper = styled.div`
   width: 100%;
@@ -10,6 +12,7 @@ const TopBarWrapper = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 5;
 `
 
 const TopBarContainer = styled.div`
@@ -78,29 +81,93 @@ const TopBarRightSpan = styled.span`
   cursor: pointer;
 `
 
-const TopBar = () => {
-  return (
-    <TopBarWrapper>
+class TopBar extends React.Component {
+  constructor() {
+    super();
 
-      <TopBarContainer>
+    this.state = {
+      modal: false,
+      username: '',
+      password: ''
+    }
+  }
 
-        <TopBarLeft>
-          <TopBarLeftSpan>TOPICS</TopBarLeftSpan><TopBarLeftSpan>SEARCH</TopBarLeftSpan>
-        </TopBarLeft>
+  toggle = () => {
+    this.setState({ modal: !this.state.modal });
+  }
 
-        <TopBarCenter>
-          <TopBarCenterSpan>GENERAL</TopBarCenterSpan><TopBarCenterSpan>BROWNBAG</TopBarCenterSpan><TopBarCenterSpan>RANDOM</TopBarCenterSpan>
-          <TopBarCenterSpan>MUSIC</TopBarCenterSpan><TopBarCenterSpan>ANNOUNCEMENTS</TopBarCenterSpan>
-        </TopBarCenter>
-        
-        <TopBarRight>
-          <TopBarRightSpan>LOG IN</TopBarRightSpan>
-        </TopBarRight>
+  handleInput = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
 
-      </TopBarContainer>
+  loginButton = () => {
+    if (this.state.username === '' && this.state.password === '') {
+      alert('You need to enter a username and password!');
+      return;
+    }
+    if (this.state.username === '') {
+      alert('You need to enter a username!');
+      return;
+    }
+    if (this.state.password === '') {
+      alert('You need to enter a password!');
+      return;
+    }
 
-    </TopBarWrapper>
-  )
+    localStorage.setItem('username', this.state.username);
+    localStorage.setItem('password', this.state.password);
+
+    window.location.reload();
+  }
+
+
+  render() {
+    return (
+      <TopBarWrapper>
+
+        <TopBarContainer>
+
+          <TopBarLeft>
+            <TopBarLeftSpan>TOPICS</TopBarLeftSpan><TopBarLeftSpan>SEARCH</TopBarLeftSpan>
+          </TopBarLeft>
+
+          <TopBarCenter>
+            <TopBarCenterSpan>GENERAL</TopBarCenterSpan><TopBarCenterSpan>BROWNBAG</TopBarCenterSpan><TopBarCenterSpan>RANDOM</TopBarCenterSpan>
+            <TopBarCenterSpan>MUSIC</TopBarCenterSpan><TopBarCenterSpan>ANNOUNCEMENTS</TopBarCenterSpan>
+          </TopBarCenter>
+
+          <TopBarRight>
+
+            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+
+              <ModalHeader toggle={this.toggle}>Log in</ModalHeader>
+
+              <Form>
+
+                <FormGroup>
+                  <Label for="exampleUsername">Username</Label>
+                  <Input onChange={this.handleInput} autoComplete='off' type="username" name="username" id="exampleUsername" placeholder="Username" />
+                </FormGroup>
+
+                <FormGroup>
+                  <Label for="examplePassword">Password</Label>
+                  <Input onChange={this.handleInput} type="password" name="password" id="examplePassword" placeholder="Password" />
+                </FormGroup>
+
+                <Button onClick={this.loginButton}>Log in</Button>
+
+              </Form>
+
+            </Modal>
+
+            <TopBarRightSpan onClick={this.toggle}>LOG IN</TopBarRightSpan>
+          </TopBarRight>
+
+        </TopBarContainer>
+
+      </TopBarWrapper>
+    )
+  }
 }
 
 export default TopBar;
