@@ -1,6 +1,38 @@
 import styled from "styled-components";
 
 
+export const HeaderSpan =styled.span`
+  align-self: flex-end;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+`;
+
+export const SpanDate =styled.span`
+  margin-left: 25px;
+  flex: 1;
+  ${HeaderSpan}
+`;
+
+export const SpanTime =styled.span`
+	text-align: right;
+   	margin-right: 25px;
+         flex: 1;
+	 ${HeaderSpan}
+`;
+
+
+
+export const HeaderH1 =styled.h1`
+  font-size: 60px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`;
+
+
 export const HeaderContainer =styled.div`
   display: flex;
   justify-content: space-between;
@@ -22,85 +54,6 @@ export const HeaderContainer =styled.div`
   }
 `;
 
-export const SpanDate =styled.span`
-  margin-left: 25px;
-  flex: 1;
-  ${HeaderSpan}
-`;
-
-export const SpanTime =styled.span`
-	text-align: right;
-   	margin-right: 25px;
-         flex: 1;
-	 ${HeaderSpan}
-`;
-
-export const HeaderSpan =styled.span`
-  align-self: flex-end;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1px;
-`;
-
-
-
-export const HeaderH1 =styled.h1`
-  font-size: 60px;
-  font-family: Didot, serif;
-  font-weight: bold;
-  flex: 8;
-  text-align: center;
-  color: #000;
-`;
-
-
-
-
-
-
-
-export const TopBarContainer= styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: none;
-  flex-direction: row;
-  position: fixed;
-  height: 44px;
-  background-color: #333;
-  color: #fff;
-  letter-spacing: 1px;
-  padding: 0 10px;
-  ${ContainerLeft}
-  ${ContainerCenter}
-  ${ContainerRight}
-  ${SpanStyle}
-
-  @media (min-width: 1280px) {
-    width: 1280px;
-}
-
-
-`;
-
-export const TopContainer= styled.div`
-width: 100%;
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  flex-direction: row;
-  color: #fff;
-  letter-spacing: 1px;
-  padding: 0 10px;
- ${ContainerLeft}
- ${ContainerCenter}
- ${ContainerRight}
- ${SpanStyle}
- 
-   @media (min-width: 1280px) {
-    width: 1280px;
-}
-`;
 
 export const SpanStyle =styled.span`
 	 cursor: pointer;
@@ -151,3 +104,47 @@ export const ContainerLeft = styled.div`
   font-size: 11px;
 `;
 
+
+export const TopBarContainer= styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  position: fixed;
+  height: 44px;
+  background-color: #333;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+  ${ContainerLeft}
+  ${ContainerCenter}
+  ${ContainerRight}
+  ${SpanStyle}
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+}
+
+
+`;
+
+
+export const TopContainer= styled.div`
+width: 100%;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+ ${ContainerLeft}
+ ${ContainerCenter}
+ ${ContainerRight}
+ ${SpanStyle}
+
+   @media (min-width: 1280px) {
+    width: 1280px;
+}
+`;
