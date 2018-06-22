@@ -29,10 +29,10 @@ export default class Content extends Component {
     });
   }
 
-// Finish this function, reflecting the new selected tab in the state K
+
   changeSelected = (tab) => {
     {/*return () => {
-        
+        // Finish this function, reflecting the new selected tab in the state
     } Why is this in here?????? Highly confusing*/}
       this.setState({
         selected: tab
