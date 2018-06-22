@@ -5,6 +5,12 @@ export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', '
 
 export const cardData = [
   {
+    headline: "The Newest Bootstrap data brought by William",
+    tab: "bootstrap",
+    img: "./assets/max.jpg",
+    author: "William DiFulvio"
+  },
+  {
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
     img: "./assets/sir.jpg",
@@ -94,6 +100,8 @@ export const cardData = [
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
   }
+
+
 ]
 
 export const carouselData = [
