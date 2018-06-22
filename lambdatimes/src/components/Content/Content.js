@@ -10,7 +10,6 @@ export default class Content extends Component {
   constructor(props){
     super(props);
     this.state = {
-      initialValue: '',
       selected: 'all',
       tabs: [],
       cards: []
@@ -23,10 +22,7 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    return () => {
-      this.setState({selected: tab})
-      // Finish this function, reflecting the new selected tab in the state
-    }
+    this.setState({selected: tab});
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
@@ -38,10 +34,11 @@ export default class Content extends Component {
     }
     else {
      this.state.cards.filter(card =>{
-      return (card.tab === this.state.selected);
-    });
+      if (card.tab === this.state.selected){
+        return card;
+    }
+    else return;});
   }
-  return
   }
 
   render(){
