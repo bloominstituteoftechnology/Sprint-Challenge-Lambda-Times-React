@@ -1,0 +1,7 @@
+1. Proptypes: PropTypes are simply a developer tool that allows the developer to typecheck props in a component. To make sure that proper props are passed through each component, PropTypes throws a warning when any data type other than the declared data type is passed through the Component.
+
+2. Lifecycle event: Lifecycle events are seperate stages of a React component. The lifecycle methods are hooks that we can use to grab into the React component at the given event. With lifecycle events, we always have a guaranteed time of when certain events can occur. This gives us predictability and simplicity for writing complex code that depends on certain events to take place before it's executed.
+
+3. Higher Order Component: Higher Order Components are components that take a component as an argument and return a component. They're sort of like Higher Order functions in that sense. A component transforms props into UI, but a higher order component transforms a component into another component.
+
+4. 3 ways to style React components: Creating a styles object and passing it in as a `style` prop. CSS-in-JS (a library like styled components), and CSS stylesheets, usually done in association with the components themselves.
