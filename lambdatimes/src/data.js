@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap','crytocurrency'];
 
 export const cardData = [
   {
@@ -93,7 +93,20 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "$17 Billion Deleted From Cryptocurrency Market in 24 Hours",
+    tab: "crytocurrency",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  },
+  {
+    headline: "Ripple CEO On Why XRP Is Not a Secury and Other Things",
+    tab: "crytocurrency",
+    img: "./assets/puppers.jpg",
+    author: "PUPPER S. DOGGO"
   }
+
 ]
 
 export const carouselData = [
