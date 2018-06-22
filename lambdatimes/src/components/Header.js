@@ -3,6 +3,9 @@ import React from 'react';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
+//cannot get styled components to work at all :/
+//I get the syntax and idea, but nothing about them is working
+
 const Header = () => {
   return (
     <div className="header">
