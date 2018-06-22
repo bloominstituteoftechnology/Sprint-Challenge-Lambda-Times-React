@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
-
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+const name = localStorage.getItem('username');
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', name];
 
 export const cardData = [
   {
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: `${name} was here! 1`,
+    tab: name,
+    img: "./assets/fido.jpg",
+    author: `${name !== null ? name.toUpperCase() : name}`
+  },
+  {
+    headline: `${name} was here! 2`,
+    tab: name,
+    img: "./assets/puppers.jpg",
+    author: `${name !== null ? name.toUpperCase() : name}`
+  },
+  {
+    headline: `${name} was here! 3`,
+    tab: name,
+    img: "./assets/max.jpg",
+    author: `${name !== null ? name.toUpperCase() : name}`
   }
 ]
 
