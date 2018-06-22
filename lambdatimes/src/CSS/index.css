@@ -77,14 +77,14 @@ body {
     width: 1280px;
   }
 }
-.top-bar .container .container-left {
+ .top-bar .container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
   flex: 1;
   font-size: 11px;
-}
+} 
 .top-bar .container .container-left span {
   cursor: pointer;
   margin-right: 25%;
@@ -98,7 +98,7 @@ body {
   flex: 3;
   font-size: 9px;
 }
-.top-bar .container .container-center span {
+ .top-bar .container .container-center span {
   cursor: pointer;
   margin-right: 5%;
 }
@@ -108,7 +108,7 @@ body {
 .top-bar .container .container-center span:hover {
   text-decoration: underline;
 }
-.top-bar .container .container-right {
+ .top-bar .container .container-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -116,10 +116,10 @@ body {
   flex: 1;
   font-size: 11px;
   font-weight: bold;
-}
-.top-bar .container .container-right span {
+} 
+ .top-bar .container .container-right span {
   cursor: pointer;
-}
+}  
 .header {
   display: flex;
   justify-content: space-between;
