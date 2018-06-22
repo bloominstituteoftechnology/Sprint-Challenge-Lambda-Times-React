@@ -10,7 +10,7 @@ export const TheTopBar = styled.div`
     flex-direction: row;
     position: fixed;
     height: 44px;
-    background-color: #333;
+    background-color: #AD0101;
   `
   
   export const Container = styled.div`
@@ -99,7 +99,6 @@ export const TheTopBar = styled.div`
         width: 1280px;
     }
   `
-  
 
   export const HeaderH1 = styled.h1`
     font-size: 60px;
@@ -128,3 +127,4 @@ export const TheTopBar = styled.div`
     font-weight: bold;
     letter-spacing: 1px;
   `
+  
