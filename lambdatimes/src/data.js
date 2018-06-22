@@ -1,9 +1,39 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'lambda'];
 
 export const cardData = [
+  {
+    headline: "Don't Forget the Homies: A Practical Approach",
+    tab: "lambda",
+    img: "./assets/josh.jpg",
+    author: "JOSH KNELL"
+  },
+  {
+    headline: "Chromebook (2018) Review: A Solid Choice With Some Caveats",
+    tab: "lambda",
+    img: "./assets/holly.jpg",
+    author: "HOLLY GIANG"
+  },
+  {
+    headline: "A Beginner's Guide to Headshot Cropping for Slack",
+    tab: "lambda",
+    img: "./assets/haywood.jpg",
+    author: "HAYWOOD D. JOHNSON"
+  },
+  {
+    headline: "Combating \"Imposter Syndrome\"",
+    tab: "lambda",
+    img: "./assets/ryan.jpg",
+    author: "RYAN HAMBLIN"
+  },
+  {
+    headline: "Good Morning! ☀️",
+    tab: "lambda",
+    img: "./assets/patrick.jpg",
+    author: "PATRICK KENNEDY"
+  },
   {
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
