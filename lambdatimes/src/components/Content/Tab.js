@@ -5,9 +5,9 @@ const Tab = props => {
     should be: 'tab active-tab', if it is not it should just be 'tab' */
   const selectedClass = 'tab'
   if (props.tab === props.selectedTab) {
-    return 'tab active-tab'
+    return  <div className='tab active-tab'>{props.tab}</div>
   } else {
-    return 'tab'
+    return <div className='tab'>{props.tab}</div>
   }
 
   return (
