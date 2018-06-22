@@ -1,6 +1,48 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
-// Complete this Carousel 
+import styled from 'styled-components';
+
+const CarouselDiv = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+ `
+const CarouselButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  background-color: #333;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: ${props => props.left?'25px':null};
+  right: ${props => props.right?'25px':null};
+  &:hover {
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+  };
+`
+const CarouselImg= styled.img`
+  width: 100%;
+  display: none;
+`
 export default class Carousel extends Component {
   constructor(props){
     super(props);
@@ -28,16 +70,16 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={this.state.carousel[this.state.selected]} style={{display: 'block'}} />
+    return <CarouselImg src={this.state.carousel[this.state.selected]} style={{display: 'block'}} />
   }
   
   render(){
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
+      <CarouselDiv>
+        <CarouselButton left onClick={this.leftClick}>{"<"}</CarouselButton>
         {this.selectedImage()}
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+        <CarouselButton right onClick={this.rightClick}>{">"}</CarouselButton>
+      </CarouselDiv>
     )
   }
 }
