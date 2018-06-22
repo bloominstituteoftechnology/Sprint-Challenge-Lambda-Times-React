@@ -93,7 +93,15 @@ class TopBar extends React.Component {
   }
 
   toggle = () => {
-    this.setState({ modal: !this.state.modal });
+    if (this.loggedIn()) {
+      localStorage.removeItem('username');
+      localStorage.removeItem('password');
+
+      window.location.reload();
+    } else {
+      console.log(this.loggedIn());
+      this.setState({ modal: !this.state.modal });
+    }
   }
 
   handleInput = event => {
@@ -118,6 +126,13 @@ class TopBar extends React.Component {
     localStorage.setItem('password', this.state.password);
 
     window.location.reload();
+  }
+
+  loggedIn = () => {
+    if(localStorage.getItem('username') && localStorage.getItem('password')) {
+      return true;
+    }
+    return false;
   }
 
 
@@ -160,7 +175,7 @@ class TopBar extends React.Component {
 
             </Modal>
 
-            <TopBarRightSpan onClick={this.toggle}>LOG IN</TopBarRightSpan>
+            <TopBarRightSpan onClick={this.toggle}>{this.loggedIn() ? 'LOG OUT' : 'LOG IN'}</TopBarRightSpan>
           </TopBarRight>
 
         </TopBarContainer>
