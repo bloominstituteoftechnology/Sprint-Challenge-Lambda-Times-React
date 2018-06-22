@@ -33,11 +33,12 @@ export default class Content extends Component {
       return this.state.cards;
     }
     else {
-     this.state.cards.filter(card =>{
-      return card.tab === this.state.selected;
+    let filtered = this.state.cards.filter(card =>{
+      return card.tab === this.state.selected
   });
+  return filtered;
   }
-  }
+}
 
   render(){
     return (
