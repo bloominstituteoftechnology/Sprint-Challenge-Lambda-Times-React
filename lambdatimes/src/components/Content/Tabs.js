@@ -12,6 +12,7 @@ const Tabs = props => {
             key = {Math.random()} 
             tab = {tab}
             selectTabHandler = {props.selectTabHandler} 
+            selectedTab = {props.selectedTab}
             />
             )}
       </div>

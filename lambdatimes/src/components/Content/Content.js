@@ -25,23 +25,24 @@ export default class Content extends Component {
 
   changeSelected = (tab) => {
     console.log(tab, 'selected')
-    return () => {
-      //  Finish this function, reflecting the new selected tab in the state
-       this.setState ({selected: tab})
-    }
+    this.setState ({selected: tab})
+    // return () => {
+      //  Finish this function, reflecting the new selected tab in the state     
+    // }
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
-    // let filter = this.state.cards.filter(tabs =>{
-    //   if(this.tabs===all){
-    //     return cards
-    //   }
-
-    // })
-    return this.state.cards;
+    if(this.state.selected === 'all')
+    return this.state.cards
+    else{
+    let newCards = this.state.cards.slice()
+    newCards = newCards.filter(card => 
+      card.tab === this.state.selected);
+    return newCards;
+    }
   }
 
   render(){
@@ -55,7 +56,7 @@ export default class Content extends Component {
         <Tabs 
         tabs = {this.state.tabs}
         selectTabHandler = {this.changeSelected}
-        // selectedTab =
+        selectedTab = {this.state.selected}
         />
         <Cards cards = {this.filterCards()}/>
       </div>
