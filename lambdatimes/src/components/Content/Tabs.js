@@ -2,7 +2,7 @@ import React from 'react';
 import Tab from './Tab'
 import PropTypes from 'prop-types';
 
-// props: tabs={this.state.tabs}, selectedTab={this.state.selectedTab}, handleSelect={this.props.changeSelected}
+// props: tabs={this.state.tabs} selectedTab={this.state.selectedTab} handleSelect={this.props.changeSelected}
 const Tabs = props => {
   return (
     <div className="tabs">
