@@ -1,4 +1,4 @@
-/* Do not change anything in this file until you are completed with the assignment 
+/* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
 export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
@@ -20,7 +20,7 @@ export const cardData = [
     headline: "Bootstrap 5: Get a Sneak Peak at all the New Features",
     tab: "bootstrap",
     img: "./assets/fido.jpg",
-    author: "FIDO WALKSALOT"
+    author: "FIDO WALKSALOT" 
   },
   {
     headline: "AI: What Are the Ethical Rammifications of the Future?",
