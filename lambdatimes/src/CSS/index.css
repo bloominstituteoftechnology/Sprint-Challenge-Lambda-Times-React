@@ -205,10 +205,10 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
-.tabs .topics .tab:hover {
+.topics .tab:hover {
   text-decoration: underline;
 }
-.tabs .topics .active-tab {
+.topics .active-tab {
   background-color: #fff;
   color: #333;
   border: 2px solid #333;
