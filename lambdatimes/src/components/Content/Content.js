@@ -15,7 +15,6 @@ export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // Set this to an initial value K
       selected: 'all',
       tabs: [],
       cards: []
