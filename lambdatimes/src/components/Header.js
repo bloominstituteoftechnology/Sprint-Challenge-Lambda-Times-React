@@ -5,16 +5,19 @@ import styled from 'styled-components'
 // You can find the corresponding CSS in the CSS/index.css file
 
 const StyledHeader = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    background-color: #fff;
-    border-bottom: 1px solid lightgrey;
-    width: 100%;
-    height: 120px;
-    margin-top: 44px;
-    padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+  height: 120px;
+  margin-top: 44px;
+  padding-bottom: 15px;
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
 `
 
 const StyledH1 = styled.div`
