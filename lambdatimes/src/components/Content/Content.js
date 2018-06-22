@@ -38,7 +38,6 @@ export default class Content extends Component {
   }
 
   render() {
-    console.log(this.state.selected);
     return (
       <div className="content-container">
         {/* 
