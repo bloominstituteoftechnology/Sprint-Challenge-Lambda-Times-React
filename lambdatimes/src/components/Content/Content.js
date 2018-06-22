@@ -26,10 +26,10 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
-    return () => {
+    return e => {
       // Finish this function, reflecting the new selected tab in the state
       this.setState({
-        selected: tab
+        selected: e.target.innerText
       });
     };
   };
