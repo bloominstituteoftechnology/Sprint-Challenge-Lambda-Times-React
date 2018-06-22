@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'React Native'];
 
 export const cardData = [
   {
@@ -93,7 +93,20 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
-  }
+  },
+   {
+     headline: "The Newest Way to Create React Native Apps",
+     tab: "React Native",
+     img: "./assets/max.jpg",
+     author: "GIGI GOODGIRL"
+   },
+   {
+     headline: "React Native is the Better Way",
+     tab: "React Native",
+     img: "./assets/max.jpg",
+     author: "GIGI GOODGIRL"
+   },
+
 ]
 
 export const carouselData = [
