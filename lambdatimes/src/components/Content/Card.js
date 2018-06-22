@@ -1,5 +1,5 @@
 import React from 'react';
-import ProtoTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Card = props => {
   return (
