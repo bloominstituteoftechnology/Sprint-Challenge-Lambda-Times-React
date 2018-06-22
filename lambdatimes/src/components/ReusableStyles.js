@@ -16,6 +16,12 @@ export const TopBarContainer= styled.div`
   ${ContainerCenter}
   ${ContainerRight}
   ${SpanStyle}
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+}
+
+
 `;
 
 export const TopContainer= styled.div`
@@ -31,6 +37,10 @@ width: 100%;
  ${ContainerCenter}
  ${ContainerRight}
  ${SpanStyle}
+ 
+   @media (min-width: 1280px) {
+    width: 1280px;
+}
 `;
 
 export const SpanStyle =styled.span`
