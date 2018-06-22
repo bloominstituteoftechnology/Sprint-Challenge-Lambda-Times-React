@@ -8,7 +8,7 @@ const Tab = props => {
   return (
     <div
       className={selectedClass}
-      onClick={props.changeSelected}
+      onClick={() => {props.selectTabHandler(props.tab)}}
     >
       {props.tab.toUpperCase()}
     </div>
