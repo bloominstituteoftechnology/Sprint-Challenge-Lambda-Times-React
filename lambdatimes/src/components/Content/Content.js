@@ -13,7 +13,8 @@ export default class Content extends Component {
       // Set this to an initial value
       selected: '',
       tabs: [],
-      cards: []
+      cards: [],
+      filteredCards: [],
     }
   }
 
@@ -24,13 +25,20 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     this.setState({selected: tab});
+    setTimeout(() => {
+      this.filterCards();
+    }, 500)
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
-    return this.state.cards;
+    const cards = this.state.cards.filter(card => {
+      if(card.tab === this.state.selected)
+      return card;
+    });
+    this.setState({filteredCards: cards})
   }
 
   render(){
@@ -42,7 +50,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} selected={this.state.selected} select={this.changeSelected} />
-        <Cards cards={this.filterCards()}/>
+        <Cards cards={this.state.filteredCards.length > 0 ? this.state.filteredCards : this.state.cards}/>
       </div>
     )
   }
