@@ -42,7 +42,6 @@ export default class Content extends Component {
     } else {
       return (this.state.cards.filter(card => card.tab === this.state.selected))
     }
-
   }
 
   render(){
