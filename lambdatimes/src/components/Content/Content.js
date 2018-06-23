@@ -19,6 +19,7 @@ export default class Content extends Component {
 
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
+    this.setState({tabs : tabData , cards : cardData })
 
   }
 
@@ -28,8 +29,8 @@ export default class Content extends Component {
     }
   }
 
-  /* Complete this function, if the selected tab is 'all' it should return all 
-     of the items from cardData. If it is something else, it shoudl only return 
+  /* Complete this function, if the selected tab is 'all' it should return all
+     of the items from cardData. If it is something else, it shoudl only return
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
     return this.state.cards;
@@ -38,12 +39,12 @@ export default class Content extends Component {
   render(){
     return (
       <div className="content-container">
-        {/* 
-          Add 2 props to the Tabs component, 
+        {/*
+          Add 2 props to the Tabs component,
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}/>
+        <Tabs tabs={this.state.tabs} selectHandler = {this.changeSelected} />
         <Cards cards={this.filterCards()}/>
       </div>
     )
