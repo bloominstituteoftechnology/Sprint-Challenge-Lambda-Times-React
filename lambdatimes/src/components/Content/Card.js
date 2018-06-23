@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {CardBox, Headline, Author, ImgContainer} from '../../CSS/ReusableStyles';
 
 // props: key={i} card={card}
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{props.card.headline}</div>
-      <div className="author">
-        <div className="img-container">
+    <CardBox>
+      <Headline>{props.card.headline}</Headline>
+      <Author>
+        <ImgContainer>
           <img src={props.card.img} />
-        </div>
+        </ImgContainer>
         <span>By {props.card.author}</span>
-      </div>
-    </div>
+      </Author>
+    </CardBox>
   )
 }
 

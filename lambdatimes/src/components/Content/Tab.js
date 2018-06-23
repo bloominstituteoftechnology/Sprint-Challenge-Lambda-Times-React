@@ -10,7 +10,7 @@ const Tab = props => {
   return (
     <TabBox>
     <div
-      className={props.selectedTab ? "tab active-tab" : "tab"}
+      className={props.selected === props.tab ? "tab active-tab" : selectedClass}
       value={props.tab}
       onClick={() => {props.handleSelect(props.tab)}}
     >
