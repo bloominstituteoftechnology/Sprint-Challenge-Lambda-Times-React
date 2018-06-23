@@ -6,7 +6,7 @@ export default class Carousel extends Component {
     super(props);
     this.state = {
       images: [],
-      image: 0,
+      imageIndex: 0,
     };
   }
   componentDidMount() {
@@ -14,22 +14,22 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    let prev = this.state.image - 1;
+    let prev = this.state.imageIndex - 1;
     if (prev < 0) prev = this.state.images.length - 1;
-    this.setState({ image: prev });
+    this.setState({ imageIndex: prev });
   };
 
   rightClick = () => {
-    let next = this.state.image + 1;
+    let next = this.state.imageIndex + 1;
     if (next > this.state.images.length - 1) next = 0;
-    this.setState({ image: next });
+    this.setState({ imageIndex: next });
   };
 
   selectedImage = () => {
     return (
       <img
-        src={this.state.images[this.state.image]}
-        alt={this.state.images[this.state.image]}
+        src={this.state.images[this.state.imageIndex]}
+        alt={this.state.images[this.state.imageIndex]}
         style={{ display: 'block' }}
       />
     );

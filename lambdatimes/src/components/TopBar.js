@@ -37,12 +37,11 @@ const TopBarContainerLeft = styled.div`
   flex-direction: row;
   flex: 1;
   font-size: 11px;
-`;
-
-const TopBarContainerLeftSpan = styled.span`
-  cursor: pointer;
-  margin-right: 25%;
-  font-weight: bold;
+  span {
+    cursor: pointer;
+    margin-right: 25%;
+    font-weight: bold;
+  }
 `;
 
 const TopBarContainerCenter = styled.div`
@@ -52,16 +51,15 @@ const TopBarContainerCenter = styled.div`
   flex-direction: row;
   flex: 3;
   font-size: 9px;
-`;
-
-const TopBarContainerCenterSpan = styled.span`
-  cursor: pointer;
-  margin-right: 5%;
-  &:last-child {
-    margin-right: 0;
-  }
-  &:hover {
-    text-decoration: underline;
+  span {
+    cursor: pointer;
+    margin-right: 5%;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -73,10 +71,9 @@ const TopBarContainerRight = styled.div`
   flex: 1;
   font-size: 11px;
   font-weight: bold;
-`;
-
-const TopBarContainerRightSpan = styled.span`
-  cursor: pointer;
+  span {
+    cursor: pointer;
+  }
 `;
 
 const TopBar = () => {
@@ -84,18 +81,18 @@ const TopBar = () => {
     <TopBarWrapper>
       <TopBarContainer>
         <TopBarContainerLeft>
-          <TopBarContainerLeftSpan>TOPICS</TopBarContainerLeftSpan>
-          <TopBarContainerLeftSpan>SEARCH</TopBarContainerLeftSpan>
+          <span>TOPICS</span>
+          <span>SEARCH</span>
         </TopBarContainerLeft>
         <TopBarContainerCenter>
-          <TopBarContainerCenterSpan>GENERAL</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>BROWNBAG</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>RANDOM</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>MUSIC</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>ANNOUNCEMENTS</TopBarContainerCenterSpan>
+          <span>GENERAL</span>
+          <span>BROWNBAG</span>
+          <span>RANDOM</span>
+          <span>MUSIC</span>
+          <span>ANNOUNCEMENTS</span>
         </TopBarContainerCenter>
         <TopBarContainerRight>
-          <TopBarContainerRightSpan>LOG IN</TopBarContainerRightSpan>
+          <span>LOG IN</span>
         </TopBarContainerRight>
       </TopBarContainer>
     </TopBarWrapper>

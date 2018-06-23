@@ -19,15 +19,15 @@ const HeaderContainer = styled.div`
   @media (min-width: 1280px) {
     width: 1280px;
   }
-`;
 
-const HeaderContainerH1 = styled.h1`
-  font-size: 60px;
-  font-family: Didot, serif;
-  font-weight: bold;
-  flex: 8;
-  text-align: center;
-  color: #000;
+  h1 {
+    font-size: 60px;
+    font-family: Didot, serif;
+    font-weight: bold;
+    flex: 8;
+    text-align: center;
+    color: #000;
+  }
 `;
 
 const HeaderContainerSpanDate = styled.span`
@@ -53,7 +53,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderContainerSpanDate>SMARCH 32, 2018</HeaderContainerSpanDate>
-      <HeaderContainerH1>Lambda Times</HeaderContainerH1>
+      <h1>Lambda Times</h1>
       <HeaderContainerSpanTemp>98°</HeaderContainerSpanTemp>
     </HeaderContainer>
   );
