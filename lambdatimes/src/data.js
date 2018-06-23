@@ -93,12 +93,42 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Javascript",
+    tab: "javascript",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  },
+  {
+    headline: "Technology",
+    tab: "technology",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Node",
+    tab: "node",
+    img: "./assets/bones.jpg",
+    author: "BONES R. LIFE"
+  },
+  {
+    headline: "React",
+    tab: "React.js",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Bootstrap",
+    tab: "bootstrap",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
   }
-]
+];
 
 export const carouselData = [
   "./assets/carousel/mountains.jpeg",
   "./assets/carousel/computer.jpeg",
   "./assets/carousel/trees.jpeg",
   "./assets/carousel/turntable.jpeg"
-]
+];
