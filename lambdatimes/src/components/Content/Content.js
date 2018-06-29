@@ -27,12 +27,13 @@ export default class Content extends Component {
   }
 
   changeSelected = (e) => {
-    return () => {
+    // return () => {
       // Finish this function, reflecting the new selected tab in the state
-      this.setState({selected: e.target.tab})
-      // this.setState({selected: e.target})
+      // this.setState({selected: e.target.tab})
+      
+      this.setState({selected: e.target.value})
       console.log("changeSelected")
-    }
+    // }
   }
 
   // selectTabHandler = e => {
