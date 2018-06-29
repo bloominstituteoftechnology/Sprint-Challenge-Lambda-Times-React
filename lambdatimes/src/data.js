@@ -1,7 +1,7 @@
-/* Do not change anything in this file until you are completed with the assignment 
+/* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'blockchain'];
 
 export const cardData = [
   {
@@ -9,6 +9,12 @@ export const cardData = [
     tab: "javascript",
     img: "./assets/sir.jpg",
     author: "SIR RUFF'N'STUFF"
+  },
+  {
+    headline: "Will Ethereum make it through the Crypto Bubble?",
+    tab: "blockchain",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
   },
   {
     headline: "Type Coercion: Why Does NaN !== NaN? and Other Strange Occurences",
@@ -33,6 +39,12 @@ export const cardData = [
     tab: "React.js",
     img: "./assets/puppers.jpg",
     author: "PUPPER S. DOGGO"
+  },
+  {
+    headline: "Monero vs. Bitcoin vs. Ethereum: The race for Crypto Supremacy",
+    tab: "blockchain",
+    img: "./assets/fido.jpg",
+    author: "FIDO WALKSALOT"
   },
   {
     headline: "UI Frameworks: A Comparison, Which Made Our List? (Hint: Bootstrap is on it)",
