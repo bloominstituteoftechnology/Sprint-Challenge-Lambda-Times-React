@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap','python'];
 
 export const cardData = [
   {
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Why Python is Sssssuper cool",
+    tab: "python",
+    img: "./assets/snake1.jpg",
+    author: "SNAKEY SNAKERTON"
+  },
+  {
+    headline: "Why you don't need hands to code Python",
+    tab: "python",
+    img: "./assets/snake2.jpeg",
+    author: "BOAZ VENOMUS"
+  },
+  {
+    headline: "How to eat tasty mice while coding Python",
+    tab: "python",
+    img: "./assets/snake3.jpg",
+    author: "SLITHERTON McSCALES"
   }
 ]
 
