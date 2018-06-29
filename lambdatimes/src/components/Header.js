@@ -49,6 +49,7 @@ flex: 8;
 text-align: center;
 color: #000;
 ;`
+
 const Header = () => {
   return (
     <StyledHeader>
