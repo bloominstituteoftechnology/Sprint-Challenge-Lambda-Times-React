@@ -35,9 +35,8 @@ export default class Content extends Component {
   filterCards = () => {
     // event.preventDefault();
     // let cards= this.state.cards.slice();
-    // if () {
+    // cards= cards.filter(cards => );
 
-    // }
     return this.state.cards;
   }
 
@@ -49,7 +48,11 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}/>
+        <Tabs 
+          tabs={this.state.tabs}
+          selectedTab
+          selectTabHandler
+          />
         <Cards cards={this.filterCards()}/>
       </div>
     )
