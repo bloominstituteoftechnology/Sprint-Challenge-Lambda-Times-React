@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 'all',
       tabs: [],
       cards: []
     }
@@ -19,12 +19,16 @@ export default class Content extends Component {
 
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
-
+    this.setState({ 
+    cards: cardData,
+    tabs: tabData
+    })
   }
 
   changeSelected = (tab) => {
     return () => {
-      // Finish this function, reflecting the new selected tab in the state
+      // Finish this function, reflecting the new selected tab in the stateSS
+      this.setState({ selected: tab });
     }
   }
 
@@ -32,6 +36,13 @@ export default class Content extends Component {
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
+    let cards = this.state.cards.slice();
+    if (this.state.selected !== 'all') {
+      let filteredCards = cards.filter(c => {
+        return c.tab === this.state.selected;
+      });
+      return filteredCards;
+    }
     return this.state.cards;
   }
 
@@ -43,7 +54,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}/>
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()}/>
       </div>
     )
