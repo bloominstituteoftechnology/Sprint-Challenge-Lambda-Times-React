@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 'placeholder',
       tabs: ['emptyTabs'],
       cards: ['emptyCards']
     }
@@ -29,12 +29,16 @@ export default class Content extends Component {
   changeSelected = (e) => {
     // return () => {
       // Finish this function, reflecting the new selected tab in the state
-      // this.setState({selected: e.target.tab})
-      
       this.setState({selected: e.target.value})
-      console.log("changeSelected")
+      
+      // this.setState({selected: e.target.value})
+      console.log(this.state.selected)
     // }
   }
+
+    changeInputHandler = (e) => {
+      this.setState({selected:e.target.value})
+    }
 
   // selectTabHandler = e => {
   //   // console.log(event.target.value);
@@ -70,6 +74,7 @@ export default class Content extends Component {
           tabs={this.state.tabs}
           selectedTab = {this.state.selected}
           changeSelected = {this.changeSelected}
+          changeInputHandler = {this.changeInputHandler}
         />
         <Cards cards={this.state.cards}/>
       </div>

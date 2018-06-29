@@ -13,6 +13,7 @@ const Tabs = props => {
               changeSelected = {props.changeSelected}
               selectedTab = {props.selectedTab}
               tab = {tab}
+              changeInputHandler = {props.changeInputHandler}
             />
           ))}
       </div>

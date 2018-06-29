@@ -6,6 +6,7 @@ const Tab = props => {
   const selectedClass = 'tab';
   if (props.selectedTab === props.tab) {
     return (
+
       <div
         className={"tab active-tab"}
         // className={"active-tab"}
@@ -21,12 +22,23 @@ const Tab = props => {
   }
   else {
     return (
-      <div
-        className={"tab"}
-        // onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
-        onClick={props.changeSelected}
-      >
-        {props.tab.toUpperCase()}
+      <div>
+        <div
+          className={"tab"}
+          // onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
+          onClick={props.changeSelected}
+        >
+          {props.tab.toUpperCase()}
+        </div>
+        <div>
+          <form onSubmit = {props.changeSelected}>
+              <input 
+            type= "text" 
+            placeholder = "tab name"
+            onChange = {props.changeInputHandler}
+            />
+          </form>
+        </div>
       </div>
     )
   }
