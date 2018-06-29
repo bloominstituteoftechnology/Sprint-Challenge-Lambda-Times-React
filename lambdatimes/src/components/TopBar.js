@@ -14,6 +14,9 @@ flex-direction: row;
 position: fixed;
 height: 44px;
 background-color: #333;
+@media (min-width: 1280px) {
+width: 1280px;
+  }
 ;`
 
 const TopBarContainer = styled.div`
@@ -34,12 +37,11 @@ align-items: center;
 flex-direction: row;
 flex: 1;
 font-size: 11px;
-;`
-
-const LeftSpan = styled.span`
-cursor: pointer;
-margin-right: 25%;
-font-weight: bold;
+span {
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
+}
 ;`
 
 const CenterContainer = styled.div`
@@ -49,6 +51,12 @@ align-items: center;
 flex-direction: row;
 flex: 3;
 font-size: 9px;
+span {
+  cursor: pointer;
+  margin-right: 5%;
+  span: hover;
+  text-decoration: underline;
+}
 ;`
 
 const ContainerRight = styled.div`
@@ -59,6 +67,9 @@ flex-direction: row;
 flex: 1;
 font-size: 11px;
 font-weight: bold;
+span {
+  cursor: pointer;
+}
 ;`
 const TopBar = () => {
   return (
