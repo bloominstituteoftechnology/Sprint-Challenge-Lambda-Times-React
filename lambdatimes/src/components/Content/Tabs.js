@@ -14,6 +14,8 @@ const Tabs = props => {
               selectedTab = {props.selectedTab}
               tab = {tab}
               // changeInputHandler = {props.changeInputHandler}
+              filterCards = {props.filterCards}
+              selectTabHandler = {props.selectTabHandler}
             />
           ))}
       </div>

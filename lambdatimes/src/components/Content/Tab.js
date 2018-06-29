@@ -11,10 +11,11 @@ const Tab = props => {
         className={"tab active-tab"}
         // className={"active-tab"}
         // onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
-        onClick={props.changeSelected()}
+        // onClick={props.changeSelected()}
+        onClick = {props.selectTabHandler()}
         value = {props.tab}
       >
-      
+      {console.log("props.tab:",props.tab)}
         {props.tab.toUpperCase()}
       </div>
 
@@ -25,7 +26,8 @@ const Tab = props => {
         <div
           className={"tab"}
           // onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
-          onClick={props.changeSelected()}
+          // onClick={props.changeSelected()}
+          onClick = {props.selectTabHandler()}
         >
           {props.tab.toUpperCase()}
         </div>
