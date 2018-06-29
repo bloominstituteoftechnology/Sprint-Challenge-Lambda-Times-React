@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Card';
 
 const Cards = props => {
   return (
     <div className="cards-container">
-      {props.cards.map(c => <Card key={c.img} card={c} />)}
+      {props.cards.map(c => {
+        return <Card card={c} />
+      })}
     </div>
   )
 }

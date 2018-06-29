@@ -3,11 +3,17 @@ import React from 'react';
 const Tab = props => {
   /* Using your props, determine if this tab is selected, if it is, the className 
     should be: 'tab active-tab', if it is not it should just be 'tab' */
-  const selectedClass = 'tab'
+
+  // const tabString = () => {
+  //   if (props.tab === props.selected) {
+  //     return "active-tab";
+  //   }else return '';
+  // }
+  
   return (
     <div
-      className={"tab active-tab"}
-      onClick={() => {props.selectTabHandler(props.tab.className)}}
+      className={`tab ${props.selected ? 'active-tab' : ''}`}
+      onClick={() => {props.selectTabHandler(props.tab)}}
     >
       {props.tab.toUpperCase()}
     </div>
