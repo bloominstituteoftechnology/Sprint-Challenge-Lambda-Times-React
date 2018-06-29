@@ -46,7 +46,7 @@ flex: 1;
 const Header = () => {
   return (
     <StyledHeader>
-      <DateSpan>>SMARCH 32, 2018</DateSpan>
+      <DateSpan> June 29, 2018</DateSpan>
       <H1Header>Lambda Times</H1Header>
       <TempSpan>98°</TempSpan>
     </StyledHeader>
