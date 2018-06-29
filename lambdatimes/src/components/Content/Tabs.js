@@ -22,4 +22,11 @@ const Tabs = props => {
 }
 
 // Make sure to use PropTypes to validate your types!
+
+// Tabs.propTypes = {
+//   tabs: PropTypes.shape ({
+
+//   })
+// }
+
 export default Tabs
