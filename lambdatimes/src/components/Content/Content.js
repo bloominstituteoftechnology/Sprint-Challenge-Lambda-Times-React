@@ -31,11 +31,11 @@ export default class Content extends Component {
      of the items from cardData. If it is something else, it should only return 
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
-    const filteredCards = this.state.cards.splice()
+    const cards = this.state.cards.splice()
     if (this.state.selected === 'all') {
-      return this.cardData;
+      return cards;
     } else {
-      return filteredCards.filter(card => {
+      return cards.filter(card => {
         if (card.tab === this.state.selected) {
           return card;
         } else {
@@ -43,7 +43,6 @@ export default class Content extends Component {
         }
       });
     }
-    // this.setState({cards: filteredCards});
   }
 
   render(){
