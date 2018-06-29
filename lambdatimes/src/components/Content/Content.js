@@ -27,23 +27,22 @@ export default class Content extends Component {
   }
 
   changeSelected = (e) => {
-    // return () => {
+    return (e) => {
       // Finish this function, reflecting the new selected tab in the state
-      this.setState({selected: e.target.value})
-      
-      // this.setState({selected: e.target.value})
-      console.log(this.state.selected)
-    // }
+      this.setState({selected: e.target.value});
+  
+      console.log(this.state.selected);
+      console.log("changeSelected invoked")
+    }
   }
 
-    changeInputHandler = (e) => {
-      this.setState({selected:e.target.value})
-    }
+    // changeInputHandler = (e) => {
+    //   this.setState({selected:e.target.value})
+    //   console.log("changeInputHandler invoked" )
+    //   console.log(e.target.value)
+    //   console.log("selected:",this.state.selected)
+    // }
 
-  // selectTabHandler = e => {
-  //   // console.log(event.target.value);
-  //   this.setState({selected:e.target.value})
-  // }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
@@ -74,7 +73,7 @@ export default class Content extends Component {
           tabs={this.state.tabs}
           selectedTab = {this.state.selected}
           changeSelected = {this.changeSelected}
-          changeInputHandler = {this.changeInputHandler}
+          // changeInputHandler = {this.changeInputHandler}
         />
         <Cards cards={this.state.cards}/>
       </div>
