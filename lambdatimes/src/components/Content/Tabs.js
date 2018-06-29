@@ -9,6 +9,7 @@ const Tabs = props => {
           props.tabs.map((tab) => {
             return (
               <Tab 
+              tab={tab}
               key={Math.random()}
               selectedTab={props.selectedTab}
               selectedTabHandler={props.selectedTabHandler}
