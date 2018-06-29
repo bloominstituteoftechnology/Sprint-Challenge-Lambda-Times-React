@@ -40,12 +40,12 @@ export default class Content extends Component {
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
     let sliceCards;
-    if (this.state.slected === 'all') {
+    if (this.state.selected === 'all') {
       return this.state.cards;
     }
     else {
-      let sliceCards = this.state.cards.slice();
-      sliceCards = sliceCards.cards.filter(potatosalad => potatosalad.tab === this.state.selected);
+      sliceCards = this.state.cards.slice();
+      sliceCards = sliceCards.filter(potatosalad => potatosalad.tab === this.state.selected);
       return sliceCards;
     }
   }
@@ -58,7 +58,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.shangeSelected}/>
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
         <Cards cards={this.filterCards()}/>
       </div>
     )
