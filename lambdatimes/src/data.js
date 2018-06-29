@@ -93,6 +93,18 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Bob Ross Says Node JS Changed The Way He Paints",
+    tab: "node",
+    img: "./assets/boblove.jpg",
+    author: "By Bobby Jr."
+  },
+  {
+    headline: "I Hava No Idea What Node JS Is",
+    tab: "node",
+    img: "./assets/download.jpg",
+    author: "By JeBron Lames"
   }
 ]
 
