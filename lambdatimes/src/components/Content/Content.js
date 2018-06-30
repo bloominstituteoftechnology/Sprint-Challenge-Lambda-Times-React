@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: 'placeholder',
+      selected: 'all',
       tabs: ['emptyTabs'],
       cards: ['emptyCards']
     }
@@ -26,16 +26,21 @@ export default class Content extends Component {
     })
   }
 
-  changeSelected = (e) => {
-    return (e) => {
-      // Finish this function, reflecting the new selected tab in the state
-      this.setState({selected: e.target.value});
+  // changeSelected = (e) => {
+  //   return (e) => {
+  //     // Finish this function, reflecting the new selected tab in the state
+  //     this.setState({selected: e.target.value});
   
-      console.log(this.state.selected);
-      console.log("changeSelected invoked")
-    }
-  }
+  //     console.log(this.state.selected);
+  //     console.log("changeSelected invoked")
+  //   }
+  // }
 
+    changeSelected = tab => {
+      // return () => {
+        this.setState({selected: tab})
+      // }
+    }
     // changeInputHandler = (e) => {
     //   this.setState({selected:e.target.value})
     //   console.log("changeInputHandler invoked" )
@@ -47,28 +52,32 @@ export default class Content extends Component {
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
-  filterCards = (e) => {
-    return (e) => {
-    const selectedTab = this.state.selected.slice();
-    const cardData = this.state.cards.slice();
-    const filteredCardData = cardData.filter(card => card.tab === selectedTab);
-    console.log("filterCards invoked")
-    if (selectedTab === "all") {
-       return this.setState({cards: cardData});
-    }
-    if (selectedTab === cardData.tab) {
-      return this.setState({cards:filteredCardData});
-    }}
-  }
 
-  selectTabHandler = (e) => {
-    return (e) => {
-      this.changeSelected(e)
-      this.filterCards(e)
-      console.log("selectTabHandler invoked")
+    filterCards = () => {
+      if (this.state.selected === 'all') {
+        return cardData;
+      }
+      else {
+        return cardData.filter(card => {
+          return card.tab === this.state.selected;
+        })
+      }
     }
+  // filterCards = (e) => {
+  //   return (e) => {
+  //   const selectedTab = this.state.selected.slice();
+  //   const cardData = this.state.cards.slice();
+  //   const filteredCardData = cardData.filter(card => card.tab === selectedTab);
+  //   console.log("filterCards invoked")
+  //   if (selectedTab === "all") {
+  //      return this.setState({cards: cardData});
+  //   }
+  //   if (selectedTab === cardData.tab) {
+  //     return this.setState({cards:filteredCardData});
+  //   }}
+  // }
 
-  }
+
 
   render(){
     return (
@@ -81,12 +90,12 @@ export default class Content extends Component {
         <Tabs 
           tabs={this.state.tabs}
           selectedTab = {this.state.selected}
-          changeSelected = {this.changeSelected}
-          filterCards = {this.filterCards}
-          selectTabHandler = {this.selectTabHandler}
+          selectTabHandler = {this.changeSelected}
+          // filterCards = {this.filterCards}
+          
           // changeInputHandler = {this.changeInputHandler}
         />
-        <Cards cards={this.state.cards}/>
+        <Cards cards={this.filterCards()}/>
       </div>
     )
   }

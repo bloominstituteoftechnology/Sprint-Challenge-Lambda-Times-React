@@ -6,28 +6,19 @@ const Tab = props => {
   const selectedClass = 'tab';
   if (props.selectedTab === props.tab) {
     return (
-
-      <div
-        className={"tab active-tab"}
-        // className={"active-tab"}
-        // onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
-        // onClick={props.changeSelected()}
-        onClick = {props.selectTabHandler()}
-        value = {props.tab}
+      <div 
+      className={"tab active-tab"}
+      onClick= {() => props.selectTabHandler(props.tab)}
       >
-      {console.log("props.tab:",props.tab)}
         {props.tab.toUpperCase()}
       </div>
-
     )
   }
   else {
     return (
-        <div
-          className={"tab"}
-          // onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
-          // onClick={props.changeSelected()}
-          onClick = {props.selectTabHandler()}
+        <div 
+        className={"tab"}
+        onClick= {() => props.selectTabHandler(props.tab)}
         >
           {props.tab.toUpperCase()}
         </div>
