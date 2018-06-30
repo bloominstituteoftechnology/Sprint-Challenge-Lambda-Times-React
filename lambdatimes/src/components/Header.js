@@ -47,18 +47,15 @@ padding-bottom: 15px;
     width: 1280px;
   }
 }
-
 `
 
 const Header = () => {
   return (
-    // <HeaderStyles>
-    <div className="header">
+    <HeaderStyles>
       <HeaderSpanDateStyles>SMARCH 32, 2018</HeaderSpanDateStyles>
       <HeaderH1Styles>Lambda Times</HeaderH1Styles>
       <HeaderSpanTempStyles>98°</HeaderSpanTempStyles>
-    </div>
-    // </HeaderStyles>
+    </HeaderStyles>
   )
 }
 

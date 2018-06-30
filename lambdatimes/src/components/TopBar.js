@@ -74,32 +74,30 @@ const ContainerStyles = styled.div`
 const TopBar = () => {
   return (
     <TopBarStyles>
-      <div className="top-bar">
         <ContainerStyles>
-          <div className="container">
+
             <ContainerLeftStyles>
-              <div>
+
                 <ContainerLeftSpanStyles>TOPICS</ContainerLeftSpanStyles>
                 <ContainerLeftSpanStyles>SEARCH</ContainerLeftSpanStyles>
-              </div>
+
             </ContainerLeftStyles>
             <ContainerCenterStyles>
-              <div>
+
                 <ContainerCenterSpanStyles>GENERAL</ContainerCenterSpanStyles>
                 <ContainerCenterSpanStyles>BROWNBAG</ContainerCenterSpanStyles>
                 <ContainerCenterSpanStyles>RANDOM</ContainerCenterSpanStyles>
                 <ContainerCenterSpanStyles>MUSIC</ContainerCenterSpanStyles>
                 <ContainerCenterSpanStyles>ANNOUNCEMENTS</ContainerCenterSpanStyles>
-              </div>
+
             </ContainerCenterStyles>
             <ContainerRightStyles>
-              <div>
+
                 <ContainerRightSpanStyles>LOG IN</ContainerRightSpanStyles>
-              </div>
+
             </ContainerRightStyles>
-          </div>
+
         </ContainerStyles>
-      </div>
     </TopBarStyles>
   )
 }
