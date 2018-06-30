@@ -26,16 +26,6 @@ const Tab = props => {
   }
 }
 
-//   return (
-//     <div
-//       className={""}
-//       // onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
-//       onClick={props.selectTabHandlers}
-//     >
-//       {props.tab.toUpperCase()}
-//     </div>
-//   )
-// }
 
 // Make sure you include PropTypes on your props.
 

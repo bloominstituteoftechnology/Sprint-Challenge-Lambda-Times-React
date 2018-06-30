@@ -26,59 +26,25 @@ export default class Content extends Component {
     })
   }
 
-  // changeSelected = (e) => {
-  //   return (e) => {
-  //     // Finish this function, reflecting the new selected tab in the state
-  //     this.setState({selected: e.target.value});
-  
-  //     console.log(this.state.selected);
-  //     console.log("changeSelected invoked")
-  //   }
-  // }
-
-    changeSelected = tab => {
-      // return () => {
-        this.setState({selected: tab})
-      // }
-    }
-    // changeInputHandler = (e) => {
-    //   this.setState({selected:e.target.value})
-    //   console.log("changeInputHandler invoked" )
-    //   console.log(e.target.value)
-    //   console.log("selected:",this.state.selected)
-    // }
-
+  changeSelected = tab => {
+      this.setState({selected: tab})
+  }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
-     of the items from cardData. If it is something else, it shoudl only return 
-     those cards whose 'tab' mached that which is selected. */
+  of the items from cardData. If it is something else, it shoudl only return 
+  those cards whose 'tab' mached that which is selected. */
 
-    filterCards = () => {
-      if (this.state.selected === 'all') {
-        return cardData;
-      }
-      else {
-        return cardData.filter(card => {
-          return card.tab === this.state.selected;
-        })
-      }
+  filterCards = () => {
+    if (this.state.selected === 'all') {
+      return cardData;
     }
-  // filterCards = (e) => {
-  //   return (e) => {
-  //   const selectedTab = this.state.selected.slice();
-  //   const cardData = this.state.cards.slice();
-  //   const filteredCardData = cardData.filter(card => card.tab === selectedTab);
-  //   console.log("filterCards invoked")
-  //   if (selectedTab === "all") {
-  //      return this.setState({cards: cardData});
-  //   }
-  //   if (selectedTab === cardData.tab) {
-  //     return this.setState({cards:filteredCardData});
-  //   }}
-  // }
-
-
-
+    else {
+      return cardData.filter(card => {
+        return card.tab === this.state.selected;
+      })
+    }
+  }
+  
   render(){
     return (
       <div className="content-container">
@@ -91,9 +57,6 @@ export default class Content extends Component {
           tabs={this.state.tabs}
           selectedTab = {this.state.selected}
           selectTabHandler = {this.changeSelected}
-          // filterCards = {this.filterCards}
-          
-          // changeInputHandler = {this.changeInputHandler}
         />
         <Cards cards={this.filterCards()}/>
       </div>
