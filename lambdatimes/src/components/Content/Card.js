@@ -17,10 +17,9 @@ const Card = props => {
 
 // Make sure to include PropTypes.
 // Card.propTypes = {
-//   card: PropTypes.shape({
+//   card: PropTypes.string,
 //     headline: PropTypes.string,
 //     author: PropTypes.string
-//   })
 // };
 
 export default Card;
