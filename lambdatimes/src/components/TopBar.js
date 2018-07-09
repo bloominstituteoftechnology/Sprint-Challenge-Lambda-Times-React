@@ -17,7 +17,7 @@ background-color: #333;
 @media (min-width: 1280px) {
 width: 1280px;
   }
-;`
+`;
 
 const TopBarContainer = styled.div`
 width: 100%;
@@ -28,7 +28,10 @@ flex-direction: row;
 color: #fff;
 letter-spacing: 1px;
 padding: 0 10px;
-;`
+@media (min-width: m1280px) {
+  width: 1280px;
+}
+`;
 
 const ContainerLeft = styled.div`
 display: flex;
@@ -42,7 +45,7 @@ span {
   margin-right: 25%;
   font-weight: bold;
 }
-;`
+`;
 
 const CenterContainer = styled.div`
 display: flex;
@@ -54,10 +57,14 @@ font-size: 9px;
 span {
   cursor: pointer;
   margin-right: 5%;
-  span: hover;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
   text-decoration: underline;
+  }
 }
-;`
+`;
 
 const ContainerRight = styled.div`
 display: flex;
@@ -70,7 +77,7 @@ font-weight: bold;
 span {
   cursor: pointer;
 }
-;`
+`;
 const TopBar = () => {
   return (
     <TopBarStyles>

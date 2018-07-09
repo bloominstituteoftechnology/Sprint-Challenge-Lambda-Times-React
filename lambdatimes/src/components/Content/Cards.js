@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import Card from "./Card";
+import Card from `./Card`;
 
-export default class Cards extends Component {
+
+export default class Card extends Component {
   render() {
-    const { cards } = this.props;
+    const { card } = this.props.card;
     return (
       <div className="cards-container">
         {cards.map((article, i) => {

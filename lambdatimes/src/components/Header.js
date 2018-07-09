@@ -39,7 +39,7 @@ span {
     font-weight: bold;
     letter-spacing: 1px;
   }
-;`
+`;
 
 const H1 = styled.h1`
 font-size: 60px;
@@ -48,14 +48,32 @@ font-weight: bold;
 flex: 8;
 text-align: center;
 color: #000;
-;`
+`;
+
+const StyledDateSpan = styled.span`
+align-self: flex-end;
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 1px;
+margin-left: 25px;
+flex: 1;
+`;
+
+const StyledTemp = styled.span`
+align-self: flex-end;
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 1px;
+margin-right: 25px;
+flex: 1;
+`;
 
 const Header = () => {
   return (
     <StyledHeader>
-      <span className="date">SMARCH 32, 2018</span>
+      <StyledDateSpan>SMARCH 32, 2018</StyledDateSpan>
       <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
+      <StyledTemp>98°</StyledTemp>
     </StyledHeader>
   )
 }
