@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from "react";
 import Tabs from './Tabs';
 import Cards from './Cards';
 import {tabData} from '../../data';
 import {cardData} from '../../data';
 
 
-class Content extends Component {
+class Content extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -37,10 +37,9 @@ class Content extends Component {
     return (
       <div className="content-container">
 
-        <Tabs changeSelected={this.changeSelected} 
-               selectedTab={this.state.selected}/>
-
-        <Tabs tabs={this.state.tabData}/>
+        <Tabs  changeSelected={this.changeSelected} 
+               selectedTab={this.state.selected}
+               tabs={this.state.tabData}/>
       
         <Cards cards={this.filterCards()}/>
       
