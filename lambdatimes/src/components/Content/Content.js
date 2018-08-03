@@ -42,6 +42,8 @@ export default class Content extends Component {
     return this.state.cards.filter(card => {
       if (this.state.selected === 'all')
         return true
+      else if (this.state.selected === 'Random')
+        return Math.random() >= 0.5
       else if (this.state.selected === card.tab)
         return true
       return false
