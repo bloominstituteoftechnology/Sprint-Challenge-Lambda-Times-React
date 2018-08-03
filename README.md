@@ -15,7 +15,7 @@ In the past week we have taken a deeper dive into React. We went from writing sm
 ## Challenge
 Today we are going to revisit an old friend, Lambda Times! This time around, we are going to take our old Vanilla Javascript app, and convert it to a React app! Much of the initial work has been done for you, but there are some missing pieces you will need to complete to get the app working properly. As before, the styling is modeled after the [LA Times Website](http://www.latimes.com). We have gone through the trouble of creating your base React app, and including some components. Included as well is a CSS file that you may reference when writing your own code. Look through the application code. If you have the old Lambda Times (Applied Javascript) sprint challenge handy, you may compare how the structure of this app differs from that, noting how React gives us very easy to use concise components. From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
 
-### Part I
+### Part I 
 * Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished. Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components.
 
 ### Part II
