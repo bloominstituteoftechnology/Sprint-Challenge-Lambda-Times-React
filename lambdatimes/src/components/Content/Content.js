@@ -23,10 +23,8 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    return () => {
       // Finish this function, reflecting the new selected tab in the state
-      this.setState({selected: tab})
-    }
+    this.setState({selected: tab})
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
@@ -43,13 +41,12 @@ export default class Content extends Component {
   }
 
   render(){
-    console.log(this.state.selected)
     return (
       <div className="content-container">
         <Tabs 
           tabs={this.state.tabs}
           selectedTab={this.state.selected}
-          selectTabHandler={this.selectTabHandler}
+          changeSelected={this.changeSelected}
         />
         <Cards cards={this.filterCards()}/>
       </div>

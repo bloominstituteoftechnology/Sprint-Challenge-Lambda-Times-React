@@ -3,7 +3,6 @@ import Tab from './Tab'
 import PropTypes from 'prop-types';
 
 const Tabs = props => {
-  console.log(props.selectedTab)
   return (
     <div className="tabs">
       <div className="topics">
@@ -11,8 +10,8 @@ const Tabs = props => {
         {props.tabs.map((item, index) => 
           <Tab 
             key={index}
-            selectTabHandler={item.selectTabHandler}
-            selectedTab={item.selectedTab}
+            changeSelected={props.changeSelected}
+            selectedTab={props.selectedTab}
             tab={item}
         />)}
       </div>
