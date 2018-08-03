@@ -1,0 +1,4 @@
+1. PropTypes are used to ensure that any data we are passing down is valid. If something is wrong, there will be a warning in the console, which is helpful for debugging our code.
+2. A lifecycle event in React is the cycle a component goes through--first is the mounting phase where the component is initialized, then the updating phase where any new data is used, and then the unmounting phase when the component is no longer being used.
+3. A Higher Order Component is a container component we wrap around another component in order to pass down props and data to render.
+4. Three different ways to style components in React: CSS, inline, or using javascript styled-components.
