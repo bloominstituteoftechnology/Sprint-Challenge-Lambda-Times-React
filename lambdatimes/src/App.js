@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
+import Authenticate from './Authentication/Authenticate';
 
-const App = () => {
+const App = (props) => {
   return (
     <div className="App">
       <TopBar />
@@ -13,4 +14,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Authenticate(App);
