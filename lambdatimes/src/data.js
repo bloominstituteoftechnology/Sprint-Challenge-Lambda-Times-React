@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'styledComponent'];
 
 export const cardData = [
   {
@@ -93,7 +93,20 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "The new card I am adding",
+    tab: "styledComponent",
+    img: './assets/max.jpg',
+    author: 'Jonathan'
+  },
+  {
+    headline: "Yet another card I am adding",
+    tab: "styledComponent",
+    img: './assets/fido.jpg',
+    author: 'Jonathan'
   }
+
 ]
 
 export const carouselData = [
