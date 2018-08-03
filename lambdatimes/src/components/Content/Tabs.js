@@ -10,7 +10,7 @@ const Tabs = props => {
         {/* {console.log(props.tabs)} */}
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/ }
-      {props.tabs.map( tab => <Tab selectedTab={tab.selectedTab} selectTabHandler={tab.selectTabHandler} tab={tab} />)}
+      {props.tabs.map( tab => <Tab selectedTab={props.selectedTab} selectedTabHandler={props.selectedTabHandler} tab={tab} />)}
       </div>
     </div>
   )
