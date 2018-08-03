@@ -10,14 +10,16 @@ const Tabs = props => {
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
 
-        {props.tabs.map(tab => (
+        {props.tabs.map(tab => {
+          return (
           <Tab
             key={tab}
             tabs={tab}
             changeSelected={props.changeSelected}
             selectedTab={props.selectedTab}
-          />
-        ))}
+          />)
+        }
+        )}
          </div>
     </div>
   );

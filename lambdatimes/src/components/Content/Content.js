@@ -8,7 +8,7 @@ class Content extends Component{
   constructor(props){
     super(props);
     this.state = {
-      selected: '',
+      selected: 'all',
       tabs: [],
       cards: []
     }
@@ -18,19 +18,21 @@ class Content extends Component{
     this.setState({tabs: tabData, cards: cardData});
   }
 
-  changeSelected = (e) => {
-   this.setState({selected: e.target.value})
+  changeSelected = (tabs) => {
+   this.setState({selected: tabs})
     
  }
 
-  // filterCards = () => {
-  //   if(this.state.selected === this.state.cards.tab){
-  //     return this.state.cards
-  //   }
-  //     else if(this.state.selected === 'all'){ 
-      
-  //     return this.state.cards}
-  // }
+  filterCards = () => {
+    if(this.state.selected === 'all'){
+      return cardData;
+    }
+    else {const filteredData = cardData.filter(card => {
+        return card.tab === this.state.selected;
+      });
+    return filteredData; 
+    }
+  }
   
 
   render(){
@@ -41,7 +43,7 @@ class Content extends Component{
                selectedTab={this.state.selected}
                tabs={this.state.tabs}/>
       
-        <Cards cards={this.state.cards}/>      
+        <Cards cards={this.filterCards()}/>      
       </div>
     )
   }

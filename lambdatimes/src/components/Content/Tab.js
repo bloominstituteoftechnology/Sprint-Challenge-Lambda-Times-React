@@ -8,7 +8,7 @@ return (
     <div 
     className={(props.selectedTab === props.tabs) ? "tab active-tab" : "tab"}  
     
-    onClick={props.changeSelected}>
+    onClick={() => {props.changeSelected(props.tabs)}}>
     
     {props.tabs.toUpperCase()}
 
@@ -22,3 +22,5 @@ Tab.propTypes = {
 
 
 export default Tab;
+
+
