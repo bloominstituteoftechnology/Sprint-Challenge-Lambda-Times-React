@@ -1,7 +1,7 @@
-/* Do not change anything in this file until you are completed with the assignment 
+/* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'for fun'];
 
 export const cardData = [
   {
@@ -30,7 +30,7 @@ export const cardData = [
   },
   {
     headline: "History of Javascript Libraries: from jQuery to React",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/puppers.jpg",
     author: "PUPPER S. DOGGO"
   },
@@ -54,7 +54,7 @@ export const cardData = [
   },
   {
     headline: "React.js v16 What's new, and what you should know about.",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/fido.jpg",
     author: "FIDO WALKSALOT"
   },
@@ -84,7 +84,7 @@ export const cardData = [
   },
   {
     headline: "React vs Angular vs Vue vs ??? How the frameworks stack up.",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/fido.jpg",
     author: "FIDO WALKSALOT"
   },
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Why do we REALLY chase the ball? Algorithmic Expressions",
+    tab: "for fun",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  },
+  {
+    headline: "The fake throw and how you can be better prepared",
+    tab: "for fun",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Apps for optimized tree marking",
+    tab: "for fun",
+    img: "./assets/fido.jpg",
+    author: "FIDO WALKSALOT"
   }
 ]
 
