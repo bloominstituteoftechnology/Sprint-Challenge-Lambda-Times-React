@@ -13,8 +13,7 @@ export default class Content extends Component {
       // Set this to an initial value
       selected: 'all',
       tabs: [],
-      cards: [],
-      filteredCards: []
+      cards: []      
     }
   }
 
@@ -35,16 +34,13 @@ export default class Content extends Component {
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
     if (this.state.selected === 'all'){
-      return this.state.cards;
+      return cardData;
     }else{
-    let cards = this.state.cards.filter(card =>{
-     if (card.tab === this.state.selected){
-       return card
-     } 
-    })
-    this.setState({filteredCards: cards})
+      let cards = cardData.filter(card =>{
+        return card.tab === this.state.selected;      
+      });
+      return cards
     }
-    return this.state.filteredCards
   }
 
   render(){console.log(this.state.selected)
