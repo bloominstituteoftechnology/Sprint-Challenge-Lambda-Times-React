@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'gaming'];
 
 export const cardData = [
   {
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "How to Approach a Woman Who is Holding Down Back When She has Both a Fireball and an Invincible Flashkick",
+    tab: "gaming",
+    img: "./assets/BB_dog.png",
+    author: "KHOA NGUYEN"
+  },
+  {
+    headline: "BBTAG Player Wants to Improve Fundamentals Yet Mashes While Minus on Block",
+    tab: "gaming",
+    img: "./assets/BB_dog.png",
+    author: "KHOA NGUYEN"
+  },
+  {
+    headline: "Competitors Missing Out on EVO2018 Due to Weather Conditions Preventing Air Travel",
+    tab: "gaming",
+    img: "./assets/BB_dog.png",
+    author: "KHOA NGUYEN"
   }
 ]
 
