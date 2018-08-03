@@ -20,9 +20,9 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    if (this.state.imgNum === this.state.numOfImg-1){
+    if (this.state.imgNum === 0){
       this.setState({
-        imgNum: 0,
+        imgNum: this.state.numOfImg-1,
       })} else {
         this.setState({
           imgNum: (this.state.imgNum) - 1,
@@ -31,9 +31,9 @@ export default class Carousel extends Component {
   }
 
   rightClick = () => {
-    if (this.state.imgNum === 0){
+    if (this.state.imgNum === this.state.numOfImg-1){
       this.setState({
-        imgNum: this.state.numOfImg-1,
+        imgNum: 0,
       })} else {
         this.setState({
           imgNum: (this.state.imgNum) + 1,
