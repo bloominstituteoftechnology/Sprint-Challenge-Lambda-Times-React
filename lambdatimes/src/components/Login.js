@@ -31,11 +31,6 @@ export default class Login extends Component {
       })
     }
   }
-  //inputs stored in local storage
-  // submit changes state to true
-
-  //if true return Content
-  //if false return Login
 
   render(){
     return(

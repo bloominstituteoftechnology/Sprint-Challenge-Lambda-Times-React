@@ -17,7 +17,6 @@ export default class Content extends Component {
 
   componentDidMount(){
     this.setState({
-      selected: "all",
       tabs: tabData,
       cards: cardData,
     })
@@ -42,23 +41,16 @@ export default class Content extends Component {
         }
     })
 
-    // this.setState({
-    //   cards: displayedCards,
-    // })
-    // return this.state.cards;
-
-    //WHY DOESNT THIS WORK?
-
     return displayedCards;
   }
 
   render(){
     return (
       <div className="content-container">
+        <Carousel />
         <Tabs
           selectedTab={this.state.selected} changeSelectedTab={this.changeSelectedTab}
           tabs={this.state.tabs} />
-        <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     )

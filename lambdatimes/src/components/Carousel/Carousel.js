@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { carouselData } from '../../data'
+import { carouselData } from '../../data';
+import styled from 'styled-components';
 
 
 

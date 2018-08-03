@@ -21,7 +21,7 @@ const TopBar = () => {
         </ContainerCenter>
         <ContainerRight>
           <p>Hello, {localStorage.getItem('username'  )}</p>
-          {(localStorage.getItem('loggedIn')) ? <p className='log' onClick={logOut}>LOG OUT</p> : <p className='log'>LOG IN</p>}
+          {(localStorage.getItem('loggedIn')) ? <p className='log' onClick={logOut}>LOGOUT</p> : <p className='log'>LOG IN</p>}
         </ContainerRight>
       </ContainerDiv>
     </TopBarDiv>

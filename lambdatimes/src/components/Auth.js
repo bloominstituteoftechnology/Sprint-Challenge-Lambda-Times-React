@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './Login.js';
 
-const Auth = App =>
+const Auth = Monkey =>
 class extends React.Component {
   constructor(props){
       super();
@@ -12,9 +12,7 @@ class extends React.Component {
 
   componentDidMount() {
     if(localStorage.getItem('username')){
-      this.setState({
-        loggedIn: true,
-      })
+      this.setState({loggedIn: true,})
       localStorage.setItem('loggedIn', true
       )
     }
@@ -22,7 +20,7 @@ class extends React.Component {
 
   render(){
       if (this.state.loggedIn === true) {
-        return <App />
+        return <Monkey />
       } else {
         return <Login />
       }
