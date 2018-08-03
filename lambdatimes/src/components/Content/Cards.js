@@ -10,7 +10,6 @@ const Cards = props => {
         headline = {card.headline}
         img = {card.img}
         author = {card.author}
-        type = {card.tab}
         />
       })}
     </div>
