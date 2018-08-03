@@ -14,6 +14,15 @@ const HeaderWrapper = styled.div`
   margin-top: 44px;
   padding-bottom: 15px;
 
+  h1 {
+    font-size: 60px;
+    font-family: Didot, serif;
+    font-weight: bold;
+    flex: 8;
+    text-align: center;
+    color: #000;
+  }
+
   @media (min-width: 1280px) {
       width: 1280px;
   }
@@ -37,20 +46,11 @@ const HeaderTemp = styled.span`
   flex: 1;
 `;
 
-const HeaderTitle = styled.h1`
-  font-size: 60px;
-  font-family: Didot, serif;
-  font-weight: bold;
-  flex: 8;
-  text-align: center;
-  color: #000;
-`;
-
 const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderDate>MARCH 32, 2018</HeaderDate>
-      <HeaderTitle>Lambda Times</HeaderTitle>
+      <h1>Lambda Times</h1>
       <HeaderTemp>98°</HeaderTemp>
     </HeaderWrapper>
   )
