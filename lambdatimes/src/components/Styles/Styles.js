@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+// ---------TopBar.js styles-----------
 export const TopBarWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -74,6 +75,7 @@ export const ContainerRightSpan = styled.span`
   cursor: pointer;
 `;
 
+// ---------Header styles-----------
 export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -118,3 +120,4 @@ export const Temp = styled.span`
   margin-right: 25px;
   flex: 1;
 `;
+
