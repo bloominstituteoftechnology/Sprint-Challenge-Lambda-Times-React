@@ -43,8 +43,6 @@ const CardImgContainer = styled.div`
 `;
 
 
-
-
 const Card = props => {
   return (
     
