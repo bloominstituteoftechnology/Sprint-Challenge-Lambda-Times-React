@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Refactor this component to use styled components and not classNames. 
-// You can find the corresponding CSS in the CSS/index.css file
-
 const MyHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -16,7 +13,6 @@ const MyHeader = styled.div`
   margin-top: 44px;
   padding-bottom: 15px;  
 `;
-
 const HeaderTitle = styled.h1`
   font-size: 60px;
   font-family: Didot, serif;
@@ -25,7 +21,6 @@ const HeaderTitle = styled.h1`
   text-align: center;
   color: #000;
 `;
-
 const HeaderDate = styled.span`
   align-self: flex-end;
   font-size: 11px;
@@ -34,7 +29,6 @@ const HeaderDate = styled.span`
   margin-left: 25px;
   flex: 1;
 `;
-
 const HeaderTemp = styled.span`
   align-self: flex-end;
   font-size: 11px;
