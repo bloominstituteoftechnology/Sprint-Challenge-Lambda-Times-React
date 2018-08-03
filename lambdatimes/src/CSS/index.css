@@ -120,7 +120,7 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,21 +131,21 @@ body {
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-}
+} */
 @media (min-width: 1280px) {
   .header {
     width: 1280px;
   }
 }
-.header h1 {
+/* .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
   flex: 8;
   text-align: center;
   color: #000;
-}
-.header span {
+} */
+/* .header span {
   align-self: flex-end;
   font-size: 11px;
   font-weight: bold;
@@ -159,7 +159,7 @@ body {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
 .content-container {
   display: flex; 
   flex-direction: column; 
