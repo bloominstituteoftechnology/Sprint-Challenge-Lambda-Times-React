@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Tabs from './Tabs';
+import Carousel from '../Carousel/Carousel';
 import Cards from './Cards';
 import { tabData, cardData } from '../../data';
 
@@ -46,6 +47,7 @@ class Content extends Component {
         <Tabs tabs={this.state.tabs} 
           selectedTab={this.state.selected} 
           selectTabHandler={this.changeSelected} />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </ContentContainer>
     )

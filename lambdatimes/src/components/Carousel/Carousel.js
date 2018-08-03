@@ -57,34 +57,48 @@ const StyledCarousel = styled.div`
 `;
 
 export default class Carousel extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-
+      images: [],
+      active: 0,
     }
   }
-  componentDidMount(){
 
+  componentDidMount() {
+    this.setState({
+      images: carouselData,
+    });
   }
 
   leftClick = () => {
-
+    this.setState({
+      active: this.state.active - 1 < 0 ?
+        this.state.images.length - 1 : 
+        this.state.active - 1
+    });
   }
 
   rightClick = () => {
-
+    this.setState({
+      active: this.state.active + 1 === this.state.images.length ?
+        0 : this.state.active + 1
+    });
   }
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    return <img 
+      src={this.state.images[this.state.active]} 
+      style={{display: 'block'}} alt="" />
   }
   
   render(){
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+      <StyledCarousel>
+        <div onClick={this.leftClick}>{"<"}</div>
+        {this.selectedImage()}
+        <div onClick={this.rightClick}>{">"}</div>
+      </StyledCarousel>
     )
   }
 }
