@@ -162,8 +162,8 @@ body {
 .cards-container .card .author .img-container {
   padding-right: 10px;
   border-right: 1px solid lightgrey;
-  height: 40px;
-
+  width: 25%; 
+  height: 25%
 }
 .cards-container .card .author .img-container img {
   width: 100%;
