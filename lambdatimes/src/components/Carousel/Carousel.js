@@ -25,7 +25,7 @@ const StyledCarousel = styled.div`
   > div {
     display: flex;
     justify-content: center;
-    align-items: none;
+    align-items: center;
     flex-direction: row;
     color: #fff;
     background-color: #333;
