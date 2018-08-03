@@ -13,7 +13,8 @@ export default class Content extends Component {
       // Set this to an initial value
       selected: '',
       tabs: [],
-      cards: []
+      cards: [], 
+      filteredTabs: []
     }
   }
 
@@ -32,9 +33,15 @@ export default class Content extends Component {
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
-  filterCards = () => {
+  filterCards = e => {
+    const setPosts = []; 
+    for(let i =0; i < this.state.tabs; i++ ){
+    if(this.state.tabs[i] === "javascript"){
+      setPosts.push(this.state.cards.tab==="javascript"); 
+    }
+    }
     return this.state.cards;
-  }
+}
 
   render(){
     return (
@@ -44,7 +51,9 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}/>
+        <Tabs 
+        selectHandler ={this.filterCards}
+        tabs={this.state.tabs}/>
         <Cards cards={this.filterCards()}/>
       </div>
     )
