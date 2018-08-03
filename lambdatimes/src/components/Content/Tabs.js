@@ -11,7 +11,7 @@ const Tabs = props => {
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/
             //why is selectTabHandler not working?
-          props.tabs.map(tab => <Tab tab={tab} key={tab} selectedTab={props.selectedTab} selectTabHandler={props.selectTabHandler} />)}
+          props.tabs.map(tab => <Tab tab={tab} key={tab} selectedTab={props.selectedTab} selectTabHandler={props.selectTabHandler(tab)} />)}
       </div>
     </div>
   )
