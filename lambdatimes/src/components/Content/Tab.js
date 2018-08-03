@@ -2,8 +2,6 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Tab = props => {
-  console.log(props.selector.map(el=> el.tab));
-  // console.log(props.selector);
   /* Using your props, determine if this tab is selected, if it is, the className 
     should be: 'tab active-tab', if it is not it should just be 'tab' */
   // console.log(props);
