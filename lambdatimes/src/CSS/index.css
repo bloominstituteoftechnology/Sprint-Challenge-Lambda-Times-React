@@ -52,7 +52,7 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
-.top-bar {
+/* .top-bar {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -119,7 +119,7 @@ body {
 }
 .top-bar .container .container-right span {
   cursor: pointer;
-}
+} */
 /* .header {
   display: flex;
   justify-content: space-between;
@@ -249,20 +249,20 @@ body {
   flex-direction: row;
   margin-top: 15px;
 } */
-.cards-container .card .author .img-container {
+/* .cards-container .card .author .img-container {
   padding-right: 10px;
   border-right: 1px solid lightgrey;
   height: 40px;
 }
 .cards-container .card .author .img-container img {
   width: 40px;
-}
-.cards-container .card .author span {
+} */
+/* .cards-container .card .author span {
   padding-left: 10px;
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: bold;
-}
+} */
 .carousel {
   width: 100%;
   display: flex;

@@ -45,8 +45,6 @@ const AuthorSpan = styled.span`
 `;
 
 const Card = props => {
-
-  let card = props.card
   return (
     <CardContainer>
       <Headline>{props.card.headline}</Headline>

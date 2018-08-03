@@ -28,17 +28,10 @@ const ActiveTab = styled.div`
   color: #333;
   border: 2px solid #333;
   }
- 
+
 `;
 
 const Tab = props => {
-  /* Using your props, determine if this tab is selected, if it is, the className 
-    should be: 'tab active-tab', if it is not it should just be 'tab' */
-  // const selectedClass = 'tab';
-
-  
-
-  
   return (
     <ActiveTab
       className={ getSelectedState(props) ? "tab active-tab" : "tab"}
@@ -46,6 +39,10 @@ const Tab = props => {
       {props.tab.toUpperCase()}
     </ActiveTab>
   )
+}
+
+Tab.propTypes = {
+  tab: PropTypes.string,
 }
 
 // Make sure you include PropTypes on your props.

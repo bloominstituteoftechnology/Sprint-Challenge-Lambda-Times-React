@@ -16,7 +16,6 @@ const TopTopBar = styled.div`
 `;
 
 const Container = styled.div`
-    .top-bar .container {
     width: 1280px;
 `;
 
