@@ -24,8 +24,8 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 * Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
 * You should now be able to filter cards using your tabs! -->
 
-### Part III
-* Make sure all of your props being passed are validated using PropTypes.
+<!-- ### Part III
+* Make sure all of your props being passed are validated using PropTypes. -->
 
 ### Part IV
 * Add another tab and some more cards to your data, and see your work in action!

@@ -9,9 +9,7 @@ const Cards = props => {
     <div className="cards-container">
       {props.cards.map( card => {
         return <Card key={card.headline} card={card}/>
-      })
-        /* Using the cards prop, map over the list creating a
-          new Card component for each passing the card as the only prop*/}
+      })}
     </div>
   )
 }
@@ -19,6 +17,5 @@ const Cards = props => {
 Cards.propTypes = {
   cards: PropTypes.array,
 }
-// Make sure you include prop types for all of your incoming props --later yo
 
 export default Cards;

@@ -16,7 +16,6 @@ const Card = props => {
   )
 }
 
-// Make sure to include PropTypes.
 Card.propTypes = {
   author: PropTypes.string,
   headline: PropTypes.string,
