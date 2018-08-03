@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'Minecraft'];
 
 export const cardData = [
   {
@@ -93,7 +93,25 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
-  }
+  },
+  {
+    headline: "Iron Golems are The Player's Best Friend: Ten Reasons",
+    tab: "Minecraft",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  },
+  {
+    headline: "Creepers: Who Are They and How to Avoid Them",
+    tab: "Minecraft",
+    img: "./assets/bones.jpg",
+    author: "BONES R. LIFE"
+  },
+  {
+    headline: "Diamonds from Wood: A Heroic Tale of Deeds Unmatched",
+    tab: "Minecraft",
+    img: "./assets/fido.jpg",
+    author: "FIDO WALKSALOT"
+  },
 ]
 
 export const carouselData = [
