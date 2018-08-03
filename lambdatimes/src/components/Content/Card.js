@@ -15,5 +15,8 @@ const Card = props => {
 }
 
 // Make sure to include PropTypes.
+Card.propTypes = {
+  
+}
 
 export default Card;
