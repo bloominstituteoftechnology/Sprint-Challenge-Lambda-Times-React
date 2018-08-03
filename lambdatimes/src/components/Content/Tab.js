@@ -9,7 +9,7 @@ const Tab = props => {
     }
     return "tab"
   }
-  console.log(props.value)
+  
   return (
     <div
       className={selectedClass()}
