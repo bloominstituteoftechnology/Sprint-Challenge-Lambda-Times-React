@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap','python'];
 
 export const cardData = [
   {
@@ -93,6 +93,18 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: 'Eloquent Python',
+    tab: 'python',
+    img: 'https://pluralsight.imgix.net/paths/python-7be70baaac.png',
+    author: 'Will Kwon'
+  },
+  {
+    headline: "Why Python Is Just Better than JavaScript",
+    tab: 'python',
+    img: 'https://pluralsight.imgix.net/paths/python-7be70baaac.png',
+    author: 'Will Kwon'
   }
 ]
 
