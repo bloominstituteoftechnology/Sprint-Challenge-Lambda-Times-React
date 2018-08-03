@@ -25,7 +25,7 @@ export default class Content extends Component {
       cards: [],
       selectedCards:[]
     }
-    console.log("this selected",this.state.selected);
+    // console.log("this selected",this.state.selected);
     
   }
 
@@ -46,23 +46,11 @@ export default class Content extends Component {
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
-    // let carditos = this.state.cards.slice();
-    // if (this.state.selected !== 'all') {
-    //   nuCards = carditos.map((card)=>{
-    //     if(card.tab === this.state.selected){
-    //       return card
-    //     }
-    //   })
-    // } else {
-    //   nuCards = carditos;
-    // }
-    
-    // this.setState({
-    //   cards: nuCards
-    // })
-
-    return this.state.cards;
-
+    if(this.state.selected === 'all') return this.state.cards;
+    let nuC = this.state.cards.filter((card,i)=>{ 
+      return card.tab === this.state.selected;
+    }); 
+    return nuC;
 }
 
   render(){
