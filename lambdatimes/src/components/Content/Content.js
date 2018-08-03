@@ -43,12 +43,10 @@ export default class Content extends Component {
     console.log
     cards = cards.filter(card => card.tab === active); 
     console.log(cards);
-    
+    let returnCards;
+    active !== 'all' ? returnCards = cards : returnCards = this.state.cards.slice(); 
 
-
-
-
-    return cards;
+    return returnCards;
   }
 
   render(){
