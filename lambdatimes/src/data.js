@@ -1,7 +1,7 @@
-/* Do not change anything in this file until you are completed with the assignment 
+/* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'for fun'];
 
 export const cardData = [
   {
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Why do we REALLY chase the ball? Algorithmic Expressions",
+    tab: "for fun",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  },
+  {
+    headline: "The fake throw and how you can be better prepared",
+    tab: "for fun",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Apps for optimized tree marking",
+    tab: "for fun",
+    img: "./assets/fido.jpg",
+    author: "FIDO WALKSALOT"
   }
 ]
 
