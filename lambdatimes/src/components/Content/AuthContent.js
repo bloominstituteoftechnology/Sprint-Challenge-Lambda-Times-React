@@ -3,22 +3,10 @@ import Login from '../Login';
 
 const Auth = Content => {
     return class extends Component {
-        constructor() {
-            super();
-            this.state = {
-                loggedIn: false,
-            };
-        }
-
-        componentDidMount() {
-            localStorage.getItem('login') && 
-            this.setState({
-                loggedIn: true,
-            });
-        }
-
         render () {
-            return this.state.loggedIn ? <Content /> : <Login />;
+            return localStorage.getItem('login') ? 
+                <Content /> : 
+                <Login isOpen={this.props.isOpen} toggle={this.props.toggle} />;
         }
     };
 };

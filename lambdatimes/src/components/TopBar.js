@@ -89,7 +89,9 @@ const TopBar = props => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </CenterContainer>
         <RightContainer>
-          <span>{props.isLoggedIn ? 'LOGGED IN' : 'LOG IN'}</span>
+          <span onClick={props.isLoggedIn ? props.logOut : props.toggle}>
+            {props.isLoggedIn ? 'LOG OUT' : 'LOG IN'}
+          </span>
         </RightContainer>
       </div>
     </StyledTopBar>

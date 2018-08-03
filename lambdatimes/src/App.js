@@ -13,15 +13,37 @@ const StyledApp = styled.div`
   font-family: 'PT Sans', sans-serif;
 `;
 
-const App = () => {
-  const isLoggedIn = localStorage.getItem('login') ? true : false;
-  return (
-    <StyledApp>
-      <TopBar isLoggedIn={isLoggedIn} />
-      <Header />
-      <Content />
-    </StyledApp>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      modal: false,
+    };
+  }
+
+  toggle = () => {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  logOut = () => {
+    localStorage.removeItem('login');
+    this.setState({
+      modal: false,
+    });
+  };
+
+  render() {
+    return (
+      <StyledApp>
+        <TopBar isLoggedIn={localStorage.getItem('login') ? true : false} 
+          toggle={this.toggle} logOut={this.logOut} />
+        <Header />
+        <Content isOpen={this.state.modal} toggle={this.toggle} />
+      </StyledApp>
+    );
+  }
 }
 
 export default App;
