@@ -12,17 +12,17 @@ const Tab = props => {
   return (
     <div
       className={""}
-      onClick={() => {props.selectedTabHandler(props.tab)}}
+      onClick={() => props.selectTabHandler(props.tab)}
     >
       {props.tab.toUpperCase()}
     </div>
   )
 }
 
-Tab.PropTypes = {
+Tab.propTypes = {
   tab: PropTypes.string,
   selected: PropTypes.string,
-  selectTabHandler: PropTypes.string
-}
+  selectTabHandler: PropTypes.func //it's  a function avoiding console erros
+};
 
 export default Tab;
