@@ -26,13 +26,9 @@ const TopBarContainer = styled.div`
     letter-spacing: 1px;
     padding: 0 10px;
 
-//How to I put the media query into the styled component?
-
-  // @media (min-width: 1280px) {
-  //   .top-bar .container {
-  //     width: 1280px;
-  //   }
-  // }
+  @media (min-width: 1280px) {
+      width: 1280px;
+  }
 `;
 
 const ContainerLeft = styled.div`
