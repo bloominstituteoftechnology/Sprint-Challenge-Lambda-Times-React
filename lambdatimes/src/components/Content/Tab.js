@@ -18,7 +18,7 @@ const Tabs = styled.div`
 `;
 
 const Tab = props => {
-  const selectedClass = `${props.selected === props.tab ? 'active-tab':'tab'}`; 
+  const selectedClass = `${props.selectedTab === props.tab ? 'active-tab':'tab'}`; 
   return (
     <Tabs
       className={selectedClass}
@@ -31,7 +31,7 @@ const Tab = props => {
 
 Tab.proptypes = {
   selectTabHandler: PropTypes.func,
-  selected: PropTypes.string,
+  selectedTab: PropTypes.string,
   tab: PropTypes.string
 }
 export default Tab;
