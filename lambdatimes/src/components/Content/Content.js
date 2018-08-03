@@ -24,14 +24,14 @@ class Content extends Component{
  }
 
   filterCards = () => {
-    if(this.state.selected === 'all'){
-    return this.state.cards}
-       else {
-         return this.state.selected
-       }
+    if(this.state.selected === this.state.cards.tab){
+      return this.state.cards
+    }
+      else if(this.state.selected === 'all'){ 
+      
+      return this.state.cards}
   }
-
-
+  
 
   render(){
     return (
@@ -41,7 +41,7 @@ class Content extends Component{
                selectedTab={this.state.selected}
                tabs={this.state.tabs}/>
       
-        <Cards cards={this.state.cards}/>      
+        <Cards cards={this.filterCards}/>      
       </div>
     )
   }
