@@ -1,9 +1,15 @@
-/* Do not change anything in this file until you are completed with the assignment 
+/* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'random'];
 
 export const cardData = [
+  {
+    headline: "Student builds a page in React, is successful!",
+    tab: "random",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  },
   {
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
