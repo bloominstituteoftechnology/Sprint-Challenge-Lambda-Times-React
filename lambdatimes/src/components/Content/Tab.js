@@ -1,5 +1,6 @@
 import React from 'react';
 import style from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   /* Using your props, determine if this tab is selected, if it is, the className 

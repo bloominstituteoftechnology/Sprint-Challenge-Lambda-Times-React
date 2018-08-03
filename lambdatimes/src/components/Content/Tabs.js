@@ -1,6 +1,7 @@
 import React from 'react';
 import style from 'styled-components';
-import Tab from './Tab'
+import Tab from './Tab';
+import PropTypes from 'prop-types';
 
 const TabsContainer = style.div`
     border-bottom: 1px solid lightgrey;
