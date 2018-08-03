@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Header from "./Header";
 
 export const TopBarWrap = styled.div`
     width: 100%;
@@ -64,3 +65,40 @@ export const TopBarRight = styled.div`
 export const RightSpan = styled.span`
     cursor: pointer;
 `;
+
+// Header.js
+
+
+export const HeaderWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+  height: 120px;
+  margin-top: 44px;
+  padding-bottom: 15px;
+`;
+
+export const HeaderH1 = styled.h1`
+  font-size: 60px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`;
+
+export const HeadSpan = styled.span`
+  align-self: flex-end;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  flex: 1;
+  margin-left: ${props => (props.date ? '25px' : 'null')};
+  text-align: ${props => (props.temp ? 'right' : 'null')};
+  margin-right: ${props => (props.temp ? '25px' : 'null')};
+`;
+
