@@ -11,28 +11,41 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selectedTab:'all',
       tabs: [],
-      cards: []
+      cards: [],
+      selectedCards: []
     }
   }
 
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
-
+    this.setState({tabs:tabData})
+    this.setState({cards: cardData})
   }
 
   changeSelected = (tab) => {
-    return () => {
-      // Finish this function, reflecting the new selected tab in the state
-    }
+    this.setState({selectedTab: tab});
+    
+    
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
-     those cards whose 'tab' mached that which is selected. */
-  filterCards = () => {
-    return this.state.cards;
+     those cards whose 'tab' matched that which is selected. */
+  filterCards = (carddata) => {
+    let cardscopy = carddata.slice();
+    let selected = []
+    if (this.state.selectedTab === 'all'){
+      return cardscopy;
+    } else {
+    for (let i=0; i<cardscopy.length; i++){
+      if (cardscopy[i].tab == this.state.selectedTab){
+        selected.push(cardscopy[i])
+      }
+    }return selected;
+    };
+    this.setState({selectedCards: selected});
   }
 
   render(){
@@ -43,9 +56,11 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}/>
-        <Cards cards={this.filterCards()}/>
+        <Tabs changeSelected={this.changeSelected} tabs={this.state.tabs}/>
+        <Cards cards={this.filterCards(this.state.cards)}/>
       </div>
     )
   }
 }
+
+// this.filterCards(this.state.selectedTab)
