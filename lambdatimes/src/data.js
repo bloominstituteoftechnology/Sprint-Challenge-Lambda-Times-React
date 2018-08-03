@@ -93,6 +93,12 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Das G. MA Added This",
+    tab: "bootstrap",
+    img: "./assets/Bully.jpg",
+    author: "Das G. MA"
   }
 ]
 
