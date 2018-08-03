@@ -25,7 +25,7 @@ export default class Content extends Component {
   changeSelected = (tab) => {
     return () => {
       // Finish this function, reflecting the new selected tab in the state
-      this.setState({selected: tab});
+      this.setState({ selected: tab} );
     }
   }
 
