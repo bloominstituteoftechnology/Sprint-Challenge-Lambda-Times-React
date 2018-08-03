@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: "",
+      selected: "all",
       tabs: [],
       cards: []
     };
@@ -33,7 +33,11 @@ export default class Content extends Component {
   of the items from cardData. If it is something else, it shoudl only return 
   those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
-    return this.state.cards;
+    if (this.state.selected === "all") {
+      return this.state.cards;
+    } else {
+      return this.state.cards.filter(card => card.tab === this.state.selected);
+    }
   };
 
   render() {
@@ -49,7 +53,7 @@ export default class Content extends Component {
           selectedTabHandler={this.changeSelected}
           selectedTab={this.state.selected}
         />
-        <Cards cards={this.state.cards} cardsFilter={this.filterCards} />
+        <Cards cards={this.filterCards()} />
       </div>
     );
   }
