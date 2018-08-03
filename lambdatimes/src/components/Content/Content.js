@@ -5,6 +5,7 @@ import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+import Carousel from '../Carousel/Carousel'
 
 
 export default class Content extends Component {
@@ -27,9 +28,11 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
+    return () => {
     this.setState({
       selected: tab,
     });
+  }
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all
