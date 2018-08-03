@@ -1,10 +1,10 @@
 import React from 'react';
 // import '../../src/CSS/index.css';
-import style from 'styled-components';
+import styled from 'styled-components';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopTopBar = style.div`
+const TopTopBar = styled.div`
     width: 100%;
   display: flex;
   justify-content: center;
@@ -15,12 +15,12 @@ const TopTopBar = style.div`
   background-color: #333;
 `;
 
-const Container = style.div`
+const Container = styled.div`
     .top-bar .container {
     width: 1280px;
 `;
 
-const ContainerLeft = style.div`
+const ContainerLeft = styled.div`
   display: flex;
   justify-content: none;
   align-items: center;
@@ -29,13 +29,13 @@ const ContainerLeft = style.div`
   font-size: 11px;
 `;
 
-const ContainerLeftSpan = style.span`
+const ContainerLeftSpan = styled.span`
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
 `;
 
-const ContainerCenter = style.div`
+const ContainerCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,12 +44,12 @@ const ContainerCenter = style.div`
   font-size: 9px;
 `;
 
-const ContainerCenterSpan = style.span`
+const ContainerCenterSpan = styled.span`
         cursor: pointer;
   margin-right: 5%;
 `;
 
-const ContainerRight = style.div`
+const ContainerRight = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -59,7 +59,7 @@ const ContainerRight = style.div`
   font-weight: bold;
 `;
 
-const ContainerRightSpan = style.span`
+const ContainerRightSpan = styled.span`
 cursor: pointer;
 `;
 
