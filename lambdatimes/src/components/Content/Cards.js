@@ -6,14 +6,11 @@ const Cards = props => {
   return (
     <div className="cards-container">
       {props.cards.map( card =>{
-        return <Card
-        key ={card.headline}
-        card ={card}
-        />
+        return <Card card ={card} key={card.headline}/>;
       })}
     </div>
-  )
-}
+  );
+};
 
 // Make sure you include prop types for all of your incoming props
 

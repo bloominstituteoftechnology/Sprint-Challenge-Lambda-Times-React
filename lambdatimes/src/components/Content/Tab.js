@@ -7,13 +7,15 @@ const Tab = props => {
     const selectedClass = props.tab === props.selectedTab ? 'active-tab' : null;
     return (
     <div
-      className={selectedClass}
-      onClick={() => props.selectTabHandler(props.tab)}
+      className={`tab ${props.selectedTab ? 'active-tab' : null}`}
+      onClick={() => {
+        props.selectTabHandler(props.tab);
+      }}
     >
       {props.tab.toUpperCase()}
     </div>
-  )
-}
+  );
+};
 
 // Make sure you include PropTypes on your props.
 
