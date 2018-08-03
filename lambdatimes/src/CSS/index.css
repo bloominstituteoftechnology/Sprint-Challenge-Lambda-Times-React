@@ -60,6 +60,7 @@ body {
   display: flex; 
   flex-direction: column; 
   align-items: center;
+  width: 100%;
 }
 .tabs {
   border-bottom: 1px solid lightgrey;
@@ -133,6 +134,7 @@ body {
   width: 380px;
   margin-bottom: 16px;
   padding: 24px;
+  
 }
 .cards-container .card .headline {
   font-size: 25px;

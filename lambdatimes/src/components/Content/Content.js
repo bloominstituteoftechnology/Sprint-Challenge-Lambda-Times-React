@@ -19,6 +19,20 @@ export default class Content extends Component {
 
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
+
+    tabData.push('lambda');
+    cardData.push({  
+      headline: "Should you go to a bootcamp?",
+      tab: "lambda",
+      img: "./assets/sir.jpg",
+      author: "SIR RUFF'N'STUFF"
+    });
+    cardData.push({  
+      headline: "Just who is LambdaPerson, the latest super hero",
+      tab: "lambda",
+      img: "./assets/bones.jpg",
+      author: "BONES R. LIFE"
+    })
     this.setState({ tabs: tabData, cards: cardData }, () => {});
 
   }
