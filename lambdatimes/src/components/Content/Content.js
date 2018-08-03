@@ -6,6 +6,15 @@ import Cards from './Cards';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 
+import style from 'styled-components';
+const ContentContainer = style.div`
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+`;
+
+
+
 export default class Content extends Component {
   constructor(props){
     super(props);
@@ -19,12 +28,18 @@ export default class Content extends Component {
 
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
-
+    let tab = tabData, card = cardData;
+    console.log(tab);
+    
+    this.setState({
+      tabs: tab, cards: card,
+    });
   }
 
   changeSelected = (tab) => {
     return () => {
       // Finish this function, reflecting the new selected tab in the state
+
     }
   }
 
@@ -37,15 +52,15 @@ export default class Content extends Component {
 
   render(){
     return (
-      <div className="content-container">
+      <ContentContainer>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}/>
+        <Tabs tabs={this.state.tabs} changeSelected={this.changeSelected}/>
         <Cards cards={this.filterCards()}/>
-      </div>
+      </ContentContainer>
     )
   }
 }
