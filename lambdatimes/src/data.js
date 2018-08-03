@@ -5,6 +5,12 @@ export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', '
 
 export const cardData = [
   {
+    headline: "I created a new card. I feel bad to the bone",
+    tab: "React.js",
+    img: "./assets/sir.jpg",
+    author: "DOGJAY"
+  },
+  {
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
     img: "./assets/sir.jpg",
