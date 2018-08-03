@@ -18,4 +18,7 @@ const Tabs = props => {
 }
 
 // Make sure to use PropTypes to validate your types!
+
+Tabs.propTypes = PropTypes.arrayOf(PropTypes.string).isRequired
+
 export default Tabs
