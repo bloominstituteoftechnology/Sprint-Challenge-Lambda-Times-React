@@ -8,7 +8,8 @@ return (
     
     onClick={props.selectTabHandler}>
     
-      {props.tab.toUpperCase()}
+    {props.tabs.toUpperCase()}
+
     </div>
   )
 }

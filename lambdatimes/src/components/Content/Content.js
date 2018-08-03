@@ -4,8 +4,6 @@ import Cards from './Cards';
 import {tabData} from '../../data';
 import {cardData} from '../../data';
 
-
-
 class Content extends Component{
   constructor(props){
     super(props);
@@ -21,18 +19,19 @@ class Content extends Component{
   }
 
   changeSelected = (e) => {
-    return () => {
-      this.setState({selected: e.target.value})
-    }
+   this.setState({selected: e.target.value})
+    
  }
 
-  filterCards = (e) => {
+  filterCards = () => {
     if(this.state.selected === 'all'){
-    return this.state.cards;}
+    return this.state.cards}
        else {
          return this.state.selected
        }
   }
+
+
 
   render(){
     return (
@@ -40,10 +39,9 @@ class Content extends Component{
 
         <Tabs  changeSelected={this.changeSelected} 
                selectedTab={this.state.selected}
-               tabs={this.state.tabData}/>
+               tabs={this.state.tabs}/>
       
-        <Cards cards={this.filterCards()}/>
-      
+        <Cards cards={this.state.cards}/>      
       </div>
     )
   }
