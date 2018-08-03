@@ -1,7 +1,7 @@
-/* Do not change anything in this file until you are completed with the assignment 
+/* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'misc.'];
 
 export const cardData = [
   {
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "aoijfaowiejfaigaoier   oijfapoiwegj ir aiojgpai",
+    tab: "misc.",
+    img: "./assets/fido.jpg",
+    author: "FIDO WALKSALOT"
+  },
+  {
+    headline: "af a lfjalfjoigeoiei  iowjgq",
+    tab: "misc.",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "zpoivzn ivzopeioan;kg",
+    tab: "misc.",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
   }
 ]
 

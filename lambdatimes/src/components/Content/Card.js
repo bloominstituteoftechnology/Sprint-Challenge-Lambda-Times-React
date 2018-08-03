@@ -24,4 +24,5 @@ Card.propTypes = {
     author: PropTypes.string
   })
 };
+
 export default Card;

@@ -16,4 +16,5 @@ const Cards = props => {
 Cards.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.object)
 };
+
 export default Cards;

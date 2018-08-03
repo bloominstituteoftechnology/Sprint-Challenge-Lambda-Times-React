@@ -19,4 +19,5 @@ Tabs.propTypes = {
   selectedTab: PropTypes.string,
   tabs: PropTypes.arrayOf(PropTypes.string)
 };
+
 export default Tabs;
