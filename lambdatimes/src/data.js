@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'SunandSteel'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'To Have To Live'];
 
 export const cardData = [
   {
@@ -95,8 +95,8 @@ export const cardData = [
     author: "MAX GOODBOYE"
   },
   {
-    headline: "Blacker than the most cheerles black",
-    tab: "SunandSteel",
+    headline: "Blacker than the most Cheerless black",
+    tab: "To Have To Live",
     img: "./assets/mishima.jpg",
     author: "Hiraoka Kimitake"
   }
