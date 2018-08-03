@@ -22,8 +22,8 @@ export default class Content extends Component {
     this.setState({tabs: tabData, cards: cardData})
   }
 
-  changeSelected = (e) => {
-    this.setState({selected: e.target.tab});
+  changeSelected = (tab) => {
+    this.setState({selected: tab.target.textContent.toLowerCase()});
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all
