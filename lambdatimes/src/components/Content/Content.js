@@ -36,38 +36,10 @@ export default class Content extends Component {
      those cards whose 'tab' mached that which is selected. */
 
   filterCards = () => {
-    // const cards = this.state.cards.slice();
-    // const newCards = cards.filter(card => {
-    //   if (card.tab === this.state.selected) {
-    //     const newCards
-    //   }
-    // })
-    return this.state.cards;
+    if(this.state.selected === 'all'){return cardData}
+    return cardData.filter(card => card.tab === this.state.selected)
   }
 
-
-  // filterCards = () => {
-  //   const cards = this.state.cards.slice();
-  //   const newCards = cards.filter(card => card.tab === this.state.selected);
-  //   this.setState({cards: newCards})
-  //   return this.state.cards;
-  // }
-
-  // searchPostsHandler = event => {
-  //   const posts = this.state.posts.filter(post => {
-  //     if (post.username.includes(event.target.value)) {
-  //       return post;
-  //     }
-  //   });
-  //   this.setState({ filteredPosts: posts });
-  // };
-
-  //   handleClearCompleted = event => {
-  //   event.preventDefault();
-  //   const todos = this.state.todos.slice();
-  //   const newTodos = todos.filter(todo => todo.completed === false);
-  //   this.setState({todos: newTodos});
-  // }
 
 
   render(){
