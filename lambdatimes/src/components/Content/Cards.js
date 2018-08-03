@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 const Cards = props => {
   return (
     <div className="cards-container">
-      {props.cards.map((e,i)=><Card key={i} card={e}/>)}
+      {props.cards?props.cards.map((e,i)=><Card key={i} card={e}/>):null}
     </div>
   )
 }
 
 // Make sure you include prop types for all of your incoming props
-Cards.PropTypes={
+Cards.Proptypes={
   cards:PropTypes.array.isRequired
 }
 
