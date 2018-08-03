@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Button, FormGroup, Label, Input, From} from 'reactstrap';
+import {Button, FormGroup, Label, Input, Form} from 'reactstrap';
 
-class Login extends React {
+class Login extends Component {
     constructor(props) {
         super(props);
 
