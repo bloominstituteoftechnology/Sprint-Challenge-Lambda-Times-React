@@ -6,7 +6,7 @@ import { TopBarWrapper, TopBarContainer, TopBarLeft,
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopBar = () => {
+const TopBar = props => {
   return (
     <TopBarWrapper>
       <TopBarContainer>
@@ -20,7 +20,7 @@ const TopBar = () => {
           <CenterSpan>MUSIC</CenterSpan>
           <CenterSpan>ANNOUNCEMENTS</CenterSpan>
         </TopBarCenter>
-        <TopBarRight>
+        <TopBarRight onClick={props.toggleModal}>
           <RightSpan>LOG IN</RightSpan>
         </TopBarRight>
       </TopBarContainer>
