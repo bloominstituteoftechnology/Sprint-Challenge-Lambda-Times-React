@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'greensock'];
 
 export const cardData = [
   {
@@ -27,6 +27,12 @@ export const cardData = [
     tab: "technology",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "GreenSock: How Good is It?",
+    tab: "greensock",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF",
   },
   {
     headline: "History of Javascript Libraries: from jQuery to React",
@@ -75,6 +81,12 @@ export const cardData = [
     tab: "javascript",
     img: "./assets/sir.jpg",
     author: "SIR RUFF'N'STUFF"
+  },
+  {
+    headline: "GSAP, the Animation Library of Tomorrow AND Today!",
+    tab: "greensock",
+    img: "./assets/bones.jpg",
+    author: "BONES R. LIFE"
   },
   {
     headline: "Quantum Computing: Where we Are Now, and Where We Will Be Very Soon",
