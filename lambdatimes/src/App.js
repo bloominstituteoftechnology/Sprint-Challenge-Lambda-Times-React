@@ -14,9 +14,10 @@ const StyledApp = styled.div`
 `;
 
 const App = () => {
+  const isLoggedIn = localStorage.getItem('login') ? true : false;
   return (
     <StyledApp>
-      <TopBar />
+      <TopBar isLoggedIn={isLoggedIn} />
       <Header />
       <Content />
     </StyledApp>

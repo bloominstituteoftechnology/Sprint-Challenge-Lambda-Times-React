@@ -4,6 +4,7 @@ import Tabs from './Tabs';
 import Carousel from '../Carousel/Carousel';
 import Cards from './Cards';
 import { tabData, cardData } from '../../data';
+import Auth from './AuthContent';
 
 const ContentContainer = styled.div`
   display: flex; 
@@ -54,4 +55,4 @@ class Content extends Component {
   }
 }
 
-export default Content;
+export default Auth(Content);

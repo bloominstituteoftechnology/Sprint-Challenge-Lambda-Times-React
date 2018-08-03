@@ -78,7 +78,7 @@ const RightContainer = styled.div`
   }
 `;
 
-const TopBar = () => {
+const TopBar = props => {
   return (
     <StyledTopBar>
       <div>
@@ -89,7 +89,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </CenterContainer>
         <RightContainer>
-          <span>LOG IN</span>
+          <span>{props.isLoggedIn ? 'LOGGED IN' : 'LOG IN'}</span>
         </RightContainer>
       </div>
     </StyledTopBar>
