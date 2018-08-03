@@ -64,7 +64,6 @@ const LoginDiv = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
   justify-content: center;
   align-items: center;
   padding: 50px;
