@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Tab = props => {
   // console.log(props.changeSelectedTab)
@@ -15,6 +17,13 @@ const Tab = props => {
       >{props.tab.toUpperCase()}
       </div>
     )
+}
+
+Tab.propTypes = {
+  changeSelectedTab: PropTypes.func,
+  selectedTab: PropTypes.string,
+  tab: PropTypes.string,
+
 }
 
 // Make sure you include PropTypes on your props. --later yo
