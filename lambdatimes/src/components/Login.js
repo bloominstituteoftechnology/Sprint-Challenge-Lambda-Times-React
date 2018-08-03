@@ -42,15 +42,23 @@ export default class Login extends Component {
       <LoginDiv>
         <form onSubmit={this.logInUser}>
           <Input
+            required
+            autofocus
             onChange={this.inputHandler}
             name="username"
             value={this.state.username}
             // value={this.state.[this.name]}
-            placeholder="Login Name">{this.value}</Input>
+            // can I do something like the above?
+            placeholder="Login Name"
+            type="text"
+            >{this.value}</Input>
           <Input
+            required
             onChange={this.inputHandler}
             name="password"
-            value={this.state.password} placeholder="Password"></Input>
+            value={this.state.password}
+            placeholder="Password"
+            type="password"></Input>
           <Button>BUTTON</Button>
         </form>
       </LoginDiv>

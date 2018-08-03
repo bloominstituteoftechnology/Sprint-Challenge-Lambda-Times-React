@@ -6,7 +6,7 @@ class extends React.Component {
   constructor(props){
       super();
       this.state ={
-        loggedIn: false
+        loggedIn: localStorage.getItem('loggedIn')
       };
     }
 
@@ -15,6 +15,8 @@ class extends React.Component {
       this.setState({
         loggedIn: true,
       })
+      localStorage.setItem('loggedIn', true
+      )
     }
   }
 

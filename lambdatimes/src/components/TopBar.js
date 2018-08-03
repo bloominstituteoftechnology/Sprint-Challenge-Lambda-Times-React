@@ -2,7 +2,11 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-
+const logOut = () => {
+  localStorage.setItem('username', "");
+  localStorage.setItem('password', "");
+  window.location.reload();
+}
 
 const TopBar = () => {
 
@@ -16,7 +20,8 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <p>Hello, {localStorage.getItem('username'  )}</p>
+          {(localStorage.getItem('loggedIn')) ? <p className='log' onClick={logOut}>LOG OUT</p> : <p className='log'>LOG IN</p>}
         </ContainerRight>
       </ContainerDiv>
     </TopBarDiv>
@@ -32,7 +37,7 @@ const TopBarDiv = styled.div`
   align-items: none;
   flex-direction: row;
   position: fixed;
-  height: 44px;
+  ${'' /* height: 66px; */}
   background-color: #333;
 `;
 
@@ -70,7 +75,7 @@ const ContainerCenter = styled.div`
   align-items: center;
   flex-direction: row;
   flex: 3;
-  font-size: 9px;
+  font-size: 11px;
   span {
     cursor: pointer;
     margin-right: 5%;
@@ -85,13 +90,19 @@ const ContainerCenter = styled.div`
 
 const ContainerRight = styled.div`
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
   flex-direction: row;
   flex: 1;
   font-size: 11px;
   font-weight: bold;
-  span {
+  margin: 5px;
+  p {
+    padding: 0;
+    margin: 10px;
+  }
+  .log:hover {
+    text-decoration: underline;
     cursor: pointer;
   }
 `;
