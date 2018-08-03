@@ -4,7 +4,7 @@ const Tab = props => {
   /* Using your props, determine if this tab is selected, if it is, the className 
     should be: 'tab active-tab', if it is not it should just be 'tab' */
   let selectedClass = 'tab'
-  if (props.selectedTab === 'all' || props.tab.tab) {
+  if (props.selectedTab === props.tab) {
     selectedClass = 'tab active-tab'
   } else {
     selectedClass = 'tab'
@@ -13,7 +13,7 @@ const Tab = props => {
   return (
     <div
       className={selectedClass}
-      onClick={() => { props.selectedTab }}
+      onClick={() => {props.selectTabHandler(props.tab)}}
     >
       {props.tab.toUpperCase()}
     </div>
