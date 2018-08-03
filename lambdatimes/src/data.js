@@ -1,9 +1,15 @@
-/* Do not change anything in this file until you are completed with the assignment 
+/* Do not change anything in this file until you are completed with the assignment
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'testing'];
 
 export const cardData = [
+  {
+    headline: "The Importance of Test Driven Programming",
+    tab: "testing",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  },
   {
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
@@ -13,6 +19,12 @@ export const cardData = [
   {
     headline: "Type Coercion: Why Does NaN !== NaN? and Other Strange Occurences",
     tab: "javascript",
+    img: "./assets/bones.jpg",
+    author: "BONES R. LIFE"
+  },
+  {
+    headline: "Why I Dislike Testing, and so should you!",
+    tab: "testing",
     img: "./assets/bones.jpg",
     author: "BONES R. LIFE"
   },
