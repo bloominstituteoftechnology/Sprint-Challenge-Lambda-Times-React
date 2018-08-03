@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap','Ruby'];
 
 export const cardData = [
   {
@@ -93,6 +93,18 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Ruby: It's not just a gem!",
+    tab: "Ruby",
+    img: "./assets/sir.jpg",
+    author: "Rachel D"
+  },
+  {
+    headline: "What is rails to ruby?",
+    tab: "Ruby",
+    img: "./assets/sir.jpg",
+    author: "Rachel D"
   }
 ]
 
