@@ -24,6 +24,9 @@ const TopContain = styled.div`
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
+  @media (min-width: 1280px) {
+      width: 1280px;
+    }
 `;
 
 const LeftContain = styled.div`
@@ -34,7 +37,6 @@ const LeftContain = styled.div`
   flex: 1;
   font-size: 11px;
 `;
-
 
 const CenterContain = styled.div`
   display: flex;
