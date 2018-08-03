@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   /* Using your props, determine if this tab is selected, if it is, the className 
@@ -18,5 +19,10 @@ const Tab = props => {
 }
 
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tab: PropTypes.string.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired
+};
 
 export default Tab;

@@ -105,6 +105,12 @@ export const cardData = [
     tab: "gaming",
     img: "./assets/BB_dog.png",
     author: "KHOA NGUYEN"
+  },
+  {
+    headline: "Competitors Missing Out on EVO2018 Due to Weather Conditions Preventing Air Travel",
+    tab: "gaming",
+    img: "./assets/BB_dog.png",
+    author: "KHOA NGUYEN"
   }
 ]
 
