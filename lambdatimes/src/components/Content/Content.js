@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 import Tabs from "./Tabs";
 import Cards from "./Cards";
 
@@ -58,3 +58,10 @@ export default class Content extends Component {
     );
   }
 }
+
+Content.propTypes = {
+  tabs: PropTypes.array,
+  selectedTabHandler: PropTypes.func,
+  selectedTab: PropTypes.string,
+  filterHandler: PropTypes.func
+};
