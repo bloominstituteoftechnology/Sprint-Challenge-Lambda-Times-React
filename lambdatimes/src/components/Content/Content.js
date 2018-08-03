@@ -14,7 +14,6 @@ export default class Content extends Component {
       selected: '',
       tabs: [],
       cards: [], 
-      filteredTabs: []
     }
   }
 
@@ -25,22 +24,27 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    return () => {
+
       // Finish this function, reflecting the new selected tab in the state
-    }
+      this.setState({ selected : tab});
+    
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
      those cards whose 'tab' mached that which is selected. */
-  filterCards = e => {
-    const setPosts = []; 
-    for(let i =0; i < this.state.tabs; i++ ){
-    if(this.state.tabs[i] === "javascript"){
-      setPosts.push(this.state.cards.tab==="javascript"); 
-    }
-    }
-    return this.state.cards;
+  filterCards = () => {
+   //if this.state.tab === "all"
+   //return all the card data
+   //filter by the tab name
+   if(this.state.selected === "all"){
+     return cardData; 
+   }else{
+     const filteredData = cardData.filter(card => {
+       return card.tab === this.state.selected; 
+     });
+     return filteredData; 
+   }
 }
 
   render(){
@@ -52,8 +56,10 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs 
-        selectHandler ={this.filterCards}
-        tabs={this.state.tabs}/>
+         tabs={this.state.tabs}
+         selected={this.state.selected} 
+         selectTabHandler ={this.changeSelected}
+         />
         <Cards cards={this.filterCards()}/>
       </div>
     )
