@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   /* Using your props, determine if this tab is selected, if it is, the className 
@@ -7,7 +8,7 @@ const Tab = props => {
   return (
     <div
       className={""}
-      onClick={() => {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
+      // {.props.selectTabHandler} {/* Replace this dummy click handler function with your selectTabHandler function from props */}}
     >
       {props.tab.toUpperCase()}
     </div>
@@ -15,5 +16,9 @@ const Tab = props => {
 }
 
 // Make sure you include PropTypes on your props.
+
+Tab.PropTypes= {
+  tab: PropTypes.shape()
+};
 
 export default Tab;
