@@ -1,0 +1,4 @@
+1. What are PropTypes used for? PropTypes are basically a react built in way to check the type of props. PropTypes helpful to ensure that the props your expecting to receive are of the type should be.
+2. What is a lifecycle event in React? Lifecycle events are react built in methods that are designed to do something at certain points within the life of a react component. Through lifecycle events, we can then control what happens when each tiny section of our UI renders, updates, thinks about re-rendering, and then disappears entirely (from birth to death).
+3. What is a Higher Order Component? A Reusable component that takes a component as an arg and returns a new component.
+4. What are three different ways to style components in React? We can use vanilla css and add css classes to components using the className prop, creating styled components (writing css in js, or by using a third party styling library such as reactstrap. 

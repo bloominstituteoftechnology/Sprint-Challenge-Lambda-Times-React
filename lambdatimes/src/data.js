@@ -94,6 +94,19 @@ export const cardData = [
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
   }
+  ,
+  {
+    headline: "React.js all the things",
+    tab: "React.js",
+    img: "./assets/fido.jpg",
+    author: "KEEGAN"
+  },
+  {
+    headline: "WHATEVER, BOOTSTRAP.",
+    tab: "bootstrap",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  }
 ]
 
 export const carouselData = [
