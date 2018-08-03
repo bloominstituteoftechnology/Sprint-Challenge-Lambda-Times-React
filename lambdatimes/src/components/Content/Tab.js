@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Tab = props => {
 
@@ -13,5 +15,10 @@ return (
     </div>
   )
 }
+
+Tab.propTypes = {
+  tabs: PropTypes.string
+}
+
 
 export default Tab;
