@@ -37,7 +37,6 @@ export default class Content extends Component {
   };
 
   render() {
-    console.log(this.state.selected);
     return (
       <div className="content-container">
         {/* 
@@ -50,7 +49,7 @@ export default class Content extends Component {
           selectedTabHandler={this.changeSelected}
           selectedTab={this.state.selected}
         />
-        <Cards cards={this.filterCards()} />
+        <Cards cards={this.state.cards} cardsFilter={this.filterCards} />
       </div>
     );
   }
