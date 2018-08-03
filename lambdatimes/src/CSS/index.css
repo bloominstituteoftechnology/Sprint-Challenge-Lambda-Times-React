@@ -120,7 +120,7 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,13 +131,13 @@ body {
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-}
-@media (min-width: 1280px) {
+} */
+/* @media (min-width: 1280px) {
   .header {
     width: 1280px;
   }
-}
-.header h1 {
+} */
+/* .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
@@ -150,8 +150,8 @@ body {
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
-}
-.header .date {
+} */
+/* .header .date {
   margin-left: 25px;
   flex: 1;
 }
@@ -159,13 +159,13 @@ body {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
 .content-container {
   display: flex; 
   flex-direction: column; 
   align-items: center;
 }
-.tabs {
+/* .tabs {
   border-bottom: 1px solid lightgrey;
   display: flex;
   justify-content: center;
@@ -174,23 +174,23 @@ body {
   width: 100%;
   height: 47px;
   background-color: #fff;
-}
+} */
 @media (min-width: 1280px) {
   .tabs {
     width: 1280px;
   }
 }
-.tabs .topics {
+/* .tabs .topics {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
-}
-.tabs .topics .title {
+} */
+/* .tabs .topics .title {
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: bold;
-}
+} */
 .tabs .topics .tab {
   display: flex;
   justify-content: none;
