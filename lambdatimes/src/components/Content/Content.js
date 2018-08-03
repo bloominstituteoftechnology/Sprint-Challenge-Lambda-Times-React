@@ -26,8 +26,8 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    return event => {
-      this.setState({selected: event.target.value })
+    return () => {
+      this.setState({selected: tab})
       // Finish this function, reflecting the new selected tab in the state
     }
   }
@@ -40,7 +40,7 @@ export default class Content extends Component {
       if (this.state.selected === "all") {
         return this.state.cards 
       } else {
-        return this.state.
+        return this.state
       }
     })
     
