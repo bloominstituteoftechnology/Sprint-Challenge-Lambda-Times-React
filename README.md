@@ -27,11 +27,11 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 <!-- ### Part III
 * Make sure all of your props being passed are validated using PropTypes. -->
 
-### Part IV
-* Add another tab and some more cards to your data, and see your work in action!
+<!-- ### Part IV
+* Add another tab and some more cards to your data, and see your work in action! -->
 
-## Stretch Challenge
-There are multiple stretch challenges available to you, you may attempt these in any order. Remember, stretch challenges are only to give you extra time to work on these concepts, if you do not get to these challenges, that is fine! Continue working on your main objectives.
+<!-- ## Stretch Challenge
+There are multiple stretch challenges available to you, you may attempt these in any order. Remember, stretch challenges are only to give you extra time to work on these concepts, if you do not get to these challenges, that is fine! Continue working on your main objectives. -->
 
 * Refactor the app, so that it uses ALL styled components. There should be no `className` props on any component. To truly test this, delete the CSS file.  
 

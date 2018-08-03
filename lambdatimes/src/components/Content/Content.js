@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
+import Carousel from '../Carousel/Carousel';
 import { tabData, cardData } from '../../data';
 
 export default class Content extends Component {
@@ -57,6 +58,7 @@ export default class Content extends Component {
         <Tabs
           selectedTab={this.state.selected} changeSelectedTab={this.changeSelectedTab}
           tabs={this.state.tabs} />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     )
