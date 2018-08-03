@@ -15,7 +15,7 @@ const Card = props => {
   )
 }
 
-Card.PropTypes = {
+Card.propTypes = {
   headline: PropTypes.string,
   img: PropTypes.string, //which makes no sense to me but I guess we are techincally passing a string which is a reference to an img not the actual img but still this is kinda dumb.
   author: PropTypes.string
