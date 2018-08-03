@@ -22,7 +22,7 @@ export default class Content extends Component {
     });
   }
   changeSelected = (tab) => {
-      this.setState({selected: tab});
+    this.setState({selected: tab});
   }
   filterCards = () => {
     if (this.state.selected === 'all'){

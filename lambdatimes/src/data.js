@@ -93,6 +93,18 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Octodec-core processors. Is it a madman's dream or is it becoming a reality?",
+    tab: "technology",
+    img: "./assets/professor.jpg",
+    author: "Dr. Edward E. Meow"
+  },
+  {
+    headline: "ReactJS - Something every new programmer should learn as it is becoming a hype.",
+    tab: "React.js",
+    img: "./assets/fb-dog.png",
+    author: "Woof Zuckerberg"
   }
 ]
 
