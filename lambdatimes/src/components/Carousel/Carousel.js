@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
-// Complete this Carousel
+
 
 
 export default class Carousel extends Component {
@@ -15,7 +15,6 @@ export default class Carousel extends Component {
   componentDidMount(){
     this.setState({
       imgNum: 1,
-      // currentImage: carouselData[this.state.imgNum]
     })
   }
 
