@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 0,
       tabs: [],
       cards: []
     }
@@ -24,9 +24,11 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    return () => {
-      // Finish this function, reflecting the new selected tab in the state
-    }
+    const tabs = this.state.tabs.slice();
+    
+    const selected = tabs.indexOf(tab);
+    
+    this.setState({tabs:tabs, selected:selected});
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
@@ -45,7 +47,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.state.tabs[0]} selectTabHandler={this.changeSelected} />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.tabs[this.state.selected]} selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()}/>
       </div>
     )
