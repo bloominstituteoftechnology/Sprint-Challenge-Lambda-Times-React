@@ -15,21 +15,73 @@ height: 44px;
 background-color: #333;
 `
 
+const TopContain = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+`;
+
+const LeftContain = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+`;
+
+
+const CenterContain = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+`;
+
+const RightContain = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+`;
+const Span = styled.span`
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
+`;
+const CSpan = styled.span`
+  cursor: pointer;
+  margin-right: 5%;
+`;
+const Span3 = styled.span`
+  cursor: pointer;
+`;
+
 
 const TopBar = () => {
   return (
     <Topbar>
-      <div className= "container">
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
-      </div>
+      <TopContain>
+        <LeftContain>
+          <Span>TOPICS</Span><Span>SEARCH</Span>
+        </LeftContain>
+        <CenterContain>
+          <CSpan>GENERAL</CSpan><CSpan>BROWNBAG</CSpan><CSpan>RANDOM</CSpan><CSpan>MUSIC</CSpan><CSpan>ANNOUNCEMENTS</CSpan>
+        </CenterContain>
+        <RightContain>
+          <Span3>LOG IN</Span3>
+        </RightContain>
+      </TopContain>
     </Topbar>
   )
 }
