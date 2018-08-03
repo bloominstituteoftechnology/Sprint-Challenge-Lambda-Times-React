@@ -5,6 +5,7 @@ import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+import propTypes from 'prop-types';
 
 export default class Content extends Component {
   constructor(props){
@@ -29,8 +30,8 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-      return this.setState({selected: tab.target.innerHTML.toLowerCase()});
-      // Finish this function, reflecting the new selected tab in the state
+    return this.setState({selected: tab.target.innerHTML.toLowerCase()});
+    // Finish this function, reflecting the new selected tab in the state
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
@@ -54,4 +55,10 @@ export default class Content extends Component {
       </div>
     )
   }
+}
+
+Content.propTypes = {
+  selected: propTypes.string,
+  tabs: propTypes.arrayOf(propTypes.string),
+  cards: propTypes.arrayOf(propTypes.object)
 }
