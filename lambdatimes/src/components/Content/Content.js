@@ -25,7 +25,7 @@ export default class Content extends Component {
   changeSelected = tab => {
     return () => {
       // Finish this function, reflecting the new selected tab in the state
-      console.log("working click, tab value equals", tab);
+      this.setState({ selected: tab });
     };
   };
 
@@ -37,6 +37,7 @@ export default class Content extends Component {
   };
 
   render() {
+    console.log(this.state.selected);
     return (
       <div className="content-container">
         {/* 
@@ -44,7 +45,11 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.changeSelected()} />
+        <Tabs
+          tabs={this.state.tabs}
+          selectedTabHandler={this.changeSelected}
+          selectedTab={this.state.selected}
+        />
         <Cards cards={this.filterCards()} />
       </div>
     );
