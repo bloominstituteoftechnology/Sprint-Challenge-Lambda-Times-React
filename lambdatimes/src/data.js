@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'lambda school'];
 
 export const cardData = [
   {
@@ -93,6 +93,24 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "CS12 is the best group to come out of Lambda School yet!",
+    tab: "lambda school",
+    img: "./assets/lambda.png",
+    author: "Banjo Josh"
+  },
+  {
+    headline: "Will Ashwin become the first Lambda student to graduate halfway through the course?",
+    tab: "lambda school",
+    img: "./assets/lambda.png",
+    author: "Banjo Josh"
+  },
+  {
+    headline: "Lambda School swag store opens! Get your merch now!",
+    tab: "lambda school",
+    img: "./assets/lambda.png",
+    author: "Banjo Josh"
   }
 ]
 
