@@ -31,6 +31,7 @@ export default class Content extends Component {
     );
   };
 
+
   // Finish this function, reflecting the new selected tab in the state
   //removed the return() , kept getting errors 
   
