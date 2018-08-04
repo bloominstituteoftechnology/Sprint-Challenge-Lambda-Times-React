@@ -16,7 +16,7 @@ class Login extends Component {
     render() { 
         return ( 
             <div>
-                <Button color="danger" onClick={this.toggle}>Login</Button>
+                <Button color="info" onClick={this.toggle}>Login</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Login to Lambda Times!</ModalHeader>
                     <ModalBody>
