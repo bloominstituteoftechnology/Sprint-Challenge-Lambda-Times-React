@@ -25,9 +25,7 @@ const TopBarContainer = styled.div`
   letter-spacing: 1px;
   padding: 0 10px;
   @media (min-width: 1280px) {
-    .top-bar .container {
-      width: 1280px;
-    }
+    width: 1280px;
   }
 `
 
