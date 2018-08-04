@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
-import Carousel from '../Carousel/Carousel'
+import Carousel from '../Carousel/Carousel.js';
+import Authenticate from '../Authenticate/Authenticate.js';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 import styled from 'styled-components';
@@ -12,9 +12,10 @@ const ContentContainer=styled.div`
   flex-direction: column; 
   align-items: center;
   `
-export default class Content extends Component {
-  constructor(props){
-    super(props);
+  const Content=Authenticate(
+  class Content extends Component {
+  constructor(){
+    super();
     this.state = {
       // Set this to an initial value
       selected: '',
@@ -62,4 +63,5 @@ export default class Content extends Component {
       </ContentContainer>
     )
   }
-}
+});
+export default Content;

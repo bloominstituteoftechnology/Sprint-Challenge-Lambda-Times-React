@@ -92,7 +92,7 @@ export default class Carousel extends Component {
   }
 
   selectedImage = (number) => {
-    return <img src={carouselData[number]} style={{display: 'block',height: '500px',width: 'auto'}} />
+    return <img alt='' src={carouselData[number]} style={{display: 'block',height: '500px',width: 'auto'}} />
   }
   
   render(){
