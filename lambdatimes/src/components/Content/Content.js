@@ -29,8 +29,7 @@ export default class Content extends Component {
     this.setState(
       {selected: tab}
     );
-  };
-
+};
 
   // Finish this function, reflecting the new selected tab in the state
   //removed the return() , kept getting errors 
@@ -41,10 +40,15 @@ export default class Content extends Component {
      those cards whose 'tab' mached that which is selected. */
   filterCards = () => {
     if (this.state.selected === 'all'){ //if the tab selected is the 'all', display all cards
-    return this.state.cards;
+    return cardData;
   } else {
-    return this.state.cards.filter(card => card.tab === this.state.selected); //display the cards with tab names that match the selected tab name
-  }
+    const filteredData = cardData.filter(card => {
+      console.log(card.tab);
+    return card.tab === this.state.selected; //display the cards with tab names that match the selected tab name
+  });
+  console.log(filteredData);
+  return filteredData;
+};
 }
 
   render(){
@@ -55,7 +59,8 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} 
+        <Tabs 
+        tabs={this.state.tabs} 
         selectedTab = {this.state.selected} 
         selectTabHandler = {this.changeSelected}
         />

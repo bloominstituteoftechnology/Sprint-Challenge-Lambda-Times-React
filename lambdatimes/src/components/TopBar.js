@@ -63,6 +63,7 @@ const CenterSpan = styled.span`
 const LastChild = styled.span`
     cursor: pointer;
     margin-right: 0;
+
 `;
 
 //how do I add styling for hover?
