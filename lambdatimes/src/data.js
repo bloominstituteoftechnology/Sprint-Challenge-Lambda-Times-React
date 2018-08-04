@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'Vue.js'];
 
 export const cardData = [
   {
@@ -71,6 +71,12 @@ export const cardData = [
     author: "PUPPER S. DOGGO"
   },
   {
+    headline: "Vue will takeover like AI will take over Hoomans",
+    tab: "Vue.js",
+    img: "./assets/puppers.jpg",
+    author: "PUPPER S. DOGGO"
+  },
+  {
     headline: "Typescript: Ten Things you Should Know Before Building Your Next Angular Application",
     tab: "javascript",
     img: "./assets/sir.jpg",
@@ -91,6 +97,12 @@ export const cardData = [
   {
     headline: "The Hottest New Bootstrap 4 Components Every Developer Needs to Know About",
     tab: "bootstrap",
+    img: "./assets/max.jpg",
+    author: "MAX GOODBOYE"
+  },
+  {
+    headline: "The Hottest New Framework?",
+    tab: "Vue.js",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
   }
