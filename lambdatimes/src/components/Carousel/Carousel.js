@@ -17,7 +17,11 @@ const CarouseL=styled.div`
     width: 1200px;
 }
 `
-const Button=styled.div`
+  
+const LeftButton=styled.div`
+  top: 50%;
+  left: 25px;
+  transform: translate(0,-50%);
   display: flex;
   justify-content: center;
   align-items: none;
@@ -36,6 +40,30 @@ const Button=styled.div`
     border: 2px solid #333;
   }
 `
+
+const RightButton=styled.div`
+  top: 50%;
+  right: 25px;
+  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  background-color: #333;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  &:hover{
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+  }
+`
+
 export default class Carousel extends Component {
   constructor(props){
     super(props);
@@ -71,8 +99,8 @@ export default class Carousel extends Component {
     return (
       <CarouseL >
         {this.selectedImage(this.state.number)}
-        <Button className="left-button" onClick={this.leftClick}>{"<"}</Button>
-        <Button className="right-button" onClick={this.rightClick}>{">"}</Button>
+        <LeftButton onClick={this.leftClick}>{"<"}</LeftButton>
+        <RightButton  onClick={this.rightClick}>{">"}</RightButton>
       </CarouseL>
     )
   }

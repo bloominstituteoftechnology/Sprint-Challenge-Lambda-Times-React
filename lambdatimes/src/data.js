@@ -105,6 +105,12 @@ export const cardData = [
     tab: 'python',
     img: 'https://pluralsight.imgix.net/paths/python-7be70baaac.png',
     author: 'Will Kwon'
+  },
+  {
+    headline: "Python Because Snakes Are Cool",
+    tab: 'python',
+    img: 'https://pluralsight.imgix.net/paths/python-7be70baaac.png',
+    author: 'Will Kwon'
   }
 ]
 
