@@ -3,7 +3,6 @@ import Card from './Card';
 import PropTypes from "prop-types";
 
 const Cards = props => {
-  console.log(props)
   return (
     <div className="cards-container">
       {props.cards.map(card => <Card card={card} />)}
