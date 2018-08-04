@@ -51,11 +51,13 @@ const Tspan = styled.span`
 `;
 
 const Header = () => {
-  return <Headr>
+  return (
+    <Headr>
       <Dspan>SMARCH 32, 2018</Dspan>
       <Titl>Lambda Times</Titl>
-    <Tspan ="temp">98°</Tspan >
-    </Headr>;
+      <Tspan>98°</Tspan>
+    </Headr>
+  );
 };
 
 export default Header;
