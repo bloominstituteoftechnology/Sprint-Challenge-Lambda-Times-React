@@ -68,23 +68,24 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-      number:''
+      number:'',
+      arr:[]
     }
   }
   componentDidMount(){
-    this.setState({number:0});
+    this.setState({number:0,arr:carouselData});
   }
 
   leftClick = () => {
     if (this.state.number>0) {
       this.setState((prevState)=>{return {number:prevState.number-1}});
     } else {
-      this.setState({number:3});
+      this.setState({number:this.state.arr.length-1});
     }
   }
 
   rightClick = () => {
-    if (this.state.number<3) {
+    if (this.state.number<this.state.arr.length-1) {
       this.setState((prevState)=>{return {number:prevState.number+1}});
     } else {
       this.setState({number:0});
