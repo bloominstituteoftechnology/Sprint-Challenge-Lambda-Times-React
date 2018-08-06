@@ -42,7 +42,7 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 
 There are multiple stretch challenges available to you, you may attempt these in any order. Remember, stretch challenges are only to give you extra time to work on these concepts, if you do not get to these challenges, that is fine! Continue working on your main objectives.
 
-- Refactor the app, so that it uses ALL styled components. There should be no `className` props on any component. To truly test this, delete the CSS file.
+- Re-factor the app, so that it uses ALL styled components. There should be no `className` props on any component. To truly test this, delete the CSS file.
 
 - You will find a `Carousel` component in your Content folder. Complete this component, rendering a functional carousel. Add this component between your `Tabs` and `Cards` components within the `Content` component. Added challenge: make it so that there is infinite scroll to the right and the left.
 
