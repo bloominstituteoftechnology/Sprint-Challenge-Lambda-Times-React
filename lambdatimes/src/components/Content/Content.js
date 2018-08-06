@@ -1,55 +1,101 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Tabs from './Tabs';
-import Cards from './Cards';
+import Tabs from "./Tabs";
+import Cards from "./Cards";
+import Carousel from "../Carousel/Carousel";
 
-// Importing our tab and card data. No need to change anything here.
-import { tabData, cardData } from '../../data';
+import { tabData, cardData, carouselData } from "../../data";
 
 export default class Content extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      // Set this to an initial value
-      selected: 'all',
+      selected: "all",
       tabs: [],
-      cards: []
-    }
+      cards: [],
+      typeStart: 0,
+      imgURL: "",
+      type: []
+    };
   }
 
-  componentDidMount(){
-    // Once the component has mounted, get the data and reflect that data on the state
-    this.setState({tabs: tabData, cards: cardData})
-  }
-
-  changeSelected = (tab) => {
-      // Finish this function, reflecting the new selected tab in the state
-    this.setState({selected: tab})
-  }
-
-  /* Complete this function, if the selected tab is 'all' it should return all 
-     of the items from cardData. If it is something else, it shoudl only return 
-     those cards whose 'tab' mached that which is selected. */
-  filterCards = () => {
-    return this.state.cards.filter(item => {
-      if (this.state.selected === 'all') {
-        return this.state.selected
-      } else {
-        return item.tab === this.state.selected
-      }
+  componentDidMount() {
+    this.setState({
+      tabs: tabData,
+      cards: cardData,
+      type: carouselData,
+      imgURL: carouselData[0].img
     });
   }
 
-  render(){
+  changeSelected = tab => {
+    let data = this.state.type.slice();
+    data = data.filter(item => item.name === tab);
+    this.setState({
+      selected: tab,
+      typeStart: data[0].id,
+      imgURL: data[0].img
+    });
+  };
+
+  filterCards = () => {
+    return this.state.cards.filter(item => {
+      if (this.state.selected === "all") {
+        return this.state.selected;
+      } else {
+        return item.tab === this.state.selected;
+      }
+    });
+  };
+
+  leftClick = () => {
+    this.setState(prevState => {
+      if (prevState.typeStart === 0) {
+        return { typeStart: 5 };
+      } else {
+        return { typeStart: prevState.typeStart - 1 };
+      }
+    });
+    window.setTimeout(() => {
+      this.setState({
+        selected: this.state.type[this.state.typeStart].name,
+        imgURL: this.state.type[this.state.typeStart].img
+      });
+    });
+  };
+
+  rightClick = () => {
+    this.setState(prevState => {
+      if (prevState.typeStart === 5) {
+        return { typeStart: 0 };
+      } else {
+        return { typeStart: prevState.typeStart + 1 };
+      }
+    });
+    window.setTimeout(() => {
+      this.setState({
+        selected: this.state.type[this.state.typeStart].name,
+        imgURL: this.state.type[this.state.typeStart].img
+      });
+    });
+  };
+
+  render() {
     return (
       <div className="content-container">
-        <Tabs 
+        <Carousel
+          leftClick={this.leftClick}
+          rightClick={this.rightClick}
+          selected={this.state.selected}
+          img={this.state.imgURL}
+        />
+        <Tabs
           tabs={this.state.tabs}
           selectedTab={this.state.selected}
           changeSelected={this.changeSelected}
         />
-        <Cards cards={this.filterCards()}/>
+        <Cards cards={this.filterCards()} />
       </div>
-    )
+    );
   }
 }

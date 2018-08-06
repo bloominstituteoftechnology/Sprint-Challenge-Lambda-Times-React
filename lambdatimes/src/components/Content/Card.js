@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const Card = props => {
   return (
@@ -9,13 +9,12 @@ const Card = props => {
         <div className="img-container">
           <img src={props.cards.img} alt="imgf" />
         </div>
-        <span>By {'kiuyfluyfg'}</span>
+        <span>By {"kiuyfluyfg"}</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-// Make sure to include PropTypes.
 Card.propTypes = {
   cards: PropTypes.objectOf(PropTypes.string)
 };
