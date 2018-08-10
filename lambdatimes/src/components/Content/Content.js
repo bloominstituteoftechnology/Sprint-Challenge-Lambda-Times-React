@@ -34,6 +34,7 @@ export default class Content extends Component {
       return cardData;
     } else {
       const filtered = this.state.cards.filter(card => {
+         console.log(card)
          this.setState({selected: card.tab});
         }
       )
