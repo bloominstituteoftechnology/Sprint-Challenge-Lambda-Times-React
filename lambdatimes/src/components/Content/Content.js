@@ -47,12 +47,10 @@ export default class Content extends Component {
   //  {console.log(cardData[0].tab)}
 
 
-  //  if(){
-  //   }else {
+  //  if(this.tabs === this.cards.tab){
   //     return this.state.selected;
-   
   //  }
-  };
+ };
 
   render() {
     return (
