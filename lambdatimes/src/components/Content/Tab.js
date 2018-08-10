@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Tab = props => {
-  console.log(props);
 
 
   /* Using your props, determine if this tab is selected, if it is, the className 

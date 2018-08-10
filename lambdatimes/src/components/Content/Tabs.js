@@ -1,8 +1,9 @@
 import React from 'react';
 import Tab from './Tab'
 
+
 const Tabs = props => {
-  console.log(props);
+
   return (
     <div className="tabs">
       <div className="topics">
@@ -15,13 +16,15 @@ const Tabs = props => {
                 selected={props.selected}
                 key={tab}
                 />
+              
             );  
           })}
-          
       </div>
     </div>
   );
 };
+
+
 
 // Make sure to use PropTypes to validate your types!
 export default Tabs;
