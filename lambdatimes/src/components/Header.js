@@ -9,7 +9,7 @@ const Header = styled.header`
   flex-direction: row;
   background-color: #fff;
   border-bottom: 1px solid lightgrey;
-  width: 66.7%;
+  width: 67.3%;
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
