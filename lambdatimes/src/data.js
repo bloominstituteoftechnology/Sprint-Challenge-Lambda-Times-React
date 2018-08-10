@@ -1,5 +1,3 @@
-/* Do not change anything in this file until you are completed with the assignment 
-   and have moved onto the stretch goals. */
 
 export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
 
@@ -97,8 +95,34 @@ export const cardData = [
 ]
 
 export const carouselData = [
-  "./assets/carousel/mountains.jpeg",
-  "./assets/carousel/computer.jpeg",
-  "./assets/carousel/trees.jpeg",
-  "./assets/carousel/turntable.jpeg"
-]
+  {
+    id: 0,
+    name: "all",
+    img: "./assets/carousel/all2.png"
+  },
+  {
+    id: 1,
+    name: "javascript",
+    img: "./assets/carousel/JavaScript.png"
+  },
+  {
+    id: 2,
+    name: "technology",
+    img: "./assets/carousel/technology.png"
+  },
+  {
+    id: 3,
+    name: "node",
+    img: "./assets/carousel/node.png"
+  },
+  {
+    id: 4,
+    name: "React.js",
+    img: "./assets/carousel/react.png"
+  },
+  {
+    id: 5,
+    name: "bootstrap",
+    img: "./assets/carousel/bootstrap.png"
+  }
+];
