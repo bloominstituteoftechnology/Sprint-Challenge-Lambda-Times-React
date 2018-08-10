@@ -12,6 +12,7 @@ const Styledheader = styled.div`
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
+
   @media (min-width: 1280px) {
     width: 1280px;
   }
@@ -30,15 +31,26 @@ const Styledheader = styled.div`
     letter-spacing: 1px;
   }
 `
+
+const StyledDate = styled.span`
+  margin-left: 25px;
+  flex: 1;
+`
+
+const StyledTemp = styled.span`
+  text-align: right;
+  margin-right: 25px;
+  flex: 1;
+`
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
 const Header = () => {
   return (
     <Styledheader>
-      <span className="date">SMARCH 32, 2018</span>
+      <StyledDate>SMARCH 32, 2018</StyledDate>
       <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
+      <StyledTemp>98°</StyledTemp>
     </Styledheader>
   )
 }
