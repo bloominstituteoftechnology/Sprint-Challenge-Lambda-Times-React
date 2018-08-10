@@ -6,22 +6,21 @@ import styled from 'styled-components';
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-direction: row;
   background-color: #fff;
   border-bottom: 1px solid lightgrey;
-  width: 100%;
+  width: 66.7%;
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
 `;
 
-const Title = styled.title`
+const Title = styled.section`
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
   display: inherit;
-  text-align: center;
+  align-items: center;
   color: #000;
 `;
 
@@ -29,6 +28,7 @@ const Span = styled.span`
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
+  align-self: flex-end;
 `;
 
 const Date = Span.extend`
@@ -36,9 +36,9 @@ const Date = Span.extend`
 `;
 
 const Temp = Span.extend`
-text-align: right;
   margin-right: 25px;
 `;
+
 const HeaderContainer = () => {
   return (
     <Header>
