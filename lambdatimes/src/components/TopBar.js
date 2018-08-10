@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
@@ -14,7 +15,7 @@ const StyledTopBar = styled.div`
   background-color: #333;
 `;
 
-const TopBar = styled.div`
+const Top = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -39,7 +40,7 @@ const Container = styled.div`
     width: 1280px;
 `;
 
-const ContainerLeft = syled.div`
+const ContainerLeft = styled.div`
   display: flex;
   justify-content: none;
   align-items: center;
@@ -48,7 +49,7 @@ const ContainerLeft = syled.div`
   font-size: 11px;
 `;
 
-const LeftSpan = sytled.span` 
+const LeftSpan = styled.span` 
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
@@ -93,7 +94,7 @@ const RightSpan = styled.span`
 const TopBar = () => {
   return (
     <StyledTopBar>
-      <TobBar>
+      <Top>
         <Container>
           <ContainerLeft>
             <LeftSpan>TOPICS</LeftSpan><LeftSpan>SEARCH</LeftSpan>
@@ -105,7 +106,7 @@ const TopBar = () => {
             <RightSpan>LOG IN</RightSpan>
           </ContainerRight>
         </Container>
-      </TobBar>
+      </Top>
     </StyledTopBar>
   )
 }

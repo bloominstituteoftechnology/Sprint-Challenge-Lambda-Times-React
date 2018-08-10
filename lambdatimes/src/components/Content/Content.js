@@ -23,10 +23,9 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    return () => {
-      this.setState({ selected: tab })
+    this.setState({ selected: tab })
       // Finish this function, reflecting the new selected tab in the state
-    }
+    
   }
 
   /* Complete this function, if the selected tab is 'all' it should return all 

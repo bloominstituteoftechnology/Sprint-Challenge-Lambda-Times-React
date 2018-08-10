@@ -1,9 +1,9 @@
 import React from 'react';
-
+import styled from 'styled-components';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const Header = style.div`
+const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,11 +36,7 @@ const HeaderSpan = styled.span`
     }
 `;
 
-
-
-
-
-const HeaderH1 = style.h1`
+const HeaderH1 = styled.h1`
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
@@ -52,11 +48,11 @@ const HeaderH1 = style.h1`
 
 const Header = () => {
   return (
-    <Header>
+    <Top>
       <HeaderSpan>SMARCH 32, 2018</HeaderSpan>
       <HeaderH1>Lambda Times</HeaderH1>
       <HeaderSpan>98°</HeaderSpan>
-    </Header>
+    </Top>
   )
 }
 

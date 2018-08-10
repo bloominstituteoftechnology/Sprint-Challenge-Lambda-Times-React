@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Card';
 
 const Cards = props => {
@@ -16,8 +16,8 @@ export default Cards;
 
 // Make sure you include prop types for all of your incoming props
 
-Cards.propTypes = {
+/*Cards.propTypes = {
   card: PropTypes.arrayOf(
    
   )
-};
+};*/
