@@ -49,7 +49,7 @@ const StyledTopBar = styled.div`
   flex: 3;
   font-size: 9px;
   span {
-    cursor: pointer;
+  cursor: pointer;
   margin-right: 5%;
   }
   span:last-child {
@@ -58,10 +58,21 @@ const StyledTopBar = styled.div`
   span:hover { 
     text-decoration: underline;
   }
-
-  }
-    
+  
 `;
+
+const StyledContainerRight = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+  span {
+    cursor: pointer;
+  }
+`
 
 
 const TopBar = () => {
@@ -79,9 +90,9 @@ const TopBar = () => {
           <span>MUSIC</span>
           <span>ANNOUNCEMENTS</span>
         </StyledContainerCenter>
-        <div className="container-right">
+        <StyledContainerRight>
           <span>LOG IN</span>
-        </div>
+        </StyledContainerRight>
       </Styledcontainer>
     </StyledTopBar>
   );
