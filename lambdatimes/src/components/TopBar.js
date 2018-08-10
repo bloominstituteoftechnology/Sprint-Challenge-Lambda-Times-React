@@ -41,7 +41,7 @@ const StyledTopBar = styled.div`
   }
   `
   
-  .container-center ``
+  const StyledContainerCenter = styled.div`
     display: flex;
   justify-content: center;
   align-items: center;
@@ -63,21 +63,22 @@ const StyledTopBar = styled.div`
     
 `;
 
+
 const TopBar = () => {
   return (
     <StyledTopBar>
       <Styledcontainer>
-        <div className="container-left">
+        <StyledContainerLeft>
           <span>TOPICS</span>
           <span>SEARCH</span>
-        </div>
-        <div className="container-center">
+        </StyledContainerLeft>
+        <StyledContainerCenter>
           <span>GENERAL</span>
           <span>BROWNBAG</span>
           <span>RANDOM</span>
           <span>MUSIC</span>
           <span>ANNOUNCEMENTS</span>
-        </div>
+        </StyledContainerCenter>
         <div className="container-right">
           <span>LOG IN</span>
         </div>
