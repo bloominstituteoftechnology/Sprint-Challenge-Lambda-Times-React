@@ -1,4 +1,5 @@
 import React from "react";
+import tabs from "./Tabs"
 
 const Tab = props => {
   let tabClass;
