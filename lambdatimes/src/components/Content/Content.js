@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 'all',
       tabs: [],
       cards: []
     }
@@ -36,10 +36,10 @@ export default class Content extends Component {
     if (this.state.selected === 'all') {
     return cardData;
     }else{
-      const filteredData = cardData.filter(card => {
+      const filteredCardData = cardData.filter(card => {
         return card.tab === this.state.selected;
       })
-      return filteredData;
+      return filteredCardData;
     }
   }
   
