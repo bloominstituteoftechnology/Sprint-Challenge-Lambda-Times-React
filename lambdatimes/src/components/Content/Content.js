@@ -34,7 +34,7 @@ export default class Content extends Component {
   filterCards = () => {
     return this.state.selected === 'all' ?  this.state.cards : 
     this.state.cards.filter((card) => {
-      return card.selected;
+      return card.tab === this.state.selected;
     })
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
