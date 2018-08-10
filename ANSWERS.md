@@ -17,5 +17,5 @@ Specifically, a HOC is a function that takes a component as an argument and retu
 
   What are three different ways to style components in React?
   1. external CSS stylesheets
-  2. inline styles in your JS
-  3. libraries like reactstrap
+  2. styled-components
+  3. Reactstrap
