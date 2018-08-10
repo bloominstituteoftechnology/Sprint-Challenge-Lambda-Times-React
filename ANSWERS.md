@@ -1,6 +1,7 @@
 1. What are PropTypes used for?
 
 -to check the type of data that is assigned  to each field.
+*-error handler.
 
 2. What is a lifecycle event in React?
 
