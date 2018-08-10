@@ -1,5 +1,5 @@
 import React from "react";
-import tabs from "./Tabs"
+import tabs from "./Tabs";
 
 const Tab = props => {
   let tabClass;
@@ -14,9 +14,11 @@ const Tab = props => {
   return (
     <div
       className={tabClass}
-      onClick={props.selectTabHandler(props.tab)}
-      /* Replace this dummy click handler function with your selectTabHandler function from props 
-         you'll need to pass the `tab` in as an argument to this handler. */
+      onClick={() => {
+        {
+          props.selectTabHandler(props.tab);
+        }
+      }}
     >
       {props.tab.toUpperCase()}
     </div>
