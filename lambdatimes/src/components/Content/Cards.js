@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
 
@@ -17,6 +17,7 @@ Cards.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({ headline: PropTypes.string, author: PropTypes.string,
     img: PropTypes.string })
+    //PropTypes.object//
   )
 };
 
