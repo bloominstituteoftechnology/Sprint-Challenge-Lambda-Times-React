@@ -10,7 +10,7 @@ const Tabs = props => {
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
         {props.tabs.map((tab, i) => (
           <Tab
-           key={i} tab={tab} 
+           key={i} tab={tab}
            selectedTab={props.selectedTab} 
            selectTabHandler={props.selectTabHandler}
            />
@@ -22,9 +22,9 @@ const Tabs = props => {
 
 // Make sure to use PropTypes to validate your types!
 Tabs.propTypes = {
-  tabs: PropTypes.shape({
-
-  })
+  tabs: PropTypes.arrayOf(PropTypes.string),
+    // selectedTab: PropTypes.string,
+    // selectTabHandler: PropTypes.string,
 };
 
 export default Tabs;

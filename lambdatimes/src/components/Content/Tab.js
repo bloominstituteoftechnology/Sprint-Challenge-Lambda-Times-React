@@ -22,9 +22,7 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 Tab.propTypes = {
-  tabs: PropTypes.shape({
-
-  })
+  tab: PropTypes.string,
 };
 
 export default Tab;
