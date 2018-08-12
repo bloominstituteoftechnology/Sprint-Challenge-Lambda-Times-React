@@ -52,12 +52,12 @@ const TopBarContainerCenterDiv = styled.div`
   font-size: 9px;
 `;
 
-TopBarContainerCenterSpan = styled.span`
+const TopBarContainerCenterSpan = styled.span`
   cursor: pointer;
   margin-right: 5%;
 `;
 
-TopBarContainerRightDiv = styled.div`
+const TopBarContainerRightDiv = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -67,7 +67,7 @@ TopBarContainerRightDiv = styled.div`
   font-weight: bold;
 `;
 
-TopBarContainerRightSpan = styled.span` 
+const TopBarContainerRightSpan = styled.span` 
   cursor: pointer;
 ;`
 

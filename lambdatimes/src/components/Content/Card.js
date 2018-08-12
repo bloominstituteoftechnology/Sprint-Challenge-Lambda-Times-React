@@ -4,17 +4,19 @@ import PropTypes from 'prop-types';
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{this.props.card.headline}</div>
+      <div className="headline">{props.card.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={'this.props.card.img'} />
+          <img src={props.card.img} alt={`by ${props.card.author}`} />
         </div>
-        <span>By {this.props.card.headline}</span>
+        <span>By {props.card.author}</span>
       </div>
     </div>
   );
 };
 
+
+// <Card key={eachcard.headline} card={eachCard} />
 // Make sure to include PropTypes.
 Card.propTypes = {
   card: PropTypes.shape({
@@ -22,7 +24,7 @@ Card.propTypes = {
     tab: PropTypes.string,
     img: PropTypes.string,
     author: PropTypes.string
-  })
+  }),
 };
 
 export default Card;
