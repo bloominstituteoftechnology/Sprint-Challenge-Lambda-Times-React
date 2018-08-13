@@ -8,7 +8,7 @@ export const cardData = [
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
     img: "./assets/sir.jpg",
-    author: "SIR RUFF'N'STUFF"
+    author: "SIR RUFF'N'STUFF",
   },
   {
     headline: "Type Coercion: Why Does NaN !== NaN? and Other Strange Occurences",

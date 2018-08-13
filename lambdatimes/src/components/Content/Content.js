@@ -16,12 +16,27 @@ export default class Content extends Component {
     };
   }
 
+  /*
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+
+export const cardData = [
+  {
+    headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
+    tab: "javascript",
+    img: "./assets/sir.jpg",
+    author: "SIR RUFF'N'STUFF"
+  }
+]
+  */
+
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({ tabs: tabData, cards: cardData });
   }
 
-  changeSelected = tab => {
+  changeSelected = (tab) => {
     // this function should take in the tab and update the state with the new tab.
+    this.setState({ selected: tab });
   };
 
   filterCards = () => {
@@ -37,7 +52,9 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
+    if(this.state.selected === "all") return this.state.cards;
+
+    return this.state.cards.filter(eachCard => eachCard.tab === this.state.selected);
   };
 
   render() {
@@ -45,10 +62,14 @@ export default class Content extends Component {
       <div className="content-container">
         {/* 
           Add 2 props to the Tabs component, 
-          `selectedTab` that includes the currently selected tab
+          `selectedTab` that includes the curre`ntly selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
+        <Tabs
+          tabs={this.state.tabs} 
+          selectedTab={this.state.selected}
+          selectTabHandler={this.changeSelected}        
+        />
         <Cards cards={this.filterCards()} />
       </div>
     );
