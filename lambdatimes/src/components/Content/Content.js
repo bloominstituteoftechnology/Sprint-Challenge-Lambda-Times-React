@@ -49,15 +49,21 @@ export default class Content extends Component {
 
 
     */
-   if (this.state.selected === 'all')
-    {return this.state.cards;
+  //  if (this.state.selected === 'all'){return this.state.cards;} else {const filtered = this.state.cards.filter(each => {return each.tab === this.state.selected}) return filtered; }}
+
+
+    if(this.state.selected === 'all'){
+      return this.state.cards;
     } else {
       const filtered = this.state.cards.filter(each => {
-        return each.tab === this.state.selected}
-      )} 
-      
-  };
+        return each.tab === this.state.selected
+      });
+      return filtered;
+    } 
 
+};
+
+   
 
 
 
