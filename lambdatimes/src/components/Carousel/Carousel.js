@@ -11,7 +11,8 @@ export default class Carousel extends Component {
     }
   }
   componentDidMount(){
-
+    // set the state from the data
+    this.setState({ imagePaths: carouselData, displayedImage: this.selectedImage(carouselData[0]) });
   }
 
   leftClick = () => {
