@@ -1,0 +1,7 @@
+1. PropTypes are used to type check the data that is received by a component as props. These are important as Javascript does not require data types to be explicitly declared which can lead to bugs being introduced. PropTypes helps developers in preventing data type bugs to be introduced to an applications.
+
+2. A lifecycle event in React is a stage of the component's life. A component's life starts with being mounted, the time while the component is working, and finally the end of its life when the event is unmounted. Each event has a set of methods that are called which can be used to manipulate what happens at each stage of the component's lifecycle.
+
+3. A Higher Order Component is a function that receives a component as an argument and returns a new component. It is used to re-use component logic and helps us be more DRY when writing code.
+
+4. The first way to style a component is simply to write the styleing in a CSS file and import the file to the JS file that has the component. There are other newer libraries that allow us to style components in JS. The first one is to use Reactstrap, which is a React library for using bootstrap components and pass props to specify the style of the component. The third way to style a component is using the Styled Component library which allows us to write CSS within the JS file by passing in the CSS as a parameter of the component function invokation. Using styled components is done with ES6 syntax of using backticks for invoking a function.
