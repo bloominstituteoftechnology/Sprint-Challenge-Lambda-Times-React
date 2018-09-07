@@ -15,6 +15,10 @@ export default function Header() {
 }
 
 const Temp = styled.span`
+  align-self: flex-end;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
   text-align: right;
   margin-right: 25px;
   flex: 1;
@@ -34,6 +38,8 @@ const Date = styled.span`
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
+  margin-left: 25px;
+  flex: 1;
 `;
 
 const HeaderContainer = styled.div`
