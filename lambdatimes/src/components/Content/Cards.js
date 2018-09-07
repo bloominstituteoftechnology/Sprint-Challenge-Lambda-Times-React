@@ -9,10 +9,12 @@ const Cards = props => {
           new Card component for each passing the card as the only prop*/}
         {
           props.cards.map(card => {
-            return <Card
-              key={card.headline}
-              card={card}
-            />
+            return (
+              <Card
+                key={card.headline}
+                card={card}
+              />
+            )
           })
         }
     </div>
