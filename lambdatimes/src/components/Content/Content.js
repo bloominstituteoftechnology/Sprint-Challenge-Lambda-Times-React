@@ -73,7 +73,3 @@ export default class Content extends Component {
     );
   }
 }
-
-Tabs.propTypes = {
-  tabs: PropTypes.array.isRequired
-};
