@@ -5,9 +5,10 @@ const Cards = props => {
   return (
     <div className="cards-container">
 
-        {props.cards.map((card) => {
+        {props.cards.map((card, index) => {
           return(
-          <Card card={card} />
+          <Card card={card}
+            key={index}/>
         )})
       }
     </div>
