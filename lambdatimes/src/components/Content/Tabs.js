@@ -1,5 +1,6 @@
 import React from 'react';
 import Tab from './Tab';
+import PropTypes from 'prop-types';
 
 /* <Tabs tabs={this.state.tabs} /> */
 
@@ -25,4 +26,15 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+
+Tabs.propTypes = {
+  Tab: PropTypes.arrayOf(
+    PropTypes.shape({ 
+      tab: PropTypes.string,
+      selectedTabHandler: PropTypes.string,
+      selectedTab: PropTypes.string,
+    })
+  ),
+};
+// ^^^ this one was confusing 
 export default Tabs;
