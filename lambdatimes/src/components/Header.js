@@ -21,12 +21,28 @@ export const StyledHeader = styled.div`
   }
 `;
 
+export const HeaderTitle = styled.h1`
+  font-size: 60px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`;
+
+export const HeaderSpan = styled.span`
+  align-self: flex-end;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+`;
+
 const Header = () => {
   return (
     <StyledHeader>
-      <span className="date">SMARCH 32, 2018</span>
-      <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
+      <HeaderSpan className="date">SMARCH 32, 2018</HeaderSpan>
+      <HeaderTitle>Lambda Times</HeaderTitle>
+      <HeaderSpan className="temp">98°</HeaderSpan>
     </StyledHeader>
   )
 }
