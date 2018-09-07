@@ -3,6 +3,7 @@ import Tab from './Tab';
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
 
+// Styles
 const TabsD = styled.div`
   border-bottom: 1px solid lightgrey;
   display: flex;
@@ -23,19 +24,21 @@ const Topics = styled.div`
   justify-content: none;
   align-items: center;
   flex-direction: row;
-`;
 
-const Title = styled.span`
-  font-size: 12px;
+  span {
+    font-size: 12px;
   letter-spacing: 1px;
   font-weight: bold;
+  }
 `;
 
+
+// Component
 const Tabs = props => {
   return (
     <TabsD>
       <Topics>
-        <Title >TRENDING TOPICS:</Title>
+        <span >TRENDING TOPICS:</span>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
             {props.tabs.map(tab => <Tab selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab} tab={tab} key={tab}  />)}

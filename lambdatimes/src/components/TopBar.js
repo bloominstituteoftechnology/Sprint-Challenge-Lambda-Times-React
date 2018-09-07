@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
+
+// Styles
 const TopBarD = styled.div`
   width: 100%;
   display: flex;
@@ -36,13 +38,14 @@ const ContainerLeft = styled.div`
   flex-direction: row;
   flex: 1;
   font-size: 11px;
+
+  span {
+    cursor: pointer;
+    margin-right: 25%;
+    font-weight: bold;
+  }
 `;
 
-const ContainerLeftSpan = styled.span`
-  cursor: pointer;
-  margin-right: 25%;
-  font-weight: bold;
-`;
 
 const ContainerCenter = styled.div`
   display: flex;
@@ -51,18 +54,18 @@ const ContainerCenter = styled.div`
   flex-direction: row;
   flex: 3;
   font-size: 9px;
-`;
 
-const ContainerCenterSpan = styled.span`
-  cursor: pointer;
-  margin-right: 5%;
+  span {
+    cursor: pointer;
+    margin-right: 5%;
 
-  &:last-child {
-    margin-right: 0;
-  }
+    &:last-child {
+      margin-right: 0;
+    }
 
-  &:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -74,24 +77,25 @@ const ContainerRight = styled.div`
   flex: 1;
   font-size: 11px;
   font-weight: bold;
+
+  span {
+    cursor: pointer;
+  }
 `;
 
-const ContainerRightSpan = styled.span`
-  cursor: pointer;
-`;
-
+// Component
 const TopBar = () => {
   return (
     <TopBarD>
       <Container>
         <ContainerLeft className="container-left">
-          <ContainerLeftSpan>TOPICS</ContainerLeftSpan><ContainerLeftSpan>SEARCH</ContainerLeftSpan>
+          <span>TOPICS</span><span>SEARCH</span>
         </ContainerLeft>
         <ContainerCenter>
-          <ContainerCenterSpan>GENERAL</ContainerCenterSpan><ContainerCenterSpan>BROWNBAG</ContainerCenterSpan><ContainerCenterSpan>RANDOM</ContainerCenterSpan><ContainerCenterSpan>MUSIC</ContainerCenterSpan><ContainerCenterSpan>ANNOUNCEMENTS</ContainerCenterSpan>
+          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <ContainerRightSpan>LOG IN</ContainerRightSpan>
+          <span>LOG IN</span>
         </ContainerRight>
       </Container>
     </TopBarD>

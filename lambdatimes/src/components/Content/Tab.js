@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
 
+// Styles
 const TabD = styled.div`
   display: flex;
   justify-content: none;
@@ -27,6 +28,8 @@ const ActiveTab = TabD.extend`
   border: 2px solid #333;
 `;
 
+
+// Component
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 

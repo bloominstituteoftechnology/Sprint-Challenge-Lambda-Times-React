@@ -4,6 +4,7 @@ import styled from 'styled-components';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
+// Styles
 const HeaderD = styled.header`
   display: flex;
   justify-content: space-between;
@@ -19,16 +20,17 @@ const HeaderD = styled.header`
   @media (min-width: 1280px) {
     width: 1280px;
   }
+
+  h1 {
+    font-size: 60px;
+    font-family: Didot, serif;
+    font-weight: bold;
+    flex: 8;
+    text-align: center;
+    color: #000;
+  }
 `;
 
-const H1 = styled.h1`
-  font-size: 60px;
-  font-family: Didot, serif;
-  font-weight: bold;
-  flex: 8;
-  text-align: center;
-  color: #000;
-`;
 
 const Temp = styled.span`
   align-self: flex-end;
@@ -49,12 +51,12 @@ const Date = styled.span`
   flex: 1;
 `;
 
-
+// Component
 const Header = () => {
   return (
     <HeaderD>
       <Date>SMARCH 32, 2018</Date>
-      <H1>Lambda Times</H1>
+      <h1>Lambda Times</h1>
       <Temp>98°</Temp>
     </HeaderD>
   )
