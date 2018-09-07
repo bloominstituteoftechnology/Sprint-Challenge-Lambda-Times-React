@@ -26,7 +26,13 @@ width: 100%;
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
+  @media (min-width: 1280px) {
+    .top-bar .container {
+      width: 1280px;
+    }
 `;
+
+
 
 const LeftContainer = styled.div`
 display: flex;
@@ -35,15 +41,13 @@ align-items: center;
 flex-direction: row;
 flex: 1;
 font-size: 11px;
+`;
 
-${props => props.span && css`
+const LeftSpan = styled(LeftContainer)`
 cursor: pointer;
 margin-right: 25%;
 font-weight: bold;
-`}
-
 `;
-
 
 const CenterContainer = styled.div`
 display: flex;
@@ -53,22 +57,23 @@ display: flex;
   flex: 3;
   font-size: 9px;
 
-${props => props.span && css`
-cursor: pointer;
-  margin-right: 5%;
-  
-  :last-child {
-    margin-right: 0;
-  }
 
-  :hover {
-    text-decoration: underline;
-  }
-
-`}
 
 `;
 
+const CenterSpan = styled(CenterContainer)`
+cursor: pointer;
+  margin-right: 5%;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+`;
 
 const RightContainer = styled.div`
 display: flex;
@@ -92,10 +97,10 @@ const TopBar = () => {
     <Top>
       <Container>
         <LeftContainer>
-          <LeftContainer span>TOPICS</LeftContainer><LeftContainer span>SEARCH</LeftContainer>
+          <LeftSpan>TOPICS</LeftSpan><LeftSpan>SEARCH</LeftSpan>
         </LeftContainer>
         <CenterContainer>
-          <CenterContainer span>GENERAL</CenterContainer><CenterContainer span>BROWNBAG</CenterContainer><CenterContainer span>RANDOM</CenterContainer><CenterContainer span>MUSIC</CenterContainer><CenterContainer span>ANNOUNCEMENTS</CenterContainer>
+          <CenterSpan>GENERAL</CenterSpan><CenterSpan>BROWNBAG</CenterSpan><CenterSpan>RANDOM</CenterSpan><CenterSpan>MUSIC</CenterSpan><CenterSpan>ANNOUNCEMENTS</CenterSpan>
         </CenterContainer>
         <RightContainer>
           <span>LOG IN</span>
