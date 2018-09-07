@@ -47,6 +47,7 @@ export default class Content extends Component {
    this.setState({selected: tab})
 
     if(tab === 'all'){
+      this.setState({cards: cardData});
       return this.state.cards;
     } else {
       console.log(this.state);
