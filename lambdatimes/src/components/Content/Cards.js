@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Card from './Card';
+import React from 'react';
+//import React, { Component } from 'react';
+//import Card from './Card';
 
 const Cards = props => {
   return (
