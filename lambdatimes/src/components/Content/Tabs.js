@@ -10,13 +10,13 @@ const Tabs = props => {
         <div>
           {props.tabs.map((tab, index) => {
                 return(
-                    <button key={index}>
+                    <div key={index}>
                         <Tab
                             tab = {tab}
                             selectedTab = {props.selectedTab}
                             selectedTabHandler = {props.selectedTabHandler}
                         />
-                    </button>
+                    </div>
                 )
             })}
         </div>

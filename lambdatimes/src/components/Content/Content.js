@@ -7,7 +7,7 @@ export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'all',
+      selected: 'javascript',
       tabs: [],
       cards: []
     };
@@ -23,10 +23,10 @@ export default class Content extends Component {
   }
 
   changeSelected = event => {
-    console.log("Changed selected tab to ", this.state.selected)
     // NEEDS TESTING this function should take in the tab and update the state with the new tab.
     event.preventDefault();
-    this.setState({ [event.target.name]: event.target.value })
+    this.setState({ selected: 'javascript' })
+    console.log("Changed selected tab to ", this.state.selected)
   };
 
   filterCards = () => {
@@ -41,11 +41,13 @@ export default class Content extends Component {
         - if the selected tab is 'all' it should return all of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    let changedSelection = [...this.state.selected];
-    changedSelection = changedSelection.filter(card => {
+    let filteredCards = [...this.state.cards];
+    filteredCards = filteredCards.filter(card => {
       if(this.state.selected === 'all') {
+        console.log("Returning all cards.")
         return card;
       } else if(card.tab === this.state.selected) {
+        console.log("Returning: ", card)
         return card;
       }
     })
