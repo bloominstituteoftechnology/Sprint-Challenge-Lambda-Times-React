@@ -1,50 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import {TopBar1, TopBarContainer, TopBarContainerLeft, TopBarContainerLeftSpan, TopBarContainerCenter, TopBarContainerRight, TopBarContainerRightSpan, TopBarContainerCenterSpan} from './TopBarCss';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-{/* <TopBar1></TopBar1>,
-<TopBarContainer></TopBarContainer>,
-<TopBarContainerLeft></TopBarContainerLeft>,
-<TopBarContainerLeftSpan></TopBarContainerLeftSpan>,
-<TopBarContainerCenter></TopBarContainerCenter>,
-<TopBarContainerCenterSpan></TopBarContainerCenterSpan>,
-<TopBarContainerRight></TopBarContainerRight>,
-<TopBarContainerRightSpan></TopBarContainerRightSpan>  */}
-
-
 const TopBar = () => {
   return (
+
     <TopBar1 key="top-bar">
-
       <TopBarContainer key="container">
-
-        <TopBarContainerLeft key="container-left">
-
-          <TopBarContainerLeftSpan>TOPICS</TopBarContainerLeftSpan>
-          <TopBarContainerLeftSpan>SEARCH</TopBarContainerLeftSpan>
-
-        </TopBarContainerLeft>
-
-        <TopBarContainerCenter key="container-center">
-
-          <TopBarContainerCenterSpan>GENERAL</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>BROWNBAG</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>RANDOM</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>MUSIC</TopBarContainerCenterSpan>
-          <TopBarContainerCenterSpan>ANNOUNCEMENTS</TopBarContainerCenterSpan>
-
-        </TopBarContainerCenter>
-
-        <TopBarContainerRight key="container-right">
-
-          <TopBarContainerRightSpan>LOG IN</TopBarContainerRightSpan>
-          
-        </TopBarContainerRight>
-
+          <TopBarContainerLeft key="container-left">
+            <TopBarContainerLeftSpan>TOPICS</TopBarContainerLeftSpan>
+            <TopBarContainerLeftSpan>SEARCH</TopBarContainerLeftSpan>
+          </TopBarContainerLeft>
+              <TopBarContainerCenter key="container-center">
+                <TopBarContainerCenterSpan>GENERAL</TopBarContainerCenterSpan>
+                <TopBarContainerCenterSpan>BROWNBAG</TopBarContainerCenterSpan>
+                <TopBarContainerCenterSpan>RANDOM</TopBarContainerCenterSpan>
+                <TopBarContainerCenterSpan>MUSIC</TopBarContainerCenterSpan>
+                <TopBarContainerCenterSpan>ANNOUNCEMENTS</TopBarContainerCenterSpan>
+              </TopBarContainerCenter>
+          <TopBarContainerRight key="container-right">
+            <TopBarContainerRightSpan>LOG IN</TopBarContainerRightSpan>
+          </TopBarContainerRight>
       </TopBarContainer>
-
     </TopBar1>
   )
 }

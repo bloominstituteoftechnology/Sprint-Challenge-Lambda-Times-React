@@ -34,7 +34,7 @@ flex: 1;
 font-size: 11px;
 `;
 
-export const TopBarContainerLeftSpan = styled.div`
+export const TopBarContainerLeftSpan = styled.span`
 cursor: pointer;
 margin-right: 25%;
 font-weight: bold;
@@ -49,7 +49,7 @@ flex: 3;
 font-size: 9px;
 `;
 
-export const TopBarContainerCenterSpan = styled.div`
+export const TopBarContainerCenterSpan = styled.span`
 cursor: pointer;
   margin-right: 5%;
 `;
@@ -64,7 +64,7 @@ font-size: 11px;
 font-weight: bold;
 `;
 
-export const TopBarContainerRightSpan = styled.div`
+export const TopBarContainerRightSpan = styled.span`
 cursor: pointer;
 `;
 
