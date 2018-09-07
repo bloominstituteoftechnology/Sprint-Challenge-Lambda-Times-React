@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -18,10 +17,12 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+ this.setState({cards:cardData})
   }
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+
   };
 
   filterCards = () => {
@@ -37,9 +38,11 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+   if(this.state.selected = 'all'){
     return this.state.cards;
-  };
-
+  }
+  return this.state.cards.filter(e => e.tab ===this.state.selected);
+  }
   render() {
     return (
       <div className="content-container">
