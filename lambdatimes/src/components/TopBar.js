@@ -39,6 +39,21 @@ export const TopBarContainerLeft = styled.div`
   font-size: 11px;
 `;
 
+export const TopBarContainerCenter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+`;
+
+export const TopBarContainerSpan = styled.span`
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
+`;
+
 
 
 const TopBar = () => {
@@ -46,11 +61,11 @@ const TopBar = () => {
     <StyledTopBar>
       <TopBarWrapper>
         <TopBarContainerLeft>
-          <span>TOPICS</span><span>SEARCH</span>
+          <TopBarContainerSpan>TOPICS</TopBarContainerSpan><TopBarContainerSpan>SEARCH</TopBarContainerSpan>
         </TopBarContainerLeft>
-        <div className="container-center">
+        <TopBarContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
+        </TopBarContainerCenter>
         <div className="container-right">
           <span>LOG IN</span>
         </div>
