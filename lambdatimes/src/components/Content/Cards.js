@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Card';
 
 const Cards = props => {
   return (
     <div className="cards-container">
-      {/* Using the cards prop, map over the list creating a 
-          new Card component for each passing the card as the only prop*/}
       {console.log('from Cards.js', props.cardsProps)}
       {props.cardsProps.map((element, index) => {
         return <Card key={index} cardProps={element}/>
       })} 
+      {/* Using the cards prop, map over the list creating a 
+          new Card component for each passing the card as the only prop*/}
     </div>
   )
 }
