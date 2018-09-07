@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -11,8 +10,8 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
-      tabs: [],
-      cards: []
+      tabs: tabData,
+      cards: cardData
     };
   }
 
@@ -21,6 +20,7 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
+    this.setState({selected: tab})
     // this function should take in the tab and update the state with the new tab.
   };
 
@@ -40,7 +40,19 @@ export default class Content extends Component {
     return this.state.cards;
   };
 
+  selectedTab = tab => {
+    console.log('SelectedTab working')
+
+  };
+
+  selectTabHandler = tab => {
+    console.log('selectTabHandler being clicked')
+  };
+
   render() {
+    console.log('In Content.js', this.state.tabs);
+    console.log('In Content.js', this.state.cards);
+
     return (
       <div className="content-container">
         {/* 
@@ -48,8 +60,8 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Tabs tabsProps={this.state.tabs} selectedTab={this.selectedTab} selectTabHandler={this.selectTabHandler}/>
+        <Cards cardsProps={this.state.cards} cards={this.filterCards()} />
       </div>
     );
   }
