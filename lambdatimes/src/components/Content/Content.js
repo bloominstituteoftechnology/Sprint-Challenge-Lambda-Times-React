@@ -45,9 +45,9 @@ export default class Content extends Component {
     if (this.state.selected === "all") {
       return this.state.cards;
     } else {
-      const cardsFiltered = this.state.cards.filter(
-        card => card.tab === this.state.selected
-      );
+      const cardsFiltered = this.state.cards.filter(card => {
+        return card.tab === this.state.selected;
+      });
       return cardsFiltered;
     }
   };
