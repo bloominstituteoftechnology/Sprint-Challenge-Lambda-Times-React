@@ -16,10 +16,9 @@ const Card = props => {
 };
 
 // Make sure to include PropTypes.
-Card.propTypes = {
-  Card: PropTypes.arrayOf(
-    PropTypes.shape({ cards: PropTypes.string })
-  )
-};
+// Card.propTypes = {
+//   Card: 
+//   )
+// };
 
 export default Card;
