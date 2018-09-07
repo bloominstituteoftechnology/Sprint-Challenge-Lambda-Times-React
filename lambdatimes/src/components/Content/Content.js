@@ -25,9 +25,9 @@ export default class Content extends Component {
   }
 
 
-  changeSelected = tab => {
+  changeSelected = event => {
     // this function should take in the tab and update the state with the new tab.
-    this.setState({selected: tab.target.value});
+    this.setState({selected: event.target.value});
   };
 
 
@@ -44,8 +44,9 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    if (this.state.selected === 'all') {this.state.cards} 
-    
+    const cards = this.state.cards.filter(c => {if(c.tab === e.target.value){return c;} return null});
+    this.setState({cards: cards})
+    this.changeSelected();
   };
 
   render() {
@@ -56,7 +57,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.changedSelected} selectedTabHandler={this.filterCards} />
+        <Tabs tabs={this.state.tabs} selected={this.state.selected} selectedTabHandler={this.filterCards} />
         <Cards cards={this.state.cards} />
       </div>
     );
