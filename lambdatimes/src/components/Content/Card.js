@@ -9,7 +9,7 @@ const Card = props => {
         <div className="img-container">
           <img src={props.card.img} alt={'Card'} />
         </div>
-        <span>By {props.card.author}</span>
+        <span>By Changegit {props.card.author}</span>
       </div>
     </div>
   );
