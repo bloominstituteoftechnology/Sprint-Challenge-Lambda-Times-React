@@ -22,10 +22,9 @@ export default class Content extends Component {
     this.setState({ cards: [...cardData] });
   }
 
-  changeSelected = event => {
+  changeSelected = tab => {
     // NEEDS TESTING this function should take in the tab and update the state with the new tab.
-    event.preventDefault();
-    this.setState({ selected: 'javascript' })
+    this.setState({ selected: tab })
     console.log("Changed selected tab to ", this.state.selected)
   };
 
@@ -60,7 +59,7 @@ export default class Content extends Component {
         <Tabs 
           tabs={this.state.tabs} 
           selectedTab = {this.state.selected}
-          selectedTabHandler = {this.changeSelected}
+          selectedTabHandler = {this.changeSelected()}
         />
         <Cards 
           cards={this.filterCards()} 

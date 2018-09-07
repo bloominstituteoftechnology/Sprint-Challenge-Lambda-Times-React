@@ -16,9 +16,8 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
     return (
-    <TabStyle active onClick={props.selectedTabHandler}
-        /* Replace this dummy click handler function with your selectTabHandler function 
-        from props. You'll need to pass the `tab` in as an argument to this handler. */
+    <TabStyle 
+    onClick={() => props.selectedTabHandler(props.tab)}
     >
       {props.tab.toUpperCase()}
     </TabStyle>
@@ -28,7 +27,7 @@ const Tab = props => {
 Tab.propTypes = {
   tab: PropTypes.string,
   selectedTab: PropTypes.string,
-  selectedTabHandler: PropTypes.function
+  selectedTabHandler: PropTypes.func
 };
 
 export default Tab;
