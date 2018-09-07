@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -42,11 +42,12 @@ export default class Content extends Component {
   };
 
   selectedTab = tab => {
+    console.log('SelectedTab working')
 
   };
 
   selectTabHandler = tab => {
-    console.log('Tab being clicked')
+    console.log('selectTabHandler being clicked')
   };
 
   render() {
