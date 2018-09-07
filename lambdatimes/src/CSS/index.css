@@ -44,6 +44,10 @@ body {
 #root {
   width: 100%;
 }
+@keyframes fade-in-anim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 .App {
   display: flex;
   align-items: center;
@@ -51,8 +55,11 @@ body {
   background-color: #f1f1f1;
   color: #333;
   font-family: 'PT Sans', sans-serif;
+  animation-name: fade-in-anim;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
-.top-bar {
+/* .top-bar {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -119,8 +126,8 @@ body {
 }
 .top-bar .container .container-right span {
   cursor: pointer;
-}
-.header {
+} */
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,7 +166,7 @@ body {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
 .content-container {
   display: flex; 
   flex-direction: column; 
@@ -313,4 +320,5 @@ body {
 .carousel img {
   width: 100%;
   display: none;
+  z-index: -1;
 }
