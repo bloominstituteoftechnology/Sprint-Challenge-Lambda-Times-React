@@ -40,6 +40,14 @@ export default class Content extends Component {
     return this.state.cards;
   };
 
+  selectedTab = () => {
+
+  };
+
+  selectTabHandler = () => {
+
+  };
+
   render() {
     console.log('In Content.js', this.state.tabs);
     console.log('In Content.js', this.state.cards);
@@ -51,8 +59,8 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Tabs tabsProp={this.state.tabs} selectedTab={this.selectedTab} selectTabHandler={this.selectTabHandler}/>
+        <Cards cardsProp={this.state.cards} cards={this.filterCards()} />
       </div>
     );
   }
