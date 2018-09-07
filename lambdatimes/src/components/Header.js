@@ -6,10 +6,10 @@ import styled from 'styled-components'
 
 const Header = () => {
   return (
-    <Div1 className="header">
-      <Span1 className="date">SMARCH 32, 2018</Span1>
+    <Div1>
+      <Span1>SMARCH 32, 2018</Span1>
       <H1>Lambda Times</H1>
-      <Span2 className="temp">98°</Span2>
+      <Span2>98°</Span2>
     </Div1>
   )
 }

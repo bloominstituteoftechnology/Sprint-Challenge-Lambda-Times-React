@@ -6,15 +6,15 @@ import styled from 'styled-components'
 
 const TopBar = () => {
   return (
-    <Div1 className="top-bar">
-      <Div2 className="container">
-        <Div3 className="container-left">
-          <Span1>TOPICS</Span1><span>SEARCH</span>
+    <Div1>
+      <Div2>
+        <Div3>
+          <Span1>TOPICS</Span1><Span1>SEARCH</Span1>
         </Div3>
-        <Div4 className="container-center">
+        <Div4>
           <Span2>GENERAL</Span2><Span2>BROWNBAG</Span2><Span2>RANDOM</Span2><Span2>MUSIC</Span2><Span2>ANNOUNCEMENTS</Span2>
         </Div4>
-        <Div5 className="container-right">
+        <Div5>
           <Span3>LOG IN</Span3>
         </Div5>
       </Div2>
