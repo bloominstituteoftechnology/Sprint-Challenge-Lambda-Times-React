@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-// Refactor this component to use styled components and not classNames. 
+// Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
 const Header = () => {
@@ -17,10 +17,10 @@ const Header = () => {
     //   <h1>Lambda Times</h1>
     //   <span className="temp">98°</span>
     // </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -53,13 +53,14 @@ const HeaderContainer = styled.div`
     letter-spacing: 1px;
   }  
   
-`
+`;
 
 const Date = styled.span`
   margin-left: 25px;
   flex: 1;
-`
+`;
 const Temp = styled.span`
   text-align: right;
   margin-right: 25px;
   flex: 1;
+`;
