@@ -10,7 +10,7 @@ const Cards = props => {
         {
           props.cards.map(card => {
             return <Card
-              key={card}
+              key={card.headline}
               card={card}
             />
           })
