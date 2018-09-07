@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Tabs from './Tabs';
-import Cards from './Cards';
+import Tabs from "./Tabs";
+import Cards from "./Cards";
 
 // Importing our tab and card data. No need to change anything here.
-import { tabData, cardData } from '../../data';
+import { tabData, cardData } from "../../data";
 
 export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'all',
+      selected: "doug",
       tabs: [],
       cards: []
     };
@@ -18,10 +18,19 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({
+      selected: '',
+      tabs: tabData,
+      cards: cardData
+    });
   }
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+    console.log("this.state.selected= " + tab);
+    this.setState({
+      selected: tab
+    });
   };
 
   filterCards = () => {
@@ -36,8 +45,16 @@ export default class Content extends Component {
         - if the selected tab is 'all' it should return all 
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
-    */
-    return this.state.cards;
+    */ if(this.state.selected= 'all'){ 
+   return this.state.cards;}
+   else {
+     let newCards = this.state.cards.filter(card => card.tab === this.state.selected );
+     console.log(newCards);
+     this.setState({
+       cards: newCards,
+     })
+
+   }
   };
 
   render() {
@@ -48,8 +65,12 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Tabs
+          tabs={this.state.tabs}
+          selectedTab={this.state.selected}
+          selectTabHandler={this.changeSelected}
+        />
+        <Cards cards={this.filterCards()} selected={this.state.selected} />
       </div>
     );
   }
