@@ -12,5 +12,13 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
+// Cards.propTypes = {
+//   cardData: PropTypes.shape ({
+//     headline: PropTypes.string,
+//     tab: PropTypes.string,
+//     image: PropTypes.string,
+//     author: PropTypes.string
+//   })
+// };
 
 export default Cards;
