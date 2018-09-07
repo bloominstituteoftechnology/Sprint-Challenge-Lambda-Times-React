@@ -1,5 +1,6 @@
 import React from 'react';
 import { cardData } from '../../data';
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
   return (
@@ -15,6 +16,15 @@ const Card = (props) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  card: PropTypes.shape({
+    author: PropTypes.string.isRequired,
+    headline: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    tab: PropTypes.string.isRequired,
+  }),
 };
 
 // Make sure to include PropTypes.
