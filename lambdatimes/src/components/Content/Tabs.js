@@ -23,4 +23,13 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+Tabs.PropTypes = {
+  tabs: PropTypes.arrayOf (
+    PropTypes.shape({
+      selectTabHandler: PropTypes.func,
+      selectedTab: PropTypes.string,
+    })
+  )
+};
+
 export default Tabs;
