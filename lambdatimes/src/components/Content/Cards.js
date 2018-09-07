@@ -26,7 +26,8 @@ const Cards = props => {
           new Card component for each passing the card as the only prop*/}
       {props.cards.map(card => { // im an array
         return <Card 
-          card={card}                    
+          card={card}
+          key={card.headline}                  
           // might need a key id, look into which data we can use
         />
       })}
