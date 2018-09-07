@@ -25,9 +25,9 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
-    console.log('change selected', event.target.name);
+    console.log('change selected', tab);
     this.setState({
-      selectedTab: null,
+      selectedTab: tab,
     });
     // this function should take in the tab and update the state with the new tab.
   };
