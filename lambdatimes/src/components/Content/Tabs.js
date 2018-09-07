@@ -16,9 +16,9 @@ const Tabs = props => {
 };
 
 
-Tabs.propTypes = {
-  tabs: PropTypes.arrayOf(
-    PropTypes.shape({ tabs: PropTypes.string })
-  )
-};
+// Tabs.propTypes = {
+//   tabs: PropTypes.arrayOf(
+//     PropTypes.shape({ tabs: PropTypes.string })
+//   )
+// };
 export default Tabs;
