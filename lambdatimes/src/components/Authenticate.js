@@ -25,6 +25,9 @@ const Authenticate = App =>
           <div className="App">
             <TopBar loggedIn={this.state.loggedIn}/>
             <Header />
+            <div>
+              Must Login in to see the Site
+            </div>
           </div>
         )
       }
