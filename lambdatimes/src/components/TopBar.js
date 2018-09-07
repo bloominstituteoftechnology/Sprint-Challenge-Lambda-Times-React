@@ -10,6 +10,7 @@ const TopsBar = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 99;
 `;
 
 const Container = styled.div`
@@ -70,6 +71,9 @@ const ContainerRight = styled.div`
   > span {
     cursor: pointer;
   }
+  > p {
+    padding-right: 5%
+  }
 `;
 
 // Refactor this component to use styled components and not classNames. 
@@ -86,7 +90,8 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <p>Welcome - {Object.keys(localStorage)}</p>
+          <span onClick={()=>{localStorage.clear();window.location.reload()}}>Log Out</span>
         </ContainerRight>
       </Container>
     </TopsBar>
