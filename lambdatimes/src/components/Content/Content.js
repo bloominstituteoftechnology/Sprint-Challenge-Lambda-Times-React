@@ -46,6 +46,7 @@ export default class Content extends Component {
     if(this.state.selected === 'all'){
     return this.state.cards; // basic idea to get this running, will need to add an else later on
   };
+}
 
   render() {
     return (
