@@ -36,7 +36,7 @@ const Temp = styled.span `
 const Header = () => {
   return (
     <HeaderStyled>
-      <Date>SMARCH 32, 2018</Date>
+      <Date>MARCH 32, 2018</Date>
       <h1>Lambda Times</h1>
       <Temp>98°</Temp>
     </HeaderStyled>
