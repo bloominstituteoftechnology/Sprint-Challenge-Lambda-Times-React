@@ -48,7 +48,7 @@ if (this.state.selected === "all") {
     sortedCards = sortedCards.filter(card => {
       return card.tab === this.state.selected; 
     });
-    this.setState({ cards: sortedCards });
+    return sortedCards;
     }
   };
 
