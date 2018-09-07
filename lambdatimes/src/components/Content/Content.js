@@ -47,7 +47,6 @@ export default class Content extends Component {
         card => card.tab === this.state.selected
       );
       return cardsFiltered;
-      console.log(cardsFiltered);
     }
   };
 
