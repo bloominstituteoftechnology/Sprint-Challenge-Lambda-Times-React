@@ -17,14 +17,34 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
+    this.setState({tabs: tabData})
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
   changeSelected = tab => {
+    tab.preventDefault();
+    this.setState({ [tab.target.name]: tab.target.value });
     // this function should take in the tab and update the state with the new tab.
   };
 
-  filterCards = () => {
+  filterCards = (props) => {
+      if (tabData === 'all') {
+        {this.state.cards}
+      }
+  };
+    //  if(this.tabData === 'all'){
+    //   this.cards = document.querySelectorAll(`.card`)
+    //  } else {
+    //   this.cards = document.querySelectorAll(`.card[data-tab="${this.tabData}"]`);
+    // } 
+  //   const posts = this.state.posts.filter(p => {
+  //     if (p.username.includes(e.target.value)) {
+  //       return p;
+  //     }
+  //   });
+  //   this.setState({ filteredPosts: posts });
+  // };
+
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
       by using it to filter out our cards for when a tab is selcted
@@ -37,8 +57,8 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
-  };
+
+
 
   render() {
     return (
