@@ -27,7 +27,15 @@ export default class Carousel extends Component {
   }
 
   rightClick = () => {
+    let newIndex;
 
+    if (this.state.imageIndex === 3) {
+      newIndex = 0;
+    } else {
+      newIndex = this.state.imageIndex + 1;
+    }
+
+    this.setState({ imageIndex: newIndex, displayedImage: this.selectedImage(this.state.imagePaths[newIndex]) });
   }
 
   selectedImage = (imagePath) => {
