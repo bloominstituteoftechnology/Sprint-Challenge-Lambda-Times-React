@@ -46,6 +46,7 @@ export default class Carousel extends Component {
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
+        {this.state.displayedImage}
         <div className="right-button" onClick={this.rightClick}>{">"}</div>
       </div>
     )
