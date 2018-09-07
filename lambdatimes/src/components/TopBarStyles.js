@@ -14,6 +14,7 @@ const TopBarDiv = styled.div`
     position: fixed;
     height: 44px;
     background-color: #333;
+    z-index: 1;
 
     & > ${ ContainerDiv } {
         width: 100%;
@@ -74,10 +75,6 @@ const TopBarDiv = styled.div`
             flex: 1;
             font-size: 11px;
             font-weight: bold;
-
-            & > span {
-                cursor: pointer;
-            }
         } // ContainerRightDiv
     } // ContainerDiv
 `; // TopBarDiv

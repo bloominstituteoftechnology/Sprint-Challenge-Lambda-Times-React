@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginModal from './LoginModal';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
@@ -21,7 +22,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenterDiv>
         <ContainerRightDiv>
-          <span>LOG IN</span>
+          <LoginModal buttonLabel = 'LOGIN' />
         </ContainerRightDiv>
       </ContainerDiv>
     </TopBarDiv>
