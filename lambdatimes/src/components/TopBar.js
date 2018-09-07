@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Login from './Login/Login'
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
@@ -77,10 +78,6 @@ const ContainerRight = styled.div`
   font-weight: bold;
 `;
 
-const ContainerRightSpan = styled.span`
-  cursor: pointer;
-`;
-
 
 
 
@@ -94,8 +91,8 @@ const TopBar = () => {
         <ContainerCenter>
           <ContainerCenterSpan>GENERAL</ContainerCenterSpan><ContainerCenterSpan>BROWNBAG</ContainerCenterSpan><ContainerCenterSpan>RANDOM</ContainerCenterSpan><ContainerCenterSpan>MUSIC</ContainerCenterSpan><ContainerCenterSpan>ANNOUNCEMENTS</ContainerCenterSpan>
         </ContainerCenter>
-        <ContainerRight className="container-right">
-          <ContainerRightSpan>LOG IN</ContainerRightSpan>
+        <ContainerRight>
+          <Login />
         </ContainerRight>
       </Container>
     </Top>
