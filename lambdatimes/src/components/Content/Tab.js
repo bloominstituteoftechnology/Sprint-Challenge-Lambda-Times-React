@@ -12,12 +12,17 @@ const TabStyle = styled.div`
 `;
 
 const Tab = props => {
+  console.log(props.value);
+  console.log(props.tab);
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
     return (
     <TabStyle 
-    onClick={() => props.selectedTabHandler(props.tab)}
+    onClick={() => props.selectedTabHandler()}
+    onClick={() => props.filterCards()}
+    name = "selected"
+    value = {props.tab}
     >
       {props.tab.toUpperCase()}
     </TabStyle>

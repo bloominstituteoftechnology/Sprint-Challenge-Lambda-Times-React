@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Tab from './Tab';
 
 const Tabs = props => {
+  
   return (
     <div className="tabs">
       <div className="topics">
@@ -13,7 +14,8 @@ const Tabs = props => {
                     <div key={index}>
                         <Tab
                             tab = {tab}
-                            selectedTab = {props.selectedTab}
+                            value = {props.value}
+                            filterCards={props.filterCards}
                             selectedTabHandler = {props.selectedTabHandler}
                         />
                     </div>
