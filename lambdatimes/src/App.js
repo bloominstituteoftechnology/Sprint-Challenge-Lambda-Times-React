@@ -36,7 +36,11 @@ class App  extends React.Component {
   render() {
     return (
       <div className="App">
-        <TopBar footerMsg = { this.state.footerMsg } handleLogOut = { this.handleLogOut } handleSubmit = { this.handleSubmit } />
+        <TopBar 
+          footerMsg = { this.state.footerMsg } 
+          handleLogOut = { this.handleLogOut } 
+          handleSubmit = { this.handleSubmit } 
+        />
         <Header />
         <AuthContent />
       </div>

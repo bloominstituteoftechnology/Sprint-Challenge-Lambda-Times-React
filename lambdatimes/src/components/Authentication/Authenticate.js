@@ -5,7 +5,7 @@ const Authenticate = Content => class extends React.Component {
         super(props);
 
         this.state = {
-            username: 'test-username',
+            username: 'stranger',
             loggedIn: false,
         };
     }
@@ -25,7 +25,7 @@ const Authenticate = Content => class extends React.Component {
         } else {
             return (
                 <div>
-                    <h3>Please log in to view content.</h3>
+                    <h3>Welcome { this.state.username }. Please log in to view content.</h3>
                 </div>
             );
         }
