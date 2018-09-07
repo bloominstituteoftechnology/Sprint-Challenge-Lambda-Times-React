@@ -23,7 +23,11 @@ const Authenticate = Content => class extends React.Component {
         if (this.state.loggedIn) {
             return <Content username = { this.state.username } />;
         } else {
-            return null;
+            return (
+                <div>
+                    <h3>Please log in to view content.</h3>
+                </div>
+            );
         }
     }
 }
