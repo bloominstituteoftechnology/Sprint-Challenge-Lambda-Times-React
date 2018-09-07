@@ -15,11 +15,18 @@ const HeaderStyled = styled.div `
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-  }
-  @media (min-width: 1280px) {
-  .header {
-    width: 1280px;
-  }
+  
+    @media (min-width: 1280px) {
+      width: 1280px;
+    }
+    h1 {
+      font-size: 60px;
+      font-family: Didot, serif;
+      font-weight: bold;
+      flex: 8;
+      text-align: center;
+      color: #000;
+    }
 `;
 
 const Date = styled.span `
@@ -43,4 +50,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
