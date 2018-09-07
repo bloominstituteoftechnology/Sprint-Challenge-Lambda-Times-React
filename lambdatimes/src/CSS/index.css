@@ -208,7 +208,7 @@ body {
 .tabs .topics .tab:hover {
   text-decoration: underline;
 }
-.tabs .topics .active-tab {
+.active-tab {
   background-color: #fff;
   color: #333;
   border: 2px solid #333;
