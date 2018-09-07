@@ -25,6 +25,10 @@ export default class Content extends Component {
   }
 
   changeSelected = (tab) => {
+    console.log('change selected', event.target.name);
+    this.setState({
+      selectedTab: null,
+    });
     // this function should take in the tab and update the state with the new tab.
   };
 
@@ -46,8 +50,8 @@ export default class Content extends Component {
 
   render() {
     console.log('Content render');
-    console.log(this.state.tabs);
-    console.log(this.state.cards);
+    console.log(this.state.selectedTab);
+    // console.log(this.state.cards);
     return (
       <div className="content-container">
         {/* 
