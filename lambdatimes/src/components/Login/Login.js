@@ -1,31 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const LoginContainer = styled.div`
-display: flex;
-height: 100%;
-margin: auto;
-max-width: 400px;
-`;
+export const Login = (props) => {
 
-const Username = styled.input`
+    const LoginContainer = styled.div`
+    display: flex;
+    height: 100%;
+    margin: auto;
+    max-width: 400px;
+    `;
 
-`;
+    const Username = styled.input`
 
-const Password = styled.input`
+    `;
 
-`;
+    const Password = styled.input`
 
-const LoginButton = styled.button`
+    `;
 
-`;
+    const LoginButton = styled.button.attrs({
+        onClick: (() => props.login),
+    })`
 
-export const Login = () => {
+    `;
+
     return (
         <LoginContainer>
-            <input/>
-            <input/>
-            <LoginButton>Button</LoginButton>
+            <form>
+                <Username/>
+                <Password/>
+                <LoginButton>Button</LoginButton>
+            </form>
         </LoginContainer>
     )
 }
@@ -38,14 +43,19 @@ const Authenticate = Component => class extends React.Component {
         }
     }
 
-
-
+    loginButton = (e) => {
+    e.preventDefault;
+    
+    this.setState({
+        loggedIn:true
+    })
+    }
 
     render() {
         if (this.state.loggedIn){
             return <Component />
         } else {
-            return <Login />
+            return <Login login={this.loginButton}/>
         }
     }
 }
