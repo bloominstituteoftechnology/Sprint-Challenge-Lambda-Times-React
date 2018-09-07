@@ -1,5 +1,25 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import data from '../../data.js';
+
+
+componentDidMount() {
+  this.setState({ Cards: data });
+};
+
+
+click = event => {
+  event.preventDefault ();
+  let event [...new.state.cards];
+  newPosts = newPosts.filter(post => {
+    if (post.username === this.state.search) {
+      return post;
+    }
+    if (post.username !== this.state.search){
+      return search;
+    }
+    
+}
 
 const Cards = props => {
   return (
@@ -9,6 +29,8 @@ const Cards = props => {
     </div>
   )
 }
+
+
 
 // Make sure you include prop types for all of your incoming props
 
