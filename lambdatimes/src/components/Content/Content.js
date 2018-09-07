@@ -18,10 +18,17 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+      this.setState({ 
+        tabs: tabData,
+        cards: cardData 
+      });
+
   }
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+    this.setState({ selected: tab });
+    console.log(this.state.selected);
   };
 
   filterCards = () => {
@@ -37,8 +44,49 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+
+   const selectedCards = cardData.filter(c => { 
+    if (c.tab.includes(this.state.selected)) { 
+      return c;
+    }
+  });
+
+  if (this.state.selected !== "all") {
+    return selectedCards;
+  }
+
+
+    // const newCards = [...this.state.cards]
+ 
+    //  newCards.map(card => {
+    //   if(card.tab === this.state.selected) {
+    //     return card;
+    //   }
+    // })
+
+  
+
+    // if (this.state.selected === "all") {
+    // console.log("all");
+    //  // return this.state.cards;
+    // }
+    // else {
+    //   console.log("not all");
+    //   console.log("selected:", this.state.selected);
+    //   this.setState({ cards: newCards })
+    // }
     return this.state.cards;
+    
   };
+
+  // const currentTab = this.state.tabs.filter()
+    
+  //   if (this.state.selected === "all") {
+      
+  //   }
+    
+  //   return this.state.cards;
+  // };
 
   render() {
     return (
@@ -48,7 +96,9 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
+        <Tabs tabs={this.state.tabs}
+              selectedTab={this.state.selected}
+              selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
     );
