@@ -31,7 +31,7 @@ const Tab = props => {
 
 Tab.propTypes = {
   tab: PropTypes.string,
-  selectedTab: PropTypes.string,
+  value: PropTypes.string,
   selectedTabHandler: PropTypes.func
 };
 

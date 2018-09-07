@@ -25,7 +25,7 @@ export default class Content extends Component {
 
   changeSelected = (event) => {
     // NEEDS TESTING this function should take in the tab and update the state with the new tab.
-    this.setState({ [event.target.name]: event.target.value })
+    this.setState({ [event.target.name]: event.target.value });
     console.log("Changed selected tab to ", this.state.selected);
   };
 
@@ -39,6 +39,7 @@ export default class Content extends Component {
         console.log("Returning: ", card)
         return card;
       }
+      return this.state.cards;
     })
     this.setState({ cards: filteredCards })
   };

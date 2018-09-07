@@ -10,6 +10,7 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
         <div>
           {props.tabs.map((tab, index) => {
+            console.log("Tabs: ", props.value);
                 return(
                     <div key={index}>
                         <Tab
@@ -29,7 +30,7 @@ const Tabs = props => {
 
 Tabs.propTypes = {
   tab: PropTypes.object,
-  selectedTab: PropTypes.string,
+  value: PropTypes.string,
   selectedTabHandler: PropTypes.func
 };
 
