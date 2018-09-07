@@ -1,15 +1,15 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap';
-
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import { FooterMsgDiv } from './LoginModalStyles';
 import PropTypes from 'prop-types';
 
 class LoginModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
     };
 
     this.toggle = this.toggle.bind(this);
@@ -24,24 +24,27 @@ class LoginModal extends React.Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+        <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
               <Form onSubmit = { this.props.handleSubmit }>
                 <FormGroup>
-                    <Label for="loginUsername">Username</Label>
+                    <Label for="username">Username</Label>
                     <Input type="text" name="username" placeholder="Enter username..." />
                 </FormGroup>
                 
                 <FormGroup>
-                    <Label for="examplePassword">Password</Label>
+                    <Label for="password">Password</Label>
                     <Input type="password" name="password" placeholder="Enter password..." />
                 </FormGroup>
 
-                <Button type="submit" color="primary">Log in</Button>{' '}
+                <Button type="submit" color="success">Log in</Button>{' '}
                 <Button color="secondary" onClick={this.toggle}>Cancel</Button>
             </Form>
+            <ModalFooter>
+                <FooterMsgDiv>{ this.props.footerMsg }</FooterMsgDiv>
+            </ModalFooter>
           </ModalBody>
         </Modal>
       </div>

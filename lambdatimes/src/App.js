@@ -10,13 +10,21 @@ class App  extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      footerMsg: '',
+    };
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('lambdaTimesLoggedIn', e.target[0].value);
-    window.location.reload();
+    if (!e.target[0].value || !e.target[1].value) {
+      this.setState({
+        footerMsg: 'Please enter a username and password.',
+      });
+    } else {
+      localStorage.setItem('lambdaTimesLoggedIn', e.target[0].value);
+      window.location.reload();
+    }
   }
 
   handleLogOut = (e) => {
@@ -28,7 +36,7 @@ class App  extends React.Component {
   render() {
     return (
       <div className="App">
-        <TopBar handleLogOut = { this.handleLogOut } handleSubmit = { this.handleSubmit } />
+        <TopBar footerMsg = { this.state.footerMsg } handleLogOut = { this.handleLogOut } handleSubmit = { this.handleSubmit } />
         <Header />
         <AuthContent />
       </div>
