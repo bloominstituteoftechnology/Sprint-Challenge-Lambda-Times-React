@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import {Logout} from './Logout'
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
@@ -74,7 +75,7 @@ const TopBar = () => {
           <SpanCenter>GENERAL</SpanCenter><SpanCenter>BROWNBAG</SpanCenter><SpanCenter>RANDOM</SpanCenter><SpanCenter>MUSIC</SpanCenter><SpanCenter>ANNOUNCEMENTS</SpanCenter>
         </ContainerCenter>
         <ContainerRight>
-          <SpanRight>LOG IN</SpanRight>
+          <SpanRight><Logout /></SpanRight>
         </ContainerRight>
       </Container>
     </BarWrapper>
