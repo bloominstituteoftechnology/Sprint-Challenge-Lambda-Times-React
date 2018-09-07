@@ -1,10 +1,4 @@
-// NEEDS A RE-LOOK //
-
-
-
-
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -45,16 +39,6 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
 
-
-    // if (this.state.selected === 'all'){
-    //   this.setState({ cards: cardData });
-    // }
-    // else {
-    //   this.setState({ cards: this.state.selected });
-    //   // ***Need to figure out the logic here***
-    // }
-
-
     if(this.state.selected === "all") {
       return this.state.cards;
     } else {
@@ -64,7 +48,6 @@ export default class Content extends Component {
         });
         this.setState({ cards: filteredCards });
     };
-
     // return this.state.cards;
   };
 
