@@ -24,11 +24,10 @@ const Container = styled.div `
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
-}
-@media (min-width: 1280px) {
-  .top-bar .container {
-    width: 1280px;
-  }
+  
+    @media (min-width: 1280px) {
+      width: 1280px;
+    }
 `;
 
 const ContainerLeft = styled.div `
@@ -38,6 +37,12 @@ const ContainerLeft = styled.div `
   flex-direction: row;
   flex: 1;
   font-size: 11px;
+  
+    span {
+      cursor: pointer;
+      margin-right: 25%;
+      font-weight: bold;
+    }
 `;  
 
 const ContainerCenter = styled.div `
@@ -47,6 +52,17 @@ const ContainerCenter = styled.div `
   flex-direction: row;
   flex: 3;
   font-size: 9px;
+
+    span {
+      cursor: pointer;
+      margin-right: 5%;
+    }
+    span:last-child {
+      margin-right: 0;
+    }
+    span:hover {
+      text-decoration: underline;
+    }
 `;
 
 const ContainerRight = styled.div `
@@ -57,6 +73,10 @@ const ContainerRight = styled.div `
   flex: 1;
   font-size: 11px;
   font-weight: bold;
+
+    span {
+      cursor: pointer;
+    }
 `;
 
 const TopBar = () => {
