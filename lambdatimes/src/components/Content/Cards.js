@@ -1,37 +1,30 @@
-import React, { Component } from 'react';
-import Card from './Card';
-import data from '../../data.js';
+import React from 'react';
+import propTypes from 'prop-types';
 
-
-componentDidMount() {
-  this.setState({ Cards: data });
+const Card = props => {
+  return (
+    <div className="card">
+      <div className="headline">{props.card.headline}</div>
+      <div className="author">
+        <div className="img-container">
+          <img src={props.card.img} alt={props.card.headline}/>
+        </div>
+        <span>By {props.card.author}</span>
+      </div>
+    </div>
+  );
 };
 
+// Make sure to include PropTypes.
 
-click = event => {
-  event.preventDefault ();
-  let event [...new.state.cards];
-  newPosts = newPosts.filter(post => {
-    if (post.username === this.state.search) {
-      return post;
-    }
-    if (post.username !== this.state.search){
-      return search;
-    }
-    
-}
-
-const Cards = props => {
-  return (
-    <div className="cards-container">
-      {/* Using the cards prop, map over the list creating a 
-          new Card component for each passing the card as the only prop*/}
-    </div>
+Card.propTypes = {
+  card: propTypes.shape({
+    headline: propTypes.string.isRequired,
+    tab: propTypes.string.isRequired,
+    img: propTypes.string.isRequired,
+    author: propTypes.string.isRequired
+  }
   )
 }
 
-
-
-// Make sure you include prop types for all of your incoming props
-
-export default Cards;
+export default Card;
