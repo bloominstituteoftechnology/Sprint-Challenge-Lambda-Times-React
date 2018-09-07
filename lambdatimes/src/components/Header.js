@@ -37,12 +37,23 @@ export const HeaderSpan = styled.span`
   letter-spacing: 1px;
 `;
 
+export const HeaderDate = styled.div`
+  margin-left: 25px;
+  flex: 1;
+`;
+
+export const HeaderTemp = styled.div`
+  text-align: right;
+  margin-right: 25px;
+  flex: 2;
+`;
+
 const Header = () => {
   return (
     <StyledHeader>
-      <HeaderSpan className="date">SMARCH 32, 2018</HeaderSpan>
+      <HeaderTemp>SMARCH 32, 2018</HeaderTemp>
       <HeaderTitle>Lambda Times</HeaderTitle>
-      <HeaderSpan className="temp">98°</HeaderSpan>
+      <HeaderTemp>98°</HeaderTemp>
     </StyledHeader>
   )
 }
