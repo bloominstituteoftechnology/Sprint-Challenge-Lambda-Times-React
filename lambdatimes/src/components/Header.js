@@ -1,15 +1,13 @@
 import React from 'react';
-
-// Refactor this component to use styled components and not classNames. 
-// You can find the corresponding CSS in the CSS/index.css file
+import {HeaderWrap, HeaderText, HeaderName} from './styles';
 
 const Header = () => {
   return (
-    <div className="header">
-      <span className="date">SMARCH 32, 2018</span>
-      <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
-    </div>
+    <HeaderWrap>
+      <HeaderText>SEPTEMBER 7, 2018</HeaderText>
+      <HeaderName>Lambda Times</HeaderName>
+      <HeaderText right>65°</HeaderText>
+    </HeaderWrap>
   )
 }
 

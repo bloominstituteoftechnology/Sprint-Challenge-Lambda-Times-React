@@ -11,6 +11,12 @@ export const cardData = [
     author: "SIR RUFF'N'STUFF"
   },
   {
+    headline: "What exactly is Node? And why is it important?",
+    tab: "node",
+    img: "./assets/max.jpg",
+    author: "Lucas Beemer"
+  },
+  {
     headline: "Type Coercion: Why Does NaN !== NaN? and Other Strange Occurences",
     tab: "javascript",
     img: "./assets/bones.jpg",
