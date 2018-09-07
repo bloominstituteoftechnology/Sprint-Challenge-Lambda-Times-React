@@ -41,7 +41,9 @@ export default class Content extends Component {
   };
 
   render() {
-    console.log(this.state);
+    console.log('In Content.js', this.state.tabs);
+    console.log('In Content.js', this.state.cards);
+
     return (
       <div className="content-container">
         {/* 
