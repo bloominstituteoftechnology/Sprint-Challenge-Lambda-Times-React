@@ -54,39 +54,9 @@ export default class Content extends Component {
   if (this.state.selected !== "all") {
     return selectedCards;
   }
-
-
-    // const newCards = [...this.state.cards]
- 
-    //  newCards.map(card => {
-    //   if(card.tab === this.state.selected) {
-    //     return card;
-    //   }
-    // })
-
-  
-
-    // if (this.state.selected === "all") {
-    // console.log("all");
-    //  // return this.state.cards;
-    // }
-    // else {
-    //   console.log("not all");
-    //   console.log("selected:", this.state.selected);
-    //   this.setState({ cards: newCards })
-    // }
     return this.state.cards;
     
   };
-
-  // const currentTab = this.state.tabs.filter()
-    
-  //   if (this.state.selected === "all") {
-      
-  //   }
-    
-  //   return this.state.cards;
-  // };
 
   render() {
     return (
