@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
-import Header from '../Header';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -45,24 +44,22 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    
-    if(this.state.selected === 'all'){
+   this.setState({selected: tab})
+
+    if(tab === 'all'){
       return this.state.cards;
-    } else if(this.state.selected !== 'all') {
-      const copyCards = this.state.cards;
-      const newCards = copyCards.filter(card => card.tab === this.state.selected);
-      this.setState({
-        cards: newCards
-      })
+    } else {
+      console.log(this.state);
+      const newCards = cardData.filter(card => card.tab === tab);
+      this.setState({cards: newCards});
     }
   };
 
   render() {
-    console.log(this.state.cards);
     return ( 
       <div className="content-container">
-        <Tabs selectedTab={this.state.selected} selectTabHandler={this.changeSelected} tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Tabs filterCards={this.filterCards} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} tabs={this.state.tabs} />
+        <Cards cards={this.state.cards} />
       </div>
     );
   }
