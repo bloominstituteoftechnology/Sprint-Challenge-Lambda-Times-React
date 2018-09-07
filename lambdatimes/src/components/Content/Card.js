@@ -23,6 +23,6 @@ Card.propTypes = {
     img: PropTypes.string,
     author: PropTypes.string
   })
-}
+};
 
 export default Card;
