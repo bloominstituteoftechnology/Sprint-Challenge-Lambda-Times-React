@@ -4,4 +4,4 @@ What is a lifecycle event in React? It's an event that has a start, action, end.
 
 What is a Higher Order Component? Its a function that takes in another function as its argument.
 
-What are three different ways to style components in React? inline, bootstrap and styled components
+What are three different ways to style components in React? inline, bootstrap and styled componenst
