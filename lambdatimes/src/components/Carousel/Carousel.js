@@ -16,15 +16,22 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
+    let newIndex;
 
+    if (this.state.imageIndex === 0) {
+      newIndex = 3;
+    } else {
+      newIndex = this.state.imageIndex - 1;
+    }
+    this.setState({ imageIndex: newIndex, displayedImage: this.selectedImage(this.state.imagePaths[newIndex]) });
   }
 
   rightClick = () => {
 
   }
 
-  selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+  selectedImage = (imagePath) => {
+    return <img src={imagePath} style={{display: 'block'}} />
   }
   
   render(){
