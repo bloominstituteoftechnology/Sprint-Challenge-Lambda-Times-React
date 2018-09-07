@@ -8,9 +8,9 @@ const TopBar = () => {
   return (
     <TopBarDiv>
       <Container>
-        <Container>
+        <ContainerLeft>
           <span>TOPICS</span><span>SEARCH</span>
-        </Container>
+        </ContainerLeft>
         <ContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
@@ -21,6 +21,15 @@ const TopBar = () => {
     </TopBarDiv>
   )
 }
+
+const ContainerLeft = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+`;
 
 const ContainerRight = styled.div`
   display: flex;
