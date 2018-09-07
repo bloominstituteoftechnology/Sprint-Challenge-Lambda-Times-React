@@ -1,5 +1,5 @@
 import React from 'react';
-import '/Users/clintkunz/Sprint-Challenge-Lambda-Times-React/lambdatimes/src/CSS/index.css';
+import PropTypes from 'prop-types';
 
 const Card = props => {
   return (
@@ -13,8 +13,16 @@ const Card = props => {
       </div>
     </div>
   );
-};
+}
 
 // Make sure to include PropTypes.
+Card.propTypes = {
+  card: PropTypes.shape({
+    headline: PropTypes.string,
+    tab: PropTypes.string,
+    img: PropTypes.string,
+    author: PropTypes.string
+  })
+}
 
 export default Card;
