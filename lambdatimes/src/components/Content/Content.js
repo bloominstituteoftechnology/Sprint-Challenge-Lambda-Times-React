@@ -59,6 +59,7 @@ export default class Content extends Component {
   render() {
     return (
       <div className="content-container">
+        <div>Welcome back, { this.props.username }.</div>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab

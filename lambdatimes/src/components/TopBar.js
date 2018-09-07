@@ -11,7 +11,7 @@ import {
   ContainerRightDiv, 
 } from './TopBarStyles';
 
-const TopBar = () => {
+const TopBar = (props) => {
   return (
     <TopBarDiv>
       <ContainerDiv>
@@ -22,7 +22,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenterDiv>
         <ContainerRightDiv>
-          <LoginModal buttonLabel = 'LOGIN' />
+          { localStorage.getItem('lambdaTimesLoggedIn') ? <button onClick = { props.handleLogOut }>LOG OUT</button> : <LoginModal buttonLabel = 'LOGIN' handleSubmit = { props.handleSubmit } /> }
         </ContainerRightDiv>
       </ContainerDiv>
     </TopBarDiv>

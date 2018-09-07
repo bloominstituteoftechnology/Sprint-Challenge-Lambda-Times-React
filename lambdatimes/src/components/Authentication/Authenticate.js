@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Authenticate = Content => class extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             username: 'test-username',
-            loggedIn: true,
+            loggedIn: false,
         };
     }
 
