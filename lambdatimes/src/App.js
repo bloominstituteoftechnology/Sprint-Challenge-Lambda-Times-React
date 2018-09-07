@@ -11,6 +11,6 @@ const App = () => {
       <Content />
     </div>
   );
-}
+};
 
 export default App;
