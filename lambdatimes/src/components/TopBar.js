@@ -48,13 +48,15 @@ const ContainerCenter = styled.div`
   flex-direction: row;
   flex: 3;
   font-size: 9px;
-}
 `;
 
 const CenterSpan = styled.span`
   cursor: pointer;
   margin-right: 5%;
-}
+
+    &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ContainerRight = styled.div`
@@ -65,12 +67,10 @@ const ContainerRight = styled.div`
   flex: 1;
   font-size: 11px;
   font-weight: bold;
-}
 `;
 
 const ContainerRightSpan = styled.span`
   cursor: pointer;
-}
 `;
 
 
