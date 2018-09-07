@@ -46,7 +46,7 @@ export default class Content extends Component {
           - seems like a filter is needed for cards === tab
     */
    if (this.state.selected === 'all') return this.state.cards; // cardData array from componentDidMount
-    return this.state.cards.filter(eachTab => eachTab.tab === this.state.selected);  
+    return this.state.cards.filter(card => card.tab === this.state.selected);  
   };
 
   render() {
