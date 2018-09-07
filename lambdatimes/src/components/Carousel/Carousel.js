@@ -5,7 +5,9 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      imagePaths: [],
+      displayedImage: "",
+      imageIndex: 0
     }
   }
   componentDidMount(){
