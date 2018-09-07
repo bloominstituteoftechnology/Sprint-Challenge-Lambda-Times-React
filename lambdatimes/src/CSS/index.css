@@ -52,10 +52,6 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
-.date {
-  margin-left: 25px;
-  flex: 1;
-}
 .content-container {
   display: flex; 
   flex-direction: column; 
