@@ -27,7 +27,6 @@ export default class Content extends Component {
   // this function should take in the tab and update the state with the new tab.
   // console.log(tab.target.innerText);
   changeSelected = tab => {
-    console.log(tab)
     this.setState({
       selected: tab
     })
