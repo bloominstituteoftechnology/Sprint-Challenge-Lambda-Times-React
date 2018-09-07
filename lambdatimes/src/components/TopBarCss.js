@@ -79,6 +79,6 @@ const TopBarCss = () => {
     <TopBarContainerRight></TopBarContainerRight>,
     <TopBarContainerRightSpan></TopBarContainerRightSpan>
     )
-}
+};
 
 export default TopBarCss;

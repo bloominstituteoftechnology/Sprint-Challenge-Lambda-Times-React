@@ -26,7 +26,7 @@ const TopBar = () => {
       </TopBarContainer>
     </TopBar1>
   )
-}
+};
 
 // const TopBar = () => {
 //   return (
