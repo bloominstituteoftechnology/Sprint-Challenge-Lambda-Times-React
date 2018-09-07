@@ -1,5 +1,6 @@
 import React from 'react';
 import Tab from './Tab';
+import PropTypes from 'prop-types';
 const Tabs = props => {
   return (
     <div className="tabs">
@@ -12,7 +13,7 @@ const Tabs = props => {
             selectTabHandler={props.selectTabHandler}
             selectedTab={props.selectedTab}
             tab={tab}
-            key={tab.img}
+            key={Math.random()}
           />
         ))}
       </div>
@@ -21,4 +22,7 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+Tabs.prototype = {
+  tab: PropTypes.string
+};
 export default Tabs;
