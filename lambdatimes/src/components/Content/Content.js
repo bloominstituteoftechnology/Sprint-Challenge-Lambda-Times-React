@@ -43,7 +43,7 @@ export default class Content extends Component {
      if (card['tab'] === this.state.selected) {
        return card;
      }
-    })
+    });
   };
 
   render() {

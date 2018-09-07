@@ -7,7 +7,7 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {props.tabs.map(tab=> <Tab tab={tab} selectedTab={props.selectedTab} selectTabHandler={props.selectTabHandler} filterCards={props.filter}/>)}
+        {props.tabs.map(tab=> <Tab onClick={props.filterCards} tab={tab} selectedTab={props.selectedTab} selectTabHandler={props.selectTabHandler}/>)}
       </div>
     </div>
   );
