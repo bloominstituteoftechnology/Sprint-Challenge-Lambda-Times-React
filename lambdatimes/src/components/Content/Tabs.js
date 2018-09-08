@@ -14,9 +14,9 @@ const Tabs = props => {
             props.tabs.map(tab => {
               return <Tab
                 key={tab}
-                selectedTabHandler={props.selectedTabHandler}          
-                selectedTab={props.selectedTab}
                 tab={tab}
+                selectedTab={props.selectedTab}
+                selectedTabHandler={props.selectedTabHandler}          
               />
             })
           }
@@ -24,6 +24,7 @@ const Tabs = props => {
     </Div1>
   )
 }
+
 const Div1 = styled.div`
   border-bottom: 1px solid lightgrey;
   display: flex;
@@ -52,8 +53,8 @@ const Span = styled.span`
 // Make sure to use PropTypes to validate your types!
 Tabs.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string),
-  selectedTabHandler: PropTypes.func,
-  selectedTab: PropTypes.string,
+  selectedTab: PropTypes.string.isRequired,
+  selectedTabHandler: PropTypes.func.isRequired,
 }
 
 export default Tabs

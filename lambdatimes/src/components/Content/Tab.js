@@ -41,9 +41,9 @@ const Div = styled.div`
 
 // Make sure you include PropTypes on your props.
 Tab.propTypes = {
-  tab: PropTypes.string,
-  selectedTabHandler: PropTypes.func,
-  selectedTab: PropTypes.string,
+  tab: PropTypes.string.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  selectedTabHandler: PropTypes.func.isRequired,
 }
 
 export default Tab
