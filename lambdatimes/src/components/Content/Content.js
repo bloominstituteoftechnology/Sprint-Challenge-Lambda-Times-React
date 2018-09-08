@@ -45,6 +45,12 @@ export default class Content extends Component {
     } else {
       return cardData.filter(card => card.tab === this.state.selected);
     }
+
+    // another way to filterCards
+    // if (this.state.selected === 'all') return this.state.cards;
+
+    // const cards = [...this.state.cards];
+    // return cards.filter(card => card.tab === this.state.selectedTab);
   };
 
 
