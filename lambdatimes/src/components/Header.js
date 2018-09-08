@@ -37,19 +37,17 @@ const H1 = styled.h1`
   text-align: center;
   color: #000;
 `
-const Span1 = styled.span`
+const Span0 = styled.span`
   align-self: flex-end;
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
+`
+const Span1 = styled(Span0)`
   margin-left: 25px;
   flex: 1;
 `
-const Span2 = styled.span`
-  align-self: flex-end;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1px;
+const Span2 = styled(Span0)`
   text-align: right;
   margin-right: 25px;
   flex: 1;
