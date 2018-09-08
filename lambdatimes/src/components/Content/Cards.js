@@ -9,9 +9,9 @@ const Cards = props => {
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
         {
-          props.cards.map(card => {
+          props.cards.map((card, i) => {
             return <Card
-              key={card.headline}
+              key={`card-${i}`}
               card={card}
             />
           })
@@ -24,10 +24,10 @@ const Cards = props => {
 Cards.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({
-     headline: PropTypes.string, 
-     tab: PropTypes.string, 
-     img: PropTypes.string, 
-     author: PropTypes.string, 
+     headline: PropTypes.string.isRequired, 
+     tab: PropTypes.string.isRequired, 
+     img: PropTypes.string.isRequired, 
+     author: PropTypes.string.isRequired, 
     })
   )
 }
@@ -44,4 +44,5 @@ const Div1 = styled.div`
     width: 1200px;
   }
 `
+
 export default Cards

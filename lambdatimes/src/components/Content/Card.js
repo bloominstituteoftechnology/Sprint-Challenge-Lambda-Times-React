@@ -3,14 +3,15 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const Card = props => {
+  const { headline, img, author } = props.card
   return (
     <Div1>
-      <Div2>{props.card.headline}</Div2>
+      <Div2>{headline}</Div2>
       <Div3>
         <Div4>
-          <Img src={props.card.img} alt="user" />
+          <Img src={img} alt="user" />
         </Div4>
-        <Span>By {props.card.author}</Span>
+        <Span>By {author}</Span>
       </Div3>
     </Div1>
   )
@@ -56,10 +57,10 @@ const Span = styled.span`
 // Make sure to include PropTypes.
 Card.propTypes = {
   card: PropTypes.shape({
-    headline: PropTypes.string, 
-    tab: PropTypes.string, 
-    img: PropTypes.string, 
-    author: PropTypes.string, 
+    headline: PropTypes.string.isRequired, 
+    tab: PropTypes.string.isRequired, 
+    img: PropTypes.string.isRequired, 
+    author: PropTypes.string.isRequired, 
   })
 }
 
