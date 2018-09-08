@@ -14,6 +14,7 @@ const Tab = props => {
          you'll need to pass the `tab` in as an argument to this handler. */
          props.selectTabHandler(props.tab);
          props.filterCards(props.tab);
+         console.log(props.tab);
       }}
     >
       {props.tab.toUpperCase()}
