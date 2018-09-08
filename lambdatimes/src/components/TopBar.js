@@ -4,6 +4,21 @@ import styled from "styled-components";
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
+function handleLogout() {
+  localStorage.clear();
+  window.location.reload();
+}
+
+const username = JSON.parse(localStorage.getItem('username')) || {};
+function loggedIn() {
+  if('username' in username) {
+    if(username.username) {
+      return <RightSpan onClick={handleLogout}>LOGOUT</RightSpan>;
+    }
+  } else {
+    return <RightSpan>LOGIN</RightSpan>;
+  }
+}
 const TopBar = () => {
   return (
     <TopBarContainer>
@@ -20,7 +35,7 @@ const TopBar = () => {
           <CenterSpan>ANNOUNCEMENTS</CenterSpan>
         </CenterContainer>
         <ContainerRight>
-         <RightSpan>LOGIN</RightSpan>
+        {loggedIn()}
         </ContainerRight>  
       </Container>
     </TopBarContainer>
