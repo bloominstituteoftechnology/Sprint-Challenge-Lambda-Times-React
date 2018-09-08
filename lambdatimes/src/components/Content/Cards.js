@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Card from './Card';
 
 const Cards = props => {
-  console.log(props.cards);
+  console.log(props.filteredCards);
   return (
     <div className="cards-container">
       <div>
-        {props.cards.map((card, index) => {
+        {props.filteredCards.map((card, index) => {
           return (
             <div key={index}>
               <Card

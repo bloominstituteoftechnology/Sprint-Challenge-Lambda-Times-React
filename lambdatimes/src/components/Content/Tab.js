@@ -19,8 +19,7 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
     return (
     <TabStyle 
-    onClick={() => props.selectedTabHandler()}
-    onClick={() => props.filterCards()}
+    onClick={() => props.filterCards(props.tab)}
     name = "selected"
     value = {props.tab}
     >
@@ -32,7 +31,7 @@ const Tab = props => {
 Tab.propTypes = {
   tab: PropTypes.string,
   value: PropTypes.string,
-  selectedTabHandler: PropTypes.func
+  //selectedTabHandler: PropTypes.func
 };
 
 export default Tab;

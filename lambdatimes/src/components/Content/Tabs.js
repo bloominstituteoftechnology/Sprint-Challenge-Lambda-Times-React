@@ -3,25 +3,22 @@ import PropTypes from 'prop-types';
 import Tab from './Tab';
 
 const Tabs = props => {
-  
+
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         <div>
-          {props.tabs.map((tab, index) => {
-            console.log("Tabs: ", props.value);
-                return(
-                    <div key={index}>
-                        <Tab
-                            tab = {tab}
-                            value = {props.value}
-                            filterCards={props.filterCards}
-                            selectedTabHandler = {props.selectedTabHandler}
-                        />
-                    </div>
-                )
-            })}
+          {props.tabs.map((tab) => 
+              <Tab
+                key={tab}
+                tab={tab}
+                value={props.value}
+                filterCards={props.filterCards}
+                //selectedTabHandler={props.selectedTabHandler}
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -29,9 +26,9 @@ const Tabs = props => {
 };
 
 Tabs.propTypes = {
-  tab: PropTypes.object,
+  tabs: PropTypes.arrayOf(PropTypes.string),
   value: PropTypes.string,
-  selectedTabHandler: PropTypes.func
+  //selectedTabHandler: PropTypes.func
 };
 
 export default Tabs;
