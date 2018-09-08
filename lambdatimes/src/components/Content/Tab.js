@@ -6,7 +6,7 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   const isActive = props.tab === props.selectedTab;
-  
+
   return (
     <div
       className={`tab ${isActive ? 'active-tab': ''}`}
@@ -24,8 +24,9 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 Tab.PropTypes = {
-  selectedTab: PropTypes.string,
-  tab: PropTypes.string,
+  selectedTab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired,
+  tab: PropTypes.string.isRequired,
 }
 
 export default Tab;
