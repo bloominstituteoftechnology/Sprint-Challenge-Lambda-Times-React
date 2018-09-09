@@ -37,13 +37,13 @@ const ContainerLeft = styled.div `
   flex-direction: row;
   flex: 1;
   font-size: 11px;
-  
-    span {
-      cursor: pointer;
-      margin-right: 25%;
-      font-weight: bold;
-    }
 `;  
+
+const CLSpan = styled.span `
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
+`;
 
 const ContainerCenter = styled.div `
   display: flex;
@@ -52,17 +52,19 @@ const ContainerCenter = styled.div `
   flex-direction: row;
   flex: 3;
   font-size: 9px;
+`;
 
-    span {
-      cursor: pointer;
-      margin-right: 5%;
-    }
-    span:last-child {
-      margin-right: 0;
-    }
-    span:hover {
-      text-decoration: underline;
-    }
+const CCSpan = styled.span `
+  cursor: pointer;
+  margin-right: 5%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ContainerRight = styled.div `
@@ -73,10 +75,10 @@ const ContainerRight = styled.div `
   flex: 1;
   font-size: 11px;
   font-weight: bold;
+`;
 
-    span {
-      cursor: pointer;
-    }
+const CRSpan = styled.span `
+  cursor: pointer;
 `;
 
 const TopBar = () => {
@@ -84,13 +86,13 @@ const TopBar = () => {
     <TopBarStyled>
       <Container>
         <ContainerLeft>
-          <span>TOPICS</span><span>SEARCH</span>
+          <CLSpan>TOPICS</CLSpan><CLSpan>SEARCH</CLSpan>
         </ContainerLeft>
         <ContainerCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          <CCSpan>GENERAL</CCSpan><CCSpan>BROWNBAG</CCSpan><CCSpan>RANDOM</CCSpan><CCSpan>MUSIC</CCSpan><CCSpan>ANNOUNCEMENTS</CCSpan>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <CRSpan>LOG IN</CRSpan>
         </ContainerRight>
       </Container>
     </TopBarStyled>
