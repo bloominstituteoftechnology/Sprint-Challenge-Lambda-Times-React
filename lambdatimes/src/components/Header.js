@@ -20,17 +20,6 @@ const HeaderStyle = styled.div`
     }
 `;
 
-const Date = styled.div`
-  margin-left: 25px;
-  flex: 1;
-`;
-
-const Temp = styled.span`
-  text-align: right;
-  margin-right: 25px;
-  flex: 1;
-`;
-
 const HeaderH1 = styled.h1`
   font-size: 60px;
   font-family: Didot, serif;
@@ -40,13 +29,33 @@ const HeaderH1 = styled.h1`
   color: #000;
 `;
 
+const HeaderSpan = styled.span`
+    align-self: flex-end;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing:1px;
+`;
+
+const DateSpan = styled(HeaderSpan)`
+  margin-left: 25px;
+  flex: 1;
+`;
+
+const TempSpan = styled(HeaderSpan)`
+  text-align: right;
+  margin-right: 25px;
+  flex: 1;
+`;
+
+
+
 
 const Header = () => {
   return (
     <HeaderStyle>
-      <Date>SMARCH 32, 2018</Date>
+      <DateSpan>MARCH 32, 2018</DateSpan>
       <HeaderH1>Lambda Times</HeaderH1>
-      <Temp>98°</Temp>
+      <TempSpan>98°</TempSpan>
     </HeaderStyle>
   )
 }
