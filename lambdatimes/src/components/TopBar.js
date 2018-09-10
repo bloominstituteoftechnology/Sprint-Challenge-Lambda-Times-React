@@ -4,24 +4,6 @@ import styled from 'styled-components';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopBar = () => {
-  return (
-    <TopBarDiv>
-      <Container>
-        <ContainerLeft>
-          <span>TOPICS</span><span>SEARCH</span>
-        </ContainerLeft>
-        <ContainerCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </ContainerCenter>
-        <ContainerRight>
-          <span>LOG IN</span>
-        </ContainerRight>
-      </Container>
-    </TopBarDiv>
-  )
-}
-
 const ContainerLeft = styled.div`
   display: flex;
   justify-content: none;
@@ -71,5 +53,25 @@ const TopBarDiv = styled.div`
   height: 44px;
   background-color: #333;
 `;
+
+
+const TopBar = () => {
+  return (
+    <TopBarDiv>
+      <Container>
+        <ContainerLeft>
+          <span>TOPICS</span><span>SEARCH</span>
+        </ContainerLeft>
+        <ContainerCenter>
+          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+        </ContainerCenter>
+        <ContainerRight>
+          <span>LOG IN</span>
+        </ContainerRight>
+      </Container>
+    </TopBarDiv>
+  )
+}
+
 
 export default TopBar;
