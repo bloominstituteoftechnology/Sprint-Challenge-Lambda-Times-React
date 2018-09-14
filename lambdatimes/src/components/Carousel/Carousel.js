@@ -16,13 +16,13 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    if(this.index <= 0) { this.index = this.state.carousel.length() - 1; }
-    this.selectedImage(this.state.index);
+    if(this.index <= 0) { this.index = (this.state.carousel.length() - 1) }
+    return this.selectedImage(this.state.index);
   }
 
   rightClick = () => {
-    if(this.index >= this.state.carousel.length() - 1) { this.index = 0; }
-    this.selectedImage(this.state.index);
+    if( this.index >= (this.state.carousel.length() - 1) ) { this.index = 0 }
+    return this.selectedImage(this.state.index);
   }
 
   selectedImage = (i) => {
@@ -33,6 +33,7 @@ export default class Carousel extends Component {
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
+        {this.selectedImage(this.state.index)}
         <div className="right-button" onClick={this.rightClick}>{">"}</div>
       </div>
     )
