@@ -10,7 +10,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
-      tabs: [],
+      tabs: ["cat", "dog"],
       cards: []
     };
   }
@@ -18,7 +18,7 @@ export default class Content extends Component {
   componentDidMount() {
     
     // Once the component has mounted, get the data and reflect that data on the state.
-    this.setState({ cards: cardData})
+    this.setState({ cards: cardData, tabs: tabData})
   }
 
   changeSelected = event => {
@@ -39,14 +39,14 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-     this.state.tabs.filter((each) => {
-     if (each.cards.includes('all')) {
-      return this.state.cards;
-     }
-     if (each.cards.includes('key' === each.tabs.value)){
+  //    this.state.tabs.filter((each) => {
+  //    if (each.cards.includes('all')) {
+  //     return this.state.cards;
+  //    }
+  //    if (each.cards.includes('key' === each.tabs.value)){
        
-     }
-   })
+  //    }
+  //  })
    return this.state.cards
   };
 
