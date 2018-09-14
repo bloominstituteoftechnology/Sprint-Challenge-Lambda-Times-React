@@ -120,7 +120,7 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,7 +136,7 @@ body {
   .header {
     width: 1280px;
   }
-}
+} */
 .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
