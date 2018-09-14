@@ -13,7 +13,8 @@ let classname = '';
     <div
       className={`${classname}`}
       onClick={(tab) => {
-      props.selectTabHandler(tab.target)
+
+      props.selectTabHandler(tab.target.innerText.toLowerCase())
         /* Replace this dummy click handler function with your selectTabHandler function from props
          you'll need to pass the `tab` in as an argument to this handler. */
       }}

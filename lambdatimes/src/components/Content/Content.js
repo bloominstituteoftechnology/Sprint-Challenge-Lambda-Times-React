@@ -25,9 +25,14 @@ this.setState(
   }
 
   changeSelected = tab => {
-    console.log(tab.innerText);
-  let NewTab = tab.innerText;
-
+    console.log(tab);
+    if(tab==="react.js"){
+      tab="React.js"
+    }
+  let NewTab =  tab;
+this.setState({
+  selected: NewTab,
+})
 
     // this function should take in the tab and update the state with the new tab.
   };
