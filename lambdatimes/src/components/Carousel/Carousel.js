@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
-// Complete this Carousel 
+// Complete this Carousel
 export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      carousel: [],
+      index: 0
     }
   }
   componentDidMount(){
-
+    this.setState({
+      carousel: carouselData,
+    })
   }
 
   leftClick = () => {
-
+    if(this.index <= 0) { this.index = this.state.carousel.length() - 1; }
+    this.selectedImage(this.state.index);
   }
 
   rightClick = () => {
-
+    if(this.index >= this.state.carousel.length() - 1) { this.index = 0; }
+    this.selectedImage(this.state.index);
   }
 
-  selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+  selectedImage = (i) => {
+    return <img src={this.state.carousel[i]} style={{display: 'block'}} />
   }
-  
+
   render(){
     return (
       <div className="carousel">
