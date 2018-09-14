@@ -18,6 +18,7 @@ export default class Content extends Component {
 
   componentDidMount() {
     this.setState( {tabs: tabData, cards: cardData})
+    console.log(this.state)
   }
 
   changeSelected = tab => {
