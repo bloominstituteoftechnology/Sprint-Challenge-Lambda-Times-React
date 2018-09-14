@@ -25,6 +25,10 @@ this.setState(
   }
 
   changeSelected = tab => {
+    console.log(tab.innerText);
+  let NewTab = tab;
+
+
     // this function should take in the tab and update the state with the new tab.
   };
 
