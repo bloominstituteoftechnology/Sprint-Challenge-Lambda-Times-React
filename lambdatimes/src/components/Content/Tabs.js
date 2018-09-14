@@ -1,6 +1,6 @@
 import React from 'react';
-import Tab from './Tab';
 import PropTypes from 'prop-types';
+import Tab from './Tab';
 
 const Tabs = (props) => {
 	return (
@@ -12,7 +12,7 @@ const Tabs = (props) => {
 				props.tabs.map((tab) => (
 					<Tab
 						key={tab}
-						selecteTabHandler={props.selectTabHandler}
+						selectTabHandler={props.selectTabHandler}
 						selectedTab={props.selectedTab}
 						tab={tab}
 					/>
