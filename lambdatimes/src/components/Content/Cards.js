@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const Cards = props => {
   return (
     <div className="cards-container">
-      {props.cardProps.map((element, index) => {
-        return <Card key={index} cardProps={element} filterCards={props.filterCards} />
+      {props.filterCards.map((element, index) => {
+        return <Card key={index} cardProps={element} />
       })}
     </div>
   )
@@ -14,6 +14,6 @@ const Cards = props => {
 
 // Make sure you include prop types for all of your incoming props
 Cards.propTypes = {
-  cardProps: PropTypes.arrayOf(PropTypes.object)
+  filterCards: PropTypes.arrayOf(PropTypes.object.isRequired)
 }
 export default Cards;
