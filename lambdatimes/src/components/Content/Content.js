@@ -25,6 +25,9 @@ export default class Content extends Component {
     // this function should take in the tab and update the state with the new tab.
 
     this.setState({ selected: tab });
+
+    console.log(this.state.selected);
+    console.log(this.state.selected);
   };
 
   filterCards = () => {
@@ -43,7 +46,14 @@ export default class Content extends Component {
     if (this.state.selected === 'all') {
       return this.state.cards;
     } else {
-      return this.state.cards.filter(card => card.tab === this.state.selected);
+      const arr = [...this.state.cards];
+      const newArray = [];
+      arr.forEach(data => {
+        if (data.tab === this.state.selected) {
+          newArray.push(data);
+        }
+      });
+      return newArray;
     }
   };
 
@@ -58,7 +68,7 @@ export default class Content extends Component {
         <Tabs
           tabs={this.state.tabs}
           selectedTab={this.state.selected}
-          selecTabHandler={this.state.selecTabHandler}
+          selectTabHandler={this.changeSelected}
         />
         <Cards cards={this.filterCards()} />
       </div>
