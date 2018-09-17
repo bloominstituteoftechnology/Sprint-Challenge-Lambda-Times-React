@@ -8,26 +8,17 @@ const Tab = props => {
       let selectedClass = 'tab';
       if (props.tab === props.selectedTab) {
         selectedClass = "tab active-tab";
-      }else{
+      } else {
         selectedClass = 'tab';
       }
-    
-      
   return (
-    <div
-      className={''}
-      onClick={() => {
-        /* Replace this dummy click handler function with your 
-        selectTabHandler function from props you'll need to pass the `tab` in 
-        as an argument to this handler. */
-      // Make sure you include PropTypes on your props.
-       <div className={selectedClass} onClick={props.selectTabHandler}>
-      {props.tab.toUpperCase()}
+    <div className={selectedClass} onClick={props.selectTabHandler}>
+        {props.tab.toUpperCase()}
     </div>
-  }
+  );
 }
 
-Tab.PropTypes = {
+Tab.propTypes = {
   key: PropTypes.string,
   tab: PropTypes.string,
   selectedTab: PropTypes.string,
@@ -35,3 +26,7 @@ Tab.PropTypes = {
 };
 
 export default Tab;
+
+ {/* Replace this dummy click handler function with your 
+        selectTabHandler function from props you'll need to pass the `tab` in 
+        as an argument to this handler. Make sure you include PropTypes on your props.*/}
