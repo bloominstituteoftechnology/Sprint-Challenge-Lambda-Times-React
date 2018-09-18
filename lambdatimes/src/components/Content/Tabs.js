@@ -7,12 +7,12 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {props.tabs.map(t => (
+        {props.tabs.map((element, index) => (
           <Tab
-            key={t.i}
-            tab={t}
-            selectTabHandler={props.selectTabHandler}
+            key={index}
+            tab={element}
             selectedTab={props.selectedTab}
+            selectedTabHandler={props.selectedTabHandler}
           />
         ))}
       </div>
