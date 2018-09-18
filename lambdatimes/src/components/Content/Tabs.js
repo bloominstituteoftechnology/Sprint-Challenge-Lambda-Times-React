@@ -9,11 +9,11 @@ const Tabs = props => {
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
        
-            {props.tabs.map((tab) => (
+            {props.tabs.map(tab => (
             <Tab
-            key={Math.random()}
+            key={tab}
             tab={tab} 
-            selectedTab={props.selectedTab}
+            selectedTab={props.selectedTab} //is change selected = selcted: tab
             selectTabHandler={props.selectTabHandler} /> ))} 
       </div>
     </div>

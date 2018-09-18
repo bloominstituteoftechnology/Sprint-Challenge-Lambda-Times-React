@@ -5,17 +5,12 @@ const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-      let selectedClass = 'tab';
-      if (props.tab === props.selectedTab) {
-        selectedClass = "tab active-tab";
-      } else {
-        selectedClass = 'tab';
-      }
+    
   return (
-    <div className={selectedClass} onClick={props.selectTabHandler}>
+    <div className={props.tab === props.selectedTab ? "active-tab" : ""} onClick={() => props.selectTabHandler(props.tab)}>
         {props.tab.toUpperCase()}
     </div>
-  );
+  ); //if tab name from the cards is equal to the selected tab, then activate that tab, else show nothing
 }
 
 Tab.propTypes = {
