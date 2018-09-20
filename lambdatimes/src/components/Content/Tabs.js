@@ -21,4 +21,6 @@ Tabs.propTypes = {
   selectedTabHandler: propTypes.func.isRequired
 }
 // Make sure to use PropTypes to validate your types!
+
+//add the selectedtab handler and change
 export default Tabs;
