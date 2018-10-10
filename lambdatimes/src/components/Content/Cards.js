@@ -5,13 +5,12 @@ import PropTypes from 'prop-types';
 const Cards = props => {
   return (
     <div className="cards-container">
-      {/* Using the cards prop, map over the list creating a 
-          new Card component for each passing the card as the only prop*/}
-      {this.state.Cards.map((card, i) =>
-      <Card 
-          key={i} 
-          card={card}  
-      />)}
+      {props.cards.map(card => {
+        return (
+          <Card 
+            card={card}  
+      />)
+        })}
 
     </div>
   )
