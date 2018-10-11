@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'lambda'];
 
 export const cardData = [
   {
@@ -87,6 +87,30 @@ export const cardData = [
     tab: "React.js",
     img: "./assets/fido.jpg",
     author: "FIDO WALKSALOT"
+  },
+  {
+    headline: "Lambda is good",
+    tab: "lambda",
+    img: "./assets/lambda.jpg",
+    author: "LAMBDA D. TRIANGLE"
+  },
+  {
+    headline: "Lambda is great",
+    tab: "lambda",
+    img: "./assets/lambda.jpg",
+    author: "LAMBDA D. TRIANGLE"
+  },
+  {
+    headline: "Go Lambda!",
+    tab: "lambda",
+    img: "./assets/lambda.jpg",
+    author: "LAMBDA D. TRIANGLE"
+  },
+  {
+    headline: "Lambda is triangle",
+    tab: "lambda",
+    img: "./assets/lambda.jpg",
+    author: "LAMBDA D. TRIANGLE"
   },
   {
     headline: "The Hottest New Bootstrap 4 Components Every Developer Needs to Know About",
