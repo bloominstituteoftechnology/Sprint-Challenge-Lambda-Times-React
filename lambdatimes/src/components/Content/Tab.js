@@ -1,22 +1,42 @@
 import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+
+const Button = styled.button`
+    padding: 7px 12px;
+    margin: 8px;
+    border: none;
+    background : black;
+    color: white;
+    font-weight : bold;
+    cursor: pointer; 
+`;
 
 const Tab = props => {
+  console.log("In Tab Component :  ",props.tab);
+  console.log(props.selectedTab);
+  console.log(props.selectTabHandler);
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   return (
     <div
-      className={''}
-      onClick={() => {
-        /* Replace this dummy click handler function with your selectTabHandler function from props 
-         you'll need to pass the `tab` in as an argument to this handler. */
-      }}
+      className={props.tab === props.selectedTab ? 'active-tab': ''}
     >
-      {props.tab.toUpperCase()}
+        <Button onClick={() => props.selectTabHandler(props.tab)}>
+               {props.tab.toUpperCase()} 
+        </Button>
     </div>
   );
 };
 
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+    tab : PropTypes.string,
+    selectedTab : PropTypes.string,
+    selectTabHandler : PropTypes.func
+};
+
 
 export default Tab;
