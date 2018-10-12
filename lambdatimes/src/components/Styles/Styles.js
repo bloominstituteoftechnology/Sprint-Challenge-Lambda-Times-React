@@ -15,7 +15,6 @@ export const Topics = Styled.div`
 `;
 
 export const TabItem = Styled.div`
-    font-weight: bold;
     letter-spacing: 2px;
     background-color: black;
     color: white;
@@ -25,7 +24,6 @@ export const TabItem = Styled.div`
 `;
 
 export const TabActive = Styled.div`
-    font-weight: bold;
     letter-spacing: 2px;
     background-color: white;
     color: black;
