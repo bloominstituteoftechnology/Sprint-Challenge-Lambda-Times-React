@@ -5,13 +5,13 @@ class Cards extends Component{
   constructor(props){
   super(props);
   this.state={
-
+    cards: props.cards
   }
 }
 render() {
   return (
     <div className="cards-container">
-      {props.cards.map((card, index) => <Card key={index} card={card} />)}
+      {this.props.cards.map((card, index) => <Card key={index} card={card} />)}
     </div>
   )
 }
