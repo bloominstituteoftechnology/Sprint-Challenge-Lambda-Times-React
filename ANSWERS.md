@@ -1,4 +1,5 @@
 1. What are PropTypes used for?
+
 React web applications and UI's, from humble 'hello world' to enterprise Skynet-sized codebases, can become buggy very easily when using a dynamically typed language like Javascript. PropTypes, then, is a very useful tool to assure us as developers that the proper types of data/props (strings, numbers, booleans, etc) are being passed to our components. PropTypes allow us to set tests to check if the proper data type is being presented into a component. Not just with individual data/prop exchanges but with the "shapes", i.e. lists of the order in which data should be passed (ex: this component expects a string, a number and another string, in that order).
 
 
