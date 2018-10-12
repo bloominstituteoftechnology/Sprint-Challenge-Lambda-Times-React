@@ -8,21 +8,21 @@ const Button = styled.button`
     background : black;
     color: white;
     font-weight : bold;
+    cursor: pointer; 
 `;
 
 const Tab = props => {
+  console.log("In Tab Component :  ********* ",props.tab);
+  console.log(props.selectedTab);
+  console.log(props.selectTabHandler);
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   return (
     <div
-      className={''}
-      onClick={() => {
-        /* Replace this dummy click handler function with your selectTabHandler function from props 
-         you'll need to pass the `tab` in as an argument to this handler. */
-      }}
+      className={props.tab === props.selectedTab ? 'active-tab': ''}
     >
-      <Button>{props.tab.toUpperCase()} </Button>
+        <Button onClick={() => props.selectTabHandler(props.tab)}> {props.tab.toUpperCase()} </Button>
     </div>
   );
 };
