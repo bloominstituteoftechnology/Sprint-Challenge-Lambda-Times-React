@@ -16,7 +16,7 @@ const Tab = props => {
          props.selectTabHandler(props.tab);
       }}
     >
-    {this.selected}
+    {/* {this.selected} */}
       {props.tab.toUpperCase()}
     </div>
   );
