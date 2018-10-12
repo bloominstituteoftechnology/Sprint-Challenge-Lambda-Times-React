@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <HeaderFormats>
-      <Date>{moment().format("MMMM Do, YYYY")}</Date>
+      <Date>Octorber 12, 2018</Date>
       <Temp>98°</Temp>
     </HeaderFormats>
   );
