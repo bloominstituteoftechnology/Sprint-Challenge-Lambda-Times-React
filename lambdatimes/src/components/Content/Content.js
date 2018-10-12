@@ -40,7 +40,6 @@ export default class Content extends Component {
 
   selectTabHandler(event) {
     this.changeSelected(event.target.innerText.toLowerCase());
-    console.log(event.target.innerText.toLowerCase());
   }
 
   filterCards = () => {
@@ -58,6 +57,10 @@ export default class Content extends Component {
     */
     if (this.state.selected === "all") {
       return this.state.cards;
+    } else {
+      return this.state.cards.filter(card => {
+        return card.tab == this.state.selected;
+      });
     }
   };
 
