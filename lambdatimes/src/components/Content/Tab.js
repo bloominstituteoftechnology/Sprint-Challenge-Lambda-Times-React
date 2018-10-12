@@ -17,12 +17,8 @@ const Tab = props => {
 // Make sure you include PropTypes on your props.
 Tab.propType = {
   selectTabHandler: propType.func.isRequired,
-  tab: propType.object.isRequired
+  tab: propType.object.isRequired,
+  selectedTab: propType.string.isRequired
 };
 
 export default Tab;
-
-// onClick = {() => {
-//   /* Replace this dummy click handler function with your selectTabHandler function from props
-//    you'll need to pass the `tab` in as an argument to this handler. */
-// }}>
