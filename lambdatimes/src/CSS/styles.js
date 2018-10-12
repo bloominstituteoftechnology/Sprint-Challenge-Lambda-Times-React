@@ -234,3 +234,35 @@ export const CardsContainerCardAuthorSpan = styled.span`
   letter-spacing: 1px;
   font-weight: bold;
 `;
+
+export const FormDiv = styled.div`
+  max-width: 800px;
+  height: 500px;
+  margin: 0 auto;
+`;
+
+export const FormHandler = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const InputText = styled.input`
+  padding: 10px;
+  border-radius: 2px;
+  margin: 20px auto;
+  align-self: center;
+`;
+
+export const InputSubmit = styled.input`
+  padding: 10px;
+  border-radius: 2px;
+  margin: 20px auto;
+  align-self: center;
+`;
+
+export const FormH1 = styled.h1`
+  border-radius: 2px;
+  margin: 30px auto;
+  align-self: center;
+  font-family: "Permanent Marker", cursive;
+`;
