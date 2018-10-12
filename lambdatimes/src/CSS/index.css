@@ -45,12 +45,6 @@ body {
   width: 100%;
 }
 
-.content-container {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-}
-
 .cards-container {
   display: flex;
   justify-content: space-evenly;
