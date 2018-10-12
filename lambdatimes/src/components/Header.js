@@ -8,6 +8,7 @@ const Header = () => {
   return (
     <HeaderFormats>
       <Date>Octorber 12, 2018</Date>
+      <Title>Lambda Times</Title>
       <Temp>98°</Temp>
     </HeaderFormats>
   );
@@ -56,5 +57,13 @@ const HeaderFormats = styled.div`
   flex: 1;
 `;
 
+const Title = styled.h1`
+  font-size: 60px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`;
 
 export default Header
