@@ -8,4 +8,4 @@ What is a Higher Order Component?
 A: A component that takes in another component as an argument.
 
 What are three different ways to style components in React?
-A: styled-components, css, and inline.
+A: styled-components, css, and Reactstrap.
