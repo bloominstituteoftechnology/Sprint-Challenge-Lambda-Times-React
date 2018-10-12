@@ -1,24 +1,28 @@
-import React from 'react';
-
-// Refactor this component to use styled components and not classNames. 
-// You can find the corresponding CSS in the CSS/index.css file
+import React from "react";
+import styled from "styled-components";
+import { StyledDiv, StyledSpan } from "../Stylesheet";
 
 const TopBar = () => {
   return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <StyledDiv topBar>
+      <StyledDiv tbContainer>
+        <StyledDiv tbContainerLeft>
+          <StyledSpan tbContainerLeftSpan>TOPICS</StyledSpan>
+          <StyledSpan tbContainerLeftSpan>SEARCH</StyledSpan>
+        </StyledDiv>
+        <StyledDiv tbContainerCenter>
+          <StyledSpan tbContainerCenterSpan>GENERAL</StyledSpan>
+          <StyledSpan tbContainerCenterSpan>BROWNBAG</StyledSpan>
+          <StyledSpan tbContainerCenterSpan>RANDOM</StyledSpan>
+          <StyledSpan tbContainerCenterSpan>MUSIC</StyledSpan>
+          <StyledSpan tbContainerCenterSpanLast>ANNOUNCEMENTS</StyledSpan>
+        </StyledDiv>
+        <StyledDiv tbContainerRight>
+          <StyledSpan tbContainerRightSpan>LOG IN</StyledSpan>
+        </StyledDiv>
+      </StyledDiv>
+    </StyledDiv>
+  );
+};
 
 export default TopBar;
