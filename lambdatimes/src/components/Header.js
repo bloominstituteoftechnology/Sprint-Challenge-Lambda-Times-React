@@ -7,8 +7,8 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <HeaderFormats>
-      <Date>Octorber 12, 2018</Date>
-      <Title>Lambda Times</Title>
+      <Date></Date>
+      <Title>Octor 12, 2018</Title>
       <Temp>98°</Temp>
     </HeaderFormats>
   );
