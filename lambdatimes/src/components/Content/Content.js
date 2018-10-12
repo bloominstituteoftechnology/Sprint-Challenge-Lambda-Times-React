@@ -27,11 +27,9 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
-    console.log(tab.target);
     tab.target.className = 'tab active-tab'
     // this function should take in the tab and update the state with the new tab.
     
-    console.log(tab.target.className);
     this.setState({
       selected: tab.target.innerHTML,
       tabs: tabData,
@@ -53,18 +51,39 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    console.log('the currently selected tab is:', this.state.selected);
 
-    if (this.state.selected === 'ALL'){
-      console.log('yes');
-      console.log(this.state.cards);
-      return this.state.cards;
-    }
-    else {
-      return this.state.cards;
-    }
+   if (this.state.selected === 'all'){
+     return this.state.cards;
+   }
+   else if (this.state.selected === 'ALL'){
+     return this.state.cards;
+   }
+   else {
+     let selectedtabid = this.state.selected.toLowerCase();  
+     if (selectedtabid === 'react.js') {
+       selectedtabid = 'React.js'
+     }
+     let filteredcards = this.state.cards.filter(obj => {
+       if (obj.tab === selectedtabid) {
+         return obj;
+       }
+       else {
+       }
+     });
 
-  }
+     return filteredcards;
+   }
+
+      //  let filteredcards = this.state.cards.filter(obj => {
+      //   if (obj.tag.toLowerCase = this.state.selected) {
+      //     console.log('yes');
+      //     return obj;
+      //   };
+      // });
+
+ }
+
+
 
   render() {
     console.log('The current state is:', this.state);
