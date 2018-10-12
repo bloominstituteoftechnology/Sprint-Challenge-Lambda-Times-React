@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import moment from 'moment';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
@@ -42,7 +43,7 @@ const HeaderSpan = styled.span`
 const Header = () => {
   return (
     <StyledHeader>
-      <HeaderSpan MarginLeft="0 0 0 25px;" TextLeft="left">MARCH 32, 2018</HeaderSpan>
+      <HeaderSpan MarginLeft="0 0 0 25px;" TextLeft="left">{moment().format("MMMM D, YYYY")}</HeaderSpan>
       <HeaderH1>Lambda Times</HeaderH1>
       <HeaderSpan MarginRight="0 25px 0 0;" TextRight="right">98°</HeaderSpan>
     </StyledHeader>
