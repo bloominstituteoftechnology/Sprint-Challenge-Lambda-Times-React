@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import React from 'react'
+import TopBar from './components/TopBar'
+import Header from './components/Header'
+import Content from './components/Content/Content'
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <Content />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
