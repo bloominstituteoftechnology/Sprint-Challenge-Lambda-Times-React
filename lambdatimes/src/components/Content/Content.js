@@ -15,7 +15,7 @@ export default class Content extends Component {
       cards: []
     };
     this.selectedTab= this.selectedTab.bind(this);
-    this.selectTabHandler= this.selectTabHandler.bind(this);
+   // this.selectTabHandler= this.selectTabHandler.bind(this);
     //this.changeSelected= this.changeSelected.bind(this);
    // this.filterCards= this.filterCards.bind(this);
   }
@@ -66,14 +66,15 @@ export default class Content extends Component {
   selectedTab(event) {
     event.preventDefault();
    let selectedTab = event.target;
+   console.log(selectedTab)
     return  selectedTab
   }
   
- selectTabHandler(event) {
-  event.preventDefault();
-  changeSelected();
+ //selectTabHandler(event) {
+ // event.preventDefault();
+ // changeSelected();
 
- }
+ //}
   
 
   render() {

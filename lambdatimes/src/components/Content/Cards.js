@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card';
 
 const Cards = props => {
@@ -10,7 +11,10 @@ const Cards = props => {
     </div>
   )
 }
-
+Cards.propTypes = {
+  Cards: PropTypes.array,
+   // tab: PropTypes.string
+  };
 // Make sure you include prop types for all of your incoming props
 
 export default Cards;
