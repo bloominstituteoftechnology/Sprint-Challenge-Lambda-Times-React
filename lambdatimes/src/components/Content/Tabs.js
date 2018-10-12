@@ -16,7 +16,7 @@ const Tabs = (props) => {
 								onClick={props.selectedTabHandler}
 								selectedtab={tab.selectedtab}
 							>
-								{tab}
+								<Tab tab={tab} />
 							</h3>
 						</div>
 					);

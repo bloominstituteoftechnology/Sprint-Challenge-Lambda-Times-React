@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import { cardData } from '../../data';
+import PropTypes from 'prop-types';
 
 class Cards extends Component {
 	constructor(props) {
@@ -17,21 +18,29 @@ class Cards extends Component {
 			<div className="cards-container">
 				{this.state.cards.map((card) => {
 					return (
-						<div className="card" tab={card.tab} key={card.headline}>
-							<div className="headline">{card.headline}</div>
-							<div className="author">
-								<div className="img-container">
-									<img src={card.img} />
-								</div>
-								<span>{card.author}</span>
-							</div>
-						</div>
+						<Card
+							tab={card.tab}
+							img={card.img}
+							author={card.author}
+							key={card.headline}
+							headline={card.headline}
+						/>
 					);
 				})}
 			</div>
 		);
 	}
 }
+
+Cards.propTypes = {
+	cardData: PropTypes.shape({
+		tab: PropTypes.string,
+		img: PropTypes.string,
+		author: PropTypes.string,
+		key: PropTypes.string,
+		headline: PropTypes.string
+	})
+};
 
 // Make sure you include prop types for all of your incoming props
 
