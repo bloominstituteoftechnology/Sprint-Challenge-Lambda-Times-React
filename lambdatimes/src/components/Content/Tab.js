@@ -16,7 +16,6 @@ const Tab = props => {
 };
 
 Tab.propTypes = {
-  changeSelected: PropTypes.func,
   selected: PropTypes.string,
   tab: PropTypes.string
 };
