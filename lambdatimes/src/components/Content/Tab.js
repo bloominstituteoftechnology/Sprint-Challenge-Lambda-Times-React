@@ -1,4 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Button = styled.button`
+    padding: 7px 12px;
+    margin: 8px;
+    border: none;
+    background : black;
+    color: white;
+    font-weight : bold;
+`;
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -12,7 +22,7 @@ const Tab = props => {
          you'll need to pass the `tab` in as an argument to this handler. */
       }}
     >
-      {props.tab.toUpperCase()}
+      <Button>{props.tab.toUpperCase()} </Button>
     </div>
   );
 };
