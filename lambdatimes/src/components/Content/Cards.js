@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Card';
 import propTypes from 'prop-types';
 
@@ -24,7 +24,6 @@ const Cards = props => {
 
 Cards.propTypes = {
   card:  propTypes.shape({
-    
     tab: propTypes.string,
     img: propTypes.string,
     author: propTypes.string
