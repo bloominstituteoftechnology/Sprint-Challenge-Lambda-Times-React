@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../CSS/index.css'
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -20,5 +21,9 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
-
+Tab.propTypes = {
+  selected:PropTypes.string,
+  tab:PropTypes.string,
+  select:PropTypes.func
+}
 export default Tab;
