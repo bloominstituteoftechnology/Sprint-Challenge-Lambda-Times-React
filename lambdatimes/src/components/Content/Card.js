@@ -6,7 +6,7 @@ const Card = ({headline, img, author}) => {
       <div className="headline">{headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={img} />
+          <img src={img} alt="thumbnail"/>
         </div>
         <span>By {author}</span>
       </div>

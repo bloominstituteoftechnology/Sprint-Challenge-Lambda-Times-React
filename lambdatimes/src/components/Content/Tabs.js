@@ -1,11 +1,11 @@
 import React from 'react';
 import Tab from './Tab';
-const Tabs = ({tabs}) => {
+const Tabs = ({tabs, selectedTabHandler, selectedTab}) => {
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {tabs.map(tabInfo => <Tab tab={tabInfo}/>) }
+        {tabs.map((tab, i) => <Tab tab={tab} selectedTabHandler={selectedTabHandler} selectedTab={selectedTab} key={i}/>) }
       </div>
     </div>
   );
