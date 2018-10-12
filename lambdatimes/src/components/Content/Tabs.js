@@ -15,6 +15,7 @@ const Tabs = props => {
               <Tab
               TabHandler = {props.selectTabHandler}
               TabSelected = {props.selectedTab}
+              onChange = {props.onChange}
               tab = {tab}
               >{tab}</Tab>
               

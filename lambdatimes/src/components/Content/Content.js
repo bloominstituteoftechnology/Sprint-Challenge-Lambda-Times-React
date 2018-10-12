@@ -12,7 +12,8 @@ export default class Content extends Component {
     this.state = {
       selected: 'all',
       tabs: [],
-      cards: []
+      cards: [],
+      
     };
   }
 
@@ -23,6 +24,7 @@ export default class Content extends Component {
         selected: 'all',
         tabs: tabData,
         cards: cardData,
+        filteredCards: []
       })      
     }, 2000)
   }
@@ -32,6 +34,11 @@ export default class Content extends Component {
     // this function should take in the tab and update the state with the new tab.
     
     this.setState({ selected: tab });
+
+    const filteringCards = this.state.cards.filter(card => 
+      card.tab.includes(this.state.selected));
+
+     this.setState({ filteredCards: filteringCards });
   };
 
   filterCards = () => {
@@ -47,19 +54,24 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+
    if (this.state.selected === "all"){
      return this.state.cards;
 
-   } else {return this.state.cards.filter(tab => {
-     return tab.indexOf(this.state.selected) !== -1;
-   })}
+   } else if (this.state.selected !== "all"){
+
+
+     return this.state.filteredCards;
+   }
     
+  
   };
 
   render() {
     console.log(cardData);
     console.log(this.state.tabs);
     console.log(this.state.selected);
+    console.log(this.state.filteredCards);
     
     return (
       <div className="content-container">
@@ -71,6 +83,7 @@ export default class Content extends Component {
         <Tabs tabs={this.state.tabs}
         selectedTab = {this.state.selected}
         selectTabHandler = {this.changeSelected}
+        onChange = {this.filterCards}
         />
         <Cards cards={this.filterCards()} />
       </div>
