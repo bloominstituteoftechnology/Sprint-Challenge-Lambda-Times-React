@@ -364,3 +364,31 @@ body {
   width: 100%;
   display: none;
 }
+
+.loginDiv {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  margin: 100px auto 0;
+  background: #fff;
+  box-shadow: 1px 1px 1px lightgrey;
+}
+
+.loginDiv .loginInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginDiv .loginInput input {
+  width: 200px;
+  height: 30px;
+  background: #F1F1F1;
+  margin-bottom: 10px;
+}
+
+.loginDiv .loginInput input[type='submit'] {
+  background: #3897F0;
+  border-radius: 5px;
+  color: white;
+}
