@@ -37,7 +37,7 @@ const ContainerLeft = styled.div`
   font-size: 11px;
 `;
 
-const Span1 = styled.div`
+const Span1 = styled.span`
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
@@ -52,7 +52,7 @@ const ContainerCenter = styled.div`
   font-size: 9px;
 `;
 
-const Span2 = styled.div`
+const Span2 = styled.span`
   cursor: pointer;
   margin-right: 5%;
 `;
@@ -67,7 +67,7 @@ const ContainerRight = styled.div`
   font-weight: bold;
 `;
 
-const Span3 = styled.div`
+const Span3 = styled.span`
   cursor: pointer;
 `;
 
