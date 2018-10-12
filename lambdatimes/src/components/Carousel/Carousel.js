@@ -16,27 +16,28 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    if (this.state.index <= 0) {
-      this.setState({
-        index: this.state.carousel.length - 1
-      });
-    } else {
+    if (this.state.index > 0) {
       this.setState(prevState => ({
         index: prevState.index - 1
       }));
-    }
+    } else
+      this.setState({
+        index: this.state.carousel.length - 1
+      });
+    console.log(this.state.index);
   };
 
   rightClick = () => {
-    if (this.state.index >= 0) {
+    if (this.state.index > this.state.carousel.length - 2) {
       this.setState({
-        index: this.state.carousel.length + 1
+        index: 0
       });
     } else {
       this.setState(prevState => ({
         index: prevState.index + 1
       }));
     }
+    console.log(this.state.index);
   };
 
   selectedImage = index => {
@@ -50,7 +51,6 @@ export default class Carousel extends Component {
   };
 
   render() {
-    console.log(this.state.carousel);
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>
