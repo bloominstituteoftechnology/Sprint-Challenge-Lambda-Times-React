@@ -6,24 +6,24 @@ import * as styl from "../Styles/Styles";
 
 const TopBar = () => {
   return (
-    <styl.TopBarDiv>
-      <styl.ContainerDiv>
-        <styl.ContainerLeftDiv>
+    <styl.TopBar>
+      <styl.Container>
+        <styl.ContainerLeft>
           <styl.LeftSpan>TOPICS</styl.LeftSpan>
           <styl.LeftSpan>SEARCH</styl.LeftSpan>
-        </styl.ContainerLeftDiv>
-        <styl.ContainerCenterDiv>
+        </styl.ContainerLeft>
+        <styl.ContainerCenter>
           <styl.CenterSpan>GENERAL</styl.CenterSpan>
           <styl.CenterSpan>BROWNBAG</styl.CenterSpan>
           <styl.CenterSpan>RANDOM</styl.CenterSpan>
           <styl.CenterSpan>MUSIC</styl.CenterSpan>
           <styl.CenterSpan>ANNOUNCEMENTS</styl.CenterSpan>
-        </styl.ContainerCenterDiv>
-        <styl.ContainerRightDiv>
+        </styl.ContainerCenter>
+        <styl.ContainerRight>
           <styl.RightSpan>LOG IN</styl.RightSpan>
-        </styl.ContainerRightDiv>
-      </styl.ContainerDiv>
-    </styl.TopBarDiv>
+        </styl.ContainerRight>
+      </styl.Container>
+    </styl.TopBar>
   );
 };
 
