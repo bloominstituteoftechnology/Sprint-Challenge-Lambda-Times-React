@@ -5,6 +5,7 @@ import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+import { consolidateStreamedStyles } from 'styled-components';
 
 export default class Content extends Component {
   constructor(props) {
@@ -23,7 +24,10 @@ export default class Content extends Component {
     })
   }
 
-  changeSelected = tab => {
+  changeSelected = (event, tab) => {
+    this.setState({
+      selected: tab
+    })
     // this function should take in the tab and update the state with the new tab.
   };
 
@@ -51,7 +55,11 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
+        <Tabs
+          tabs={this.state.tabs}
+          changeSelected={this.changeSelected}
+          selected={this.state.selected}
+        />
         <Cards cards={this.filterCards()} />
       </div>
     );

@@ -1,16 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tab from './Tab';
+
+import { TabContainer } from '../Styles/Styles';
+import { Topics } from '../Styles/Styles';
+
 const Tabs = props => {
   return (
-    <div className="tabs">
-      <div className="topics">
+    <TabContainer>
+      <Topics>
         <span className="title">TRENDING TOPICS:</span>
-        {/* map over the tabs provided on your props, create a new Tab component for each one.
-            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
-      </div>
-    </div>
+        {props.tabs.map((tab, index) => (
+          <div key={index}>
+            <Tab
+              tab={tab}
+              changeSelected={props.changeSelected}
+              selected={props.selected}
+            />
+          </div>
+        ))}
+        
+      </Topics>
+    </TabContainer>
   );
 };
+
 
 // Make sure to use PropTypes to validate your types!
 export default Tabs;
