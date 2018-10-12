@@ -6,6 +6,7 @@ import Cards from './Cards';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 
+//Content > Tabs > Tab
 export default class Content extends Component {
   constructor(props) {
     super(props);
@@ -18,10 +19,16 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState ({
+      tabs: tabData,
+      cards: cardData
+    })
+
   }
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+    this.setState ({selected: tab});
   };
 
   filterCards = () => {
@@ -37,6 +44,10 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+    if (this.selected === 'all') 
+      this.state.cards = cardData;
+    else this.state.cards = cardData.filter(card => card.tab === this.selected)  
+
     return this.state.cards;
   };
 
@@ -48,7 +59,11 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
+        <Tabs 
+          tabs={this.state.tabs}
+          selectedTab = {this.state.selected}
+          selecTabHandler = {this.changeSelected}
+          />
         <Cards cards={this.filterCards()} />
       </div>
     );
