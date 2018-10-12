@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
-const Cardscontainerdiv = styled.div `
-
-`;
 
 
 const Cards = props => {

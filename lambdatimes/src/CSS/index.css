@@ -228,15 +228,16 @@ body {
   }
 }
 .cards-container .card {
-  border-bottom: 1px solid lightgrey;
+  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: none;
   flex-direction: column;
   background-color: #fff;
   width: 380px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   padding: 24px;
+  margin-left : 18px;
 }
 .cards-container .card .headline {
   font-size: 25px;

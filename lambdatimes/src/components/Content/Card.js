@@ -2,24 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-
-
-const Carddiv = styled.div`
-    padding: 7px 12px;
-    margin: 8px;
-    border: none;
-    background : black;
-    color: white;
-    font-weight : bold;
-`;
-
-const Headlinediv = styled.div``;
-
-const Authordiv = styled.div``;
-
-const ImgContainerdiv = styled.div ``;
-
-
 const Card = props => {
   console.log("In Card-component : ",props);
   return (
