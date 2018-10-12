@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 const Form = styled.form`
   margin: 75px 0;
@@ -16,9 +17,12 @@ const Form = styled.form`
   justify-content: space-around;
   width: 300px;
   align-items: baseline;
+  h4{
+      margin:10px auto 0;
+  }
 `;
 const Input = styled.input`
-  margin: 0 auto;
+  margin: 10px auto;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   width: 175px;
