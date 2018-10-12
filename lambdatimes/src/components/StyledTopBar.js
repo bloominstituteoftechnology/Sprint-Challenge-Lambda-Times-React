@@ -9,6 +9,13 @@ export const StyledTopBar = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+
+  @media (min-width: 1280px) {
+    .top-bar .container {
+      width: 1280px;
+      color: red;
+    }
+  }
 `;
 
 export const StyledContainer = styled.div`

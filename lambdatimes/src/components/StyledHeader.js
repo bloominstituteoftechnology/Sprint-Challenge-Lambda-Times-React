@@ -25,6 +25,11 @@ export const StyledTitle = styled.h1`
   flex: 8;
   text-align: center;
   color: #000;
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+    color: red;
+  }
 `;
 
 export const StyledTemp = styled.span`

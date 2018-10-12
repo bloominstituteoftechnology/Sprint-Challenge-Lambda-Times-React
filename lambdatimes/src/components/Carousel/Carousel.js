@@ -34,7 +34,13 @@ export default class Carousel extends Component {
   };
 
   selectedImage = () => {
-    return <img src={carouselData} style={{ display: 'block' }} />;
+    console.log(this.state.currentImageIndex, carouselData);
+    return (
+      <img
+        src={carouselData[this.state.currentImageIndex]}
+        style={{ display: 'block' }}
+      />
+    );
   };
 
   render() {
@@ -43,7 +49,7 @@ export default class Carousel extends Component {
         <div className="left-button" onClick={this.leftClick}>
           {'<'}
         </div>
-        <div>{this.state.currentImageIndex}</div>
+        <div>{this.selectedImage()}</div>
         <div className="right-button" onClick={this.rightClick}>
           {'>'}
         </div>
