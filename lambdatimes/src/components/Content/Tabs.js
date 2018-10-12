@@ -9,11 +9,13 @@ const Tabs = props => {
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
         {props.tabs.map(tab => {
           const random = Math.floor(Math.random() * 1000000);
-          <Tab 
-          key={random}
-          selectedTabHandler={props.selectedTabHandler}
-          selectedTab={props.selectedTab} 
-          tab={tab} />
+          return(
+            <Tab
+              key={random}
+              selectTabHandler={props.selectTabHandler}
+              selectedTab={props.selectedTab}
+              tab={tab} />
+          );
         })}
       </div>
     </div>
