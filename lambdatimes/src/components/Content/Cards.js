@@ -14,7 +14,7 @@ const Cards = props => {
   )
 }
 
-console.log({Cards});
+// console.log({Cards});
 
 // Make sure you include prop types for all of your incoming props
 
