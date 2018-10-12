@@ -47,17 +47,13 @@ export default class Content extends Component {
     */
     let selected = this.state.selected;
     if (selected === "all") {
-      this.setState({
-        cards: cardData
-      })
-    } else {
+      return this.state.cards;
+      } else {
       let filteredCards = copyCardData.filter(card => {
         return card.tab.includes(selected);
       })
-      this.setState({
-        cards: filteredCards
-      })
-    }
+      return filteredCards;
+      }
   };
 
   render() {
@@ -73,7 +69,7 @@ export default class Content extends Component {
         selectedTab={this.state.selected}
         changeSelected={this.changeSelected}
         />
-        <Cards cards={this.filterCards} />
+        <Cards cards={this.filterCards()} />
       </div>
     );
   }
