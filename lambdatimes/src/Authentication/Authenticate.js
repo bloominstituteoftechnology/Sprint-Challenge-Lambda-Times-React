@@ -26,7 +26,7 @@ const Authenticate = (App, Login) =>
         username === localStorage.getItem('username') &&
         password === localStorage.getItem('password')
       ) {
-        // this.setState({ loggedIn: true });
+        this.setState({ username: '', password: '' });
         this.props.login();
       }
     };

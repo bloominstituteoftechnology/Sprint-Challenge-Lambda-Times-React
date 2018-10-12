@@ -1,7 +1,7 @@
 1.  What are PropTypes used for?
-    PropTypes are a development tool used to add structure. They are also helpful for showing other developers the type of data that is supposed to flow through your app.
+    PropTypes are a development tool used make sure the correct type of data is being passed through props. They are also helpful for showing other developers the type of data that is supposed to flow through your app.
 2.  What is a lifecycle event in React?
-    The lifecycle of a React element mounting => updating => unmounting. A lifecycle event is triggered durring one of these points in a component's life.
+    The lifecycle of a React element mounting => updating => unmounting. Lifecycle methods given to us by the Component class triggers these events.
 3.  What is a Higher Order Component?
     Higher Order Components are components that take in functions/components as arguments and returns a new component. They can be helpful for conditional rendering two seperate views or for creating multiple components with the same functionality, but have different state.
 4.  What are three different ways to style components in React?
