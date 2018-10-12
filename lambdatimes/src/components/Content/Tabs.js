@@ -10,6 +10,7 @@ const Tabs = props => {
         {props.tabs.map(tab=>(
           <Tab key={tab} 
           selectedTab={props.selectedTab}
+          selectTabHandler={props.selectTabHandler}
           tab={tab}/>
         ))}
         {/* map over the tabs provided on your props, create a new Tab component for each one.
@@ -23,7 +24,9 @@ const Tabs = props => {
 
 Tabs.propTypes={
 tabs: PropTypes.arrayOf(
-  PropTypes.shape({selectedTab: PropTypes.string})
+  PropTypes.shape({
+    selectedTab: PropTypes.string,
+    selectTabHandler: PropTypes.func})
 )
 };
 
