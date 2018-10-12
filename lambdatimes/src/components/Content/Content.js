@@ -22,6 +22,11 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
+    let currentTab = tab.target.innerText.toLowerCase()
+    if (currentTab === 'react.js'){
+      currentTab = 'React.js'
+    }
+    this.setState({selected:currentTab})
     // this function should take in the tab and update the state with the new tab.
   };
 
@@ -29,7 +34,7 @@ export default class Content extends Component {
     if (this.state.selected === 'all'){
       return cardData;
     } else{
-      return cardData.filter(card => card.tab = this.state.selected)
+      return cardData.filter(card => card.tab === this.state.selected)
       
     }
     /* Right now this function only returns the cards on state.
@@ -54,7 +59,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
         <Cards cards={this.filterCards()} />
       </div> 
     );
