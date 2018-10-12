@@ -63,6 +63,12 @@ export const ContainerRight = styled.div`
 
 export const SpanLike = styled.span`
     cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
 `;
 
 export const Headers = styled.div`

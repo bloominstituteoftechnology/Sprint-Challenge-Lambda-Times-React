@@ -1,5 +1,5 @@
 import React from 'react';
-import {TopBars, Container, ContainerLeft, ContainerCenter, ContainerRight} from './Styles.js';
+import {TopBars, Container, ContainerLeft, ContainerCenter, ContainerRight, SpanLike} from './Styles.js';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
@@ -9,14 +9,14 @@ const TopBar = () => {
     <TopBars>
       <Container>
         <ContainerLeft>
-          <span>TOPICS</span><span>SEARCH</span>
+          <SpanLike>TOPICS</SpanLike><SpanLike>SEARCH</SpanLike>
         </ContainerLeft>
         <ContainerCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          <SpanLike>GENERAL</SpanLike><SpanLike>BROWNBAG</SpanLike><SpanLike>RANDOM</SpanLike><SpanLike>MUSIC</SpanLike><SpanLike>ANNOUNCEMENTS</SpanLike>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
-          </ContainerRight>
+          <SpanLike>LOG IN</SpanLike>
+        </ContainerRight>
         </Container>
      </TopBars>
   )
