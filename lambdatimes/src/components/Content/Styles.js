@@ -114,7 +114,41 @@ export const ContainerRight = styled.div`
 `;
 
 //Login
-export const LoginPage = styled.div``;
-export const LoginForm = styled.form``;
-export const LoginInput = styled.input``;
-export const LoginButton = styled.button``;
+export const LoginPage = styled.div`
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    font-size: 60px;
+    font-family: Didot, serif;
+    font-weight: bold;
+    flex: 8;
+    text-align: center;
+    color: #000;
+  }
+
+  p {
+    font-size: 20px;
+  }
+`;
+export const LoginForm = styled.form`
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+export const LoginInput = styled.input`
+  width: 60%;
+  margin: 10px auto;
+  padding: 15px 0;
+  height: 20px;
+  text-indent: 15px;
+  border-radius: 2px;
+  border: 2px solid #000;
+`;
+export const LoginButton = styled.button`
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 3px;
+`;
