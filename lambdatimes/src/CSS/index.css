@@ -238,26 +238,26 @@ header .temp {
   margin-bottom: 16px;
   padding: 24px;
 }
-.cards-container .card .headline {
+.cards-container div .headline {
   font-size: 25px;
   font-family: Didot, serif;
 }
-.cards-container .card .author {
+.cards-container div.author {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
   margin-top: 15px;
 }
-.cards-container .card .author .img-container {
+.cards-container div .author .img-container {
   padding-right: 10px;
   border-right: 1px solid lightgrey;
   height: 40px;
 }
-.cards-container .card .author .img-container img {
+.cards-container div .author .img-container img {
   width: 40px;
 }
-.cards-container .card .author span {
+.cards-container div .author span {
   padding-left: 10px;
   font-size: 12px;
   letter-spacing: 1px;
