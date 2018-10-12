@@ -55,7 +55,7 @@ export const TopBarContainerCenter = styled.div`
     margin-right: 5%;
 
     &:last-child {
-      margin-right 0;
+      margin-right: 0;
     }
 
     &:hover {
