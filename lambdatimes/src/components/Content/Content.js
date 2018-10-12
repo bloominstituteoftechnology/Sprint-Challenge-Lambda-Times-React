@@ -14,7 +14,6 @@ export default class Content extends Component {
       tabs: [],
       cards: []
     };
-    console.log("props on content", this.props.tab);
   }
   componentDidMount() {
     this.setState({ tabs: tabData, cards: cardData });
@@ -39,14 +38,22 @@ export default class Content extends Component {
     of the items from cardData. 
     - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+    // console.log(this.state.cards);
+
     const filteredCards = this.state.cards.filter(card => {
+      // console.log(this.state.selected);
+      // console.log("card", card.tab);
+      if (this.state.selected === "all") return true;
+
       return card.tab === this.state.selected;
     });
+    // console.log(filteredCards);
+
     return filteredCards;
   };
 
   render() {
-    // console.log(this.state.tabs);
+    // console.log(this.filterCards());
     return (
       <div className="content-container">
         {/* 
