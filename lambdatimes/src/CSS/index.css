@@ -52,7 +52,53 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
-.top-bar {
+
+.login {
+  width: 50%;
+  margin: 10% auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 1px solid gray;
+  text-align: center;
+  padding: 5%;
+}
+
+.login h1 {
+  margin: 0 0 5% 0;
+  color: #A0001E;
+}
+
+.login form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login form input {
+  width: 100%;
+  padding: 1%;
+  margin-bottom: 4%;
+  border-radius: 3px;
+  border: 1px solid gray;
+  text-align: center;
+}
+
+.login form button {
+  width: 100%;
+  border-radius: 3px;
+  padding: 2%;
+  background: #A0001E;
+  border: none;
+  color: white;
+  cursor: pointer; 
+}
+
+
+/* .top-bar {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -61,8 +107,8 @@ body {
   position: fixed;
   height: 44px;
   background-color: #333;
-}
-.top-bar .container {
+} */
+/* .top-bar .container {
   width: 100%;
   display: flex;
   justify-content: none;
@@ -76,29 +122,29 @@ body {
   .top-bar .container {
     width: 1280px;
   }
-}
-.top-bar .container .container-left {
+} */
+/* .top-bar .container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
   flex: 1;
   font-size: 11px;
-}
-.top-bar .container .container-left span {
+} */
+/* .top-bar .container .container-left span {
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
-}
-.top-bar .container .container-center {
+} */
+/* .top-bar .container .container-center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex: 3;
   font-size: 9px;
-}
-.top-bar .container .container-center span {
+} */
+/* .top-bar .container .container-center span {
   cursor: pointer;
   margin-right: 5%;
 }
@@ -107,8 +153,8 @@ body {
 }
 .top-bar .container .container-center span:hover {
   text-decoration: underline;
-}
-.top-bar .container .container-right {
+} */
+/* .top-bar .container .container-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -116,11 +162,11 @@ body {
   flex: 1;
   font-size: 11px;
   font-weight: bold;
-}
-.top-bar .container .container-right span {
+} */
+/* .top-bar .container .container-right span {
   cursor: pointer;
-}
-.header {
+} */
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,22 +182,22 @@ body {
   .header {
     width: 1280px;
   }
-}
-.header h1 {
+} */
+/* .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
   flex: 8;
   text-align: center;
   color: #000;
-}
-.header span {
+} */
+/* .header span {
   align-self: flex-end;
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
-}
-.header .date {
+} */
+/* .header .date {
   margin-left: 25px;
   flex: 1;
 }
@@ -159,10 +205,10 @@ body {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
 .content-container {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .tabs {
