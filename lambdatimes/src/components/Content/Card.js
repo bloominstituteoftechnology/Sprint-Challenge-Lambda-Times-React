@@ -17,3 +17,9 @@ const Card = props => {
 // Make sure to include PropTypes.
 
 export default Card;
+
+
+
+
+
+
