@@ -20,7 +20,7 @@ export default class Content extends Component {
     // Once the component has mounted, get the data and reflect that data on the state.
     this.setState({
       tabs: tabData,
-      // cards: cardData
+      cards: cardData
     })
   }
 
@@ -42,9 +42,16 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    if (this.selected === "all") this.state.cards = cardData;
-    else this.state.cards = cardData.filter(card => card.tab === this.selected);
-    return this.state.cards;
+    if (this.state.selected === "all") {
+      // this.setState({ cards: cardData });
+      // console.log("all", this.state.cards);
+      return this.state.cards;
+    } else {
+      // this.setState({ cards: cardData.filter(card => card.tab === this.state.selected) });
+      // console.log(this.selected, this.state.cards);
+      return this.state.cards.filter(card => card.tab === this.state.selected);
+    }
+    // return this.state.cards;
   };
 
   render() {
