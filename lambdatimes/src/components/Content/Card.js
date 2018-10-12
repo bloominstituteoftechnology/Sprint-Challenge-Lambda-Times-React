@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
@@ -57,5 +57,11 @@ const Card = props => {
 };
 
 // Make sure to include PropTypes.
+Card.propTypes = {
+  headline: PropTypes.string,
+  tab: PropTypes.string,
+  img: PropTypes.string,
+  author: PropTypes.string,
+}
 
 export default Card;

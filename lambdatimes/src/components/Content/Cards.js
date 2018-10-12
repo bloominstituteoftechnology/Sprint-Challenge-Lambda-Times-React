@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card';
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledCardsContainer = styled.div`
@@ -23,5 +23,13 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
+Cards.propTypes = {
+  card: PropTypes.shape({
+    headline: PropTypes.string,
+    tab: PropTypes.string,
+    img: PropTypes.string,
+    author: PropTypes.string,
+  })
+}
 
 export default Cards;

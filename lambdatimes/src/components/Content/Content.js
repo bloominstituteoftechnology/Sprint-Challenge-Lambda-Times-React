@@ -6,7 +6,7 @@ import Cards from './Cards';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledContentContainer = styled.div`
@@ -80,4 +80,22 @@ export default class Content extends Component {
       </StyledContentContainer>
     );
   }
+}
+
+
+Tabs.propTypes = {
+  tabs: PropTypes.shape({
+    tab: PropTypes.string
+  })
+}
+
+Cards.propTypes = {
+  cards: PropTypes.shape({
+    card: PropTypes.shape({
+      headline: PropTypes.string,
+      tab: PropTypes.string,
+      img: PropTypes.string,
+      author: PropTypes.string,
+    })
+  })
 }
