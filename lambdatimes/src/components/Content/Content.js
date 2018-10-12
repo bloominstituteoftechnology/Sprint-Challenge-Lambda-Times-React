@@ -24,8 +24,18 @@ export default class Content extends Component {
     });
   }
 
-  changeSelected = tab => {
-    // this function should take in the tab and update the state with the new tab.
+  // changeSelected = tab => {
+  //   // this function should take in the tab and update the state with the new tab.
+  //   this.setState({
+  //     selected: tab
+  //   });
+  // };
+
+  selectTabHandler = e => {
+    console.log(e.target.innerHTML);
+    this.setState({
+      selected: e.target.innerHTML
+    });
   };
 
   filterCards = () => {
@@ -52,10 +62,12 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selected={this.sele} />
-        {/* <Cards cards={this.filterCards()} /> */}
-        <Cards cards={this.state.cards} />{" "}
-        {/* change this line later, for testing only */}
+        <Tabs
+          tabs={this.state.tabs}
+          selectedTab={this.state.selected}
+          selectTabHandler={this.selectTabHandler}
+        />
+        <Cards cards={this.filterCards()} />
       </div>
     );
   }
