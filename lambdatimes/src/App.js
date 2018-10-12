@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import React, { Component } from "react";
+import LambdaTimes from "./components/Content/LamdaTimes";
+import Login from "./components/Login";
+import Authenticate from "./components/Content/Autheticate";
 
-const App = () => {
-  return (
-    <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <LambdaTimes />
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Authenticate(App, Login);
