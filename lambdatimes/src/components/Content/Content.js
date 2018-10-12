@@ -29,7 +29,9 @@ export default class Content extends Component {
     // Once the component has mounted, get the data and reflect that data on the state.
     this.setState({
       tabs: tabData,
-      cards: cardData
+      cards: cardData,
+      selectedTab: '',
+      filteredCards: []
     })
   }
 
@@ -64,7 +66,7 @@ export default class Content extends Component {
 
     // this.setState({ cards: cards });
 
-    return this.state.cards;
+    return this.state.filteredCards;
   };
 
   render() {
@@ -76,7 +78,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Cards cards={this.state.cards} />
       </StyledContentContainer>
     );
   }
@@ -90,12 +92,5 @@ Tabs.propTypes = {
 }
 
 Cards.propTypes = {
-  cards: PropTypes.shape({
-    card: PropTypes.shape({
-      headline: PropTypes.string,
-      tab: PropTypes.string,
-      img: PropTypes.string,
-      author: PropTypes.string,
-    })
-  })
+  cards: PropTypes.arrayOf(PropTypes.object)
 }
