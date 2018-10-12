@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ContentContain } from '../../Styles';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
@@ -47,7 +48,7 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="content-container">
+      <ContentContain>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
@@ -58,7 +59,7 @@ export default class Content extends Component {
         selectTabHandler={this.changeSelected}
         />
         <Cards cards={this.filterCards()} />
-      </div>
+      </ContentContain>
     );
   }
 }
