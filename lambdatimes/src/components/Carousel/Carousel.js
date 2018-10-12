@@ -4,7 +4,10 @@ import { carouselData } from '../../data';
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      carousel: [],
+      index: 0
+    };
   }
   componentDidMount() {
     this.setState({
@@ -12,14 +15,34 @@ export default class Carousel extends Component {
     });
   }
 
-  leftClick = () => {};
+  leftClick = () => {
+    if (this.state.index <= 0) {
+      this.setState({
+        index: this.state.carousel.length - 1
+      });
+    } else {
+      this.setState(prevState => ({
+        index: prevState.index - 1
+      }));
+    }
+  };
 
-  rightClick = () => {};
+  rightClick = () => {
+    if (this.state.index >= 0) {
+      this.setState({
+        index: this.state.carousel.length + 1
+      });
+    } else {
+      this.setState(prevState => ({
+        index: prevState.index + 1
+      }));
+    }
+  };
 
-  selectedImage = () => {
+  selectedImage = index => {
     return (
       <img
-        src={this.state.carousel}
+        src={this.state.carousel[index]}
         style={{ display: 'block' }}
         alt="carousel"
       />
@@ -33,6 +56,7 @@ export default class Carousel extends Component {
         <div className="left-button" onClick={this.leftClick}>
           {'<'}
         </div>
+        {this.selectedImage(this.state.index)}
         <div className="right-button" onClick={this.rightClick}>
           {'>'}
         </div>
