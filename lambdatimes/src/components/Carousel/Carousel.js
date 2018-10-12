@@ -43,6 +43,7 @@ export default class Carousel extends Component {
         <div className="left-button" onClick={this.leftClick}>
           {'<'}
         </div>
+        <div>{this.state.currentImageIndex}</div>
         <div className="right-button" onClick={this.rightClick}>
           {'>'}
         </div>
