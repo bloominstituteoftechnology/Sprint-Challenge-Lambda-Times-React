@@ -38,8 +38,7 @@ const TopBar = () => {
 
 export default TopBar;
 
-{
-  /* <div className="top-bar">
+/* <div className="top-bar">
   <div className="container">
     <div className="container-left">
       <span>TOPICS</span><span>SEARCH</span>
@@ -52,4 +51,3 @@ export default TopBar;
     </div>
   </div>
 </div> */
-}
