@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import PropTypes from 'prop-types';
 
 class Cards extends Component{
   constructor(props){
@@ -17,6 +18,8 @@ render() {
 }
 }
 
-// Make sure you include prop types for all of your incoming props
+Cards.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default Cards;

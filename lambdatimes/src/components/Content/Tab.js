@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
 if (props.tab === props.selectedTab) {
@@ -9,13 +10,14 @@ if (props.tab === props.selectedTab) {
   return (
     <div
       className={props.tab.className}
-      onClick={(event) => this.selectTabHandler(props.tab, event)}>
+      onClick={(tab) => props.selectTabHandler(tab)}>
       {props.tab.toUpperCase()}
     </div>
   );
 }
 
-
-// Make sure you include PropTypes on your props.
+Tab.PropTypes = {
+  tab: PropTypes.string
+}
 
 export default Tab;
