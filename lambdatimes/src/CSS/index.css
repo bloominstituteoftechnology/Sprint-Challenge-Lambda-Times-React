@@ -62,7 +62,7 @@ body {
   height: 44px;
   background-color: #333;
 }
-.top-bar .container {
+div.container {
   width: 100%;
   display: flex;
   justify-content: none;
@@ -73,11 +73,11 @@ body {
   padding: 0 10px;
 }
 @media (min-width: 1280px) {
-  .top-bar .container {
+  div .container {
     width: 1280px;
   }
 }
-.top-bar .container .container-left {
+div .container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -85,12 +85,12 @@ body {
   flex: 1;
   font-size: 11px;
 }
-.top-bar .container .container-left span {
+div .container .container-left span {
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
 }
-.top-bar .container .container-center {
+div .container .container-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,17 +98,17 @@ body {
   flex: 3;
   font-size: 9px;
 }
-.top-bar .container .container-center span {
+div .container .container-center span {
   cursor: pointer;
   margin-right: 5%;
 }
-.top-bar .container .container-center span:last-child {
+div .container .container-center span:last-child {
   margin-right: 0;
 }
-.top-bar .container .container-center span:hover {
+div .container .container-center span:hover {
   text-decoration: underline;
 }
-.top-bar .container .container-right {
+div .container .container-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -117,7 +117,7 @@ body {
   font-size: 11px;
   font-weight: bold;
 }
-.top-bar .container .container-right span {
+div .container .container-right span {
   cursor: pointer;
 }
 .header {
@@ -137,7 +137,7 @@ body {
     width: 1280px;
   }
 }
-.header h1 {
+header h1 {
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
@@ -145,17 +145,17 @@ body {
   text-align: center;
   color: #000;
 }
-.header span {
+header span {
   align-self: flex-end;
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
 }
-.header .date {
+header .date {
   margin-left: 25px;
   flex: 1;
 }
-.header .temp {
+header .temp {
   text-align: right;
   margin-right: 25px;
   flex: 1;
