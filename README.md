@@ -20,8 +20,8 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 
 ## Project Setup
 
-- This project was put together using Create React App so you should be very familiar with the file structure up to this point.
-- From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
+X This project was put together using Create React App so you should be very familiar with the file structure up to this point.
+X From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
 
 ### Part I
 
