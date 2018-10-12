@@ -18,8 +18,8 @@ export default class Content extends Component {
 
   componentDidMount() {
     this.setState({ tabs: tabData });
-    //this.setState({cards: cardData})
-    console.log(this.state.tabs)
+    this.setState({ cards: cardData });
+    
   }
   
   changeSelected = tab => {
@@ -43,7 +43,6 @@ export default class Content extends Component {
   };
 
   render() {
-    console.log(this.state.tabs)
     return (
       <div className="content-container">
         {/* 
