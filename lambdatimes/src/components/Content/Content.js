@@ -22,6 +22,7 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    //points the values to where they are defined in the data.js file
     this.setState ({
       tabs: tabData,
       cards: cardData
@@ -31,6 +32,7 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+    //this changes the 'selected' state to the new tab
     let NewTab = tab
     this.setState ({selected: NewTab});
   };
@@ -48,6 +50,7 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
    */}
+   //filters though to see if tabb is set to all, and if it is, it will show all the cards, if not, it will show the cards that correspond with 'selected'
    if (this.state.selected === 'all') {
     return this.state.cards
   } else {
@@ -66,7 +69,10 @@ export default class Content extends Component {
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
+
+          Passes the props to the other components
         */}
+        
         <Tabs 
           tabs={this.state.tabs}
           selectedTab = {this.state.selected}

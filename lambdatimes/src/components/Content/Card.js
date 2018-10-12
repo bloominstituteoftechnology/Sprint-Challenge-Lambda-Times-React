@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
+// passing in the props values 
 const Card = props => {
   return (
     <div className="card">
