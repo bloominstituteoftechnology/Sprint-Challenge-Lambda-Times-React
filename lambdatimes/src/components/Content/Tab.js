@@ -19,4 +19,5 @@ Tab.propTypes = {
   tab: PropTypes.string,
   changeSelected: PropTypes.func,
 }
+
 export default Tab;
