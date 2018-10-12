@@ -11,7 +11,7 @@ const Tab = props => {
   return (
     <div
       className={selected ? 'tab active-tab' : 'tab'}//first time using this kind of cool
-      onClick={(props) =>  props.selectTabHandler(props.tab)}
+      onClick={() =>  props.selectTabHandler(props.tab)}//this was a pain and I am not sure if there is a better way to do this without invoking the function
         /* Replace this dummy click handler function with your selectTabHandler function from props 
          you'll need to pass the `tab` in as an argument to this handler. */
       
