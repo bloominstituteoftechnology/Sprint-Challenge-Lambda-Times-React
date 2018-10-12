@@ -20,7 +20,8 @@ export default class Content extends Component {
     // Once the component has mounted, get the data and reflect that data on the state.
     this.setState({
       tabs: tabData.map(tab => tab),
-      cards: cardData.map(card => card)
+      cards: cardData.map(card => card),
+      selected: this.state.selected.toUpperCase()
     });
   }
 
@@ -51,6 +52,22 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+
+    // const cards = [...this.state.cards];
+    // cards.filter(card => {
+    //   // console.log(this.state.cards[0].tab);
+    //   // console.log(this.state.selected);
+    //   if (card.tab.toUpperCase() === this.state.selected) {
+    //     this.setState({
+    //       cards: card
+    //     });
+    //   }
+
+    // else {
+    //   return this.state.cards;
+    // }
+    // });
+
     return this.state.cards;
   };
 
