@@ -7,6 +7,9 @@ import Cards from './Cards';
 import { tabData, cardData } from '../../data';
 
 //Content > Tabs > Tab
+//Content > Cards > Card
+
+
 export default class Content extends Component {
   constructor(props) {
     super(props);
