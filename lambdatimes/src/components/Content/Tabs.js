@@ -1,7 +1,7 @@
-import React from 'react';
-import Tab from './Tab';
+import React from 'react'
+import Tab from './Tab'
 
-const Tabs = ({ tabs }) => {
+const Tabs = ({ tabs, selectedTab, selectTabHandler }) => {
   return (
     <div className="tabs">
       <div className="topics">
@@ -9,11 +9,18 @@ const Tabs = ({ tabs }) => {
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
 
-        {tabs.map((tab, i) => <Tab key={i} tab={tab} />)}
+        {tabs.map((tab, i) => (
+          <Tab
+            key={i}
+            tab={tab}
+            selectedTab={selectedTab}
+            selectTabHandler={selectTabHandler}
+          />
+        ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
 // Make sure to use PropTypes to validate your types!
-export default Tabs;
+export default Tabs
