@@ -27,11 +27,17 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
-    console.log('hellofromchangeSelected');
-    console.log(tab);
-  
-    
+    console.log(tab.target);
+    tab.target.className = 'tab active-tab'
     // this function should take in the tab and update the state with the new tab.
+    
+    console.log(tab.target.className);
+    this.setState({
+      selected: tab.target.innerHTML,
+      tabs: tabData,
+      cards: cardData
+    });
+    
   };
 
   filterCards = () => {
