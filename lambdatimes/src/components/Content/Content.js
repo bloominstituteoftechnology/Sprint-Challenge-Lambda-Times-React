@@ -33,7 +33,7 @@ export default class Content extends Component {
 
 	filterCards = (tab) => {
 		if (tab === 'all') {
-			this.selectedtab({ cards: cardData });
+			this.setState({ cards: cardData });
 			return this.state.cards;
 		} else {
 			const newCards = cardData.filter((c) => c.tab === tab);
