@@ -19,10 +19,10 @@ const Tab = (props) => {
 }
 
 Tab.propTypes = {
-    tabData: PropTypes.arrayOf(PropTypes.string),
-    tab: PropTypes.string,
-    selectedTab: PropTypes.string,
-    className: PropTypes.string
+    tabData: PropTypes.arrayOf(PropTypes.string.isRequired),
+    tab: PropTypes.string.isRequired,
+    selectedTab: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired
 }
 // Make sure you include PropTypes on your props.
 
