@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import * as styles from '../styleComponents.js'
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -52,7 +52,7 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="content-container">
+      <styles.ContentContainer>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
@@ -64,7 +64,7 @@ export default class Content extends Component {
           selectTabHandler={this.changeSelected}
         />
         <Cards cards={this.filterCards()} />
-      </div>
+      </styles.ContentContainer>
     );
   }
 }

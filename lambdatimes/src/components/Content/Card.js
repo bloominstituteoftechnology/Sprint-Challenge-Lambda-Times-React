@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as styles from '../styleComponents.js';
 
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{props.card.headline}{/* headline goes here */}</div>
-      <div className="author">
-        <div className="img-container">
+    <styles.Card>
+      <styles.Headline>{props.card.headline}{/* headline goes here */}</styles.Headline>
+      <styles.Author>
+        <styles.ImgContainer>
           <img src={props.card.img /* image source goes here */} alt="Author Profile" />
-        </div>
+        </styles.ImgContainer>
         <span>By {props.card.author/* author goes here */}</span>
-      </div>
-    </div>
+      </styles.Author>
+    </styles.Card>
   );
 };
 
