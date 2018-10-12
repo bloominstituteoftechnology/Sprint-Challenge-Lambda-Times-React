@@ -27,7 +27,6 @@ const Authenticate = App =>
 
     login(ev) {
       ev.preventDefault();
-      console.log("Loggin in");
         localStorage.setItem("username", this.state.usernameInputText)
         this.setState({
             loggedIn: true,
