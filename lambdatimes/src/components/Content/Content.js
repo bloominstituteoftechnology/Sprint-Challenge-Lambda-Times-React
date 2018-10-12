@@ -21,7 +21,8 @@ export default class Content extends Component {
     this.state = {
       selected: 'all',
       tabs: [],
-      cards: []
+      cards: [],
+      filteredCards: [],
     };
   }
 
@@ -30,14 +31,17 @@ export default class Content extends Component {
     this.setState({
       tabs: tabData,
       cards: cardData,
-      selectedTab: '',
-      filteredCards: []
-    })
+    });
+    this.filterCards();
   }
+
+
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-
+    console.log(tab + ' - Selected Tab Change');
+    this.setState({ selected: tab });
+    this.filterCards();
   };
 
   filterCards = () => {
@@ -53,23 +57,28 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+   console.log('Filtering Cards');
 
-    const cards = cardData.filter(card => {
-      if(this.state.tabs.length > 1) {
-        return cardData;
-      } else if(card.topic === this.state.tabs[0]) {
+
+    const filteredCards = cardData.filter(card => {
+      console.log(this.state.selected);
+      if(this.state.selected === 'all') {
+        return this.state.cards;
+      } else if(card.tab === this.state.selected) {
+        console.log(card + ' has Passed the Filter');
         return card;
       } else {
         return null;
       }
     });
 
-    // this.setState({ cards: cards });
+    this.setState({ filteredCards: filteredCards });
 
     return this.state.filteredCards;
   };
 
   render() {
+
     return (
       <StyledContentContainer>
         {/* 
@@ -77,8 +86,8 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.state.cards} />
+        <Tabs tabs={this.state.tabs} changeSelected={this.changeSelected}/>
+        <Cards cards={this.state.filteredCards} />
       </StyledContentContainer>
     );
   }
@@ -86,9 +95,7 @@ export default class Content extends Component {
 
 
 Tabs.propTypes = {
-  tabs: PropTypes.shape({
-    tab: PropTypes.string
-  })
+  tabs: PropTypes.array
 }
 
 Cards.propTypes = {

@@ -29,6 +29,15 @@ const StyledTitle = styled.span`
 `
 
 const Tabs = props => {
+
+
+  
+  function selectTabHandler(event, tab) {
+    event.preventDefault();
+    console.log(tab + ' - Selected Tab Handled');
+    props.changeSelected(tab);
+  }
+
   return (
     <StyledTabs>
       <StyledTopics>
@@ -36,7 +45,7 @@ const Tabs = props => {
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
         {props.tabs.map(tab => 
-          <Tab tab={tab} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab} />)}
+          <Tab tab={tab} key={tab} selectTabHandler={selectTabHandler} selectedTab={props.selectedTab} />)}
       </StyledTopics>
     </StyledTabs>
   );

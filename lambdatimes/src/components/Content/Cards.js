@@ -17,7 +17,7 @@ const StyledCardsContainer = styled.div`
 const Cards = props => {
   return (
     <StyledCardsContainer>
-      {props.cards.map(card => <Card card={card}/>)};
+      {props.cards.map(card => <Card card={card} key={card.headline} />)};
     </StyledCardsContainer>
   )
 }
