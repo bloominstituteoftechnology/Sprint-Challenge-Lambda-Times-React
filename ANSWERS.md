@@ -5,4 +5,4 @@ What is a lifecycle event in React?
 What is a Higher Order Component?
 - A higher order component is a function that takes a component as an argument and returns a new component.
 What are three different ways to style components in React?
--CSS, styled components, or templated frameworks like reactstrap
+-CSS, styled components, or templated  frameworks. 
