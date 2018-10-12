@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Tab from './Tab';
 const Tabs = (props) => {
   return (
@@ -21,6 +23,12 @@ const Tabs = (props) => {
 };
 
 // Make sure to use PropTypes to validate your types!
+Tabs.propTypes = {
+  tabs: PropTypes.array,
+  selectTabHandler: PropTypes.func,
+  selectedTab: PropTypes.string,
+};
+
 export default Tabs;
 
 /* map over the tabs provided on your props, create a new Tab component for each one.
