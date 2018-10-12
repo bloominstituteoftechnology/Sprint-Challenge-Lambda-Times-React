@@ -1,4 +1,5 @@
 import React from 'react';
+//import {bones, fido, max, puppers , sir} from '.../assets/carousel'
 
 const Card = props => {
   console.log("In Card-component : ",props);
