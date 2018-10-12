@@ -56,6 +56,41 @@ export const SubContainerSpan = styled.span`
     ${props => (props.right ? `margin-right: 0` : null)}
     `;
 
-// export const TopBarDiv = styled.div`
+export const HeaderDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fff;
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+    height: 120px;
+    margin-top: 44px;
+    padding-bottom: 15px;
 
-//     `;
+    @media (min-width: 1280px) {
+        width: 1280px;
+    }
+    `;
+
+export const HeaderText = styled.h1`
+    font-size: 60px;
+    font-family: Didot, serif;
+    font-weight: bold;
+    flex: 8;
+    text-align: center;
+    color: #000;
+    `;
+
+export const HeaderSpan = styled.span`
+    align-self: flex-end;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    flex: 1;
+    ${props => (props.date ? `margin-left: 25px` : null)}
+    ${props => (props.temp ? 
+        `margin-right: 25px 
+        text-align: right` 
+        : null)}
+    `;
