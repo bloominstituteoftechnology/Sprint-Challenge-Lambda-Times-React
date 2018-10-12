@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 const Tab = props => {
  
   if (props.tab === props.selectedTab) {
@@ -25,5 +25,7 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
-
+Tab.propTypes={
+  tab : PropTypes.string
+}
 export default Tab;

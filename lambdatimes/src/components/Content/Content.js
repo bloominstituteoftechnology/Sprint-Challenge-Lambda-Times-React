@@ -39,10 +39,25 @@ export default class Content extends Component {
   };
 
   render() {
-    if(this.state.selected==='all'){
-      
+    if(this.state.selected==="all"){
+      return (
+        <div className="content-container">
+          {/* 
+            Add 2 props to the Tabs component, 
+            `selectedTab` that includes the currently selected tab
+            and `selectTabHandler` that includes the function to change the selected tab
+          */}
+          <Tabs
+            tabs={this.state.tabs}
+            selectedTab={this.state.selected}
+            selectTabHandler={this.changeSelected}
+          />
+          <Cards cards={this.state.cards} />
+        </div>
+      );
     }
-    return (
+    else{
+      return (
       <div className="content-container">
         {/* 
           Add 2 props to the Tabs component, 
@@ -57,5 +72,7 @@ export default class Content extends Component {
         <Cards cards={this.filterCards()} />
       </div>
     );
+    }
+    
   }
 }
