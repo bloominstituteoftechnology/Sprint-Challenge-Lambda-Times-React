@@ -1,6 +1,9 @@
 import React from 'react';
 import Tab from './Tab';
+
+
 const Tabs = props => {
+  console.log("In tabs Component : ",props);
   return (
     <div className="tabs">
       <div className="topics">
