@@ -3,7 +3,16 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
 
-const App = () => {
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+    }
+  }
+
+
+  render() {
   return (
     <div className="App">
       <TopBar />
@@ -12,5 +21,8 @@ const App = () => {
     </div>
   );
 }
+
+  }
+
 
 export default App;

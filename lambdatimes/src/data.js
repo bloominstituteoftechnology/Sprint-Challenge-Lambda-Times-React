@@ -1,9 +1,9 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
+ 
+const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
-
-export const cardData = [
+const cardData = [
   {
     headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
     tab: "javascript",
@@ -96,9 +96,15 @@ export const cardData = [
   }
 ]
 
-export const carouselData = [
+const carouselData = [
   "./assets/carousel/mountains.jpeg",
   "./assets/carousel/computer.jpeg",
   "./assets/carousel/trees.jpeg",
   "./assets/carousel/turntable.jpeg"
 ]
+
+export {
+  tabData,
+  carouselData,
+  cardData
+}
