@@ -11,7 +11,7 @@ const Tabs = props => {
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
 
         {
-          props.tabs.map(tab => <Tab filterCards={props.filterCards} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab}  tab={tab} key={Math.random() * 1000} />)
+          props.tabs.map(tab => <Tab filterCards={props.filterCards} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab}  tab={tab} key={Math.random() * 1000000} />)
         }
       </div>
     </div>

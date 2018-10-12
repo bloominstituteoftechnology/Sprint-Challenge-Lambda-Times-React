@@ -9,7 +9,7 @@ const Cards = props => {
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
 
-      {props.cards.map(card => <Card key={card} card={card} />)}
+      {props.cards.map(card => <Card key={Math.random() * 1000000} card={card} />)}
     </div>
   )
 }

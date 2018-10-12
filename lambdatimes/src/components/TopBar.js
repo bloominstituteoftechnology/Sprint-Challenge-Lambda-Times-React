@@ -26,9 +26,6 @@ const TopBar = () => {
   );
 };
 
-const RightSpan = styled.span`
-  cursor: pointer;
-`;
 
 const ContainerRight = styled.div`
   display: flex;
