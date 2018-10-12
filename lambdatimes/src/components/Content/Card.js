@@ -1,6 +1,8 @@
 import React from 'react';
-//import {bones, fido, max, puppers , sir} from '.../assets/carousel'
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+
 
 const Carddiv = styled.div`
     padding: 7px 12px;
@@ -34,6 +36,15 @@ const Card = props => {
 };
 
 // Make sure to include PropTypes.
+Card.propTypes = {
+  card :  PropTypes.shape({
+              author : PropTypes.string,
+              headline : PropTypes.string,
+              img : PropTypes.string,
+              tab : PropTypes.string,
+  })
+};
+
 
 export default Card;
 

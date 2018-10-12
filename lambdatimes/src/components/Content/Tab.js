@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 
 const Button = styled.button`
     padding: 7px 12px;
@@ -12,7 +14,7 @@ const Button = styled.button`
 `;
 
 const Tab = props => {
-  console.log("In Tab Component :  ********* ",props.tab);
+  console.log("In Tab Component :  ",props.tab);
   console.log(props.selectedTab);
   console.log(props.selectTabHandler);
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -22,11 +24,19 @@ const Tab = props => {
     <div
       className={props.tab === props.selectedTab ? 'active-tab': ''}
     >
-        <Button onClick={() => props.selectTabHandler(props.tab)}> {props.tab.toUpperCase()} </Button>
+        <Button onClick={() => props.selectTabHandler(props.tab)}>
+               {props.tab.toUpperCase()} 
+        </Button>
     </div>
   );
 };
 
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+    tab : PropTypes.string,
+    selectedTab : PropTypes.string,
+    selectTabHandler : PropTypes.func
+};
+
 
 export default Tab;
