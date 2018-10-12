@@ -4,9 +4,9 @@ import Header from './components/Header';
 import Content from './components/Content/Content';
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// }
 	render() {
 		return (
 			<div className="App">
