@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Header = styled.div`
+const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,92 @@ const Span= styled.span`
     ${props => (props.type === 'temp' ? `text-align: right; margin-right: 25px; flex: 1;` : null)}
  `;
 
+ const StyledH1 = styled.h1`
+   font-size: 60px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+ `;
+
+ const StyledTopBar = styled.div`
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  position: fixed;
+  height: 44px;
+  background-color: #333;
+ `;
+
+ const TopBarContainer = styled.div`
+   width: 100%;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+ `;
+
+ const LeftContainer = styled.div`
+   display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+ `;
+
+ const LeftSpan = styled.span`
+    cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
+ `;
+
+ const CenterContainer = styled.div`
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+ `;
+
+ const CenterSpan = styled.span`
+   cursor: pointer;
+  margin-right: 5%;
+
+    ${props => (props.type === 'last' ? `margin-right: 0;` : null)}  
+ `;
+
+ const RightContainer = styled.div`
+   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+ `;
+
+ const LogIn = styled.span`
+   cursor: pointer;
+ `;
+
 export {
-    Header,
-    Span
+    StyledHeader,
+    Span,
+    StyledH1,
+    StyledTopBar,
+    TopBarContainer,
+    LeftContainer,
+    LeftSpan,
+    CenterContainer,
+    CenterSpan,
+    RightContainer,
+    LogIn
 }
