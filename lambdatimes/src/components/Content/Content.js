@@ -14,6 +14,10 @@ export default class Content extends Component {
       tabs: [],
       cards: []
     };
+    this.selectedTab= this.selectedTab.bind(this);
+    this.selectTabHandler= this.selectTabHandler.bind(this);
+    //this.changeSelected= this.changeSelected.bind(this);
+   // this.filterCards= this.filterCards.bind(this);
   }
 
   componentDidMount() {
@@ -22,12 +26,32 @@ export default class Content extends Component {
     
   }
   
-  changeSelected = tab => {
+  changeSelected = (selctedTab) => {
+    console.log(this.selectedTab)
+    this.setState({ selected:this.selectedTab});
     // this function should take in the tab and update the state with the new tab.
   };
 
   filterCards = () => {
-    /* Right now this function only returns the cards on state.
+  
+   if (this.selected === 'all'){
+      return this.state.cards;
+    } else if (this.state.selected === this.selectedTab) {
+      let allCards= this.state.cards;
+      let selectedCards = [];
+      let i;
+      for (i = 0; i > allCards.length; i++) {
+        if (allCards[i].tab === this.selectedTab) {
+          selectedCards.push(allCards[i])
+          return selectedCards;
+        }
+      }
+      console.log(selectedCards)
+     
+    }
+   
+  };
+  /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
       by using it to filter out our cards for when a tab is selcted
       
@@ -38,9 +62,19 @@ export default class Content extends Component {
         - if the selected tab is 'all' it should return all 
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
-    */
-    return this.state.cards;
-  };
+    */ 
+  selectedTab(event) {
+    event.preventDefault();
+   let selectedTab = event.target;
+    return  selectedTab
+  }
+  
+ selectTabHandler(event) {
+  event.preventDefault();
+  changeSelected();
+
+ }
+  
 
   render() {
     return (
@@ -51,8 +85,8 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the
            function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs}  />
-        <Cards cards={this.filterCards()} />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selectedTab} selectTabHandler={this.selectTabHandler}  />
+        <Cards selectedCards={this.selectedCards} />
       </div>
     );
   }
