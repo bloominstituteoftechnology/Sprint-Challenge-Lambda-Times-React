@@ -44,7 +44,7 @@ export default class Content extends Component {
       return this.state.cards;
     }else{
       return(
-        this.state.cards.filter(card => {return card === this.state.selected})
+        this.state.cards.filter(card => {return card.tab === this.state.selected})//that card.tab got me there
       );
     }
   };
