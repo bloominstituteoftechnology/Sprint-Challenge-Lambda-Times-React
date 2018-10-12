@@ -21,11 +21,12 @@ const Tab = props => {
 };
 
 Tab.propTypes = {
+  tabs:PropTypes.shape({
   tab: PropTypes.string,
   selectedTab: PropTypes.string,
+})
+
 }
-
-
 
 // Make sure you include PropTypes on your props.
 
