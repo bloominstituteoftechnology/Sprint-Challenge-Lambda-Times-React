@@ -9,10 +9,10 @@ In the past week we have taken a deeper dive into React. We went from writing sm
 
 ### Questions:
 
-1.  What are PropTypes used for?
-1.  What is a lifecycle event in React?
-1.  What is a Higher Order Component?
-1.  What are three different ways to style components in React?
+1.  What are PropTypes used for?  They are a useful way to find bugs before they become a problem because they ensure the data being passed around is the correct type.  When we build components that receive props they have to receive the correct type of date, ie strings, numbers, bools, so propTypes allows us to validate data and make sure they are the right type. 
+1.  What is a lifecycle event in React?  Lifecycle event in react can be compared to the biological lifecycle of birth, growth and death, except in react the cycle is mounting, updating and unmounting.  You originally mount via the constructor, then rendering it, and then seeing if the component did mount.  Then update the component with new data. And then unmount when it is no longer needed. 
+1.  What is a Higher Order Component?  It is a component that receives another component as an argument and returns that component.  Similar to higher order functions in javascript. 
+1.  What are three different ways to style components in React?  You can style the old school way with vanilla CSS, use a preprocessor like LESS to compile styling, or use CSS in JS with React to apply styles to components.
 
 ## Challenge
 
