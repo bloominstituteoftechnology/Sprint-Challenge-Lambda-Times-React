@@ -16,7 +16,7 @@ const Tabs = props => {
 };
 
 Tabs.propTypes = {
-  tab: PropTypes.string.isRequired,
+  tabs: PropTypes.arrayOf(PropTypes.string)
 }
 
 // Make sure to use PropTypes to validate your types!

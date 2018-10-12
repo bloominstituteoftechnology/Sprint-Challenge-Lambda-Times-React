@@ -48,7 +48,6 @@ export default class Content extends Component {
 
   selectTabHandler =  (tab) => {
     this.setState({selected: tab})
-    console.log(this.state.selected)
   } 
   render() {
     return (
