@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Authenticate from '../../Authentication/Authenticate';
+import Login from '../Login';
 import Tabs from './Tabs';
 import Carousel from '../Carousel/Carousel';
 import Cards from './Cards';
@@ -6,7 +8,7 @@ import Cards from './Cards';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 
-export default class Content extends Component {
+class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,3 +71,5 @@ export default class Content extends Component {
     );
   }
 }
+
+export default Authenticate(Content, Login);

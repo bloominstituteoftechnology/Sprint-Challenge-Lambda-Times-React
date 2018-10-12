@@ -10,6 +10,7 @@ const StyledTopBar = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 1000;
 `;
 
 const Container = styled.div`
@@ -26,7 +27,6 @@ const Container = styled.div`
   .top-bar .container {
     width: 1280px;
   }
-
 `;
 
 const ContainerLeft = styled.div`
