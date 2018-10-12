@@ -1,17 +1,22 @@
-import React from 'react';
 import Styled from 'styled-components';
 
-export const TabContainer = Styled.div`
+export const ContentContainer = Styled.div`
     width: 100%;
-    padding: 5px 0;
+`;
+
+export const Topics = Styled.div`
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 0;
+    margin: 0;
 `;
 
 export const TabItem = Styled.div`
     font-weight: bold;
     letter-spacing: 2px;
-    /* display: flex;
-    justify-content: space-around; */
     background-color: black;
     color: white;
     padding: 2px 10px;
@@ -29,12 +34,4 @@ export const TabActive = Styled.div`
     border: 1px solid black;
     margin: 0 5px;
     cursor: pointer;
-`;
-
-export const Topics = Styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: white;
-
 `;
