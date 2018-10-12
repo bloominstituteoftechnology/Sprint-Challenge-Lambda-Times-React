@@ -46,9 +46,7 @@ export const ContainerCenter = styled.div`
     flex-direction: row;
     flex: 3;
     font-size: 9px;
-    ${SpanLike} {
-        margin-right: 5%;
-    }
+    
 `;
 
 export const ContainerRight = styled.div`
@@ -63,6 +61,7 @@ export const ContainerRight = styled.div`
 
 export const SpanLike = styled.span`
     cursor: pointer;
+    margin-right: 5%;
     &:hover {
         text-decoration: underline;
     }
