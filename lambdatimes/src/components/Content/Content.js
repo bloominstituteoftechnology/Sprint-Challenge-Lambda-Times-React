@@ -31,6 +31,9 @@ console.log(cardData);/* this.state.tabs = this.tabData; */
  
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+   // const newTab = this.state.tabs.find(tab => tab === tab);
+   this.setState({ selected: tab})
+console.log("what" + tab)
   };
 
   filterCards = () => {
@@ -46,15 +49,18 @@ console.log(cardData);/* this.state.tabs = this.tabData; */
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-  /*  if (this.state.selected === 'all') {
+    if (this.state.selected === 'all') {
     return this.state.cards;
-  }
-      let filteredCards = this.state.cards.filter(function (card) {
-      return card.tab === this.state.selected;
-  } */
-     return this.state.cards; 
+  } else {
+    let select = this.state.selected
+      let filteredCards = cardData.filter(function (card) {
+        return select = card})
+      
+  } 
+}
+    /*  return this.state.cards;  */
 
-  }
+  
   render() {
     return (
       <div className="content-container">
@@ -64,12 +70,12 @@ console.log(cardData);/* this.state.tabs = this.tabData; */
           and `selectTabHandler` that includes the function to change the selected tab
         */}
 
-        <Tabs tabs={this.state.tabs} selected={this.state.selected} selectTabHandler={this.changeSelected}/>
+        <Tabs tabs={this.state.tabs} selected={this.state.selected} changeSelected={this.changeSelected}/>
      {/*  {cardData.map((cards, index) => {
         return <Cards key={index} img={cards.img} tab={cards.tab} author={cards.author} headline={cards.headline}/>
      } ) }  */}
-     <Cards cards={this.state.cards}/>
-       {/*  <Cards cards={this.filterCards()} /> */}
+   /*   <Cards cards={this.state.cards}/> */
+         <Cards cards={this.filterCards()} /> 
       </div>
     );
   }
