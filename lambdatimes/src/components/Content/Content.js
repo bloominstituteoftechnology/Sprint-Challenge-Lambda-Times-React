@@ -24,11 +24,12 @@ export default class Content extends Component {
     });
   }
 
-  changeSelected = newTab => {
+  changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
     this.setState({
-      selected: "test"
+      selected: tab
     })
+    console.log(tab)
   };
 
   filterCards = () => {
