@@ -62,7 +62,6 @@ export default class Content extends Component {
         */}
         <Tabs tabs={this.state.tabs} />
         <Cards cards={this.filterCards()} />
-        <h1>Test</h1>
       </div>
     );
   }
