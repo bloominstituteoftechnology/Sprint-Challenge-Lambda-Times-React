@@ -3,7 +3,7 @@ import Tab from './Tab';
 import PropTypes from 'prop-types';
 
 const Tabs = props => {
-	// console.log(props.tabs);
+	console.log(props.tabs);
   return (
     <div className="tabs">
       <div className="topics">
@@ -18,7 +18,8 @@ const Tabs = props => {
 };
 
 Tabs.propTypes = {
-	tab: PropTypes.array
+  tabs: PropTypes.array,
+  tab:PropTypes.object
 }
 
 // Make sure to use PropTypes to validate your types!

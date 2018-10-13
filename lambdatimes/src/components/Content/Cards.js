@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import PropsType from 'props-type';
+import PropTypes from 'prop-types';
 
 const Cards = props => {
 	// console.log(props.cards)
@@ -14,7 +14,7 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
-Cards.propsType = {
-    cards:PropsType.array
+Cards.propTypes = {
+    cards:PropTypes.array
 }
 export default Cards;
