@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
+import style from'styled-components';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+
+
+const ContentContainer = style.div`
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+`;
 
 export default class Content extends Component {
   constructor(props) {
@@ -45,7 +53,7 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
     const arr = this.state.cards.filter(card =>{
-      return card.tab === this.state.selected
+      return card.tab.includes(this.state.selected)
     })
 
     if(this.state.selected === "all"){
@@ -60,7 +68,7 @@ export default class Content extends Component {
   render() {
     console.log()
     return (
-      <div className="content-container">
+      <ContentContainer>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
@@ -72,7 +80,7 @@ export default class Content extends Component {
           selectTabHandler={this.changeSelected}
          />
         <Cards cards={this.filterCards()} />
-      </div>
+      </ContentContainer>
     );
   }
 }
