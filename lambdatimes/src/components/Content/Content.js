@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../../CSS/index.css'
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -12,14 +12,24 @@ export default class Content extends Component {
     this.state = {
       selected: 'all',
       tabs: [],
-      cards: []
+      cards: [],
+     
     };
+    
+console.log(tabData);
+console.log(cardData);/* this.state.tabs = this.tabData; */
   }
 
   componentDidMount() {
+    
     // Once the component has mounted, get the data and reflect that data on the state.
+  /*  tabData.map(item, index) */
+
+  /*  this.setState({ tabs: this.tabData, cards: this.cardData })
+   console.log(this.state) */
   }
 
+ 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
   };
@@ -37,9 +47,15 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+  /*  if (this.state.selected === 'all') {
     return this.state.cards;
-  };
+  }
+      let filteredCards = this.state.cards.filter(function (card) {
+      return card.tab === this.state.selected;
+  } */
+     return this.state.cards; 
 
+  }
   render() {
     return (
       <div className="content-container">
@@ -47,10 +63,16 @@ export default class Content extends Component {
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
-        */}
-        <Tabs tabs={this.state.tabs} />
+        */}{tabData.map((tabs, index) => {
+  return<Tabs key={index} tabs={this.tabs} />})}
+
+      {/*   <Tabs tabs={this.state.tabs} selected={this.state.selected} selectTabHandler={this.changeSelected}/> */}
+     {/*  {cardData.map((cards, index) => {
+        return <Cards key={index} img={cards.img} tab={cards.tab} author={cards.author} headline={cards.headline}/>
+     } ) }  */}
         <Cards cards={this.filterCards()} />
       </div>
     );
   }
 }
+/* export default Content; */
