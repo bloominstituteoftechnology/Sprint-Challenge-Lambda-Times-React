@@ -5,6 +5,13 @@ import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+import styled from 'styled-components';
+
+const StyledContent = styled.div `
+display: flex; 
+flex-direction: column; 
+align-items: center;
+`
 
 export default class Content extends Component {
   constructor(props) {
@@ -41,9 +48,9 @@ export default class Content extends Component {
   };
 
   render() {
-    console.log(this.state.tabs)
+    console.log(this.state.cards)
     return (
-      <div className="content-container">
+      <StyledContent>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
@@ -51,7 +58,7 @@ export default class Content extends Component {
         */}
         <Tabs tabs={this.state.tabs} />
         <Cards cards={this.filterCards()} />
-      </div>
+      </StyledContent>
     );
   }
 }

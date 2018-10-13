@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import styled from 'styled-components';
 
+const StyledCards = styled.div `
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 16px;
+  flex-wrap: wrap;
+`
 const Cards = props => {
   return (
-    <div className="cards-container">
+    <StyledCards>
       {props.cards.map(card => <Card key={props.headline} card={card}/>)
 /* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
-    </div>
+    </StyledCards>
   )
 }
 

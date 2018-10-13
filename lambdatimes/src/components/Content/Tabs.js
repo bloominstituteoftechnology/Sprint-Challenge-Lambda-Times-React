@@ -14,6 +14,20 @@ const TabsStyle = styled.div `
   background-color: #fff;
 `
 
+const StyledTab =styled.div `
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  color: #fff;
+  background-color: #333;
+  margin: 0 5px;
+  padding: 2px 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: bold;
+`
 const Topics = styled.div`
 display: flex;
 justify-content: none;
@@ -27,12 +41,13 @@ letter-spacing: 1px;
 font-weight: bold;
 `
 
+
 const Tabs = props => {
   return (
     <TabsStyle>
       <Topics>
         <Title>TRENDING TOPICS:</Title>
-    {props.tabs.map(tab => <Tab key={tab} tab={tab}/>)}
+    <StyledTab>{props.tabs.map(tab => <Tab key={tab} tab={tab}/>)}</StyledTab>
       </Topics>
     </TabsStyle>
   );
