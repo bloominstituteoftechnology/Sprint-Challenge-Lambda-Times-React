@@ -44,7 +44,7 @@ body {
 #root {
   width: 100%;
 }
-.App {
+/*.App {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -76,7 +76,7 @@ body {
   .top-bar .container {
     width: 1280px;
   }
-}
+} 
 .top-bar .container .container-left {
   display: flex;
   justify-content: none;
@@ -313,4 +313,4 @@ body {
 .carousel img {
   width: 100%;
   display: none;
-}
+}*/
