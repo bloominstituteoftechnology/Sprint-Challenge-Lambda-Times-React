@@ -10,6 +10,9 @@ const TopBarWrapper = styled.div `
   position: fixed;
   height: 44px;
   background-color: #333;
+  span{
+    
+  }
 `
 const TopBarContainer = styled.div `
   width: 100%;

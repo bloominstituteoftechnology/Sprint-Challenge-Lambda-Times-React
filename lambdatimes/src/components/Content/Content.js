@@ -38,7 +38,7 @@ this.setState({
       <div className="content-container">
         <Tabs 
           tabs={this.state.tabs}
-          slectedTab={this.state.selected}
+          selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
