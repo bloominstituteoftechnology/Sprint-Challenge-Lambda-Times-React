@@ -1,0 +1,12 @@
+Questions:
+
+    1. What are PropTypes used for?
+    PropTypes are used for type checking props to verify that the data is what is it suposed to be. 
+    We try to stick with immutability when working with data(create new data as opposed to changing data values). 
+    PropTypes are only used for development. It also has a powerful way to verify complex objects using shape.
+    
+    
+    2. What is a lifecycle event in React?
+    3. What is a Higher Order Component?
+    4. What are three different ways to style components in React?
+ 
