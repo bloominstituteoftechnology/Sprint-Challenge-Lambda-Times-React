@@ -89,3 +89,27 @@ export const Temp = styled.span`
   margin-right: 25px;
   flex: 1;
 `;
+
+export const Title = styled.span`
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+`;
+
+export const Topics = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const TabsContainer = styled.div`
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 47px;
+  background-color: #fff;
+`;
