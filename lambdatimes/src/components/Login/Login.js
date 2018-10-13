@@ -13,9 +13,9 @@ const LoginDiv = styled.div`
     width: 100%;
     margin: 54px auto;
     padding: 6%;
-    background-color: #a64f25;
+	background-color: #e4e1e8;
     border-radius: 10px;
-    border: solid #553615 3px;
+    border: solid #443f39 3px;
 	}
 	> form > input {
 		font-size: 1.6rem;
@@ -27,7 +27,7 @@ const LoginDiv = styled.div`
 		font-size: 1.6rem;
 		border: solid #707072 1px;
 		&:hover{
-			background-color:black;
+			background-color:#443f39;
 			color: white;
 		}
 	}
@@ -56,7 +56,7 @@ class Login extends React.Component {
 			<form>
 				<input placeholder="user name" value={this.state.name} onChange={this.loginHandler} name="name" />
 				<input placeholder="password" value={this.state.login} onChange={this.loginHandler} name="login"/>
-				<button onClick={this.login}>Login</button>
+				<button onClick={this.login}>Login in Here</button>
 			</form>
 		</LoginDiv>
 		)

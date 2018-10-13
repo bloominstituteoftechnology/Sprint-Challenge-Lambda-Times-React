@@ -84,7 +84,7 @@ const TopBar = () => {
           <span>TOPICS</span><span>SEARCH</span>
         </ContainerLeft>
         <ContainerCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          <span>GENERAL</span><span>BROWNBAG</span><span>TRENDING TECH</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
           <p>Welcome - {Object.keys(localStorage)}</p>
