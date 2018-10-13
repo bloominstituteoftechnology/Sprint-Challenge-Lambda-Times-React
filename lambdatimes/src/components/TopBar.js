@@ -86,9 +86,9 @@ const TopBar = () => {
         <Center>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </Center>
-        <div className="container-right">
+        <Right>
           <span>LOG IN</span>
-        </div>
+        </Right>
       </Container>
     </Topbar>
   )
