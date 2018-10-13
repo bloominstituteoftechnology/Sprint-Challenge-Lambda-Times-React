@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class Tab extends React.Component {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -23,5 +24,10 @@ class Tab extends React.Component {
 }
 
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tab: PropTypes.string,
+  selectedTab: PropTypes.string,
+  selectHandler: PropTypes.func
+}
 
 export default Tab;
