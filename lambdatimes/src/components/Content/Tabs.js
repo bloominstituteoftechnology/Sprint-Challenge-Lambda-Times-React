@@ -14,6 +14,7 @@ const Tabs = props => {
               tab={tab} 
               selectTabHandler={props.selectTabHandler}
               selectedTab={props.selectedTab} 
+              key={Math.random()}
             />)}
       </div>
     </div>
@@ -26,5 +27,5 @@ export default Tabs;
 Tabs.propTypes = {
   tabs: PropTypes.array,
   selectTabHandler: PropTypes.func,
-  selectedTab: PropTypes.func
+  selectedTab: PropTypes.string
 }
