@@ -50,8 +50,7 @@ export default class Content extends Component {
 
       return newCards
    }
-   
-    return this.state.cards;
+
   };
 
   render() {
@@ -64,8 +63,8 @@ export default class Content extends Component {
         */}
         <Tabs 
           tabs={this.state.tabs} 
-          selectedTab={this.selectedTab}
-          selectTabHandler={this.selectTabHandler}
+          selectedTab={this.state.selected}
+          changeSelected={this.changeSelected}
 
         />
         <Cards 
