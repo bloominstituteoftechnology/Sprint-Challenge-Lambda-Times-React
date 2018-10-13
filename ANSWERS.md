@@ -7,6 +7,11 @@ Questions:
     
     
     2. What is a lifecycle event in React?
+    Functions such as  ComponentDidMount, ComponentWillMount, ComponentWillUnmount, allows components to be 
+    mounted/unmounted from the DOM. Also they can be used to control data that we want to change and therefore tie
+    to state.
+    
+    
     3. What is a Higher Order Component?
     4. What are three different ways to style components in React?
  
