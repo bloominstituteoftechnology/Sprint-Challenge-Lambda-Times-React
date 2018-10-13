@@ -74,20 +74,20 @@ const ContainerRightSpan = Styled.span`
 `;
 const TopBar = () => {
   return (
-    <Topbar className="top-bar">
-      <TopbarContainer className="container">
-        <ContainerLeft className="container-left">
+    <Topbar>
+      <TopbarContainer>
+        <ContainerLeft>
           <ContainerLeftSpan>TOPICS</ContainerLeftSpan>
           <ContainerLeftSpan>SEARCH</ContainerLeftSpan>
       </ContainerLeft>
-        <ContainerCenter className="container-center">
+        <ContainerCenter>
           <ContainerCenterSpan>GENERAL</ContainerCenterSpan>
           <ContainerCenterSpan>BROWNBAG</ContainerCenterSpan>
           <ContainerCenterSpan>RANDOM</ContainerCenterSpan>
           <ContainerCenterSpan>MUSIC</ContainerCenterSpan>
         <ContainerCenterSpanLastChild>ANNOUNCEMENTS</ContainerCenterSpanLastChild>
       </ContainerCenter>
-        <ContainerRight className="container-right">
+        <ContainerRight>
           <ContainerRightSpan>LOG IN</ContainerRightSpan>
       </ContainerRight>
       </TopbarContainer>

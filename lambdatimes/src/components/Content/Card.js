@@ -42,9 +42,9 @@ const AuthorSpan = Styled.span`
 const Card = props => {
   return (
     <StyledCard data-tab={props.card.tab}>
-      <Headline className="headline">{props.card.headline}</Headline>
+      <Headline>{props.card.headline}</Headline>
     <Author>
-        <ImageContainer className="img-container">
+        <ImageContainer>
           <Image src={props.card.img} alt={props.card.headline}/>
         </ImageContainer>
         <AuthorSpan>By {props.card.author}</AuthorSpan>
