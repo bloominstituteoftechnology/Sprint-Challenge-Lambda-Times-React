@@ -52,6 +52,17 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
+.cardtabstitle {
+  font-size: 12px;
+  border: 1px solid rgb(44, 43, 43);
+  background: rgb(44, 43, 43);
+  color: white;
+  margin: 5px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-weight: bold;
+
+}
 .top-bar {
   width: 100%;
   display: flex;
