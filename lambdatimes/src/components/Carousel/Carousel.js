@@ -7,29 +7,38 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      data: [],
+      selected: '',
     }
   }
   componentDidMount(){
-
+    this.setState({ 
+                    data : carouselData,
+                    selected: carouselData[0],
+                  })
   }
 
   leftClick = () => {
-
+    this.state.selected === this.state.data[0] 
+                            ? this.setState({ selected : this.state.data[this.state.data.length - 1] }) 
+                            : this.setState({ selected : this.state.data[this.state.data.indexOf(this.state.selected) - 1] })
   }
 
   rightClick = () => {
-
+    this.state.selected === this.state.data[this.state.data.length - 1] 
+                            ? this.setState({ selected : this.state.data[0] }) 
+                            : this.setState({ selected : this.state.data[this.state.data.indexOf(this.state.selected) + 1]})
   }
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    return <Image src={this.state.selected} style={{display: 'block'}} />
   }
   
   render(){
     return (
       <CarouselContainer>
         <Button left onClick={this.leftClick}>{"<"}</Button>
+          {this.selectedImage()}
         <Button right onClick={this.rightClick}>{">"}</Button>
       </CarouselContainer>
     )
@@ -57,6 +66,7 @@ const Button = styled.div`
   justify-content: center;
   align-items: none;
   flex-direction: row;
+  z-index: 1;
   color: #fff;
   background-color: #333;
   font-size: 40px;
@@ -76,10 +86,10 @@ const Button = styled.div`
   }
 
   left: ${props => props.left ? "25px" : "0px"};
-  right: ${props => props.right ? "0px" : "25px"};
+  right: ${props => props.right ? "25px" : "0px"};
 `;
 
-// const Image = styled.img`
-//   width: 100%;
-//   display: none;
-// `;
+const Image = styled.img`
+  width: 100%;
+  display: none;
+`;
