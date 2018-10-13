@@ -25,7 +25,7 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
-Tabs.Proptypes = {
+Tab.Proptypes = {
   tab: PropTypes.Array,
   selectedTab: PropTypes.string
 
