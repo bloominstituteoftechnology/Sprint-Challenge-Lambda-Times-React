@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import trees from './img/trees.jpeg';
 import computer from './img/computer.jpeg';
