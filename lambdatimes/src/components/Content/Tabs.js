@@ -12,7 +12,7 @@ const Tabs = props => {
             {props.tabs.map(item => {
               return (
                   <Tab 
-                    key={Date.now()}
+                    key={Date.now() + Math.random()}
                     selectTabHandler={props.selectTabHandler}
                     selectedTab={props.selectedTab}
                     tab={item}
