@@ -41,5 +41,5 @@
 4. What are three different ways to style components in React?   
 
     * Good old CSS: We can create a stylesheet and just use className inside the component to style accordingly like the old way.
-    *Preprocessor: We can use a preprocessor like LESS and style our components. The new create-react-app 2.0 guides us on how to do this easily since they incorporated use for it.
-    *Styled-Components package: This is a package we can install to our project that let's us use a more React way to style our components and uses a LESS type of way of doing things. Also is more visually appealing because instead of seeing <div className='foo'> We see <Foo>.
+    * Preprocessor: We can use a preprocessor like LESS and style our components. The new create-react-app 2.0 guides us on how to do this easily since they incorporated use for it.
+    * Styled-Components package: This is a package we can install to our project that let's us use a more React way to style our components and uses a LESS type of way of doing things. Also is more visually appealing because instead of seeing <div className='foo'> We see <Foo>.
