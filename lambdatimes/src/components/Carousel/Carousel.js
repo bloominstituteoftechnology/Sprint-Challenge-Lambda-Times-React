@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
+} from 'reactstrap';
+
 // Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
