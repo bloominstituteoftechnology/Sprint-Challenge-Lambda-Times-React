@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { carouselData } from '../../data';
 import styled from 'styled-components';
 import trees from './img/trees.jpeg';
 import computer from './img/computer.jpeg';
