@@ -18,7 +18,7 @@ export default class Content extends Component {
 
   componentDidMount() {
     this.setState({
-      tab: tabData,
+      tabs: tabData,
       cards: cardData
     })
   }

@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Card';
-import PropTypes from 'prop-type';
+import PropTypes from 'prop-types';
 
 const Cards = props => {
   console.log(props);   // cool!, they are showing up
 
   return (
     <div className="cards-container">
-      {props.cards.map( card => <Card
-        card = {card}
-        key = {card.headline}  // this is only unique prop per cards array
-      />  )}
+      {props.cards.map( (card, i )=> {
+        return <Card
+          card = {card}
+          key = {i}
+        />
+        }
+
+      )}
 
 
       {/* Using the cards prop, map over the list creating a
