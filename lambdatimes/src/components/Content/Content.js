@@ -11,8 +11,11 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
-      tabs: tabData,
-      cards: cardData,
+      tabs: [],
+      cards: [],
+      filteredCards:[],
+      tabData: [],
+      cardData: []
      };
     
 console.log(tabData);
@@ -24,7 +27,7 @@ console.log(cardData);/* this.state.tabs = this.tabData; */
     // Once the component has mounted, get the data and reflect that data on the state.
   /*  tabData.map(item, index) */
   console.log("and the state is:" + this.state)
-  /*   this.setState({ tabData: this.tabData, cardData: cardData }) */
+    this.setState({ tabData, cardData, tabs: tabData, cards: cardData, filteredCards: cardData }) 
    console.log(this.state) 
   }
 
@@ -53,10 +56,18 @@ console.log("what" + tab)
     return this.state.cards;
   } else {
     let select = this.state.selected
-      let filteredCards = cardData.filter(function (card) {
-        return select = card})
+    console.log("select: " + select)
+    let filteredCards = this.state.cardData  
+    filteredCards = filteredCards.filter((card) => {
+        return select == card.tab})
+        return filteredCards}
+  /*    console.log(filteredCards)  */
+    /* return this.state.cards  */ 
+     /*  this.setState({ cards: this.state.filteredCards})  */
+    /*  console.log(this.state)   */
+
       
-  } 
+  
 }
     /*  return this.state.cards;  */
 
@@ -74,7 +85,7 @@ console.log("what" + tab)
      {/*  {cardData.map((cards, index) => {
         return <Cards key={index} img={cards.img} tab={cards.tab} author={cards.author} headline={cards.headline}/>
      } ) }  */}
-   /*   <Cards cards={this.state.cards}/> */
+  
          <Cards cards={this.filterCards()} /> 
       </div>
     );
