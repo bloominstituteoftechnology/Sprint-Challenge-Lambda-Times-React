@@ -25,7 +25,7 @@ const Tabs = props => {
 
 // Make sure to use PropTypes to validate your types!
 
-Tabs.propTypes ={
+Tabs.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string)
 }
 
