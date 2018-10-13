@@ -26,11 +26,15 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-    const newSelected = this.state.tabs.filter(t =>{
-      return t === tab;
-    })
+    // const newSelected = this.state.tabs.filter(t =>{
+    //   return t === tab;
+    // })
+    // this.setState({
+    //   selected: newSelected[0]
+    // })
+
     this.setState({
-      selected: newSelected[0]
+      selected: tab
     })
   };
 
