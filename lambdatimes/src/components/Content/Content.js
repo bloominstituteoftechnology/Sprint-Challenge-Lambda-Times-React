@@ -18,16 +18,23 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+        this.setState({
+          tabs: tabData,
+          cards: cardData,
+    })
   }
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+      this.setState({
+          tabs: [...this.state.tabs, {tab} ]
+      })
   };
 
   filterCards = () => {
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
-      by using it to filter out our cards for when a tab is selcted
+      by using it to filter out our cards for when a tab is selected
       
       Notice that we're passing this function to our <Cards /> component below.
       This function returns an array of cards, so we can just pass it down as such.
