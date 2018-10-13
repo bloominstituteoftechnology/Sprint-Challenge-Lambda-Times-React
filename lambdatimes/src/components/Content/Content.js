@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
-
 import { tabData, cardData } from '../../data';
 
 export default class Content extends Component {
