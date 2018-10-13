@@ -37,7 +37,7 @@ this.setState({active:this.state.imgs.length-1})
   }
 
   selectedImage = () => {
-    return <img src={this.state.imgs[this.state.active]} style={{display: 'block'}} />
+    return <img src={this.state.imgs[this.state.active]} style={{display: 'block'}} alt=""/>
   }
   
   render(){
