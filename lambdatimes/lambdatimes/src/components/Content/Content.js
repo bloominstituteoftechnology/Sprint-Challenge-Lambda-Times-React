@@ -49,6 +49,7 @@ export default class Content extends Component {
          newArray.push(data);
        }
      });
+     return newArray;
    }
     return this.state.cards;
   };
