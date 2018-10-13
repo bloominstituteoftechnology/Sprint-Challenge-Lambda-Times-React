@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../CSS/index.css'
 import Tabs from './Tabs';
 import Cards from './Cards';
+import PropTypes from 'prop-types';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -17,9 +18,7 @@ export default class Content extends Component {
       tabData: [],
       cardData: []
      };
-    
-console.log(tabData);
-console.log(cardData);/* this.state.tabs = this.tabData; */
+
   }
 
   componentDidMount() {
@@ -61,13 +60,7 @@ console.log("what" + tab)
     filteredCards = filteredCards.filter((card) => {
         return select == card.tab})
         return filteredCards}
-  /*    console.log(filteredCards)  */
-    /* return this.state.cards  */ 
-     /*  this.setState({ cards: this.state.filteredCards})  */
-    /*  console.log(this.state)   */
-
-      
-  
+    
 }
     /*  return this.state.cards;  */
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../CSS/index.css'
+import PropTypes from 'prop-types';
 /* const Tab = props => { */
 class Tab extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Tab extends Component {
       tabMatch: false,
       selected: this.props.selectedTab
     };
-    console.log(this.state)
+  
   }
   /* const Tab = props => { */
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -55,5 +56,8 @@ let tabMatch = false;
   };
 }
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tab: PropTypes.string.isRequired,
+ }
 
 export default Tab;
