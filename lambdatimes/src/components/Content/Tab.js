@@ -1,17 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TabStyle from '../Styles/Tab'
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-  let tabClass = 'tab';
+  let color = '#fff';
+  let background = '#333';
+  let border = 'none';
   
-  if(props.tab === props.selectedTab) tabClass = 'tab active-tab' 
-  
+  if(props.tab === props.selectedTab) {
+    color = '#333';
+    background = '#fff'; 
+    border = '2px solid #333';
+  }
+
   return (
-    <div
-      className={tabClass}
+    <TabStyle 
+      color={color}
+      background={background}
+      border={border}
       onClick={() => {
         /* Replace this dummy click handler function with your selectTabHandler function from props 
          you'll need to pass the `tab` in as an argument to this handler. */
@@ -19,7 +28,7 @@ const Tab = props => {
       }}
     >
       {props.tab.toUpperCase()}
-    </div>
+    </TabStyle>
   );
 };
 
