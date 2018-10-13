@@ -12,7 +12,7 @@ const Tabs = props => {
             key={tab.headline}
             tab={tab}
             selectedTab={props.selectedTab}
-            selectedTabHandler={props.selectedTabHandler}
+            selectTabHandler={props.selectTabHandler}
           />
         ))}
       </div>
@@ -24,5 +24,4 @@ Tabs.propTypes = {
   tabData: PropTypes.arrayOf(PropTypes.string)
 }
 
-// Make sure to use PropTypes to validate your types!
 export default Tabs;
