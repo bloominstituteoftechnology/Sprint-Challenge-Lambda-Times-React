@@ -44,7 +44,7 @@ body {
 #root {
   width: 100%;
 }
-.App {
+/* .App {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -313,4 +313,4 @@ body {
 .carousel img {
   width: 100%;
   display: none;
-}
+} */
