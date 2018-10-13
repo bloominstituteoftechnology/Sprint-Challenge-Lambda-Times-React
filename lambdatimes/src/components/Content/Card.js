@@ -23,6 +23,6 @@ Card.propTypes = {
 		tab: PropTypes.string
 	}).isRequired
 };
-// Make sure to include PropTypes.
+
 
 export default Card;

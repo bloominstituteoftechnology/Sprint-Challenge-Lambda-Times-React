@@ -27,5 +27,5 @@ Tabs.propTypes = {
 	selectTabHandler: PropTypes.func.isRequired,
 	tabs: PropTypes.array.isRequired
 };
-// Make sure to use PropTypes to validate your types!
+
 export default Tabs;

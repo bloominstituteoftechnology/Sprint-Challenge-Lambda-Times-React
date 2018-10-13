@@ -20,6 +20,6 @@ Tab.propTypes = {
 	tab: PropTypes.string.isRequired
 };
 
-// Make sure you include PropTypes on your props.
+
 
 export default Tab;
