@@ -1,25 +1,29 @@
 import React from 'react';
+import Tab from './Tab';
+import PropTypes from 'prop-types';
 
-const Tab = props => {
-  /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
-      if they match, the className should be: 'tab active-tab', 
-      if it is not it should just be 'tab'*/
+const Tabs = props => {
   return (
-    <div
-      className={props.tab === props.selectedTab ? 'tab active-tab' : 'tab'}
-      onClick={() => props.selectedTabHandler(props.tab)}
-      /* Replace this dummy click handler function with your selectTabHandler function from props 
-         you'll need to pass the `tab` in as an argument to this handler. */
-    >
-      {props.tab.toUpperCase()}
+    <div className="tabs">
+      <div className="topics">
+        <span className="title">TRENDING TOPICS:</span>
+        {/* map over the tabs provided on your props, create a new Tab component for each one.
+            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/
+        props.tabs.map(element => (
+          <Tab
+            key={element.headline}
+            tab={element}
+            selectedTab={props.selectedTab}
+            selectedTabHandler={props.selectedTabHandler}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
-// Make sure you include PropTypes on your props.
-
-Tab.propTypes = {
-  tab: PropTypes.string
+// Make sure to use PropTypes to validate your types!
+Tabs.propTypes = {
+  tabData: PropTypes.arrayOf(PropTypes.string)
 };
-
-export default Tab;
+export default Tabs;
