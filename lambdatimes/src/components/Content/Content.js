@@ -12,7 +12,7 @@ export default class Content extends Component {
     this.state = {
       selected: 'all',
       tabs: [],
-      cards: []
+      cards: [] 
     };
   }
 
