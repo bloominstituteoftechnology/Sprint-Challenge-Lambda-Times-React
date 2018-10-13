@@ -6,7 +6,7 @@ import '../../CSS/index.css'
       super(props);
       this.state = {
          tabMatch: false,
-        selected: this.props.selected
+        selected: props.selectedTab
       };
       console.log(this.state)
     }
@@ -19,10 +19,11 @@ import '../../CSS/index.css'
   
         render (){
           let classNames = require('classnames');
+          console.log(this.props.tab)
   
   
-  
-        if (this.state.tab === this.state.selected) {
+        if (this.props.tab === this.props.selectedTab) {
+         console.log(this.props.tab)
           this.setState=({ tabMatch: true})
         }
         

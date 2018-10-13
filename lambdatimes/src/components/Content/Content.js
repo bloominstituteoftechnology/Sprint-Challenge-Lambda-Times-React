@@ -11,10 +11,9 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
-      tabs: [],
-      cards: [],
-     
-    };
+      tabs: tabData,
+      cards: cardData,
+     };
     
 console.log(tabData);
 console.log(cardData);/* this.state.tabs = this.tabData; */
@@ -24,9 +23,9 @@ console.log(cardData);/* this.state.tabs = this.tabData; */
     
     // Once the component has mounted, get the data and reflect that data on the state.
   /*  tabData.map(item, index) */
-
-  /*  this.setState({ tabs: this.tabData, cards: this.cardData })
-   console.log(this.state) */
+  console.log("and the state is:" + this.state)
+  /*   this.setState({ tabData: this.tabData, cardData: cardData }) */
+   console.log(this.state) 
   }
 
  
@@ -63,14 +62,14 @@ console.log(cardData);/* this.state.tabs = this.tabData; */
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
-        */}{tabData.map((tabs, index) => {
-  return<Tabs key={index} tabs={this.tabs} />})}
+        */}
 
-      {/*   <Tabs tabs={this.state.tabs} selected={this.state.selected} selectTabHandler={this.changeSelected}/> */}
+        <Tabs tabs={this.state.tabs} selected={this.state.selected} selectTabHandler={this.changeSelected}/>
      {/*  {cardData.map((cards, index) => {
         return <Cards key={index} img={cards.img} tab={cards.tab} author={cards.author} headline={cards.headline}/>
      } ) }  */}
-        <Cards cards={this.filterCards()} />
+     <Cards cards={this.state.cards}/>
+       {/*  <Cards cards={this.filterCards()} /> */}
       </div>
     );
   }

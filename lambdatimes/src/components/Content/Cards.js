@@ -5,8 +5,8 @@ import { tabData, cardData } from '../../data';
 const Cards = props => {
   return (
     <div className="cards-container">
-    {cardData.map((cards, index) => {
-        return <Card key={index} img={cards.img} tab={cards.tab} author={cards.author} headline={cards.headline} />
+    {props.cards.map((card, index) => {
+        return <Card key={index} img={card.img} tab={card.tab} author={card.author} headline={card.headline} />
      } ) }
      
       {/* Using the cards prop, map over the list creating a 
