@@ -31,7 +31,6 @@ const Authenticate = App =>
 
       console.log(userList)
       console.log(logs)
-      // console.log(name[0], login[0])
 
     	const newState = {...this.state};
     	

@@ -93,7 +93,31 @@
        tab: "bootstrap",
        img: "./assets/max.jpg",
        author: "MAX GOODBOYE"
-     }
+     },
+     {
+      headline: "50 Junior Web Developer Interview Questions. The Ultimate 2018 Guide.",
+      tab: "technology",
+      img: "./assets/sir.jpg",
+      author: "SIR RUFF'N'STUFF"
+    },
+    {
+      headline: "Top 26 JavaScript Interview Questions and Answers in 2018 ",
+      tab: "javascript",
+      img: "./assets/max.jpg",
+      author: "MAX GOODBOYE"
+    },
+    {
+      headline: "15 Amazon Web Services Interview Questions and Answers for 2018 ",
+      tab: "technology",
+      img: "./assets/max.jpg",
+      author: "MAX GOODBOYE"
+    },
+    {
+      headline: "Node.js Error Handling: 7 Ways To Kill Them All ",
+      tab: "node",
+      img: "./assets/puppers.jpg",
+      author: "PUPPER S. DOGGO"
+    },
    ]
    
    export const carouselData = [

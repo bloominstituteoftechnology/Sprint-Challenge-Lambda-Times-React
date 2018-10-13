@@ -54,3 +54,4 @@ export default class Carousel extends Component {
     )
   }
 }
+// end carousel
