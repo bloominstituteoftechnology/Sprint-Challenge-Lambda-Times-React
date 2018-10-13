@@ -36,7 +36,7 @@ class Login extends React.Component {
           name="password"
           onChange={this.handleInput}
         />
-        <button onClick={this.handleLoginSubmit}>Click Me!</button>
+        <button onClick={this.handleLoginSubmit}>LOG IN</button>
       </div>
     );
   }
