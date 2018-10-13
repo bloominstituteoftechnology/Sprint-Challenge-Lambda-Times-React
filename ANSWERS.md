@@ -1,0 +1,1 @@
+1. PropTypes is a method that allows us to check and make sure that a piece of incoming data matches with a datat type that we specify within the propTypes method. We can check 
