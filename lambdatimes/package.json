@@ -15,4 +15,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
+  // "semi": false,
+  // "overrides": [
+  //   {
+  //     "files": "*.test.js",
+  //     "options": {
+  //       "semi": true
+  //     }
+  //   }
+  // ]
 }
