@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
+import AppStyle from './Styles/App';
 
 const App = () => {
   return (
-    <div className="App">
+    <AppStyle>
       <TopBar />
       <Header />
       <Content />
-    </div>
+    </AppStyle>
   );
 }
 
