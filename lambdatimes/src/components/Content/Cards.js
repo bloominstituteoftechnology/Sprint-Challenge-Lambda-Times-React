@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
+import CardsContainer from '../Styles/Cards'
 
 const Cards = props => {
   return (
-    <div className="cards-container">
+    <CardsContainer>
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
       {props.cards.map(card => (
@@ -12,7 +13,7 @@ const Cards = props => {
           <Card card={card} />
         </div>
       ))}    
-    </div>
+    </CardsContainer>
   )
 }
 
