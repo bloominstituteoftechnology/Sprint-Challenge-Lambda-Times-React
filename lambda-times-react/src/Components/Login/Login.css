@@ -1,0 +1,51 @@
+/*body {
+    background-image: url('https://lambdaschool.com/static/images/herogirl.png');
+    background-size: cover;
+}*/
+
+.login-box {
+    height: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #fff;
+    margin-top: 190px;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+    .login-box img {
+        width: 225px;
+        padding-top: 30px;
+    }
+
+    .login-box input {
+        width: 80%;
+        height: 30px;
+        padding-left: 5px;
+        margin-top: 10px;
+    }
+
+    .login-box button {
+        width: 80%;
+        background-color: #D46A6A;
+        border-color: #801515;
+        color: white;
+        margin-top: 20px;
+        height: 50px;
+        box-shadow: none;
+    }
+
+    .login-box p {
+        margin-top: 30px;
+    }
+
+    .login-box a {
+        text-decoration: none;
+        color: #003333;
+    }
+
+    .login-box a:hover {
+        color: #669999;
+    }

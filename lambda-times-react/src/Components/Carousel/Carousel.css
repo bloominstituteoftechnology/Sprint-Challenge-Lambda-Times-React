@@ -1,0 +1,10 @@
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.left-button, .right-button {
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+}

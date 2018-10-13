@@ -1,0 +1,9 @@
+.topics {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 25px 10px;
+    max-width: 1180px;
+}
+
