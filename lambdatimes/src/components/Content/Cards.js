@@ -22,7 +22,7 @@ class Cards extends Component {
 
 // Make sure you include prop types for all of your incoming props
 Cards.propTypes = {
-  cards: PropTypes.arrayOf(PropTypes.string)
+  cards: PropTypes.arrayOf(PropTypes.object)
 }
 
 
