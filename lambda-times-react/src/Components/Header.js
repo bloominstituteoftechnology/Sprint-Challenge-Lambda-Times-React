@@ -12,8 +12,8 @@ const HeaderClass = styled.div`
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-  @media (min-width: 1200px) {
-    width: 1280px;
+  @media (min-width: 1100px) {
+    width: 1180px;
   }
 `
 const HeaderH1 = styled.h1`
@@ -45,9 +45,9 @@ const TempHeaderSpan = HeaderSpan.extend`
 const Header = () => {
     return (
         <HeaderClass>
-            <DateHeaderSpan>SMARCH 32, 2018</DateHeaderSpan>
+            <DateHeaderSpan>OCTOBER 13, 2018</DateHeaderSpan>
             <HeaderH1>Lambda Times</HeaderH1>
-            <TempHeaderSpan>98°</TempHeaderSpan>
+            <TempHeaderSpan>55°</TempHeaderSpan>
         </HeaderClass>
     )
 }

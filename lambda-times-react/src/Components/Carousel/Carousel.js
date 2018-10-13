@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data';
+import './Carousel.css';
 
 export default class Carousel extends Component {
   constructor(props){

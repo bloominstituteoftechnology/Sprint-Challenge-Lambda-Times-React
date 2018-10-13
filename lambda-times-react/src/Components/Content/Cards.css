@@ -1,0 +1,21 @@
+.cards-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.cards-container img {
+    width: 100%;
+}
+
+.cards-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
