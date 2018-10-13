@@ -4,7 +4,7 @@ import Card from './Card';
 const Cards = props => {
   return (
     <div className="cards-container">
-    {this.props.tabs.map(card => {
+    {props.cards.map(card => {
       return <Card key={card.tab} card={card} />
     })}
       {/* Using the cards prop, map over the list creating a 
