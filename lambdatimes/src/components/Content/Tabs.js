@@ -6,9 +6,9 @@ const Tabs = props => {
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
 
-        {props.tabs.map(tab => {
+        {this.props.tabs.map(tab => {
 
-          return <Tab key={tab} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab} tab={tab} />
+          return <Tab key={tab} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab} tabs={props.tabs} />
         })
         
         
