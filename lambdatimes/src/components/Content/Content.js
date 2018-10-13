@@ -51,7 +51,7 @@ export default class Content extends Component {
   else {
     let cards = [];
     this.state.cards.map(card => {
-      card.tab === this.state.selected ? cards.push(card) : null;
+      return card.tab === this.state.selected ? cards.push(card) : null;
     })
     return cards;
   }
