@@ -1,11 +1,15 @@
 import React from 'react';
+import Wrapper from'./wrapper';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
+const barTop= {
+ 
+};
 
 const TopBar = () => {
   return (
-    <div className="top-bar">
+    <Wrapper>
       <div className="container">
         <div className="container-left">
           <span>TOPICS</span><span>SEARCH</span>
@@ -17,7 +21,7 @@ const TopBar = () => {
           <span>LOG IN</span>
         </div>
       </div>
-    </div>
+    </Wrapper>
   )
 }
 
