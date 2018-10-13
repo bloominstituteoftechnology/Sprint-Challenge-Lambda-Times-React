@@ -10,6 +10,11 @@ import {
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
+const clearStorage = () => {
+  localStorage.clear();
+  window.location.reload();
+};
+
 const TopBar = () => {
   return (
     <TopBarWrapper>
@@ -26,7 +31,7 @@ const TopBar = () => {
           <span>ANNOUNCEMENTS</span>
         </TopBarContainerCenter>
         <TopBarContainerRight>
-          <span>LOG IN</span>
+          <span onClick={clearStorage}>LOG OUT</span>
         </TopBarContainerRight>
       </TopBarContainer>
     </TopBarWrapper>
