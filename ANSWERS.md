@@ -41,7 +41,7 @@
             ComponentWillUnmount
 
 ## 3.  What is a Higher Order Component?
-    A: A Higher Order Component returns class or function objects.
+    A: A Higher Order Component returns class or function objects.  The common use for HOC's is to prevent unauthorized access to specific areas of the app.  For example, a user authentication HOC that will only allow use of the app after the user provides a username and password.  HOC's can operate with different levels of priveleges for specific users although this function is the scope of our current insruction.
 
 ##4.  What are three different ways to style components in React?
     A: React compnents can be styled by:
