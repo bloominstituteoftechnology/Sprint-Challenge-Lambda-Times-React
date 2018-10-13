@@ -19,4 +19,8 @@ Questions:
     
     
     4. What are three different ways to style components in React?
+        i) Old school CSS
+        ii) Inline style(not recommended for maintainability)
+        iii) Styled Components
+        iv) Reactstrap, Bootstrap, etc. and combinations of these
  
