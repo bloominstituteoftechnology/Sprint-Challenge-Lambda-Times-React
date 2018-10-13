@@ -3,19 +3,37 @@ import PropTypes from 'prop-types';
 
 
 
-const Card = props => {
-  return (
-    <div className="card">
-      <div className="headline">{props.headline}</div>
-      <div className="author">
-        <div className="img-container">
-          <img src={props.img} />
+
+class Card extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      headline: '',
+      img: '',
+      author: ''
+    }
+  }
+
+  componentDidMount(){
+    this.setState({headline: this.props.headline, img: this.props.img, author: this.props.author});
+  }
+
+    render(){
+      return (
+        <div className="card">
+          <div className="headline">{this.props.headline}</div>
+          <div className="author">
+            <div className="img-container">
+              <img src={this.props.img} />
+            </div>
+            <span>By {this.props.author}</span>
+          </div>
         </div>
-        <span>By {props.author}</span>
-      </div>
-    </div>
-  );
-};
+      );
+    }
+}
+  
+
 
 // const Card = props => {
 //   return (
