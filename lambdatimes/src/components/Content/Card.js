@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 
 const CardContainer = styled.div`
@@ -50,7 +50,7 @@ const Card = props => {
       <Headline>{props.card.headline}</Headline>
       <Author>
         <IMG>
-          <img src={props.card.img} />
+          <img src={props.card.img} alt="author img"/>
         </IMG>
         <span>By {props.card.author}</span>
       </Author>
@@ -58,7 +58,7 @@ const Card = props => {
   );
 };
 
-Card.PropTypes = {
-  card: PropTypes.array.isRequired
+Card.propTypes = {
+  card: propTypes.object.isRequired
 }
 export default Card;

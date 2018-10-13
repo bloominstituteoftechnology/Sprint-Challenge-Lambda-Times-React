@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Card';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styled from 'styled-components'
 
 const CardsContainers = styled.div`
@@ -19,13 +19,13 @@ flex-wrap: wrap;
 const Cards = props => {
   return (
     <CardsContainers>
-          {props.cards.map((card)   =>  <Card card={card}/>)}
+          {props.cards.map((card, index)   =>  <Card card={card} key={index}/>)}
     </CardsContainers>
   )
 }
 
-Cards.PropTypes = {
-  cards: PropTypes.func.isRequired
+Cards.propTypes = {
+  cards: propTypes.array.isRequired
 }
 
 export default Cards;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Tab from './Tab';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 
 const TabsContainer = styled.div`
@@ -63,16 +63,16 @@ const Tabs = props => {
         <span>TRENDING TOPICS:</span>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
-            {props.tabs.map(tab => <Tab tab={tab} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab}/>)}
+            {props.tabs.map((tab,index) => <Tab tab={tab} key={index} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab}/>)}
       </Topics>
     </TabsContainer>
   );
 };
 
-Tabs.PropTypes = {
-  tabs: PropTypes.array.isRequired,
-  selectedTab: PropTypes.string.isRequired,
-  selectTabHandler: PropTypes.func.isRequired
+Tabs.propTypes = {
+  tabs: propTypes.array.isRequired,
+  selectedTab: propTypes.string.isRequired,
+  selectTabHandler: propTypes.func.isRequired
 }
 
 export default Tabs;
