@@ -12,4 +12,4 @@ A Higher Order Component is a function that takes in a component and returns a n
 
 4.  What are three different ways to style components in React?
 
-Css files, Reactstrap, and Styled Components
+CSS files, a library like Reactstrap or Material UI, and Styled Components.
