@@ -1,23 +1,55 @@
 import React from 'react';
+import styled from 'styled-components';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
+export const StyledTopBar = styled.div`
+display: flex;
+width: 100%;
+background-color: grey;
+`;
+
+export const TopBarContainerLeft = styled.div`
+display: flex;
+width: 100%;
+color: white;
+`;
+
+export const TopBarContainerCenter = styled.div`
+display: flex;
+width: 100%;
+color: white;
+`;
+
+export const TopBarContainerRight = styled.div`
+display: flex;
+width: 100%;
+color: white;
+`;
+
+export const Container = styled.div`
+display: flex;
+width: 100%;
+color: white;
+padding: 0 20px;
+`;
+
 const TopBar = () => {
   return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
+    <StyledTopBar>
+      <Container>
+        <TopBarContainerLeft>
           <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
+        </TopBarContainerLeft>
+        <TopBarContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
+          </TopBarContainerCenter>
+          <TopBarContainerCenter>
           <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
+          </TopBarContainerCenter>
+        </Container>
+    </StyledTopBar>
   )
 }
 
