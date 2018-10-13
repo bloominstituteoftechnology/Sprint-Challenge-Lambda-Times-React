@@ -19,7 +19,12 @@ export default class Carousel extends Component {
     if (this.state.imageIndex > 0) {
       this.setState({
         imageIndex: this.state.imageIndex - 1
-      }, console.log(this.state.imageIndex))
+      })
+    }
+    else if (this.state.imageIndex === 0) {
+      this.setState({
+        imageIndex: this.state.images.length - 1
+      })
     }
   }
 
@@ -27,7 +32,12 @@ export default class Carousel extends Component {
     if (this.state.imageIndex < this.state.images.length - 1) {
       this.setState({
         imageIndex: this.state.imageIndex + 1
-      }, console.log(this.state.imageIndex))
+      })
+    }
+    else if (this.state.imageIndex === this.state.images.length - 1) {
+      this.setState({
+        imageIndex: 0
+      })
     }
   }
 
