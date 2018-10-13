@@ -1,16 +1,19 @@
 import React from 'react';
 import Tab from './Tab';
+
 const Tabs = props => {
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         {props.tabs.map((tab) =>{
-          <Tab 
+          return(
+            <Tab 
             tab = {tab}
-            selectedTab = {tab.selectedTab}
-            selectTabHandler = {tab.selectTabHandler}
+            selectedTab = {props.selectedTab}
+            selectTabHandler = {props.selectTabHandler}
           />
+          )
         })
           
           /* map over the tabs provided on your props, create a new Tab component for each one.
