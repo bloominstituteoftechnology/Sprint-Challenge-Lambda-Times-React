@@ -16,8 +16,8 @@ export default class Content extends Component {
 	}
 
 	componentDidMount() {
-		setState({
-			tabs: tabDatal,
+		this.setState({
+			tabs: tabData,
 			cards: cardData
 		});
 	}
@@ -27,13 +27,11 @@ export default class Content extends Component {
 	};
 
 	filterCards = () => {
-		cardsState = [...this.state.cards];
+		const cardsState = [...this.state.cards];
 		if (this.state.selected === 'all') {
 			return cardsState;
 		} else {
-			return cardsState.filter(card => {
-				card.tab === this.state.selected;
-			});
+			return cardsState.filter(card => card.tab === this.state.selected);
 		}
 	};
 
