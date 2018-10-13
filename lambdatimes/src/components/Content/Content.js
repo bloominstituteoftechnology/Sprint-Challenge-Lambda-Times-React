@@ -47,7 +47,7 @@ export default class Content extends Component {
     */
     let newCards = this.state.cards
     if (this.state.selected === "all") {
-      return cardData
+      return newCards
     } else {
       let newInfo = newCards.filter(newCard => {
         if (newCard.tab === this.state.selected) {
