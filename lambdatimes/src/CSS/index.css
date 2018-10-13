@@ -76,7 +76,7 @@ body {
   .top-bar .container {
     width: 1280px;
   }
-} */
+} 
 .top-bar .container .container-left {
   display: flex;
   justify-content: none;
@@ -262,7 +262,7 @@ body {
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: bold;
-}
+}*/
 .carousel {
   width: 100%;
   display: flex;
