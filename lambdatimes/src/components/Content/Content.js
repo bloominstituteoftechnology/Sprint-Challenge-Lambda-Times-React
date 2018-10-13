@@ -17,11 +17,11 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
-    this.setState({ tabs: tabData, cards: cardData });
+    this.setState({tabs: tabData, cards: cardData});
   }
 
   changeSelected = tab => {
-    this.setState({ selected: tab });
+    this.setState({selected: tab});
   };
 
   filterCards = () => {
