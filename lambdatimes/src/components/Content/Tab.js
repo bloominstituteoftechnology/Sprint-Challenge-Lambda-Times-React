@@ -6,7 +6,7 @@ import '../../CSS/index.css'
       super(props);
       this.state = {
          tabMatch: false,
-        selected: props.selectedTab
+        selected: this.props.selectedTab
       };
       console.log(this.state)
     }
@@ -22,7 +22,7 @@ import '../../CSS/index.css'
           console.log(this.props.tab)
   
   
-        if (this.props.tab === this.props.selectedTab) {
+        if (this.props.tab === this.state.selected) {
          console.log(this.props.tab)
           this.setState=({ tabMatch: true})
         }
