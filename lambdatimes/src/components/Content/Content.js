@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-
+import styled from 'styled-components';
 import Tabs from './Tabs';
 import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 
+const ContentContainer = styled.div`
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+`;
 export default class Content extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +28,7 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     this.setState({
-      selected: tab
+      selected: tab 
     });
     // this function should take in the tab and update the state with the new tab.
   };
@@ -51,7 +56,7 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="content-container">
+      <ContentContainer>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
@@ -59,7 +64,7 @@ export default class Content extends Component {
         */}
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
         <Cards cards={this.filterCards()} />
-      </div>
+      </ContentContainer>
     );
   }
 }
