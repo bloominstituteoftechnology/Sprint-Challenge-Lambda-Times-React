@@ -18,6 +18,9 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({
+         tabs: tabData
+    })
   }
 
   changeSelected = tab => {
@@ -41,6 +44,7 @@ export default class Content extends Component {
   };
 
   render() {
+     console.log(this.state.tabs);
     return (
       <div className="content-container">
         {/* 
