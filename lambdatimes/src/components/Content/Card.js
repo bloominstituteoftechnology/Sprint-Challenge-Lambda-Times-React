@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 
 
 class Card extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       headline: '',
       img: '',
