@@ -25,7 +25,7 @@ const Tabs = props => {
     </div>
   );
 };
-Tabs.PropTypes={
+Tabs.propType={
   key: PropTypes.string.isRequired,
   selectTabHandler: PropTypes.func,
   selectedTab: PropTypes.string.isRequired,
