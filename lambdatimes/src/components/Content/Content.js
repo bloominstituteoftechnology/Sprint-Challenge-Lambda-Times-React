@@ -14,14 +14,21 @@ export default class Content extends Component {
       tabs: [],
       cards: []
     };
+    
   }
-
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({
+      tabs: tabData,
+      cards: cardData
+    })    
   }
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+    this.setState({
+      tabs: [this.tab],
+    })
   };
 
   filterCards = () => {
@@ -47,8 +54,12 @@ export default class Content extends Component {
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
-        */}
-        <Tabs tabs={this.state.tabs} />
+        */          
+       }
+        <Tabs tabs={this.state.tabs}
+              selectTabHandler={this.changeSelected}
+              selectedTab={this.selectedTab}
+        />
         <Cards cards={this.filterCards()} />
       </div>
     );
