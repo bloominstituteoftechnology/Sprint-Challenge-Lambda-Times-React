@@ -22,12 +22,10 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 
-
 Tab.propTypes = {
   changeSelected: PropTypes.func,
   selectedTab: PropTypes.string,
   tabs: PropTypes.string
 }
-
 
 export default Tab;

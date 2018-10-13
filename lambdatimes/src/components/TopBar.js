@@ -14,7 +14,11 @@ const TopBar = () => {
           <TBContainerLeftSpan>TOPICS</TBContainerLeftSpan><TBContainerLeftSpan>SEARCH</TBContainerLeftSpan>
         </TBContainerLeft>
         <TBContainerCenter>
-          <TBContainerCenterSpan>GENERAL</TBContainerCenterSpan><TBContainerCenterSpan>BROWNBAG</TBContainerCenterSpan><TBContainerCenterSpan>RANDOM</TBContainerCenterSpan><TBContainerCenterSpan>MUSIC</TBContainerCenterSpan><TBCCSpanLast>ANNOUNCEMENTS</TBCCSpanLast>
+          <TBContainerCenterSpan>GENERAL</TBContainerCenterSpan>
+          <TBContainerCenterSpan>BROWNBAG</TBContainerCenterSpan>
+          <TBContainerCenterSpan>RANDOM</TBContainerCenterSpan>
+          <TBContainerCenterSpan>MUSIC</TBContainerCenterSpan>
+          <TBCCSpanLast>ANNOUNCEMENTS</TBCCSpanLast>
         </TBContainerCenter>
         <TBContainerRightDiv>
           <TBCRSpan>LOG IN</TBCRSpan>
