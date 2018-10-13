@@ -8,10 +8,27 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
+        {props.tabs.map(tab => {
+          return (
+            <Tab
+              tab={tab}
+              selectHanlder={props.selectHanlder}
+              selectedtab={props.selectedtab}
+            />
+          )
+        })}
       </div>
     </div>
   );
 };
 
 // Make sure to use PropTypes to validate your types!
+Tabs.propTyped = {
+  tabs: PropTypes.arrayOf(
+    PropTypes.string
+  ),
+  selectHanlder: PropTypes.func,
+  selectedtab: PropTypes.string,
+}
+
 export default Tabs;
