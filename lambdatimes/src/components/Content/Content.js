@@ -28,11 +28,19 @@ export default class Content extends Component {
       selected: tab
 
     });
-
     console.log(this.state.selected);
   };
 
   filterCards = () => {
+    // let's try a ternary approach like in training kit
+
+    return this.state.selected === 'all'   // if 'all' true?
+      ? this.state.cards     // give back ALL cards
+      : this.state.cards.filter ( card => {         // give back matched
+        return card.tab === this.state.selected
+      })
+
+
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
       by using it to filter out our cards for when a tab is selected
@@ -45,7 +53,7 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
+
   };
 
   render() {
