@@ -7,3 +7,33 @@
 2. What is a lifecycle event in React?
 
     * Lifecycle events can be described as the birth, growth and death of the component (components can die!? :scream:). With these lifecycle events we can determine what the component does in each step of it's life just like playing a Sims game. This is very useful to set initial data to the state of the component as an example.
+
+        ```
+        export default class Content extends Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    selected: 'all',
+                    tabs: [],
+                    cards: []
+                };
+            }
+
+            componentDidMount() {
+                // Once the component has mounted, get the data and reflect that data on the state.
+                this.setState({
+                    tabs: tabData,
+                    cards: cardData
+                });
+            }
+        }
+        ```
+
+3. What is a Higher Order Component?  
+
+    * It's an advanced technique and a bit tricky to understand but barebones explanation is a function that takes a component as a parameter and returns a new component for example 
+
+        ```
+        const EnhancedComponent = higherOrderComponent(WrappedComponent);
+        ```
+    * They are useful because some components follow similar patterns and with HOC (Higher Order Components) we can cut lines of repeated code and keep our source dry.    
