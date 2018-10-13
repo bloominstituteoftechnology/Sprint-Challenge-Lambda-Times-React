@@ -37,9 +37,9 @@ export default class Carousel extends Component {
   render(){
     return (
       <CarouselContainer>
-        <Button left onClick={this.leftClick}>{"<"}</Button>
+        <ButtonLeft left onClick={this.leftClick}>{"<"}</ButtonLeft>
           {this.selectedImage()}
-        <Button right onClick={this.rightClick}>{">"}</Button>
+        <ButtonRight right onClick={this.rightClick}>{">"}</ButtonRight>
       </CarouselContainer>
     )
   }
@@ -61,7 +61,7 @@ const CarouselContainer = styled.div`
   }
 `;
 
-const Button = styled.div`
+const ButtonLeft = styled.div`
   display: flex;
   justify-content: center;
   align-items: none;
@@ -78,6 +78,7 @@ const Button = styled.div`
 
   top: 50%;
   transform: translate(0, -50%);
+  left: 25px;
 
   :hover {
     color: #333;
@@ -85,8 +86,37 @@ const Button = styled.div`
     border: 2px solid #333;
   }
 
-  left: ${props => props.left ? "25px" : "0px"};
-  right: ${props => props.right ? "25px" : "0px"};
+  /* left: ${props => props.left ? "25px" : "0px"};
+  right: ${props => props.right ? "25px" : "0px"}; */
+`;
+
+const ButtonRight = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  z-index: 1;
+  color: #fff;
+  background-color: #333;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 25px;
+
+  :hover {
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+  }
+
+  /* left: ${props => props.left ? "25px" : "0px"};
+  right: ${props => props.right ? "25px" : "0px"}; */
 `;
 
 const Image = styled.img`
