@@ -14,7 +14,12 @@ After that, the application may move onto another component, in which the previo
 
 What is a Higher Order Component?
 
-Answer: A HOC is a function that passes another function, thus "giving" the function that is passed some new functionality. 
+Answer: A HOC is a function that passes another function, thus "giving" the function that is passed some new functionality. This allows us to write a HOC once and pass its' functionality to many other components. It's an advanced design pattern that allows us to write DRY code in React.  
 
 
 What are three different ways to style components in React?
+
+Answer: 
+First way: In-line style in the component.
+Second way: Separate CSS file. 
+Third way: CSS-in-JS way - styled-components, which is the React way. 
