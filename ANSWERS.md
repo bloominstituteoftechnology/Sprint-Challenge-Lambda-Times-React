@@ -6,4 +6,4 @@
 
 2. What is a lifecycle event in React?
 
-    * Lifecycle events can be described as the birth, growth and death of the component (components can die!? :scream:)
+    * Lifecycle events can be described as the birth, growth and death of the component (components can die!? :scream:). With these lifecycle events we can determine what the component does in each step of it's life just like playing a Sims game. This is very useful to set initial data to the state of the component as an example.
