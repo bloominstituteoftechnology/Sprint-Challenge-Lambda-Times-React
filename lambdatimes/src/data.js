@@ -1,7 +1,7 @@
 /* Do not change anything in this file until you are completed with the assignment 
    and have moved onto the stretch goals. */
 
-export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
+export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap', 'less'];
 
 export const cardData = [
   {
@@ -93,6 +93,12 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+  {
+    headline: "Less (which stands for Leaner Style Sheets) is a backwards-compatible language extension for CSS.",
+    tab: "less",
+    img: "./assets/tree.jpg",
+    author: "WITANDAY KYANGA"
   }
 ]
 
