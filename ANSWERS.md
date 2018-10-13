@@ -9,7 +9,7 @@
     A Higher Order Component is a component returned from a function that took
     in a component and returned the a component either very similar with added
     functionality or a different component because certain things weren't meant.
-1.  What are three different ways to style components in React?
+4.  What are three different ways to style components in React?
     You can style them with css, you can style them with ReacStrap (A react library
         similar to bootstrap), or as styled components where you put the css directly into
         the javascript
