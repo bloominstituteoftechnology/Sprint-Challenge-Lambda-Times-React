@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Card from './Card';
+import PropTypes from 'prop-types';
 
-const Card = props => {
+const Cards = props => {
   return (
-    <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
-      <div className="author">
-        <div className="img-container">
-          <img src={'' /* image source goes here */} />
-        </div>
-        <span>By {/* author goes here */}</span>
-      </div>
+    <div className="cards-container">
+      {/* Mapping over the list creating a new Card component for each passing the card as the only prop*/}
+      {props.cards.map((card, index) => <Card card={card} key={index}/>)}
     </div>
-  );
-};
+  )
+}
 
-// Make sure to include PropTypes.
+Cards.propTypes = {
+	cards: PropTypes.arrayOf(PropTypes.object)
+}
 
-export default Card;
+export default Cards;
