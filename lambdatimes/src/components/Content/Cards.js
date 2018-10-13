@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import PropTypes from 'prop-type';
 
 const Cards = props => {
   console.log(props);   // cool!, they are showing up
 
   return (
     <div className="cards-container">
-      {props.cards.map( card => <Card card = {card}/>  )}
+      {props.cards.map( card => <Card
+        card = {card}
+        key = {card.headline}  // this is only unique prop per cards array
+      />  )}
 
 
       {/* Using the cards prop, map over the list creating a
@@ -16,5 +20,10 @@ const Cards = props => {
 };
 
 // Make sure you include prop types for all of your incoming props
+Cards.propTypes = {
+  cards: PropTypes.array,
+  card: PropTypes.object
+};
+
 
 export default Cards;
