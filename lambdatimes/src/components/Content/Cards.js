@@ -18,7 +18,7 @@ const Cards = props => {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 // Make sure you include prop types for all of your incoming props
