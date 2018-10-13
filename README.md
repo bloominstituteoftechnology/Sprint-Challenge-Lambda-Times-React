@@ -4,8 +4,8 @@ In the past week we have taken a deeper dive into React. We went from writing sm
 
 ## Assessing your Intermediate React Fu
 
-- Answers to your written questions will be recorded in _ANSWERS.md_
-- This is to be worked on alone but you can use outside resources. You can _reference_ any old code you may have, and documentation, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words.
+- [x] Answers to your written questions will be recorded in _ANSWERS.md_
+- [x] This is to be worked on alone but you can use outside resources. You can _reference_ any old code you may have, and documentation, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words.
 
 ### Questions:
 
@@ -20,8 +20,8 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 
 ## Project Setup
 
-- This project was put together using Create React App so you should be very familiar with the file structure up to this point.
-- From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
+- [x] This project was put together using Create React App so you should be very familiar with the file structure up to this point.
+- [x] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
 
 ### Part I
 
