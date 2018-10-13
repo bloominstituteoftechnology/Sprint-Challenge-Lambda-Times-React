@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Tabs from './Tabs';
+import Carousel from '../Carousel/Carousel';
 import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
@@ -38,20 +39,19 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-   console.log(this.state.selected);
-   if (this.state.selected === 'all') {
-     return this.state.cards;
-   } else {
-     const arr = [...this.state.cards];
-     const newArray = [];
-     arr.forEach(data => {
-       if (data.tab === this.state.selected) {
-         newArray.push(data);
-       }
-     });
-     return newArray;
-   }
-    return this.state.cards;
+    console.log(this.state.selected);
+    if (this.state.selected === 'all') {
+      return this.state.cards;
+    } else {
+      const arr = [...this.state.cards];
+      const newArray = [];
+      arr.forEach(data => {
+        if (data.tab === this.state.selected) {
+          newArray.push(data);
+        }
+      });
+      return newArray;
+    }
   };
 
   render() {
@@ -67,8 +67,10 @@ export default class Content extends Component {
           selectedTab={this.state.selected}
           selectedTabHandler={this.changeSelected}
         />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     );
   }
 }
+© 2018 GitHub, Inc.
