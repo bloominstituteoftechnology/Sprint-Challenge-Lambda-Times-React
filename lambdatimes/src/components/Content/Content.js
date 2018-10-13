@@ -26,15 +26,9 @@ export default class Content extends Component {
   filterCards = () => {
     if (this.state.selected === 'all') {
       return this.state.cards;
+    } else {
+      return this.state.cards.filter(card => card.tab === this.state.selected);
     }
-    const arr = [...this.state.cards];
-    const newArr = [];
-    arr.forEach(card => {
-      if (card.tab === this.state.selected) {
-        newArr.push(card);
-      }
-    })
-    return newArr;
   };
 
   render() {
