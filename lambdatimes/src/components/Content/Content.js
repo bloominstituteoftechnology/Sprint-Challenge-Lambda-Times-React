@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes  from'prop-types'
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -19,9 +19,10 @@ export default class Content extends Component {
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
     this.setState({
-      selected:this.state.selected,
-      tabs:this.state.tabs,
-      cards:this.state.cards
+      tabs:tabData,
+      cards:cardData,
+      changeSelected:this.changeSelected,
+      filterCards:this.filterCards
   })
   }
 
@@ -30,17 +31,13 @@ export default class Content extends Component {
     return()=>{
       this.setState({selected:tab});
     }
-  };
+  }
 
   filterCards = () => {
       if(this.state.selected==="all"){
-        return cardData;}
-        else{
-            return cardData.filter(card=>{
-              return card.tab===this.state.selected;
-            });
-        }
-    return this.state.cards;
+        return this.state.cards;}
+
+    return this.state.cards.filter(card=> card.tab===this.state.selected);
   };
 
   render() {
@@ -54,4 +51,10 @@ export default class Content extends Component {
       </div>
     );
   }
+}
+Content.propTypes={
+  tabs:PropTypes.array,
+  selectedTabHandler:PropTypes.func,
+  selectedTab:PropTypes.string,
+  filterHandler:PropTypes.func
 }

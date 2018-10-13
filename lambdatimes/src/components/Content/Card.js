@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from'prop-types'
 const Card = props => {
   return (
     <div className="card">
@@ -14,6 +14,9 @@ const Card = props => {
   );
 };
 
+Card.propTypes={
+  props:PropTypes.array
+}
 // Make sure to include PropTypes.
 
 export default Card;
