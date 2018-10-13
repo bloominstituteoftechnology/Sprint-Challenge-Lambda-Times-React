@@ -49,7 +49,8 @@ class Cards extends React.Component {
 // Make sure you include prop types for all of your incoming props
 
 Cards.propTypes = {
-  tabs: PropTypes.array
+  tabs: PropTypes.array,
+  card: PropTypes.object
 }
 
 // Cards.propTypes = {

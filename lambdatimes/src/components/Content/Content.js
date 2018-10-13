@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import tabData from '../../data';
-// import cardData from '../../data';
 import Tabs from './Tabs';
 import Cards from './Cards';
+import PropTypes from 'prop-types';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -19,12 +18,13 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
-    this.setState({tabs: tabData});
-    this.setState({cards: cardData});
+    this.setState({tabs: tabData, cards: cardData});
+    // this.setState({cards: cardData});
   }
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+    this.setState({selected: tab.target})
   };
 
   filterCards = () => {
@@ -40,6 +40,8 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+
+   
     return this.state.cards;
   };
 
@@ -57,3 +59,17 @@ export default class Content extends Component {
     );
   }
 }
+
+
+
+Content.propTypes = {
+  cards: PropTypes.arrayOf(
+      PropTypes.shape({
+          headline: PropTypes.string,
+          tab: PropTypes.string,
+          img: PropTypes.string,
+          author: PropTypes.string
+      })
+  ).isRequired,
+  tabs: PropTypes.array,
+};
