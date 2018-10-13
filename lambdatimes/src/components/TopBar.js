@@ -10,6 +10,8 @@ const ChildTopBar = styled.div`
     position: fixed;
     height: 44px;
     background-color: #333;
+    position: 'relative',;
+    z-index: 3;
 `
 const TopBarContainer = styled.div`
     width: 100%;

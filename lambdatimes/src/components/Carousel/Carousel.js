@@ -11,13 +11,15 @@ const ChildCarousel = styled.div`
     height: 500px;
     position: relative;
     overflow: hidden;
-    margin-top: 16px;  
+    margin-top: 16px;
   @media (min-width: 1200px) {
       width: 1200px;
   }
   >img {
       width: 100%;
       display: none;
+      position: 'relative';
+      z-index: 1;  
   }
 `
 
@@ -36,6 +38,7 @@ const CarouselButton = styled.div`
     cursor: pointer;
     top: 50%;
     transform: translate(0, -50%);
+    z-index: 2;
     &:hover {
         color: #333;
         background-color: #fff;
