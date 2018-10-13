@@ -17,7 +17,6 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
-     console.log(this.state.cards)
     this.setState({
       tabs:[...tabData],
       cards:[...cardData]
@@ -28,13 +27,13 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     this.setState({
-      selected:tab.target.tabs
+      selected:tab
     })
     // this function should take in the tab and update the state with the new tab.
   };
 
   filterCards = () => {
-   this.state.selected === 'all' ? this.state.cards : this.state.cards.filter(item => item.tab === this.state.selected)
+   return this.state.selected === 'all' ? this.state.cards : this.state.cards.filter(item => item.tab === this.state.selected)
   };
 
   render() {
