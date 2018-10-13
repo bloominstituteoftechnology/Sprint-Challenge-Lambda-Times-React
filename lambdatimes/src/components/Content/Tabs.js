@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tab from './Tab';
 const Tabs = props => {
   return (
@@ -12,8 +13,8 @@ const Tabs = props => {
               <div>
                 <Tab
                   key={tab[index]}
-                  tab={props.tab}
-                  selectedTab={props.tab}
+                  tab={props.tabs.tab}
+                  selectedTab={props.tabs.tab}
                   selectTabHandler={props.changeSelected}
                 />
               </div>
@@ -25,4 +26,8 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+Tabs.propTypes = {
+  tabs: PropTypes.arrayOf(PropTypes.string)
+}
+
 export default Tabs;
