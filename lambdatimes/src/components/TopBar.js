@@ -66,7 +66,9 @@ const ContainerRight = Styled.div`
   font-size: 11px;
   font-weight: bold;
 `;
-
+const RightSpan = Styled.span`
+  cursor: pointer;
+`;
 
 
 
