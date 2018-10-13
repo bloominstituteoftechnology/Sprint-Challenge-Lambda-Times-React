@@ -13,5 +13,10 @@ Questions:
     
     
     3. What is a Higher Order Component?
+    A HOC transforms a component into another component using composition(a functioban that takes a function as an input 
+    and returns anohter functionas output). Essentially, a component can have additonal functionality added to it 
+    via a HOC. Also, like a closure, unique state can be tied to each new component using this powerful approach. 
+    
+    
     4. What are three different ways to style components in React?
  
