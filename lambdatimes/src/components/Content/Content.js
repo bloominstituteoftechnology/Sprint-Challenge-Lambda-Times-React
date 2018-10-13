@@ -21,7 +21,7 @@ export default class Content extends Component {
     // Once the component has mounted, get the data and reflect that data on the state.
     setTimeout(() => {
       this.setState ({
-        selected: 'all',
+        selected: '',
         tabs: tabData,
         cards: cardData,
         filteredCards: []
@@ -29,17 +29,7 @@ export default class Content extends Component {
     }, 2000)
   }
 
-  changeSelected = tab => {
-    console.log(tab);
-    // this function should take in the tab and update the state with the new tab.
-    
-    this.setState({ selected: tab });
 
-    const filteringCards = this.state.cards.filter(card => 
-      card.tab.includes(this.state.selected));
-
-     this.setState({ filteredCards: filteringCards });
-  };
 
   filterCards = () => {
     /* Right now this function only returns the cards on state.
@@ -58,7 +48,7 @@ export default class Content extends Component {
    if (this.state.selected === "all"){
      return this.state.cards;
 
-   } else if (this.state.selected !== "all"){
+   } else{
 
 
      return this.state.filteredCards;
@@ -66,6 +56,20 @@ export default class Content extends Component {
     
   
   };
+
+    changeSelected = tab => {
+      
+      console.log(tab);
+      // this function should take in the tab and update the state with the new tab.
+      const filteredCards = this.state.cards.filter(card => 
+        card.tab.includes(this.state.selected));
+
+      this.setState({ filteredCards });    
+      this.setState({ selected: tab });
+
+
+    };
+
 
   render() {
     console.log(cardData);
@@ -83,7 +87,7 @@ export default class Content extends Component {
         <Tabs tabs={this.state.tabs}
         selectedTab = {this.state.selected}
         selectTabHandler = {this.changeSelected}
-        onChange = {this.filterCards}
+        // onChange = {this.filterCards}
         />
         <Cards cards={this.filterCards()} />
       </div>
