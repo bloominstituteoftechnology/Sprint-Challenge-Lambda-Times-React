@@ -53,7 +53,7 @@ export default class Content extends Component {
         if (newCard.tab === this.state.selected) {
           return newCard
         }
-        newInfo
+        return newInfo
       })
       return newInfo
     }
