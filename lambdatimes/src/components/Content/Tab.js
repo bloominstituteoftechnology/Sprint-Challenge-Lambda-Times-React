@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 class Tab extends React.Component {
@@ -13,7 +13,7 @@ class Tab extends React.Component {
     return (
       <div
         className={
-          this.props.tab === this.props.selectedTab ? "tab active-tab" : "tab"
+          this.props.tab === this.props.selectedTab ? 'tab active-tab' : 'tab'
         }
         onClick={this.select}
       >

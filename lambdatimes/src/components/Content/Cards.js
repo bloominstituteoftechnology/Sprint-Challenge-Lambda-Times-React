@@ -1,11 +1,11 @@
-import React from "react";
-import Card from "./Card";
-import PropTypes from "prop-types";
+import React from 'react';
+import Card from './Card';
+import PropTypes from 'prop-types';
 
 class Cards extends React.Component {
   render() {
     return (
-      <div className="cards-container">
+      <div className='cards-container'>
         {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/
         this.props.cards.map(card => (

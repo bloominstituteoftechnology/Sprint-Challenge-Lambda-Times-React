@@ -1,16 +1,16 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Tabs from "./Tabs";
-import Cards from "./Cards";
+import Tabs from './Tabs';
+import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
-import { tabData, cardData } from "../../data";
+import { tabData, cardData } from '../../data';
 
 export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: "all",
+      selected: 'all',
       tabs: [],
       cards: []
     };
@@ -45,7 +45,7 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
    let filtered = this.state.cards.filter(card => card.tab === this.state.selected);
-    if(this.state.selected === "all") {
+    if(this.state.selected === 'all') {
       return this.state.cards;
     } else {
       return filtered
@@ -55,7 +55,7 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="content-container">
+      <div className='content-container'>
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab

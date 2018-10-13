@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
 
   render() {
     return (
-      <div className="card">
-        <div className="headline">{this.props.card.headline}</div>
-        <div className="author">
-          <div className="img-container">
+      <div className='card'>
+        <div className='headline'>{this.props.card.headline}</div>
+        <div className='author'>
+          <div className='img-container'>
             <img src={this.props.card.img /* image source goes here */} alt='' />
           </div>
           <span>By {this.props.card.author}</span>
