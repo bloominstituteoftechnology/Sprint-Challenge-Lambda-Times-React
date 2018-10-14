@@ -20,19 +20,19 @@ export default class Content extends Component {
     // Once the component has mounted, get the data and reflect that data on the state.
     this.setState({
       selected: 'all',
-      tabs: this.props.tabData,
-      cards: this.props.cardData
+      tabs: tabData,
+      cards: cardData
     })
    
   }
 
-  changeSelected = (taseclected) => {
+  changeSelected = (tabseclected) => {
     // this function should take in the tab and update the state with the new tab.
         this.setState({
-          selected: taseclected,
+          selected: tabseclected,
           
         })
-     console.log (taseclected)
+     
   };
 
   filterCards = () => {
@@ -53,7 +53,7 @@ export default class Content extends Component {
       return card.tab.includes(this.state.selected)
       
     });
-    console.log(cards)
+    
     return cards
    
    }

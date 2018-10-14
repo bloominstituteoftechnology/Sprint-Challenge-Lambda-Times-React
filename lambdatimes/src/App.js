@@ -9,11 +9,7 @@ const App = props => {
     <div className="App">
       <TopBar />
       <Header />
-      <Content 
-      tabData ={props.tabData}
-      cardData ={props.cardData}
-      carouselData={props.carouselData}
-      />
+      <Content />
     </div>
   );
 }

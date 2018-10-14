@@ -99,7 +99,8 @@ export const cardData = [
     tab: "less",
     img: "./assets/tree.jpg",
     author: "WITANDAY KYANGA"
-  }
+  },
+  
 ]
 
 export const carouselData = [

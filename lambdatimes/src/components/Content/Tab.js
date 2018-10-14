@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
 
-  const tabargument = props.selectedTab;
-  console.log(tabargument)
+ 
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
@@ -24,5 +24,9 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
-
+Tab.protoTypes ={
+  selectedTab : PropTypes.string,
+  selectTabHandler: PropTypes.func.isRequired,
+  tab: PropTypes.string
+}
 export default Tab;
