@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tab = props => {
-  console.log(props.tab)
   if (props.selectedTab === props.tab) {
     return (
       <div
