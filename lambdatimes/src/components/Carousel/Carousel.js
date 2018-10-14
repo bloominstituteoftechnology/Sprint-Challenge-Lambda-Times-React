@@ -12,15 +12,15 @@ const ChildCarousel = styled.div`
     position: relative;
     overflow: hidden;
     margin-top: 16px;
-  @media (min-width: 1200px) {
-      width: 1200px;
-  }
-  >img {
-      width: 100%;
-      display: none;
-      position: 'relative';
-      z-index: 1;  
-  }
+    @media (min-width: 1200px) {
+        width: 1200px;
+    }
+    >img {
+        width: 100%;
+        display: none;
+        position: 'relative';
+        z-index: 1;  
+    }
 `
 
 const CarouselButton = styled.div`

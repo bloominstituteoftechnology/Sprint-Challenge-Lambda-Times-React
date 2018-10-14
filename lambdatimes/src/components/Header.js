@@ -18,7 +18,7 @@ const ChildHeader = styled.div`
 `
 
 const HeaderH1 = styled.h1`
-font-size: 60px;
+    font-size: 60px;
     font-family: Didot, serif;
     font-weight: bold;
     flex: 8;
