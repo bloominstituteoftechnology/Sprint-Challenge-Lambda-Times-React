@@ -185,7 +185,15 @@ body {
   justify-content: none;
   align-items: center;
   flex-direction: row;
+  
 }
+
+.tab-styles{
+  display: flex;
+  
+}
+
+
 .tabs .topics .title {
   font-size: 12px;
   letter-spacing: 1px;
