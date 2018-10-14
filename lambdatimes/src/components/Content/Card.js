@@ -1,14 +1,15 @@
-import React from 'react';
+import React from 'react'
+// import PropTypes from './../../../node_modules/prop-types';
 
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
+      <div className="headline">{props.Card.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={'' /* image source goes here */} />
+          <img src={props.Card.img} />
         </div>
-        <span>By {/* author goes here */}</span>
+        <span>By{props.Card.author}</span>
       </div>
     </div>
   );
@@ -16,4 +17,10 @@ const Card = props => {
 
 // Make sure to include PropTypes.
 
+
 export default Card;
+
+// Card.PropTypes = {
+//   author: PropTypes.string,
+//   headline: PropTypes.string,
+// }
