@@ -7,11 +7,11 @@ import styled from "styled-components"
 const StyledHeaderWrapper = styled.div `
 display: flex;
 justify-content: space-between;
-flex-direction: row;
 align-items: center;
-width: 100%;
+flex-direction: row;
 background-color: #fff;
 border-bottom: 1px solid lightgrey;
+width: 100%;
 height: 120px;
 margin-top: 44px;
 padding-bottom: 15px;
@@ -19,7 +19,8 @@ padding-bottom: 15px;
 @media (min-width: 1280px) {
 .header {
   width: 1280px;
-} 
+}
+}
 `
 
 const Date = styled.span `
