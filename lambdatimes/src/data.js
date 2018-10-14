@@ -30,7 +30,7 @@ export const cardData = [
   },
   {
     headline: "History of Javascript Libraries: from jQuery to React",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/puppers.jpg",
     author: "PUPPER S. DOGGO"
   },
@@ -54,7 +54,7 @@ export const cardData = [
   },
   {
     headline: "React.js v16 What's new, and what you should know about.",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/fido.jpg",
     author: "FIDO WALKSALOT"
   },
@@ -84,12 +84,12 @@ export const cardData = [
   },
   {
     headline: "React vs Angular vs Vue vs ??? How the frameworks stack up.",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/fido.jpg",
     author: "FIDO WALKSALOT"
   },
   {
-    headline: "The Hottest New Bootstrap 4 Components Every Developer Needs to Know About",
+    headline: "The Hottest New Bootstrap: 4 Components Every Developer Needs to Know About",
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
