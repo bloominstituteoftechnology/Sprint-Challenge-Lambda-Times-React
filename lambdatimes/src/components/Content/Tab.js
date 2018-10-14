@@ -7,10 +7,15 @@ class Tab extends Component {
     super(props);
     this.state = {
       tabMatch: false,
-      selected: this.props.selectedTab
+      selected: this.props.selected,
     };
   
   }
+
+  componentDidMount() {
+  
+  }
+
   /* const Tab = props => { */
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
@@ -18,17 +23,16 @@ class Tab extends Component {
  /*  selectTabHandler = keyIndex => {
  
   const newTab = this.props.tab;
-  
 
-} */
-    
+} */ 
 
   render() {
     let classNames = require('classnames');
 
-let tabMatch = false;
+    let tabMatch = false;
 
-    if (this.props.tab === this.state.selected) {
+
+    if (this.props.tab === this.props.selected) {
       this.setState = ({ tabMatch: true })
       tabMatch = true;
      
