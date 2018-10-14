@@ -7,12 +7,13 @@ class Tab extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      tab: '',
+      tab: 'empty string',
     }
   }
 
   componentDidMount(){
     this.setState({tab: this.props.tab})
+    console.log(this.props.selectedTab)
   }
 
   render(){
@@ -34,9 +35,6 @@ class Tab extends React.Component{
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-
-
-
 
 
 // Make sure you include PropTypes on your props.

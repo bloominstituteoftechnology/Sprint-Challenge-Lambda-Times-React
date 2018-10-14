@@ -13,16 +13,19 @@ class Cards extends React.Component {
 
   componentDidMount(){
     this.setState({cards: this.props.cards})
+    
   }
 
   render(){
+    console.log(this.props.cards)
     return (
       <div className="cards-container">
         {/* Using the cards prop, map over the list creating a 
             new Card component for each passing the card as the only prop*/}
             {this.props.cards.map(card => (
               <div>
-                  <Card card={card.card}/>
+                  {/* <Card card={card.card} /> */}
+                  <Card card={card.card} headline={card.headline} img={card.img} author={card.author}/>
               </div>
             ))}
       </div>

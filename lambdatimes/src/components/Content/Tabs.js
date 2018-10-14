@@ -13,6 +13,9 @@ class Tabs extends React.Component{
 
   componentDidMount(){
     this.setState({tabs: this.props.tabs})
+    const tabsArray = this.props.tabs
+    console.log(tabsArray)
+    console.log(this.props.tabs)
   }
 
   render(){
@@ -25,6 +28,7 @@ class Tabs extends React.Component{
               {this.props.tabs.map(tab => (
                 <div>
                   <Tab selectTabHandler={tab.selectTabHandler} selectedTab={tab.selectedTab} tab={tab.tab}/>
+                  {/* <Tab selectTabHandler={this.selectTabHandler} selectedTab={this.selectedTab} tab={this.tab}/> */}
                 </div>
               ))}
         </div>
