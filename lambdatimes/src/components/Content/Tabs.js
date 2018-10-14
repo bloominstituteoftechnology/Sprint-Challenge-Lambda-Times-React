@@ -1,13 +1,14 @@
 import React from 'react';
 import Tab from './Tab';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
+// import styled from 'styled-components';
 
-const eachTab = styled.div`
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: row;
-`
+// const eachTab = styled.div`
+//   display: flex;
+//   justify-content: none;
+//   align-items: center;
+//   flex-direction: row;
+// `
 
 const Tabs = props => {
   return (
@@ -25,4 +26,8 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+Tabs.propTypes = {
+  tabs: PropTypes.array.isRequired,
+}
+
 export default Tabs;

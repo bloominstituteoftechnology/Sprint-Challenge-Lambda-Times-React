@@ -44,8 +44,9 @@ export default class Content extends Component {
   // };
 
   filterCards = (event) => {
-   const displayedCards = [];
+   
     if (event.target.innerHTML === 'ALL'){
+      const displayedCards = [];
       displayedCards.push(...cardData)
       this.setState({
         cards: displayedCards,
