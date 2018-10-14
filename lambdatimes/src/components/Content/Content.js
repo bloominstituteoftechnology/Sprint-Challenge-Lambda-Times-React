@@ -17,25 +17,21 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
+const tabs = tabData;
+const cards = cardData;
+
     // Once the component has mounted, get the data and reflect that data on the state.
     setTimeout(() => {
       this.setState({
-        tabs: tabData,
-        cards: cardData
+        tabs, //same as tabs: tabs, 
+        cards,
       });
     }, 800);
   }
 
   changeSelected = tab => {
-    tab.target.className = 'tab active-tab'
     // this function should take in the tab and update the state with the new tab.
-    
-    this.setState({
-      selected: tab.target.innerHTML,
-      tabs: tabData,
-      cards: cardData
-    });
-    
+    this.setState({selected:tab});
   };
 
   filterCards = () => {
@@ -52,42 +48,14 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
 
-   if (this.state.selected === 'all'){
-     return this.state.cards;
-   }
-   else if (this.state.selected === 'ALL'){
-     return this.state.cards;
-   }
-   else {
-     let selectedtabid = this.state.selected.toLowerCase();  
-     if (selectedtabid === 'react.js') {
-       selectedtabid = 'React.js'
-     }
-     let filteredcards = this.state.cards.filter(obj => {
-       if (obj.tab === selectedtabid) {
-         return obj;
-       }
-       else {
-       }
-     });
+      if (this.state.selected === 'all') return this.state.cards;
 
-     return filteredcards;
-   }
-
-      //  let filteredcards = this.state.cards.filter(obj => {
-      //   if (obj.tag.toLowerCase = this.state.selected) {
-      //     console.log('yes');
-      //     return obj;
-      //   };
-      // });
-
- }
-
+      const cards = [...this.state.cards];
+      return cards.filter(card => card.tab === this.state.selected);
+   };
 
 
   render() {
-    console.log('The current state is:', this.state);
-    console.log('The current tabs are:', this.state.tabs);
     return (
       <div className="content-container">
         {/* 
@@ -95,8 +63,11 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs selectedTab={this.state.tabs} selectTabHandler={this.changeSelected}/>
-        <Cards cards={this.filterCards()} />
+        <Tabs tabs = {this.state.tabs} 
+        selectedTab={this.state.selected} 
+        selectTabHandler={this.changeSelected}/>
+        <Cards cards={this.filterCards()} 
+        />
       </div>
     );
   }
