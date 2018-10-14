@@ -14,10 +14,7 @@ export default class Content extends Component {
       tabs: [],
       cards: []
     };
-    this.selectedTab= this.selectedTab.bind(this);
-   // this.selectTabHandler= this.selectTabHandler.bind(this);
-    //this.changeSelected= this.changeSelected.bind(this);
-   // this.filterCards= this.filterCards.bind(this);
+
   }
 
   componentDidMount() {
@@ -26,11 +23,10 @@ export default class Content extends Component {
     
   }
   
-  changeSelected = (selctedTab) => {
-    console.log(this.selectedTab)
-    this.setState({ selected:this.selectedTab});
+ // changeSelected = (selctedTab) => {
+
     // this function should take in the tab and update the state with the new tab.
-  };
+ // };
 
   filterCards = () => {
   
@@ -63,21 +59,19 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */ 
-  selectedTab(event) {
-    event.preventDefault();
-   let selectedTab = event.target;
-   console.log(selectedTab)
-    return  selectedTab
-  }
-  
- //selectTabHandler(event) {
- // event.preventDefault();
- // changeSelected();
 
- //}
+ selectTabHandler = e => { 
+   console.log(e)
+   const currentTab = e
+   this.setState({ selected:currentTab});
+      };
+
+ 
   
 
   render() {
+  
+    console.log(this.selectedTab)
     return (
       <div className="content-container">
         {/* 
@@ -86,9 +80,19 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the
            function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.state.selectedTab} selectTabHandler={this.selectTabHandler}  />
-        <Cards selectedCards={this.selectedCards} />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.selectTabHandler}  />
+        <Cards cards={this.filterCards()} />
       </div>
     );
   }
 }
+ //selectTabHandler(event) {
+ //event.preventDefault();
+ //this.setState({ selected:event.target.value });
+  //  console.log(this.selectedTab)
+   // this.setState({ selected:this.selectedTab});
+
+   //this.selectedTab= this.selectedTab.bind(this);
+ // this.selectTabHandler= this.selectTabHandler.bind(this);
+    //this.changeSelected= this.changeSelected.bind(this);
+   // this.filterCards= this.filterCards.bind(this);
