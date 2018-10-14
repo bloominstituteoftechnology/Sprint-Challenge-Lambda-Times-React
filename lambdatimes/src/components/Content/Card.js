@@ -21,12 +21,12 @@ class Card extends React.Component {
     render(){
       return (
         <div className="card">
-          <div className="headline">Sample headline{this.props.headline}</div>
+          <div className="headline">{this.props.headline}</div>
           <div className="author">
             <div className="img-container">
-              Sample Image<img src={this.props.img} />
+              <img src={this.props.img} />
             </div>
-            <span>By Sample Author{this.props.author}</span>
+            <span>By {this.props.author}</span>
           </div>
         </div>
       );

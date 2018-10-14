@@ -7,16 +7,17 @@ class Tab extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      tab: 'empty string',
+      tab: '',
     }
   }
 
   componentDidMount(){
     this.setState({tab: this.props.tab})
-    console.log(this.props.selectedTab)
+    console.log(this.props.selectTabHandler)
   }
 
   render(){
+    // console.log(this.props.tab)
     if (this.props.tab === this.props.selectedTab) {
       return (
         <div
@@ -26,7 +27,7 @@ class Tab extends React.Component{
              you'll need to pass the `tab` in as an argument to this handler. */
             
         >
-          {this.props.tab} Placeholder
+          {this.props.selectedProp} 
         </div>
       );
     }

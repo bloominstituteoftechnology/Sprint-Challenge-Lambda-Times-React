@@ -15,10 +15,11 @@ class Tabs extends React.Component{
     this.setState({tabs: this.props.tabs})
     const tabsArray = this.props.tabs
     console.log(tabsArray)
-    console.log(this.props.tabs)
+    
   }
 
   render(){
+    console.log(this.props.tabs)
     return (
       <div className="tabs">
         <div className="topics">
@@ -27,8 +28,10 @@ class Tabs extends React.Component{
               give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
               {this.props.tabs.map(tab => (
                 <div>
-                  <Tab selectTabHandler={tab.selectTabHandler} selectedTab={tab.selectedTab} tab={tab.tab}/>
-                  {/* <Tab selectTabHandler={this.selectTabHandler} selectedTab={this.selectedTab} tab={this.tab}/> */}
+                  <Tab selectTabHandler={tab.selectTabHandler} 
+                    selectedTab={tab.selectedTab}
+                    selectedProp={tab.toUpperCase()}
+                  />
                 </div>
               ))}
         </div>
