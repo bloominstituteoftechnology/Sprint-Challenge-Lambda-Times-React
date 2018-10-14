@@ -21,6 +21,12 @@ flex: 8;
 text-align: center;
 color: #000;
 `;
+const SpanWrap= styled.span `
+align-self: flex-end;
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 1px;
+`;
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
@@ -28,9 +34,9 @@ color: #000;
 const Header = () => {
   return (
     <HeaderWrap>
-      <span className="date">SMARCH 32, 2018</span>
+      <SpanWrap className="date">SMARCH 32, 2018</SpanWrap>
       <HeadlineWrap>Lambda Times</HeadlineWrap>
-      <span className="temp">98°</span>
+      <SpanWrap className="temp">98°</SpanWrap>
     </HeaderWrap>
   )
 }

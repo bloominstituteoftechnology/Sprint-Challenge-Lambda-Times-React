@@ -40,7 +40,14 @@ display: flex;
   font-size: 11px;
   font-weight: bold;
 `
-
+const TopBarCenter = styled.div `
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+flex: 3;
+font-size: 9px;
+`
 const TopBar = () => {
   return (
     <TopBarStyle>
@@ -48,9 +55,9 @@ const TopBar = () => {
         <TopBarLeft>
           <span>TOPICS</span><span>SEARCH</span>
         </TopBarLeft>
-        <div className="container-center">
+        <TopBarCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
+        </TopBarCenter>
         <TopBarRight>
           <span>LOG IN</span>
         </TopBarRight>
