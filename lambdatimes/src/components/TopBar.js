@@ -3,24 +3,13 @@ import { Button, Input, NavItem } from 'reactstrap';
 import styled from 'styled-components';
 import Nav from './Styles/Nav'
 import Container from './Styles/Container'
+import NavBar from './Styles/NavBar'
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-
-const Navbar = styled.div`
-display: flex;
-justify-content: none;
-align-items: center;
-flex-direction: row;
-flex: 1;
-font-size: 11px;
-cursor: pointer;
-margin-right: 25%;
-font-weight: bold;
-`
 const Navbar2 = styled.div`
-display: flex;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
@@ -42,9 +31,9 @@ const TopBar = () => {
   return (
     <Nav>
       <Container>
-        <Navbar>
+        <NavBar>
           <NavLink>TOPICS</NavLink><NavLink>SEARCH</NavLink>
-        </Navbar >
+        </NavBar >
         <NavbarCenter >
           <NavLink>GENERAL</NavLink><NavLink>BROWNBAG</NavLink><NavLink>RANDOM</NavLink><NavLink>MUSIC</NavLink><NavLink>ANNOUNCEMENTS</NavLink>
         </NavbarCenter >
