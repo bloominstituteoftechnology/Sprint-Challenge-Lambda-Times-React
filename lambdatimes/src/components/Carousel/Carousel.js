@@ -62,7 +62,7 @@ export default class Carousel extends Component {
 
   leftClick = () => {
       this.setState({
-        index: this.state.index -1 < 0 ? this.state.images.length - 1 : this.state.index - 1
+        index: this.state.index - 1 < 0 ? this.state.images.length - 1 : this.state.index - 1
       })
   }
 
