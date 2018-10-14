@@ -107,4 +107,4 @@ export {
     CenterSpan,
     RightContainer,
     LogIn
-}
+};
