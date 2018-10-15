@@ -27,6 +27,17 @@ cursor: pointer;
   margin-right: 20%;
 `
 
+const handleLoginSubmit = e => {
+  /* const user = this.state.username; */
+  /* const password = this.state.password; */
+  localStorage.setItem('user', "");
+  localStorage.setItem('password', "");
+  window.location.reload();
+};
+
+
+
+
 const TopBar = () => {
   return (
     <Nav>
@@ -38,7 +49,7 @@ const TopBar = () => {
           <NavLink>GENERAL</NavLink><NavLink>BROWNBAG</NavLink><NavLink>RANDOM</NavLink><NavLink>MUSIC</NavLink><NavLink>ANNOUNCEMENTS</NavLink>
         </NavbarCenter >
         <Navbar2 >
-          <NavLink>LOG IN</NavLink>
+          <NavLink  onClick={handleLoginSubmit}>LOG IN</NavLink>
         </Navbar2 >
       </Container>
     </Nav>
