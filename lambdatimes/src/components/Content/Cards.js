@@ -13,11 +13,10 @@ class Cards extends React.Component {
 
   componentDidMount(){
     this.setState({cards: this.props.cards})
-    
   }
 
   render(){
-    console.log(this.props.cards)
+    console.log(this.state.cards)
     return (
       <div className="cards-container">
         {/* Using the cards prop, map over the list creating a 
