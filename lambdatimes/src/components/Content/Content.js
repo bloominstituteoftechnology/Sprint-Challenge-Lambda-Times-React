@@ -54,8 +54,8 @@ export default class Content extends Component {
               return this.state.cards;
         }
 
-        let newCard = this.state.cards.map(card => card.tab === this.state.selected);
-        
+        const newCard = this.state.cards.filter(card => card.tab === this.state.selected);
+
           return newCard;
         
               
@@ -73,7 +73,8 @@ export default class Content extends Component {
         */
        }
         <Tabs   tabs={this.state.tabs}
-                changeSelected={this.changeSelected} />
+                changeSelected={this.changeSelected}
+                selectedTab={this.state.selected} />
         <Cards  cards={this.filterCards()} />
       </div>
     );
