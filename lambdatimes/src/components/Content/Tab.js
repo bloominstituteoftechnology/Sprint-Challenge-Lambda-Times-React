@@ -12,24 +12,36 @@ class Tab extends React.Component{
   }
 
   componentDidMount(){
-    this.setState({tab: this.props.tab})
-    console.log(this.props.selectTabHandler)
+    this.setState({tab: this.props.selectedProp})
+    console.log(this.props.selectedProp)
   }
 
+  
+
   render(){
-    // console.log(this.props.tab)
-    if (this.props.tab === this.props.selectedTab) {
+    console.log(this.props.selectTabHandler)
+    if (this.props.selectedProp === this.props.selectedTab) {
       return (
         <div
           className={'tab active-tab'}
           onClick={this.props.selectTabHandler}
             /* Replace this dummy click handler function with your selectTabHandler function from props 
              you'll need to pass the `tab` in as an argument to this handler. */
-            
         >
           {this.props.selectedProp} 
         </div>
-      );
+      ) 
+    } else {
+      return (
+        <div
+        className={'tab'}
+        onClick={this.props.selectTabHandler}
+          /* Replace this dummy click handler function with your selectTabHandler function from props 
+           you'll need to pass the `tab` in as an argument to this handler. */
+      >
+        {this.props.selectedProp} 
+      </div>
+      )
     }
   }
 }
