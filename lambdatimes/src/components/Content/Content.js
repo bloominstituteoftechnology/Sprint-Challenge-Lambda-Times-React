@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './Content.css'
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -18,18 +18,29 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
+      filtered: [],
       tabs: [],
       cards: []
     };
   }
 
   componentDidMount() {
-    this.setState({tabs:tabData, cards:cardData})
+    this.setState({tabs:tabData, cards:cardData, filtered:cardData})
   }
 
-  changeSelected = tab => {
-    // this function should take in the tab and update the state with the new tab.
-  };
+  changeSelected = event => {
+    // this.state.tabs.forEach(function (tab) {tab.classList.remove('selected')})
+    const ID = event.target.getAttribute('id')
+    const filtered = this.state.tabs.filter( tab => tab === ID)
+    this.setState({selected:filtered});
+    if (this.state.filtered === ID) {event.target.classList.add('selected')} 
+    console.log(ID);
+    const match = this.state.cards.filter( card => ID==='all' || card.tab === ID)
+    this.setState({filtered:match});
+
+  }
+        // this function should take in the tab and update the state with the new tab.
+  
 
   filterCards = () => {
     /* Right now this function only returns the cards on state.
@@ -44,7 +55,6 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
   };
 
   render() {
@@ -56,8 +66,9 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        
+        <Tabs tabs={this.state.tabs} selected={this.state.selected} changeSelected={this.changeSelected}  />
+        <Cards cards={this.state.filtered} />
       </StyledContent>
     );
   }

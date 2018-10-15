@@ -2,7 +2,7 @@ import React from 'react';
 import Tab from './Tab';
 import '../../CSS/index.css'
 import styled from 'styled-components'
-
+import './Content.css'
 const TabsStyle = styled.div `
   border-bottom: 1px solid lightgrey;
   display: flex;
@@ -28,6 +28,24 @@ const StyledTab =styled.div `
   cursor: pointer;
   font-weight: bold;
 `
+
+const Selected =styled.div `
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+  margin: 0 5px;
+  padding: 2px 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: bold;
+`
+
+
 const Topics = styled.div`
 display: flex;
 justify-content: none;
@@ -44,10 +62,12 @@ font-weight: bold;
 
 const Tabs = props => {
   return (
+    
     <TabsStyle>
       <Topics>
         <Title>TRENDING TOPICS:</Title>
-    <StyledTab>{props.tabs.map(tab => <Tab key={tab} tab={tab}/>)}</StyledTab>
+    <div className='tab'>{props.tabs.map(tab => <Tab className='' key={tab} tab={tab}
+    changeSelected={props.changeSelected} filterCards={props.filterCards}/>)}</div>
       </Topics>
     </TabsStyle>
   );

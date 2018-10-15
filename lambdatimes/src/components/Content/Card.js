@@ -26,20 +26,31 @@ flex-direction: row;
 margin-top: 15px;
 `
 
-const Image = styled.div `
+const ImageContainer = styled.div `
 padding-right: 10px;
 border-right: 1px solid lightgrey;
 height: 40px;
+`
+
+const Image = styled.img `
+width: 40px;
+`
+
+const Span = styled.span`
+padding-left: 10px;
+font-size: 12px;
+letter-spacing: 1px;
+font-weight: bold;
 `
 const Card = props => {
   return (
     <StyledCard>
       <Headline>{props.card.headline/* headline goes here */}</Headline>
       <Author>
-        <Image>
-          <img src={props.card.img/* image source goes here */} />
-        </Image>
-        <span>By {props.card.author/* author goes here */}</span>
+        <ImageContainer>
+          <Image src={props.card.img/* image source goes here */} />
+        </ImageContainer>
+        <Span>By {props.card.author/* author goes here */}</Span>
       </Author>
     </StyledCard>
   );
