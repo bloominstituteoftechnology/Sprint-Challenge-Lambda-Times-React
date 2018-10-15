@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+import '../../CSS/index.css'
 import Tabs from './Tabs';
 import Cards from './Cards';
+import PropTypes from 'prop-types';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -12,16 +13,26 @@ export default class Content extends Component {
     this.state = {
       selected: 'all',
       tabs: [],
-      cards: []
-    };
+      cards: [],
+      filteredCards:[],
+      tabData: [],
+      cardData: []
+     };
+
   }
 
   componentDidMount() {
+    
     // Once the component has mounted, get the data and reflect that data on the state.
+  /*  tabData.map(item, index) */ 
+    this.setState({ tabData, cardData, tabs: tabData, cards: cardData, filteredCards: cardData })  
   }
-
+ 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
+   // const newTab = this.state.tabs.find(tab => tab === tab);
+   this.setState({ selected: tab})
+
   };
 
   filterCards = () => {
@@ -37,9 +48,20 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+    if (this.state.selected === 'all') {
     return this.state.cards;
-  };
+  } else {
+    let select = this.state.selected
+  
+    let filteredCards = this.state.cardData  
+    filteredCards = filteredCards.filter((card) => {
+        return select == card.tab})
+        return filteredCards}
+    
+}
+    /*  return this.state.cards;  */
 
+  
   render() {
     return (
       <div className="content-container">
@@ -48,9 +70,15 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+
+        <Tabs tabs={this.state.tabs} selected={this.state.selected} changeSelected={this.changeSelected}/>
+     {/*  {cardData.map((cards, index) => {
+        return <Cards key={index} img={cards.img} tab={cards.tab} author={cards.author} headline={cards.headline}/>
+     } ) }  */}
+  
+         <Cards cards={this.filterCards()} /> 
       </div>
     );
   }
 }
+/* export default Content; */

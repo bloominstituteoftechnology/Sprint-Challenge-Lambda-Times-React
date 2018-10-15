@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import { tabData, cardData } from '../../data';
+import PropTypes from 'prop-types';
 
 const Cards = props => {
   return (
     <div className="cards-container">
+    {props.cards.map((card, index) => {
+        return <Card key={index} img={card.img} tab={card.tab} author={card.author} headline={card.headline} />
+     } ) }
+     
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
     </div>
@@ -11,5 +17,7 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
-
+Cards.propTypes = {
+  cards: PropTypes.array.isRequired
+ }
 export default Cards;
