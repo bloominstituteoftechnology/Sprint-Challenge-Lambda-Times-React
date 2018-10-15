@@ -17,9 +17,11 @@ export default class Content extends Component {
 	}
 
 	componentDidMount() {
+		const tabs = tabData;
+		const cards = cardData;
 		this.setState({
-			tabs: tabData,
-			cards: cardData
+			tabs,
+			cards
 		});
 	}
 
@@ -30,13 +32,17 @@ export default class Content extends Component {
 	};
 
 	filterCards = (tab) => {
+		const cards = cardData;
 		if (tab === 'all') {
-			this.setState({ cards: cardData });
+			this.setState({ cards });
 			return this.state.cards;
 		} else {
-			const newCards = cardData.filter((c) => c.tab === tab);
+			const newCards = cardData.filter((card) => card.tab === tab);
 			this.setState({ cards: newCards });
 		}
+		// if (tab === 'all') return this.state.cards;
+		// const cards = [ ...this.state.cards ];
+		// return cards.filter((card) => card.tab === this.state.selected);
 	};
 
 	render() {

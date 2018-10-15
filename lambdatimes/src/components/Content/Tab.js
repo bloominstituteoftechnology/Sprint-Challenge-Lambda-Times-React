@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tab = (props) => {
+	const isActive = props.tab === props.selectedTab;
 	return (
 		<div
-			className={props.tab === props.selectedTab ? 'tab active-tab' : 'tab'}
+			className={`tab ${isActive ? 'active-tab' : null}`}
+			// className={`tab ${isActive && 'active-tab'}`}
 			onClick={() => {
 				props.selectTabHandler(props.tab);
 				props.filterCards(props.tab);
@@ -23,10 +25,10 @@ const Tab = (props) => {
 // Make sure you include PropTypes on your props.
 
 Tab.propTypes = {
-	selectedTab: PropTypes.string,
-	tab: PropTypes.string,
-	selectedTabHandler: PropTypes.func,
-	filterCards: PropTypes.func
-};
+	selectedTab: PropTypes.string.isRequired,
+	tab: PropTypes.string.isRequired,
+	selectedTabHandler: PropTypes.func.isRequired,
+	filterCards: PropTypes.func.isRequired
+}.isRequired;
 
 export default Tab;
