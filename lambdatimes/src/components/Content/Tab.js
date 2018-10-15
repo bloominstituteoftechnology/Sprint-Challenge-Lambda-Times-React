@@ -5,7 +5,7 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
       // console.log(props.selectedTab);
-      console.log(props.selectTabHandler)
+      // console.log(props.selectTabHandler)
       // console.log(props.tab);
      let name; 
     if(props.tab === props.selectedTab) {
