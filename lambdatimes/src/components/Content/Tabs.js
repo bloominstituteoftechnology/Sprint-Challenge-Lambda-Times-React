@@ -36,19 +36,20 @@ const StyledTabDiv = styled.div`
   justify-content: none;
   align-items: center;
   flex-direction: row;
-  color: #fff;
-  background-color: #333;
   margin: 0 5px;
-  padding: 2px 10px;
   font-size: 12px;
   letter-spacing: 2px;
   cursor: pointer;
   font-weight: bold;
-
+  
   &:hover {
     text-decoration: underline;
+    color: white;
   }
-`
+`;
+
+
+  // border: 2px solid #333;
 
 const Tabs = props => {
   return (
@@ -58,7 +59,9 @@ const Tabs = props => {
         
           {props.tabs.map((tab, index) => (
             <StyledTabDiv>
-            <Tab key= {index} tab={tab} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab} />
+            <Tab 
+            key= {Date.now()} 
+            tab={tab} selectTabHandler={props.selectTabHandler} selectedTab={props.selectedTab} isSelected={props.isSelected}/>
           </StyledTabDiv>
           ))}
           {/* map over the tabs provided on your props, create a new Tab component for each one.
