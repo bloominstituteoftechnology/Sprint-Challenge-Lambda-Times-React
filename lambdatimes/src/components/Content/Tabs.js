@@ -13,4 +13,5 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+
 export default Tabs;
