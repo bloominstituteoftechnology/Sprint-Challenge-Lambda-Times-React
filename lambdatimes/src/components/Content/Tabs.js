@@ -35,8 +35,6 @@ const Tabs = props => {
     <TabsContainer>
       <Topics>
         <Title className="title">TRENDING TOPICS:</Title>
-        {/* map over the tabs provided on your props, create a new Tab component for each one.
-            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
         {props.tabs.map(tab => {
           return (
             <Tab
@@ -51,7 +49,6 @@ const Tabs = props => {
   );
 };
 
-// Make sure to use PropTypes to validate your types!
 Tabs.propTypes = {
   tab: PropTypes.arrayOf(
     PropTypes.string
