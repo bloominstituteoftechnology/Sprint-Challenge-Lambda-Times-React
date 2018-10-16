@@ -9,16 +9,18 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
-        {props.tabs.map(x => (
+        {props.tabs.map((tab, index) => (
           <div className="tab">
             <Tab
-              key={x}
-              tab={x}
-              selectedTab={x.selectedTab}
-              selectTabHandler={x.selectTabHandler}
+              key={index}
+              tab={tab}
+              selectedTab={props.selectedTab}
+              selectTabHandler={props.selectTabHandler}
             />
           </div>
         ))}
+        {console.log(props)}
+
       </div>
     </div>
   );

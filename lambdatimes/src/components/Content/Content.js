@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -46,7 +45,7 @@ export default class Content extends Component {
     */
     if (this.state.selected !== 'all') {
       this.setState({
-        cards: cardData.filter(item => item.tab === this.state.selected)
+        cards: cardData.filter(item => {return item.tab === this.state.selected})
       })
     }
     return this.state.cards;
