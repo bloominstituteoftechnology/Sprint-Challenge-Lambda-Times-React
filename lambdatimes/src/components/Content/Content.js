@@ -33,13 +33,13 @@ export default class Content extends Component {
 
   filterCards = () => {
 
-    cardData.map(card => {
+    cardData.filter(card => {
       if(card.tab === 'all'){
         return card
       }
-      else {
-       return this.state.cards.push(card)
-      }
+      // else {
+      //  return this.state.cards.push(card)
+      // }
     })
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
@@ -65,7 +65,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs selectedTab={this.changeSelected} selectTabHandler={this.filterCards} tabs={this.state.tabs} />
-        <Cards cards={this.state.cards} cards={this.filterCards()} />
+        <Cards cards={this.state.cards} tabs={this.state.tabs} cards={this.filterCards()} />
       </div>
     );
   }
