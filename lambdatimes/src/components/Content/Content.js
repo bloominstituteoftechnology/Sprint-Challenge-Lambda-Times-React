@@ -15,11 +15,10 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
-    const tabsData = tabData;
-    const cardsData = cardData;
+    
     this.setState({
-      tabs: tabsData,
-      cards: cardsData
+      tabs: tabData,
+      cards: cardData
     });
   }
 
