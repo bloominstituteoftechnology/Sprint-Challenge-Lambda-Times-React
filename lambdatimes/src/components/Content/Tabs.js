@@ -17,47 +17,21 @@ class Tabs extends Component {
   render() {
     const tabs = this.props.tabs
 
-    console.log('test', this.state.activeTab);
-
-    return (<div className="tabs">
+    return (
+      <div className="tabs">
       <div className="topics">
-
-        {
-          tabs.map((child, index) => {
-            const {label} = this.props;
-
-            return (<Tab activeTab={this.state.activeTab} key={index} label={child} onClick={this.selectTabHandler}/>);
-          })
-        }
-
-        <div className="tab-content">
-          <span className="title">TRENDING TOPICS:</span>
-          {
-            tabs.map((data, index) => {
-              return <Tab selectedTabHandler={this.props} selectedTab={this.props} allTabs ={tabs} tabs={data} index={index} key={data.index}/>
-            })
-          }
-
-          {/* {tabs.map((tabNames) => {
-            if (this.state.child !== this.state.activeTab) return undefined;
-            return this.state.child; */
-          } {/* })} */
-          }
-        </div>
-
-        {/* {tabs.map((child) => {
-            const { label } = child.props;
-
-
-        {tabs.map((data, index)   =>  {
-                      return  <Tab  onClick={this.selectTabHandler} allTabs ={tabs} text={data} index={index} key={data.index}/>})}
-        {/* map over the tabs provided on your props, create a new Tab component for each one. */
-        } {/* give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props */
-        }
-        </div>
-    </div>);
+      <span className="title">TRENDING TOPICS:</span>
+      {
+        tabs.map((data, index) => {
+          return (<div>
+            <Tab selectedTabHandler={this.props} selectedTab={this.props}  tabs={data} key={index}/>
+          </div>)
+        })
       }
-    };
+    </div>
+    </div>);
+  }
+};
 
-    // Make sure to use PropTypes to validate your types!
-    export default Tabs;
+// Make sure to use PropTypes to validate your types!
+export default Tabs;

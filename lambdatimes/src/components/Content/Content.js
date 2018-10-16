@@ -55,7 +55,7 @@ export default class Content extends Component {
         return this.state.cards;
       }
     });
-    };	  
+    };
 
   render() {
 
