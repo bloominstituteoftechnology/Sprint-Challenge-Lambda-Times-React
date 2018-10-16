@@ -22,7 +22,8 @@ export default class Carousel extends Component {
     })
   }
 
-  leftClick = () => {
+  leftClick = (e) => {
+    e.preventDefault();
     if(this.state.currentIndex > 0) {
     this.setState({
       currentIndex: this.state.currentIndex-1,
@@ -43,7 +44,8 @@ export default class Carousel extends Component {
     }
   }
 
-  rightClick = () => {
+  rightClick = (e) => {
+    e.preventDefault();
     if(this.state.currentIndex < this.state.images.length - 1) {
     this.setState({
       currentIndex: this.state.currentIndex+1,

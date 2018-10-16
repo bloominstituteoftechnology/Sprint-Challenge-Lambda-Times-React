@@ -3,6 +3,7 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
 import Styled from 'styled-components';
+import Authenticate from './components/Authentication/Authenticate';
 
 const StyledApp = Styled.div`
   box-sizing: border-box;
@@ -50,4 +51,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Authenticate(App);
