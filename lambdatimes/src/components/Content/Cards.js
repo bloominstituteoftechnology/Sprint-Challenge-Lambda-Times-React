@@ -19,8 +19,7 @@ const CardsContainer = styled.div`
 const Cards = props => {
   return (
     <CardsContainer>
-      {/* Using the cards prop, map over the list creating a 
-          new Card component for each passing the card as the only prop*/}
+     
       {props.cards.map(card => {
         return (
           <Card
@@ -32,7 +31,7 @@ const Cards = props => {
   )
 }
 
-// Make sure you include prop types for all of your incoming props
+
 Cards.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.object)
 }
