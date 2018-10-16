@@ -11,10 +11,7 @@ const Cards = props => {
         return (
           <Card
             key={i}
-            tab={props.tab}
-            author={props.author}
-            img={props.img}
-            headline={props.headline}
+            card={card}
           />
         )
       })}
