@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
-
-const StyledTab = styled.div`
+import PropTypes from 'prop-types'
+import './Content.css'
+export const StyledTab = styled.div`
 display: flex;
 justify-content: none;
 align-items: center;
@@ -24,14 +25,17 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   return (
-    <StyledTab id={props.tab} 
-      onClick={props.changeSelected}
+    <StyledTab className={props.selectedStyle} id={props.tab} 
+      onClick={() =>props.changeSelected(props.tab)} onClick={props.changeStyle}
     >
       {props.tab.toUpperCase()}
     </StyledTab>
   );
 };
 
+StyledTab.propTypes = {
+  id: PropTypes.string,
+}
 // Make sure you include PropTypes on your props.
 
 export default Tab;

@@ -66,7 +66,7 @@ const Tabs = props => {
     <TabsStyle>
       <Topics>
         <Title>TRENDING TOPICS:</Title>
-    <div className='tab'>{props.tabs.map(tab => <Tab className='' key={tab} tab={tab}
+    <div className='tab'>{props.tabs.map(tab => <Tab selectedStyle={props.selectedStyle} changeStyle={props.changeStyle} key={tab} tab={tab}
     changeSelected={props.changeSelected} filterCards={props.filterCards}/>)}</div>
       </Topics>
     </TabsStyle>

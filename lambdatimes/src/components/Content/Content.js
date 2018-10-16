@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './Content.css'
 import Tabs from './Tabs';
 import Cards from './Cards';
-
+import PropTypes from 'prop-types'
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 import styled from 'styled-components';
-
+import {StyledTab} from './Tab'
 const StyledContent = styled.div `
 display: flex; 
 flex-direction: column; 
@@ -18,7 +18,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
-      filtered: [],
+      selectedStyle: '',
       tabs: [],
       cards: []
     };
@@ -28,17 +28,24 @@ export default class Content extends Component {
     this.setState({tabs:tabData, cards:cardData, filtered:cardData})
   }
 
-  changeSelected = event => {
+  changeSelected = tab => {
     // this.state.tabs.forEach(function (tab) {tab.classList.remove('selected')})
-    const ID = event.target.getAttribute('id')
-    const filtered = this.state.tabs.filter( tab => tab === ID)
-    this.setState({selected:filtered});
-    if (this.state.filtered === ID) {event.target.classList.add('selected')} 
-    console.log(ID);
-    const match = this.state.cards.filter( card => ID==='all' || card.tab === ID)
-    this.setState({filtered:match});
-
+    // const filtered = this.state.tabs.filter( tab => tab === ID)
+    // this.setState({selected:filtered});
+    this.setState({selected:tab})
   }
+
+  changeStyle = event => {
+    const ID = event.target.getAttribute('id')
+    console.log(ID)
+    this.setState({selected:ID})
+    // this.state.tabs.forEach(function (tab) {tab.classList.remove('selected')})
+    // const filtered = this.state.tabs.filter( tab => tab === ID)
+    // this.setState({selected:filtered});
+    if (ID === this.state.selected) {this.setState({selectedStyle:'selected'})}
+    else {this.setState({selectedStyle:''})
+  }
+}
         // this function should take in the tab and update the state with the new tab.
   
 
@@ -55,10 +62,11 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+    return this.state.selected === 'all' ? this.state.cards : this.state.cards.filter(card => card.tab === this.state.selected)
+
   };
 
   render() {
-    console.log(this.state.cards)
     return (
       <StyledContent>
         {/* 
@@ -67,9 +75,26 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         
-        <Tabs tabs={this.state.tabs} selected={this.state.selected} changeSelected={this.changeSelected}  />
-        <Cards cards={this.state.filtered} />
+        <Tabs tabs={this.state.tabs} selected={this.state.selected} selectedStyle={this.state.selectedStyle} changeStyle={this.changeStyle} changeSelected={this.changeSelected}  />
+        <Cards cards={this.filterCards()} />
       </StyledContent>
     );
   }
+}
+
+Tabs.propTypes = {
+  tabs: PropTypes.array,
+  selected: PropTypes.string,
+}
+
+Cards.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+     headline: PropTypes.string,
+      tab: PropTypes.string,
+      img: PropTypes.string,
+      author: PropTypes.string,
+      
+})
+  )
 }

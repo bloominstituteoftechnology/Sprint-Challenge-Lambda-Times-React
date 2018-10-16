@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import './Content.css'
 
 const StyledCard = styled.div `
 border-bottom: 1px solid lightgrey;
@@ -7,7 +9,7 @@ display: flex;
 justify-content: space-between;
 align-items: none;
 flex-direction: column;
-background-color: #fff;
+background-color: orange;
 width: 380px;
 margin-bottom: 16px;
 padding: 24px;
@@ -57,5 +59,12 @@ const Card = props => {
 };
 
 // Make sure to include PropTypes.
+Card.propTypes = {
+  card: PropTypes.shape({
+    headline: PropTypes.string,
+    img:PropTypes.string,
+    author:PropTypes.string,
+  })
 
+  }
 export default Card;
