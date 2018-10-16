@@ -64,7 +64,7 @@ Card.propTypes = {
   headline: PropTypes.string,
   tab: PropTypes.string,
   author: PropTypes.string,
-  img: PropTypes.img,
+  img: PropTypes.string,
 }
 
 export default Card;
