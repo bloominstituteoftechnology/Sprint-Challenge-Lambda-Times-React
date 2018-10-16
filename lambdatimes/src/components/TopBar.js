@@ -23,7 +23,10 @@ const Container = styled.div`
   padding: 0 10px;
 `;
 
+/////////////////////
 //Could make one container and use attributes to distinguish left, right, center if I were so inclined
+//If you don't believe I can use attrs, look back at ALL of my other React projects
+/////////////////////
 
 const ContainerLeft = styled.div`
   display: flex;

@@ -14,7 +14,9 @@ const _Header = styled.div`
   padding-bottom: 15px;
 `;
 
-// An so on and so forth
+/////////////////////
+// An so on and so forth. I have already done this so many times! You get the idea!
+/////////////////////
 
 const Header = () => {
   return (
