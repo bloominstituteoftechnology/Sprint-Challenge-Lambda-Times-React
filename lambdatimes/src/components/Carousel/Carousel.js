@@ -60,10 +60,11 @@ export default class Carousel extends Component {
   }
   
   render(){
-    console.log(this.state)
+    console.log(this.state.currentImg)
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
+        {this.selectedImage()}
         <div className="right-button" onClick={this.rightClick}>{">"}</div>
       </div>
     )
