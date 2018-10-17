@@ -24,7 +24,7 @@ class Card extends React.Component {
           <div className="headline">{this.props.headline}</div>
           <div className="author">
             <div className="img-container">
-              <img src={this.props.img} />
+              <img src={this.props.img} alt="lambdatimes card"/>
             </div>
             <span>By {this.props.author}</span>
           </div>

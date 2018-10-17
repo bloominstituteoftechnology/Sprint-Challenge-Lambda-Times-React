@@ -37,7 +37,6 @@ class Tabs extends React.Component{
   // }
 
   render(){
-    console.log(this.props.tabs)
     return (
       <div className="tabs">
         <div className="topics">
@@ -48,7 +47,7 @@ class Tabs extends React.Component{
                 <div>
                   <Tab selectTabHandler={this.props.selectTabHandler} 
                     selectedTab={this.props.selectedTab}
-                    selectedProp={tab.toUpperCase()}
+                    selectedProp={tab}
                   />
                 </div>
               ))}

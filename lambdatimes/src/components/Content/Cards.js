@@ -24,7 +24,10 @@ class Cards extends React.Component {
             {this.props.cards.map(card => (
               <div>
                   {/* <Card card={card.card} /> */}
-                  <Card card={card.card} headline={card.headline} img={card.img} author={card.author}/>
+                  <Card card={card.card} 
+                  headline={card.headline} 
+                  img={card.img} 
+                  author={card.author}/>
               </div>
             ))}
       </div>

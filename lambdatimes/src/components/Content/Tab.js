@@ -13,36 +13,21 @@ class Tab extends React.Component{
 
   componentDidMount(){
     this.setState({tab: this.props.selectedProp})
-    console.log(this.props.selectedProp)
   }
 
   
-
+  // Question: is this conditional structured correctly? is there a shorter way to write this?
   render(){
-    console.log(this.props.selectTabHandler)
-    if (this.props.selectedProp === this.props.selectedTab) {
       return (
         <div
-          className={'tab active-tab'}
-          onClick={this.props.selectTabHandler}
+          className={this.props.selectedProp === this.props.selectedTab ? 'tab' : 'tab active-tab'}
+          onClick={() => this.props.selectTabHandler(this.state.tab)}
             /* Replace this dummy click handler function with your selectTabHandler function from props 
              you'll need to pass the `tab` in as an argument to this handler. */
         >
-          {this.props.selectedProp} 
+          {this.props.selectedProp.toUpperCase()} 
         </div>
       ) 
-    } else {
-      return (
-        <div
-        className={'tab'}
-        onClick={this.props.selectTabHandler}
-          /* Replace this dummy click handler function with your selectTabHandler function from props 
-           you'll need to pass the `tab` in as an argument to this handler. */
-      >
-        {this.props.selectedProp} 
-      </div>
-      )
-    }
   }
 }
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 

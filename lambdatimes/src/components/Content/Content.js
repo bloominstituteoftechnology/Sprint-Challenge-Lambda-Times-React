@@ -19,17 +19,13 @@ export default class Content extends Component {
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
     this.setState({tabs: tabData, cards: cardData});
-    console.log(tabData)
-    console.log(cardData)
-    console.log(this.state.selected)
   }
 
-  changeSelected = tab => {
+  //Where is a 'new tab' coming from? Tab.js? Is that child-to-parent flow?
+  changeSelected = tabby => {
+    console.log(tabby)
     // this function should take in the tab and update the state with the new tab.
-    
-    this.setState({selected: tab})
-    return this.state.selected
-    
+    this.setState({selected: tabby})
   };
 
   
@@ -47,21 +43,32 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+    // if (this.state.selected === 'all') {
+    //   return cardData;
+    // } else {
+    //   return cardData.filter((card) => {
+    //     // card.tab.includes(Object.values(selectedTab))
+    //     return card.tab.includes(this.changeSelected)
+    //   })
+    // }
+
     if (this.state.selected === 'all') {
       return cardData;
-    } else {
+    }  else  {
       return cardData.filter((card) => {
-        // card.tab.includes(Object.values(selectedTab))
-        card.tab.match(this.state.selected)
-      })
+        // return card.tab.includes(this.state.selected)
+        return card.tab === this.state.selected
+      })  
     }
+
+  
     
     
     // return cardData;
   };
 
   render() {
-    console.log(this.changeSelected)
+    console.log(this.state.selected)
     return (
       <div className="content-container">
         {/* 
