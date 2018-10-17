@@ -39,8 +39,8 @@ const LeftSpan = styled.span`
   margin-right: 25%;
   font-weight: bold;
   &:hover{
-         text-decoration: underline;
-         }
+    text-decoration: underline;
+  }
 `
 
 const TopBarContainerCenterCss = styled.div`
@@ -51,7 +51,7 @@ display: flex;
   flex: 3;
   font-size: 9px;
 `
-const CenterSpan  = styled.span`
+const CenterSpan = styled.span`
  cursor: pointer;
   margin-right: 5%;
    &:hover{
@@ -84,7 +84,7 @@ const TopBar = () => {
       <TopBarContainerCss>
         <TopBarContainerLeftCss>
           <LeftSpan>TOPICS</LeftSpan><LeftSpan>SEARCH</LeftSpan>
-          </TopBarContainerLeftCss>
+        </TopBarContainerLeftCss>
         <TopBarContainerCenterCss>
           <CenterSpan>GENERAL</CenterSpan><CenterSpan>BROWNBAG</CenterSpan><CenterSpan>RANDOM</CenterSpan><CenterSpan>MUSIC</CenterSpan><LastCenterSpan>ANNOUNCEMENTS</LastCenterSpan>
         </TopBarContainerCenterCss>
