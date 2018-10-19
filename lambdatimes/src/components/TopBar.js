@@ -1,11 +1,8 @@
 import React from 'react';
-import TopBar from './components/TopBar'
-import styled from 'styled-components';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
-import React from 'react';
-import styled from 'styled-components';
+
 
 
 
@@ -14,11 +11,6 @@ import styled from 'styled-components';
 const TopBar = () => {
   return (
     <div className="top-bar">
-        padding: 6px 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 3px;
-    color: white;
       <div className="container">
         <div className="container-left">
           <span>TOPICS</span><span>SEARCH</span>

@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from './components/Header'
-import styled from 'styled-components';
+
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
@@ -9,11 +8,6 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <div className="header">
-        padding: 6px 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 3px;
-    color: white;
       <span className="date">SMARCH 32, 2018</span>
       <h1>Lambda Times</h1>
       <span className="temp">98°</span>
