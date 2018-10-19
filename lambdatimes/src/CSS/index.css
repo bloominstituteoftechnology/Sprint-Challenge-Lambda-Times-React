@@ -45,7 +45,7 @@ body {
   width: 100%;
 }
 
-/* 
+
 .App {
   display: flex;
   align-items: center;
@@ -53,9 +53,9 @@ body {
   background-color: #f1f1f1;
   color: #333;
   font-family: 'PT Sans', sans-serif;
-} */
+}
 
-/* 
+ 
 .top-bar {
   width: 100%;
   display: flex;
@@ -66,6 +66,8 @@ body {
   height: 44px;
   background-color: #333;
 }
+
+/*
 .top-bar .container {
   width: 100%;
   display: flex;

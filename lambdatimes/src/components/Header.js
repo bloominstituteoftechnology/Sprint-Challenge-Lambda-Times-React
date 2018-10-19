@@ -1,10 +1,10 @@
 import React from 'react';
-import { HeaderStyle, theDate } from './Content/Styles';
+import { HeaderStyle, theDate, theTemp } from './Content/Styles';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const Header = () => {
+function Header() {
   return (
     <HeaderStyle>
       <theDate>OCTOBER 19, 2018</theDate>
