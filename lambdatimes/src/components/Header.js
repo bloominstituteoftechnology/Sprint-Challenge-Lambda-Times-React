@@ -5,11 +5,11 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div className="header">
-      <span className="date">OCTOBER 19, 2018</span>
+    <HeaderStyle>
+      <Date>OCTOBER 19, 2018</Date>
       <h1>Lambda Times</h1>
-      <span className="temp">53°</span>
-    </div>
+      <Temp>53°</Temp>
+    </HeaderStyle>
   )
 }
 
