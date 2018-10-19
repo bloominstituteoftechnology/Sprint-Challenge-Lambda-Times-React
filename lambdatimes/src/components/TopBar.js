@@ -13,8 +13,8 @@ align-items: none;
 flex-direction: row;
 position: fixed;
 height: 44px;
-background-color: #333;
-`
+background-color: #333;`
+
 const Container = styled.div`
 width: 100%;
 display: flex;
@@ -60,7 +60,11 @@ cursor: pointer;
 margin-right: 5%;
 `
 const SpanRight = styled.span`
-    cursor: pointer;
+cursor: pointer;
+
+
+
+
 `
 
 
