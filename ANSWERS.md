@@ -1,0 +1,7 @@
+1. PropTypes are used to make sure that any props being passed to a component are of the correct type, such as boolean, string, etc. It's basically another failsafe to catch potential errors and bugs before they become a bigger problem.
+
+2. I'm not sure we've covered anything called a "lifecycle event," a term which implies some sort of user interaction within the React lifecycle. I'll assume this question meant to refer to lifecycle phases. Basically, when React loads an app, there are a series of steps that get triggered. These steps mimic a human lifecycle in a way, going from birth, to growth, and finally to death. At each step of the way, we can code methods that are meant to trigger at specific points within this cycle. So perhaps we can look at the various steps of the React lifecycle as "events", and lifecycle methods as "event handlers" when those events occur. 
+
+3. A higher-order-component is a component that takes in another component as an argument. Basically, it's a component that is fed another component, and then performs some type of function with that argument component. 
+
+4. We can style components with vanilla css by adding "className" attributes to our React components. You can also use the built-in syles, if you're using a component library such as Reactstrap. And lastly, you can write dynamic CSS with JavaScript, using a library such as Styled Components. 
