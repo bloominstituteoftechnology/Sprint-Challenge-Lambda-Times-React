@@ -1,6 +1,6 @@
 import React from 'react';
-import Tab from './Tab';
-import PropTypes from 'prop-types';
+import Tab from './Tab.js';
+import propTypes from 'prop-types';
 
 const Tabs = props => {
   return (
@@ -24,14 +24,11 @@ const Tabs = props => {
   );
 };
 
-// Make sure to use PropTypes to validate your types!
-
 // yarn add prop-types
-
 // export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
 
 Tabs.propTypes = {
- tabData : PropTypes.arrayOf(PropTypes.string.isRequired)
+ tabData : propTypes.arrayOf(propTypes.string.isRequired)
 }
 
 export default Tabs;

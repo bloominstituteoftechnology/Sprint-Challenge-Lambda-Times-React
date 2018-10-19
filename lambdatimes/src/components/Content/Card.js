@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const Card = props => {
   return (
@@ -14,6 +15,8 @@ const Card = props => {
   );
 };
 
-// Make sure to include PropTypes.
+Card.propTypes = {
+  card: propTypes.object.isRequired
+}
 
 export default Card;
