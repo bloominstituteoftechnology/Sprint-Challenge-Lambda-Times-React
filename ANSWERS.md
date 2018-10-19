@@ -10,5 +10,3 @@
 
 4.  What are three different ways to style components in React?
     You can style component in React with CSS, a preprocessor or using Javascript.
-
-    
