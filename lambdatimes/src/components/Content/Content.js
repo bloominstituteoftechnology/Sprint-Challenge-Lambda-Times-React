@@ -27,13 +27,14 @@ export default class Content extends Component {
   };
 
   filterCards = (tab) => {
-    const cards = cardData;
-    if (tab === 'all') {
-      this.setState({cards});
+    if (this.state.selected === 'all') {
       return this.state.cards;
     } else {
-      const newCards = cardData.filter((card) => card.tab === tab);
-      this.setState({cards: newCards})
+      let cardSorted = [...this.state.cards];
+      cardSorted = cardSorted.filter(card => {
+        return card.tab === this.state.selected;
+      })
+      return cardSorted;
     }
   };
 
@@ -41,12 +42,10 @@ export default class Content extends Component {
     return (
       <div className="content-container">
         <Tabs tabs={this.state.tabs} 
-        filterCards={this.filterCards}
         selectedTab={this.state.selected}
         selectTabHandler={this.changeSelected}
         />
-        <Cards filtercards={this.filterCards()} 
-        cards={this.state.cards}
+        <Cards cards={this.filterCards()} 
         />
       </div>
     );
