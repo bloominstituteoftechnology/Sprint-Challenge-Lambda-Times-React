@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const App = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    color: #333;
+    font-family: 'PT Sans', sans-serif;
+`;
+
 export const theTopBar = styled.div`
   width: 100%;
   display: flex;
@@ -56,11 +65,11 @@ export const topBarContainerCenter = styled.div`
     margin-right: 5%;
   }
 
-  span:last-child {
+  &:last-child {
     margin-right: 0;    
   }
 
-  span:hover {
+  &:hover {
     text-decoration: underline;    
   }
 `;
@@ -92,7 +101,7 @@ export const HeaderStyle = styled.div`
   margin-top: 44px;
   padding-bottom: 15px;
 
-  media (min-width: 1280px) {
+  @media (min-width: 1280px) {
     .header {
       width: 1280px;
     }
@@ -115,12 +124,12 @@ export const HeaderStyle = styled.div`
   }
 `;
 
-export const Date = styled.span`
+export const theDate = styled.span`
   margin-left: 25px;
   flex: 1;
 `;
 
-export const Temp = styled.span`
+export const theTemp = styled.span`
   text-align: right;
   margin-right: 25px;
   flex: 1;

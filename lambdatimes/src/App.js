@@ -5,11 +5,11 @@ import Content from './components/Content/Content';
 
 const App = () => {
   return (
-    <div className="App">
+    <App>
       <TopBar />
       <Header />
       <Content />
-    </div>
+    </App>
   );
 }
 
