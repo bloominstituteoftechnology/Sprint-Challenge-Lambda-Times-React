@@ -5,4 +5,4 @@ What is a lifecycle event in React?
 What is a Higher Order Component?
     It is a pattern that allows us to reuse component logic. It is a function that receives a component as an argument and returns a new component. 
 What are three different ways to style components in React?
-    We can use CSS, reactstrap, and bootstrap.
+    We can use CSS modules, CSS stylesheets, and style-components.

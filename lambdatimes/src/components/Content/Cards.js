@@ -18,11 +18,11 @@ const Cards = props => {
           new Card component for each passing the card as the only prop*/}
     </div>
   )
-Cards.propTypes = {
-  cards: PropTypes.array
+  
 }
-
-}
+    Cards.propTypes = {
+      cards: PropTypes.array
+    }
 
 // Make sure you include prop types for all of your incoming props
 
