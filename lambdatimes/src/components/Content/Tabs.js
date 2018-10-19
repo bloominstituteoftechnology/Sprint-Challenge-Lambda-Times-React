@@ -18,27 +18,6 @@ const Tabs = props => {
             selectTabHandler={props.selectedTabHandler} 
             key={index} />
           )}
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
       </div>
@@ -47,8 +26,29 @@ const Tabs = props => {
 };
 Tabs.propTypes = {
   selectedTab : propTypes.string,
-  selectTabHandler : propTypes
+  selectTabHandler : propTypes.string
 }
 
 // Make sure to use PropTypes to validate your types!
 export default Tabs;
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
