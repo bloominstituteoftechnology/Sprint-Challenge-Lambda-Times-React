@@ -55,7 +55,7 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
- 
+/* 
 .top-bar {
   width: 100%;
   display: flex;
@@ -67,7 +67,6 @@ body {
   background-color: #333;
 }
 
-/*
 .top-bar .container {
   width: 100%;
   display: flex;

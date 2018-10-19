@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const topBar = styled.div`
+export const Top_Bar = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ export const topBar = styled.div`
   background-color: #333;
 `;
 
-export const topBarContainer = styled.div`
+export const TopBarContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: none;
@@ -28,7 +28,7 @@ export const topBarContainer = styled.div`
   }
 `;
 
-export const topBarContainerleft = styled.div`
+export const TopBarContainerLeft = styled.div`
   display: flex;
   justify-content: none;
   align-items: center;
@@ -43,7 +43,7 @@ export const topBarContainerleft = styled.div`
   }
 `;
 
-export const topBarContainerCenter = styled.div`
+export const TopBarContainerCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +65,7 @@ export const topBarContainerCenter = styled.div`
   }
 `;
 
-export const topBarContainerBottom = styled.div`
+export const TopBarContainerBottom = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -115,12 +115,12 @@ export const HeaderStyle = styled.div`
   }
 `;
 
-export const theDate = styled.span`
+export const TheDate = styled.span`
   margin-left: 25px;
   flex: 1;
 `;
 
-export const theTemp = styled.span`
+export const TheTemp = styled.span`
   text-align: right;
   margin-right: 25px;
   flex: 1;

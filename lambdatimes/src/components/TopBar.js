@@ -1,29 +1,28 @@
 import React from 'react';
-import { topBar, 
-        topBarContainer, 
-        topBarContainerleft,
-        topBarContainerCenter,
-        topBarContainerBottom,
-        }  from './Content/Styles';
+import {Top_Bar,
+        TopBarContainer,
+        TopBarContainerLeft,
+        TopBarContainerCenter,
+        TopBarContainerBottom} from './Content/Styles';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
 function TopBar() {
   return (
-    <topBar>
-      <topBarContainer>
-        <topBarContainerleft>
+    <Top_Bar>
+      <TopBarContainer>
+        <TopBarContainerLeft>
           <span>TOPICS</span><span>SEARCH</span>
-        </topBarContainerleft>
-        <topBarContainerCenter>
+        </TopBarContainerLeft>
+        <TopBarContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span>
           <span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </topBarContainerCenter>
-        <topBarContainerBottom>
+        </TopBarContainerCenter>
+        <TopBarContainerBottom>
           <span>LOG IN</span>
-        </topBarContainerBottom>
-      </topBarContainer>
-    </topBar>
+        </TopBarContainerBottom>
+      </TopBarContainer>
+    </Top_Bar>
   )
 }
 
