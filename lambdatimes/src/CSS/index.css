@@ -52,7 +52,7 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
-.top-bar {
+/* .top-bar {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -61,8 +61,8 @@ body {
   position: fixed;
   height: 44px;
   background-color: #333;
-}
-.top-bar .container {
+} */
+/* .top-bar .container {
   width: 100%;
   display: flex;
   justify-content: none;
@@ -76,8 +76,8 @@ body {
   .top-bar .container {
     width: 1280px;
   }
-}
-.top-bar .container .container-left {
+} */
+/* .top-bar .container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -89,8 +89,8 @@ body {
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
-}
-.top-bar .container .container-center {
+} */
+/* .top-bar .container .container-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,8 +107,8 @@ body {
 }
 .top-bar .container .container-center span:hover {
   text-decoration: underline;
-}
-.top-bar .container .container-right {
+} */
+/* .top-bar .container .container-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -118,10 +118,10 @@ body {
   font-weight: bold;
 }
 .top-bar .container .container-right span {
-  cursor: pointer;
-}
-.header {
-  display: flex;
+  cursor: pointer
+} */
+/* .header { */
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -130,36 +130,28 @@ body {
   width: 100%;
   height: 120px;
   margin-top: 44px;
-  padding-bottom: 15px;
-}
-@media (min-width: 1280px) {
+  padding-bottom: 15px; */
+/* } */
+/* @media (min-width: 1280px) {
   .header {
     width: 1280px;
   }
-}
-.header h1 {
+} */
+/* .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
   flex: 8;
   text-align: center;
   color: #000;
-}
-.header span {
+} */
+/* .header span {
   align-self: flex-end;
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
-}
-.header .date {
-  margin-left: 25px;
-  flex: 1;
-}
-.header .temp {
-  text-align: right;
-  margin-right: 25px;
-  flex: 1;
-}
+} */
+
 .content-container {
   display: flex; 
   flex-direction: column; 
