@@ -6,9 +6,9 @@ import React from 'react';
 const Header = () => {
   return (
     <div className="header">
-      <span className="date">SMARCH 32, 2018</span>
+      <span className="date">OCT 20, 2018</span>
       <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
+      <span className="temp">64°</span>
     </div>
   )
 }
