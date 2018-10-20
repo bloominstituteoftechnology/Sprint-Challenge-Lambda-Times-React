@@ -4,8 +4,8 @@ In the past week we have taken a deeper dive into React. We went from writing sm
 
 ## Assessing your Intermediate React Fu
 
-- Answers to your written questions will be recorded in _ANSWERS.md_
-- This is to be worked on alone but you can use outside resources. You can _reference_ any old code you may have, and documentation, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words.
+[x] Answers to your written questions will be recorded in _ANSWERS.md_
+[x] This is to be worked on alone but you can use outside resources. You can _reference_ any old code you may have, and documentation, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words.
 
 ### Questions:
 
@@ -25,14 +25,14 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 
 ### Part I
 
-- Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
-- Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- You should now be able to filter cards using your tabs!
+[x] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+[x] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+[x] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+[x] You should now be able to filter cards using your tabs!
 
 ### Part II
 
-- Make sure all of your props being passed are validated using PropTypes.
+[x] Make sure all of your props being passed are validated using PropTypes.
 
 ### Part III
 
