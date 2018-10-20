@@ -15,7 +15,11 @@ render() {
       {this.props.cards.map((card, index) => <Card key={index} card={card} />)}
     </div>
   )
+  }
 }
+
+Cards.propTypes = {
+  cards: PropTypes.array
 }
 
 export default Cards;

@@ -12,4 +12,10 @@ if (props.tab)
   );
 }
 
+Tab.propTypes = {
+  selected: PropTypes.string,
+  selectedTab: PropTypes.string,
+  tab: PropTypes.string
+}
+
 export default Tab;

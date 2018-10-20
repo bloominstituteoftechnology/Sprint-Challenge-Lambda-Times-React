@@ -14,4 +14,8 @@ const Tabs = props => {
   );
 };
 
+Tabs.propTypes = {
+  tabs: PropTypes.array
+}
+
 export default Tabs;
