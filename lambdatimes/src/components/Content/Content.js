@@ -23,7 +23,6 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-    console.log(tab)
     this.setState({ selected: tab });
   };
 
@@ -42,14 +41,9 @@ export default class Content extends Component {
     */
     console.log(this.state.selected)
       return this.state.cards.filter(card => {
-        if (this.state.selected === "all") {
-          return true;
-        } else if (this.state.selected === card.tab) {
-          return true;
-        }
+        if (this.state.selected === "all") return true;
+        if (this.state.selected === card.tab) return true;
       });
-    
-    //return this.state.cards;
   };
 
   

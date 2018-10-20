@@ -6,12 +6,12 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   let className='tab';
-  if(props.tab === props.selectedTab) {
-    className+=' active-tab'
-  }
+  let activeClassName='tab active-tab';
+
   return (
     <div
-      className={className}
+      className={props.tab === props.selectedTab ? activeClassName : className}
+
       value="tab"
       onClick={(event) => {
         props.selectedTabHandler(props.tab);
