@@ -19,7 +19,7 @@ const Tabs = props => {
   );
 };
 
-Tabs.PropTypes = {
+Tabs.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string)
 };
 
