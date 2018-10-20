@@ -41,7 +41,7 @@ export default class Content extends Component {
     */
     const cardFilter = cardData.filter(card => this.state.selected === 'all' || this.state.selected === card.tab);
 
-    return this.state.cards;
+    return cardFilter;
   };
 
   render() {
