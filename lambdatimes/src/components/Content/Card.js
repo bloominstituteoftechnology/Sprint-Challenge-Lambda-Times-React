@@ -18,7 +18,7 @@ const Card = props => {
 Card.propTypes = {
   headline: PropTypes.string,
   author: PropTypes.string,
-  img: PropTypes.image
+  img: PropTypes.string
 };
 
 export default Card;
