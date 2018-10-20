@@ -9,7 +9,6 @@ const App = () => {
 			<TopBar />
 			<Header />
 			<Content />
-			<initialcommit />
 		</div>
 	);
 };

@@ -1,0 +1,11 @@
+##What are PropTypes used for?
+Proptypes let us specify the kind of data a particular component is expecting to receive as props. We can specify a specific 'shape' of the data, for example a username, a password and a hometown. If PropTypes sees we tried to pass in a username, a password and an array of numbers, it would throw an error.
+
+##What is a lifecycle event in React?
+The lifecycle events are the events that happen as React works on rendering and re-rendering a component in accordance with the internal logic of the component. The most common method we are using right now is called ComponentDidMount and is typically used to make a call for the data our application will need from another source. After the component has been 'birthed' but still has empty data, it will make the call for the data. It is preferrable to fetch this data at this point because it may take some time, and in the meantime the rest of the page can load while it waits on an external server. We can also use these methods to specify what to do when a component updates, or what to do when it 'dies.'
+##What is a Higher Order Component?
+A higher order component is like a higher order function: it is a component that takes another component as an argument. It is used to put a certain kind of functionality on top of different kinds of components, with that functionality including a new version of state just for that component. For example, we may want components to be able to keep track of the quantity of items in a cart. We would make a itemCounter higher order component, and pass the individual types of products to it. Then each of them would have their own state object made by the higher order function which could keep track of the number of items, as well as whatever logic we need to make that work. Authentication is another use case, where we wrap our whole application in an authentication component which decides what to do based on whether or not someone is logged in and may display a completely different screen depending on the state of authentication.
+
+##What are three different ways to style components in React?
+
+You can connect an external stylesheet to each component in the same directory, or use an external library like ReactStrap that comes with pre-styled components or use the style-components library to write our own styled components.
