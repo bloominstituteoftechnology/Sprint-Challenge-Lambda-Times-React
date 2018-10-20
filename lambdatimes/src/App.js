@@ -3,6 +3,8 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
 import Carousel from './components/Carousel/Carousel';
+import authentication from './Authenticate.js';
+import Login from './components/Login';
 
 const App = () => {
   return (
@@ -15,4 +17,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default authentication(Login)(App);
