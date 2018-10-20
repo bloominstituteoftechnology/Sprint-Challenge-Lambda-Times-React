@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
+import {CardsContainer} from '../StyledComponents';
 
 const Cards = props => {
   return(
-    <div className="cards-container">
+    <CardsContainer>
       {props.cards.map(item=><Card card={item} key={item.headline}/>)}
-    </div>
+    </CardsContainer>
   )
 }
 

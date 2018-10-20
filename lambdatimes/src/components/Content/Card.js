@@ -1,21 +1,22 @@
 import React from 'react';
 import { cardData } from '../../data';
+import {CardStyle, Headline, Author, CardImgContainer} from '../StyledComponents';
 
 const Card = props => {
   return (
-    <div className="card">
+    <CardStyle>
 
-      <div className="headline">{props.card.headline}</div>
+      <Headline>{props.card.headline}</Headline>
 
-      <div className="author">
+      <Author>
 
-        <div className="img-container">
+        <CardImgContainer>
           <img src={props.card.img} alt={props.card.author}/>
-        </div>
+        </CardImgContainer>
 
         <span>By {props.card.author}</span>
-      </div>
-    </div>
+      </Author>
+    </CardStyle>
   );
 };
 
