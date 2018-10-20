@@ -10,9 +10,20 @@ In the past week we have taken a deeper dive into React. We went from writing sm
 ### Questions:
 
 1.  What are PropTypes used for?
+
+PropTypes are used by developers to ensure the proper property type is being received by a component.
+
 1.  What is a lifecycle event in React?
+
+Mounting, Updating, and Unmounting (of the React component); a good analogy is birth, change, death.
+
 1.  What is a Higher Order Component?
+
+An HOC is a component that receives another component as its props argument.
+
 1.  What are three different ways to style components in React?
+
+CSS?  (Haven't gotten this far in studies yet.)
 
 ## Challenge
 
