@@ -1,4 +1,5 @@
 import React from 'react';
+import {LoginStyle, LoginInput, LoginSubmit, LoginHeader} from './StyledComponents';
 
 export default class Login extends React.Component {
     constructor(){
@@ -31,27 +32,30 @@ export default class Login extends React.Component {
 
     render(){
         return(
-            <div>
-                <input
+            <LoginStyle>
+
+                <LoginHeader>Login to Lambda Times!</LoginHeader>
+
+                <LoginInput
                     type='text'
                     placeholder='Username'
                     onChange={this.setUsername}
                 >
-                </input>
+                </LoginInput>
 
-                <input
+                <LoginInput
                     type='text'
                     placeholder='Password'
                     onChange={this.setPassword}
                 >
-                </input>
+                </LoginInput>
 
-                <button onClick={this.login}>
+                <LoginSubmit onClick={this.login}>
                     Log In
-                </button>
+                </LoginSubmit>
             
 
-            </div>
+            </LoginStyle>
         )
     }
 }

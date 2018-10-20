@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
+import {CarouselStyle, CarouselLeftButton, CarouselRightButton, CarouselImg} from '../StyledComponents';
 
-// Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
     super(props);
@@ -27,17 +27,17 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={this.state.data[this.state.current]} style={{display: 'block'}} />
+    return <CarouselImg src={this.state.data[this.state.current]} style={{display: 'block'}} />
   }
   
   render(){
     console.log(this.state.data)
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
+      <CarouselStyle>
+        <CarouselLeftButton onClick={this.leftClick}>{"<"}</CarouselLeftButton>
         {this.selectedImage()}
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+        <CarouselRightButton className="right-button" onClick={this.rightClick}>{">"}</CarouselRightButton>
+      </CarouselStyle>
     )
   }
 }

@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {TabStyle, SelectedTab} from '../StyledComponents';
 
 const Tab = props => {
-
   return (
-    <div className= {props.tab === props.selectedTab ? "tab active-tab" : "tab" }
-      onClick={() => { props.selectTabHandler(props.tab) }}
-    >
-      {props.tab.toUpperCase()}
-    </div>
-  );
-};
+  <TabStyle selected={props.tab === props.selectedTab ? true : false }
+    onClick={() => { props.selectTabHandler(props.tab) }}
+  >
+    {props.tab.toUpperCase()}
+  </TabStyle>
+  )
+}
 
 Tab.propTypes = {
   tab: PropTypes.string,
@@ -19,3 +19,5 @@ Tab.propTypes = {
 }
 
 export default Tab;
+
+
