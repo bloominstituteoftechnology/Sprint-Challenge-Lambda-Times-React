@@ -1,19 +1,23 @@
 import React from 'react';
+import { cardData } from '../../data';
+import {CardStyle, Headline, Author, CardImgContainer} from '../StyledComponents';
 
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
-      <div className="author">
-        <div className="img-container">
-          <img src={'' /* image source goes here */} />
-        </div>
-        <span>By {/* author goes here */}</span>
-      </div>
-    </div>
+    <CardStyle>
+
+      <Headline>{props.card.headline}</Headline>
+
+      <Author>
+
+        <CardImgContainer>
+          <img src={props.card.img} alt={props.card.author}/>
+        </CardImgContainer>
+
+        <span>By {props.card.author}</span>
+      </Author>
+    </CardStyle>
   );
 };
-
-// Make sure to include PropTypes.
 
 export default Card;
