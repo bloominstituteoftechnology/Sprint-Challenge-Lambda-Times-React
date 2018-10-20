@@ -31,10 +31,6 @@ const Header = styled.div`
     font-weight: bold;
     letter-spacing: 1px;
   }
-
-  @media (min-width: 1280px) {
-    width: 1280px;
-  }
 `
 
 const HeaderDate = styled.span`
@@ -58,4 +54,4 @@ const FullHeader = () => {
   )
 }
 
-export default FullHeader;
+export default FullHeader
