@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderDiv = styled.div `
+ const HeaderDiv = styled.div `
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,7 @@ export const HeaderDiv = styled.div `
     margin-top: 44px;
     padding-bottom: 15px;
 `
-export const DateSpan = styled.span `
+ const DateSpan = styled.span `
     margin-left: 25px;
     flex: 1;
     align-self: flex-end;
@@ -20,7 +20,7 @@ export const DateSpan = styled.span `
     font-weight: bold;
     letter-spacing: 1px;
 `
-export const HeaderTitle = styled.h1 `
+ const HeaderTitle = styled.h1 `
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
@@ -28,7 +28,7 @@ export const HeaderTitle = styled.h1 `
   text-align: center;
   color: #000;
 `
-export const TempSpan = styled.span `
+ const TempSpan = styled.span `
   align-self: flex-end;
   font-size: 11px;
   font-weight: bold;
@@ -37,7 +37,7 @@ export const TempSpan = styled.span `
   margin-right: 25px;
   flex: 1;
 `
-export const TopBarDiv = styled.div `
+ const TopBarDiv = styled.div `
     width: 100%;
     display: flex;
     justify-content: center;
