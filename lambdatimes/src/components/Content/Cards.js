@@ -10,6 +10,7 @@ const Cards = props => {
             return (
               <div>
                   <Card 
+                    key={i}
                     author={card.author}
                     headline={card.headline}
                     img={card.img}

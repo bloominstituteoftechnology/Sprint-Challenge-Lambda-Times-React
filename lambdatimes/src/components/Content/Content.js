@@ -48,7 +48,19 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
+    if (this.state.selected === 'all') {
+      return this.state.cards
+    } else {
+      const cards = [];
+      this.state.cards.filter( card => {
+        if (card.tab === this.state.selected) {
+          cards.push(card)
+        }
+      }); return cards;
+    }
+
+
+
   };
 
   render() {
