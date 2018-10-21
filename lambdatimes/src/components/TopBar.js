@@ -68,11 +68,19 @@ font-weight: bold;
 const StyledSpanCenter=styled.span`
 cursor: pointer;
 margin-right: 5%;
+&:hover{
+  text-decoration: underline;
+
+}
 `
 
 const CenterLastChild=styled.span`
 cursor: pointer;
-margin-right: 0;`
+margin-right: 0;
+&:hover{
+  text-decoration: underline;
+
+}`
 
 const StyledSpanRight=styled.span`
 cursor: pointer;
