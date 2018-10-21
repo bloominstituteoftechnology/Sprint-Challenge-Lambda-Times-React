@@ -52,7 +52,16 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
-
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  position: fixed;
+  height: 44px;
+  background-color: #333;
+}
 .top-bar .container {
   width: 100%;
   display: flex;
