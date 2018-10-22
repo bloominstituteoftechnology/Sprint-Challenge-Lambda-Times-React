@@ -44,6 +44,8 @@ body {
 #root {
   width: 100%;
 }
+
+
 .App {
   display: flex;
   align-items: center;
@@ -52,6 +54,8 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
+
+/* 
 .top-bar {
   width: 100%;
   display: flex;
@@ -62,6 +66,7 @@ body {
   height: 44px;
   background-color: #333;
 }
+
 .top-bar .container {
   width: 100%;
   display: flex;
@@ -120,7 +125,9 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
-.header {
+*/
+
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,7 +166,9 @@ body {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
+
+
 .content-container {
   display: flex; 
   flex-direction: column; 
