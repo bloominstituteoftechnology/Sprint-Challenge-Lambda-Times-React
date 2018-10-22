@@ -7,7 +7,7 @@ In the past week we have taken a deeper dive into React. We went from writing sm
 - Answers to your written questions will be recorded in _ANSWERS.md_
 - This is to be worked on alone but you can use outside resources. You can _reference_ any old code you may have, and documentation, however, please refrain from copying and pasting any of your answers. Try and understand the question and put your responses in your own words.
 
-### Questions:
+### Questions: [ COMPLETED ]
 
 1.  What are PropTypes used for?
 1.  What is a lifecycle event in React?
