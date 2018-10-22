@@ -25,14 +25,15 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 
 ### Part I
 
-- Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
-- Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+[ X ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`
+[ X ] Follow the directions in the `Content` component to get your data ready.
+[ X ] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+[ X ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
 - You should now be able to filter cards using your tabs!
 
 ### Part II
 
-- Make sure all of your props being passed are validated using PropTypes.
+[ X ] Make sure all of your props being passed are validated using PropTypes.
 
 ### Part III
 
