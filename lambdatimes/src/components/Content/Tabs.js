@@ -7,9 +7,9 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {props.tabs.map(tab => (
+        {props.tabs.map((tab, index) => (
         	<Tab
-        		key={Math.random()}
+        		key={index}
         		selectTabHandler={props.selectTabHandler}
         		selectTab={props.selectedTab}
         		tab={tab}
