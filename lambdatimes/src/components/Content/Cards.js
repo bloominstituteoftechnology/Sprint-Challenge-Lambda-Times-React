@@ -10,14 +10,14 @@ const Cards = props => {
       			key={Math.random()}
       			card={card}
       		/>
-      ))};
+      ))}
     </div>
   )
 }
 
 // Make sure you include prop types for all of your incoming props
 Cards.PropTypes = {
-	cards: PropTypes.array
+	cards: PropTypes.arrayOf()
 }
 
 

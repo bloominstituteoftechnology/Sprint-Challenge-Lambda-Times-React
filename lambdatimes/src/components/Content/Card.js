@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { cardData } from '../../data'
 
 const Card = props => {
   return (
