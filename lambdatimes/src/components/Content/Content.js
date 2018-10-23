@@ -15,7 +15,6 @@ class Content extends Component {
       cards: []
     };
   }
-
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
     this.setState({
@@ -23,7 +22,6 @@ class Content extends Component {
       cards: cardData
     })
   }
-
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
     this.setState({
@@ -31,16 +29,10 @@ class Content extends Component {
       selected: tab 
     })
     }
-
-   
-  
-
   filterCards = () => {
-
     if (this.state.selected ===  'all'){
       return this.state.cards
     }
-
     else {
       return this.state.cards.filter(item => item.tab === this.state.selected)
     }
