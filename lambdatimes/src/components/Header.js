@@ -29,7 +29,6 @@ const Temp = styled.div`
 
 const Header = () => {
   return (
-    // <div className="header">
     <HeaderStyle>
     <Date>
       SMARCH 32, 2018
