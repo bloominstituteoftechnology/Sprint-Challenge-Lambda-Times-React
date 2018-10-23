@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import Tabs from "./Tabs";
 import Cards from "./Cards";
 import { tabData, cardData } from "../../data";
-import styled from "styled-components";
-
-const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import { ContentContainer } from "../Content/Styled";
 
 export default class Content extends Component {
   constructor(props) {
