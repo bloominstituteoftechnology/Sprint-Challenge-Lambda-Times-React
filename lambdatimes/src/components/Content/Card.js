@@ -1,19 +1,25 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
+import { CardStyled, Headline, Author, ImgContainer } from "../Content/Styled";
 
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
-      <div className="author">
-        <div className="img-container">
-          <img src={'' /* image source goes here */} />
-        </div>
-        <span>By {/* author goes here */}</span>
-      </div>
-    </div>
+    <CardStyled>
+      <Headline>{props.card.headline}</Headline>
+      <Author>
+        <ImgContainer>
+          <img alt="" src={props.card.img} />
+        </ImgContainer>
+        <span>By {props.card.author}</span>
+      </Author>
+    </CardStyled>
   );
 };
 
-// Make sure to include PropTypes.
+Card.propTypes = {
+  headline: PropTypes.string,
+  author: PropTypes.string,
+  img: PropTypes.string
+};
 
 export default Card;

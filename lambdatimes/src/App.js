@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import React from "react";
+import TopBar from "./components/TopBar";
+import Header from "./components/Header";
+import Content from "./components/Content/Content";
+import { AppWrapper } from "./components/Content/Styled";
 
 const App = () => {
   return (
-    <div className="App">
+    <AppWrapper>
       <TopBar />
       <Header />
       <Content />
-    </div>
+    </AppWrapper>
   );
-}
+};
 
 export default App;
