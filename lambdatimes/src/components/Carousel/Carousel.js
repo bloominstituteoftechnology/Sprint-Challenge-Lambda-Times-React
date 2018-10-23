@@ -10,6 +10,9 @@ export default class Carousel extends Component {
   }
   componentDidMount(){
 
+    this.setState({
+      data: carouselData
+    })
   }
 
   leftClick = () => {
@@ -21,7 +24,9 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    return <img alt={''} src={this.state.data.map((item, index) => {
+      return item.index
+    })} style={{display: 'block'}} />
   }
   
   render(){
