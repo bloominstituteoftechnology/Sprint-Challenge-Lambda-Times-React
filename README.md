@@ -1,5 +1,6 @@
 # Sprint Challenge: Lambda Times (React)
 
+.
 In the past week we have taken a deeper dive into React. We went from writing small functional components, to building class components, using lifecycle events, type checking our props, and styling our components dynamically. React is a powerful library and to be able to use all of these concepts while building an app will be extremely beneficial. In this sprint challenge, we will be revisiting all of these concepts. Remember, this is a way for you to analyze your understanding of the concepts presented this week. Feel free to reference old code, but please refrain from copy/pasting, even rewriting old code can teach you something new! Take your time, and have fun!
 
 ## Assessing your Intermediate React Fu
