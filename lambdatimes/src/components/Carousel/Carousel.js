@@ -24,7 +24,7 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={this.state.data.map((item, index) => {
+    return <img alt={''} src={this.state.data.map((item, index) => {
       return item.index
     })} style={{display: 'block'}} />
   }
