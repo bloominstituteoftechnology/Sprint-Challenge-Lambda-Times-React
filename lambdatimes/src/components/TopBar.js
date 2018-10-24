@@ -14,9 +14,9 @@ const TopBar = () => {
         <ContainerCenterDiv>
           <ContainerCenterSpan>GENERAL</ContainerCenterSpan><ContainerCenterSpan>BROWNBAG</ContainerCenterSpan><ContainerCenterSpan>RANDOM</ContainerCenterSpan><ContainerCenterSpan>MUSIC</ContainerCenterSpan><ContainerCenterLastSpan>ANNOUNCEMENTS</ContainerCenterLastSpan>
         </ContainerCenterDiv>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
+        <ContainerRightDiv>
+          <ContainerRightSpan>LOG IN</ContainerRightSpan>
+        </ContainerRightDiv>
       </ContainerDiv>
     </TopBarDiv>
   )
