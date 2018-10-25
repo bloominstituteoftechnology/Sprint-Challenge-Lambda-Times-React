@@ -51,16 +51,16 @@ flex: 1;
 font-size: 11px;
 font-weight: bold;`;
 
-const Topleftspan = styled.div`
+const Topleftspan = styled.span`
 cursor: pointer;
 margin-right: 25%;
 font-weight: bold;`;
 
-const Topcenterspan = styled.div`
+const Topcenterspan = styled.span`
 cursor: pointer;
 margin-right: 5%;`;
 
-const Toprightspan = styled.div`
+const Toprightspan = styled.span`
 cursor: pointer;`;
 
 const TopBar = () => {
