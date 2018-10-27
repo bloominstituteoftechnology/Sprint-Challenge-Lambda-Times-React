@@ -6,15 +6,18 @@ import styled from 'styled-components';
 const HeaderContainer = () => {
   return (
     <div> 
-    <Date>MARCH 32, 2018</Date> 
+      <HeaderContainerDiv>
+      <Date>MARCH 32, 2018</Date> 
     <Title>Lambda Times</Title>
     <Temperature>98°</Temperature>
+      </HeaderContainerDiv>
+  
     </div>
    
   )
 }
 
-const HeaderContainer = styled.div`
+const HeaderContainerDiv = styled.div`
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -55,4 +58,4 @@ margin-right: 25px;
 flex: 1;
 `;
 
-export default Header;
+export default HeaderContainer;
