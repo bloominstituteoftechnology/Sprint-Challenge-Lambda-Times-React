@@ -10,9 +10,14 @@ In the past week we have taken a deeper dive into React. We went from writing sm
 ### Questions:
 
 1.  What are PropTypes used for?
+Proptypes are used to display properties for a class and signify what data type they should fall in.
 1.  What is a lifecycle event in React?
+A lifecycle event in React is the Mounting/Birth, Updating/Growth, Unmounting/Death of a component.
 1.  What is a Higher Order Component?
+A higher order component is a function with a function as a parameter.
 1.  What are three different ways to style components in React?
+1)CSS StyleSheets 2)Inline Styling 3)CSS Modules 4)Styled=Components
+
 
 ## Challenge
 
@@ -24,7 +29,7 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 - From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
 
 ### Part I
-
+ 
 - Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
 - Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
 - Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
