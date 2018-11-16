@@ -11,7 +11,7 @@ const CarouselSection = styled.section`
 	height: 500px;
 	position: relative;
 	overflow: hidden;
-	margin-top: 16px;
+	margin: 1% 0;
 	@media (min-width: 1200px) {
 		width: 1200px;
 	}
