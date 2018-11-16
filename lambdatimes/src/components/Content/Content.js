@@ -10,17 +10,16 @@ export default class Content extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected : 'all',
-            tabs     : [],
-            cards    : []
+            selectedTab : 'all',
+            tabs        : [],
+            cards       : []
         };
     }
 
     componentDidMount() {
         this.setState({
-            selected : this.props.selected,
-            tabs     : tabData,
-            cards    : cardData
+            tabs  : tabData,
+            cards : cardData
         });
         // Once the component has mounted, get the data and reflect that data on the state.
     }
@@ -28,9 +27,11 @@ export default class Content extends Component {
     changeSelected = (tab) => {
         // this function should take in the tab and update the state with the new tab.
         this.setState({
-            selected : tab
+            selectedTab : tab
         });
     };
+
+    //TODO Filter Cards
 
     filterCards = () => {
         /* Right now this function only returns the cards on state.
@@ -45,7 +46,9 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-        return this.state.cards;
+        return this.state.cards.map((card) => {
+            card.tab === this.state.selectedTab ? card : null;
+        });
     };
 
     render() {
