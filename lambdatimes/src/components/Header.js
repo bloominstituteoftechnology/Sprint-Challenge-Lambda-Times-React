@@ -27,6 +27,9 @@ const HeaderDiv = styled.div`
       font-weight: bold;
       letter-spacing: 1px;
   }
+  @media (min-width: 1280px) {
+    width: 1280px;
+}
 `;
 
 const Date = styled.span`
