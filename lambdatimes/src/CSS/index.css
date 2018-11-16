@@ -52,7 +52,7 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
-.top-bar {
+/* .top-bar {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@ body {
   position: fixed;
   height: 44px;
   background-color: #333;
-}
+} 
 .top-bar .container {
   width: 100%;
   display: flex;
@@ -77,6 +77,9 @@ body {
     width: 1280px;
   }
 }
+
+
+
 .top-bar .container .container-left {
   display: flex;
   justify-content: none;
@@ -85,11 +88,15 @@ body {
   flex: 1;
   font-size: 11px;
 }
+
+
 .top-bar .container .container-left span {
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
 }
+
+
 .top-bar .container .container-center {
   display: flex;
   justify-content: center;
@@ -98,6 +105,8 @@ body {
   flex: 3;
   font-size: 9px;
 }
+
+
 .top-bar .container .container-center span {
   cursor: pointer;
   margin-right: 5%;
@@ -108,6 +117,9 @@ body {
 .top-bar .container .container-center span:hover {
   text-decoration: underline;
 }
+
+
+
 .top-bar .container .container-right {
   display: flex;
   justify-content: flex-end;
@@ -117,10 +129,12 @@ body {
   font-size: 11px;
   font-weight: bold;
 }
+
+
 .top-bar .container .container-right span {
   cursor: pointer;
 }
-.header {
+ .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,7 +150,7 @@ body {
   .header {
     width: 1280px;
   }
-}
+} 
 .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
@@ -145,6 +159,8 @@ body {
   text-align: center;
   color: #000;
 }
+
+
 .header span {
   align-self: flex-end;
   font-size: 11px;
@@ -155,11 +171,15 @@ body {
   margin-left: 25px;
   flex: 1;
 }
+
+
 .header .temp {
   text-align: right;
   margin-right: 25px;
   flex: 1;
 }
+
+*/
 .content-container {
   display: flex; 
   flex-direction: column; 
