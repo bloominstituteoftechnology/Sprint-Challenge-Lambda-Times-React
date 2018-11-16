@@ -5,9 +5,13 @@ import Card from './Card';
 new Card component for each passing the card as the only prop*/
 
 const Cards = props => {
+  let cards = props.cards.map((card, index) => {
+    return <Card key={index} card={card} />; 
+    });
+
   return (
     <div className="cards-container">
-      {}
+      {cards}
     </div>
   )
 }
