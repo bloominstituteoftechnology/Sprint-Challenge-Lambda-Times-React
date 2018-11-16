@@ -36,6 +36,7 @@ export default class Content extends Component {
   };
 
   render() {
+    
     return (
       <div className="content-container">
         <Tabs tabs={this.state.tabs} selectTab={this.changeSelected} selected={this.state.selected}/>
@@ -44,3 +45,5 @@ export default class Content extends Component {
     );
   }
 }
+
+
