@@ -1,24 +1,183 @@
-import React from 'react';
+import React, { Component } from "react";
+import styled from "styled-components";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
-// Refactor this component to use styled components and not classNames. 
+// Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopBar = () => {
-  return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
+const Bar = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  position: fixed;
+  height: 44px;
+  background-color: #333;
+`;
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
+`;
+const ContainLeft = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+
+  span {
+    cursor: pointer;
+    margin-right: 25%;
+    font-weight: bold;
+  }
+`;
+const ContainCenter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+
+  span {
+    cursor: pointer;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+const ContainRight = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+
+  span {
+    cursor: pointer;
+  }
+`;
+const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+const Username = styled.input`
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1%;
+`;
+const Password = styled(Username)`
+  margin-bottom: 5%;
+`;
+
+class TopBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      modal: false,
+      username: "",
+      password: ""
+    };
+  }
+
+  handleChange = ev => {
+    this.setState({ [ev.target.name]: ev.target.value });
+  };
+
+  toggle = () => {
+    this.setState({ modal: !this.state.modal });
+  };
+
+  onSubmit = ev => {
+    ev.preventDefault();
+    let username = this.state.username;
+    localStorage.setItem("username", username);
+    window.location.reload();
+  };
+
+  render() {
+    let modal;
+    if (this.state.modal) {
+      modal = (
+        <div>
+          <Modal
+            isOpen={this.state.modal}
+            toggle={this.toggle}
+            className={this.props.className}
+          >
+            <ModalHeader>Login</ModalHeader>
+            <ModalBody>
+              <LoginForm onSubmit={this.onSubmit}>
+                username:
+                <Username
+                  type="text"
+                  name="username"
+                  onChange={this.handleChange}
+                  value={this.state.username}
+                  required
+                />
+                <br />
+                password:
+                <Password
+                  type="password"
+                  name="password"
+                  onChange={this.handleChange}
+                  value={this.state.password}
+                  required
+                />
+                <Button color="primary">Login</Button>
+              </LoginForm>
+            </ModalBody>
+            <ModalFooter />
+          </Modal>
         </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
-  )
+      );
+    }
+
+    return (
+      <Bar>
+        <Container>
+          <ContainLeft>
+            <span>TOPICS</span>
+            <span>SEARCH</span>
+          </ContainLeft>
+          <ContainCenter>
+            <span>GENERAL</span>
+            <span>BROWNBAG</span>
+            <span>RANDOM</span>
+            <span>MUSIC</span>
+            <span>ANNOUNCEMENTS</span>
+          </ContainCenter>
+          <ContainRight>
+            <span onClick={this.toggle}>LOG IN</span>
+            {modal}
+          </ContainRight>
+        </Container>
+      </Bar>
+    );
+  }
 }
+// const TopBar = () => {};
 
 export default TopBar;
