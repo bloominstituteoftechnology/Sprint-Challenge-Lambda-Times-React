@@ -1,20 +1,62 @@
-// libraries import
+// Importing libraries
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+// Styled Components
+const CardComp = styled.div`
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+  background-color: #fff;
+  width: 380px;
+  margin-bottom: 16px;
+  padding: 24px;
+`;
+
+const Headline = styled.div`
+  font-size: 25px;
+  font-family: Didot, serif;
+`;
+
+const Author = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 15px;
+  span {
+    padding-left: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+`;
+
+const AuthorImgContainer = styled.div`
+  padding-right: 10px;
+  border-right: 1px solid lightgrey;
+  height: 40px;
+  img {
+    width: 40px;
+  }
+`;
 
 const Card = props => {
   // destructuring props for readability
   const {card} = {...props};
   return (
-    <div className="card">
-      <div className="headline">{card.headline}</div>
-      <div className="author">
-        <div className="img-container">
+    <CardComp className="card">
+      <Headline className="headline">{card.headline}</Headline>
+      <Author className="author">
+        <AuthorImgContainer className="img-container">
           <img src={card.img} alt={card.headline}/>
-        </div>
+        </AuthorImgContainer>
         <span>By {card.author}</span>
-      </div>
-    </div>
+      </Author>
+    </CardComp>
   );
 };
 
