@@ -23,8 +23,7 @@ export default class Content extends Component {
     });
   }
 
-  changeSelected = (e, tab) => {
-    console.log("SELECTED TAB", e.target);
+  changeSelected = tab => {
     // e.target.classList.toggle("active-tab");
     this.setState({ selected: tab });
   };
@@ -46,8 +45,9 @@ export default class Content extends Component {
     let cardsArr = [...this.state.cards];
     if (this.state.selected === "all") {
       return this.state.cards;
+    } else {
+      return cardsArr.filter(card => card.tab === this.state.selected);
     }
-    return cardsArr.filter(card => card.tab === this.state.selected);
   };
 
   render() {
@@ -58,8 +58,15 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.changeSelected} />
-        <Cards cards={this.filterCards()} />
+        <Tabs
+          tabs={this.state.tabs}
+          selectedTab={this.state.selected}
+          selectedTabHandler={this.changeSelected}
+        />
+        <Cards
+          cards={this.filterCards()}
+          selectedTabState={this.state.selected}
+        />
       </div>
     );
   }
