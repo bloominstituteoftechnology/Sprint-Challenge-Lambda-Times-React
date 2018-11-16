@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// Children Component(s)
 import Tabs from './Tabs';
 import Cards from './Cards';
 
