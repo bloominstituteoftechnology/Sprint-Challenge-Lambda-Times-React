@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tab = {tab, selectedTab, selectTabHandler} => {
+const Tab = ({tab, selectedTab, selectTabHandler}) => {
   const className = (selectedTab) ? 'tab active-tab' : 'tab';
   return (
     <div
