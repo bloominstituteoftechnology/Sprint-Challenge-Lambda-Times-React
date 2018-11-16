@@ -1,17 +1,48 @@
-// libraries import
+// Importing libraries
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-// components import
+// Importing components
 import Tab from './Tab';
+
+// Styled Components
+const TabsComp = styled.div`
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 47px;
+  background-color: #fff;
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
+`;
+
+const Topics = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+`;
+
+const TopicsTitle = styled.span`
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+`;
+
 
 const Tabs = props => {
   // destructuring props for readability
   const {tabs, selectedTab, selectTabHandler} = {...props}
   return (
-    <div className="tabs">
-      <div className="topics">
-        <span className="title">TRENDING TOPICS:</span>
+    <TabsComp className="tabs">
+      <Topics className="topics">
+        <TopicsTitle>TRENDING TOPICS:</TopicsTitle>
         {
           // map over the tabs
           tabs.map(
@@ -24,8 +55,8 @@ const Tabs = props => {
               />
             ))
         }
-      </div>
-    </div>
+      </Topics>
+    </TabsComp>
   );
 };
 
