@@ -25,9 +25,6 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
-     /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
-      if they match, the className should be: 'tab active-tab', 
-      if it is not it should just be 'tab'*/
     // this function should take in the tab and update the state with the new tab.
     if(!(tab === this.state.selected)){
       this.setState({selected: tab})
