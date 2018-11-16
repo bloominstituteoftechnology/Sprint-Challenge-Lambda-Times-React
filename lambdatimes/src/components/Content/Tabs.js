@@ -1,6 +1,17 @@
 import React from 'react';
 import Tab from './Tab';
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const TabStyles = styled.div`
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color: #f1f1f1;
+color: #333;
+font-family: 'PT Sans', sans-serif;
+`;
+
 
 const Tabs = props => {
   return (
