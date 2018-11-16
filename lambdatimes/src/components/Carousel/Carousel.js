@@ -14,15 +14,15 @@ export default class Carousel extends Component {
 
   leftClick = () => {
 
-  }
+  };
 
   rightClick = () => {
 
-  }
+  };
 
   selectedImage = () => {
     return <img src={} style={{display: 'block'}} />
-  }
+  };
   
   render(){
     return (
