@@ -1,10 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from './../../../node_modules/styled-components';
 import Card from './Card';
+
+const Div = styled.div`
+	display: flex;
+	justify-content: space-evenly;
+	align-items: none;
+	flex-direction: row;
+	width: 100%;
+	margin-top: 16px;
+	flex-wrap: wrap;
+	@media (min-width: 1200px) {
+		width: 1200px;
+	}
+`;
 
 const Cards = (props) => {
 	return (
-		<div className="cards-container">
+		<Div>
 			{props.cards.map((card, index) => {
 				return (
 					<Card
@@ -16,7 +30,7 @@ const Cards = (props) => {
 					/>
 				);
 			})}
-		</div>
+		</Div>
 	);
 };
 
