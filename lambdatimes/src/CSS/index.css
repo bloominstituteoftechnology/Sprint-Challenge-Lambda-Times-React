@@ -77,7 +77,7 @@ body {
     width: 1280px;
   }
 }
-.top-bar .container .container-left {
+/* .top-bar .container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -119,8 +119,8 @@ body {
 }
 .top-bar .container .container-right span {
   cursor: pointer;
-}
-.header {
+} */
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,7 +159,7 @@ body {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
 .content-container {
   display: flex; 
   flex-direction: column; 
