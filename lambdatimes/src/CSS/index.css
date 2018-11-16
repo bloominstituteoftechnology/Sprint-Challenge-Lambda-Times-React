@@ -62,7 +62,7 @@ body {
   height: 44px;
   background-color: #333;
 } */
-.top-bar .container {
+/* .top-bar .container {
   width: 100%;
   display: flex;
   justify-content: none;
@@ -76,39 +76,39 @@ body {
   .top-bar .container {
     width: 1280px;
   }
-}
-.top-bar .container .container-left {
+} */
+/* .top-bar .container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
   flex: 1;
   font-size: 11px;
-}
-.top-bar .container .container-left span {
+} */
+/* .top-bar .container .container-left span {
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
-}
-.top-bar .container .container-center {
+} */
+/* .top-bar .container .container-center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex: 3;
   font-size: 9px;
-}
-.top-bar .container .container-center span {
+} */
+/* .top-bar .container .container-center span {
   cursor: pointer;
   margin-right: 5%;
 }
 .top-bar .container .container-center span:last-child {
   margin-right: 0;
-}
-.top-bar .container .container-center span:hover {
+} */
+/* .top-bar .container .container-center span:hover {
   text-decoration: underline;
-}
-.top-bar .container .container-right {
+} */
+/* .top-bar .container .container-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -116,11 +116,11 @@ body {
   flex: 1;
   font-size: 11px;
   font-weight: bold;
-}
-.top-bar .container .container-right span {
+} */
+/* .top-bar .container .container-right span {
   cursor: pointer;
-}
-.header {
+} */
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,8 +136,8 @@ body {
   .header {
     width: 1280px;
   }
-}
-.header h1 {
+} */
+/* .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
@@ -150,8 +150,8 @@ body {
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 1px;
-}
-.header .date {
+} */
+/* .header .date {
   margin-left: 25px;
   flex: 1;
 }
@@ -159,7 +159,7 @@ body {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
 .content-container {
   display: flex; 
   flex-direction: column; 
