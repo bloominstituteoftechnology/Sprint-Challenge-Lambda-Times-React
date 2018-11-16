@@ -3,7 +3,7 @@ import styled from './../../node_modules/styled-components';
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
-const HeaderContainer = styled.div`
+const Div = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -18,12 +18,14 @@ const HeaderContainer = styled.div`
 		width: 1280px;
 	}
 `;
-const DateSpan = styled.span`
+const Span = styled.span`
 	align-self: flex-end;
 	font-size: 11px;
 	font-weight: bold;
 	letter-spacing: 1px;
-	margin-left: 25px;
+	text-align: ${props => props.temp ? 'right' : null};
+	margin-left: ${props => props.date ? '25px' : null};
+	margin-right: ${props => props.temp ? '25px' : null};
 	flex: 1;
 `;
 const Heading = styled.h1`
@@ -35,23 +37,14 @@ const Heading = styled.h1`
 	color: #000;
 `;
 
-const TempSpan = styled.span`
-	align-self: flex-end;
-	font-size: 11px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	text-align: right;
-	margin-right: 25px;
-	flex: 1;
-`;
 
 const Header = () => {
 	return (
-		<HeaderContainer>
-			<DateSpan>SMARCH 32, 2018</DateSpan>
+		<Div>
+			<Span date>SMARCH 32, 2018</Span>
 			<Heading>Lambda Times</Heading>
-			<TempSpan>98°</TempSpan>
-		</HeaderContainer>
+			<Span temp>98°</Span>
+		</Div>
 	);
 };
 
