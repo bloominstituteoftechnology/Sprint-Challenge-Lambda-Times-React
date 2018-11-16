@@ -19,12 +19,17 @@ const Authenticate = Component => class extends React.Component {
     }
   }
 
+  logOut = () => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   render() {
     return  this.state.loggedIn ? (
-      <Component />
+      <Component logout={this.logOut} loggedIn={this.state.loggedIn}/>
     ) : (
       <div>
-        <TopBar />
+        <TopBar loggedIn={this.state.loggedIn}/>
         <Header />
         <Login />
       </div>

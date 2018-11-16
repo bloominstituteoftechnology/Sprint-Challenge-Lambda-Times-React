@@ -6,7 +6,8 @@ import { StyledTopBar, StyledContainer,
 // You can find the corresponding CSS in the CSS/index.css file
 
 
-const TopBar = () => {
+const TopBar = (props) => {
+  const logInText = props.loggedIn ? 'LOG OUT' : 'LOG IN'
   return (
     <StyledTopBar>
       <StyledContainer>
@@ -17,7 +18,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <span onClick={props.logout}>{logInText}</span>
         </ContainerRight>
       </StyledContainer>
     </StyledTopBar>

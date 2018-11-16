@@ -4,10 +4,11 @@ import Header from './components/Header';
 import Content from './components/Content/Content';
 import Authenticate from './Authenticate';
 
-const App = () => {
+
+const App = (props) => {
   return (
     <div className="App">
-      <TopBar />
+      <TopBar logout={props.logout} loggedIn={props.loggedIn}/>
       <Header />
       <Content />
     </div>
