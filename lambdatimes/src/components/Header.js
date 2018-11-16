@@ -37,6 +37,7 @@ const HeaderSection = styled.div`
 const TheDateIs = styled.span`
   margin-left: 25px;
   flex: 1;
+  letter-spacing: 1px;
 `;
 
 const Headline = styled.h1`
@@ -54,9 +55,9 @@ const Temperature = styled.span`
 const Header = () => {
   return (
     <HeaderSection>
-      <TheDateIs className="date">SMARCH 32, 2018</TheDateIs>
+      <TheDateIs >SMARCH 32, 2018</TheDateIs>
       <Headline>Lambda Times</Headline>
-      <Temperature className="temp">98°</Temperature>
+      <Temperature >98°</Temperature>
     </HeaderSection>
   )
 }
