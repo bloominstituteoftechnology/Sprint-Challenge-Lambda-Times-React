@@ -53,11 +53,6 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-.content-container {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-}
 .tabs {
   border-bottom: 1px solid lightgrey;
   display: flex;
