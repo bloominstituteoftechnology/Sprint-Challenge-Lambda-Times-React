@@ -1,6 +1,65 @@
 import React, { Component } from "react";
 import { carouselData } from "../../data";
-// Complete this Carousel
+import styled, { css } from "styled-components";
+
+const CarouselSlider = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+`;
+
+const CarouselButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  background-color: #333;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+  }
+
+  ${props =>
+    props.left &&
+    css`
+      top: 50%;
+      left: 25px;
+      transform: translate(0, -50%);
+    `};
+
+  ${props =>
+    props.right &&
+    css`
+      top: 50%;
+      right: 25px;
+      transform: translate(0, -50%);
+    `}
+`;
+
+const CarouselImg = styled.img`
+  width: 100%;
+  display: none;
+`;
+
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +94,7 @@ export default class Carousel extends Component {
 
   selectedImageIndex = () => {
     return (
-      <img
+      <CarouselImg
         src={this.state.slider[this.state.selectedImageIndex]}
         style={{ display: "block" }}
       />
@@ -43,18 +102,18 @@ export default class Carousel extends Component {
   };
 
   render() {
-    console.log("SLIDER STATE LENGTH", this.state.slider.length);
+    // console.log("SLIDER STATE LENGTH", this.state.slider.length);
 
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>
+      <CarouselSlider>
+        <CarouselButton left onClick={this.leftClick}>
           {"<"}
-        </div>
+        </CarouselButton>
         {this.selectedImageIndex()}
-        <div className="right-button" onClick={this.rightClick}>
+        <CarouselButton right onClick={this.rightClick}>
           {">"}
-        </div>
-      </div>
+        </CarouselButton>
+      </CarouselSlider>
     );
   }
 }
