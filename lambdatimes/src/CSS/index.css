@@ -131,12 +131,12 @@ body {
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-} */
+}
 @media (min-width: 1280px) {
   .header {
     width: 1280px;
   }
-}
+} 
 .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
@@ -145,6 +145,8 @@ body {
   text-align: center;
   color: #000;
 }
+
+
 .header span {
   align-self: flex-end;
   font-size: 11px;
@@ -155,11 +157,15 @@ body {
   margin-left: 25px;
   flex: 1;
 }
+
+
 .header .temp {
   text-align: right;
   margin-right: 25px;
   flex: 1;
 }
+
+*/
 .content-container {
   display: flex; 
   flex-direction: column; 
