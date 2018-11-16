@@ -1,5 +1,70 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
+import styled, { css } from 'styled-components';
+
+const CarouselDiv = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+
+  ${props =>
+    props.mediaBreak &&
+    css`
+    min-width: 1200px;
+    width: 1200px;
+    `};
+`;
+
+const CarouselArrowDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  background-color: #333;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  &:hover{
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+  }
+
+  ${props =>
+    props.leftBtn &&
+    css`
+    top: 50%;
+    left: 25px;
+    transform: translate(0, -50%);
+    `};
+
+    ${props =>
+      props.rightBtn &&
+      css`
+      top: 50%;
+      right: 25px;
+      transform: translate(0, -50%);
+      `};
+`;
+
+const CarouselImg = styled.div`
+  width: 100%;
+  display: none;
+`;
+
+
+
 // Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
@@ -40,16 +105,16 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={this.state.carouselImages[this.state.imgIndex]} style={{display: 'block'}} />
+    return <img src={this.state.carouselImages[this.state.imgIndex]} style={{display: 'block'}} alt='carousel'/>
   }
   
   render(){
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={() => this.leftClick()}>{"<"}</div>
+      <CarouselDiv >
+        <CarouselArrowDiv leftBtn onClick={() => this.leftClick()}>{"<"}</CarouselArrowDiv>
         <div>{this.selectedImage()}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+        <CarouselArrowDiv rightBtn onClick={this.rightClick}>{">"}</CarouselArrowDiv>
+      </CarouselDiv>
     )
   }
 }

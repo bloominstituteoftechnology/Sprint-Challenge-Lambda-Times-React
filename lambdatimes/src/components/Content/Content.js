@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import Carousel from '../Carousel/Carousel';
 import Tabs from './Tabs';
 import Cards from './Cards';
+import styled, { css } from "styled-components";
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+
+const ContentContainerDiv = styled.div`
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+`;
 
 export default class Content extends Component {
   constructor(props) {
@@ -64,7 +71,7 @@ export default class Content extends Component {
     // console.log(this.state.tabs)
     // console.log(this.state.cards)
     return (
-      <div className="content-container">
+      <ContentContainerDiv >
         {/* 
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
@@ -81,7 +88,7 @@ export default class Content extends Component {
         <Cards 
           cards={this.filterCards()} 
         />
-      </div>
+      </ContentContainerDiv>
     );
   }
 }
