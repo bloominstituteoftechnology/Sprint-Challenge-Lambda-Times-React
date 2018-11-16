@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 const Card = props => {
   return (
+    // DONE
     <div className="card">
       <div className="headline">{props.card.headline}</div>
       <div className="author">
