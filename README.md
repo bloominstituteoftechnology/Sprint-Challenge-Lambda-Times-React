@@ -30,13 +30,13 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 - Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
 - You should now be able to filter cards using your tabs! -->
 
-### Part II
+<!-- ### Part II
 
-- Make sure all of your props being passed are validated using PropTypes.
+- Make sure all of your props being passed are validated using PropTypes. -->
 
 ### Part III
 
-- Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished. Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components.
+<!-- - Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished. Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components. -->
 
 ## Stretch Challenge
 
