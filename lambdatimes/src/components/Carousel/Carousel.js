@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data';
-import {TweenMax} from 'gsap/TweenMax';
+import {TweenMax, Power2} from 'gsap/TweenMax';
 // Complete this Carousel
 export default class Carousel extends Component {
   constructor(props){
@@ -26,7 +26,7 @@ export default class Carousel extends Component {
 
       TweenMax.set('#nextImg', {display: 'block'});
 
-      TweenMax.to('#currentImg', 1, {xPercent: -100, onComplete: () => {
+      TweenMax.to('#currentImg', 1, {xPercent: -100, ease: Power2.easeInOut, onComplete: () => {
 
         this.setState({currentIndex: newIndex});
         TweenMax.set('#currentImg', {xPercent: 0});
@@ -34,7 +34,7 @@ export default class Carousel extends Component {
 
       }});
 
-      TweenMax.to('#nextImg', 1, {xPercent: 0});
+      TweenMax.to('#nextImg', 1, {xPercent: 0, ease: Power2.easeInOut});
 
     });
 

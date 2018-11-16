@@ -97,7 +97,7 @@ const TopBarContainerRight = styled.div`
 
 `;
 
-const TopBar = () => {
+const TopBar = ({username, setUsername, toggleBtnPress}) => {
   return (
     <TopBarContainer>
         <TopBarContainerLeft>
@@ -107,7 +107,9 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </TopBarContainerCenter>
         <TopBarContainerRight>
-          <span>LOG IN</span>
+          <span onClick={() => {
+            username == '' ? toggleBtnPress() : setUsername('');
+          }}>{username === '' ? 'LOG IN' : username.toUpperCase()}</span>
         </TopBarContainerRight>
       </TopBarContainer>
   )
