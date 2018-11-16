@@ -4,8 +4,7 @@ import styled from 'styled-components';
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopBarContainer = styled.div
-`
+const TopBarContainer = styled.div`
 
   width: 100%;
   display: flex;
@@ -30,8 +29,7 @@ const TopBarContainer = styled.div
 
 `;
 
-const TopBarContainerLeft = styled.div
-`
+const TopBarContainerLeft = styled.div`
 
   display: flex;
   justify-content: none;
@@ -50,8 +48,7 @@ const TopBarContainerLeft = styled.div
 
 `;
 
-const TopBarContainerCenter = styled.div
-`
+const TopBarContainerCenter = styled.div`
 
   display: flex;
   justify-content: center;
@@ -81,8 +78,7 @@ const TopBarContainerCenter = styled.div
 
 `;
 
-const TopBarContainerRight = styled.div
-`
+const TopBarContainerRight = styled.div`
 
   display: flex;
   justify-content: flex-end;
@@ -98,7 +94,7 @@ const TopBarContainerRight = styled.div
 
   }
 
-`
+`;
 
 const TopBar = () => {
   return (
