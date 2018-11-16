@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderContainer, HeaderHeading, HeaderDate, HeaderTemp } from '../StyledComponents/Header';
+import { HeaderContainer, HeaderHeading, HeaderDate, HeaderTemp } from '../StyledComponents/Header-st';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
