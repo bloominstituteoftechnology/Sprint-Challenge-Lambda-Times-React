@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const _Tab = styled.div`
+const TabWrapper = styled.div`
   display: flex;
   justify-content: none;
   align-items: center;
@@ -20,7 +20,7 @@ const _Tab = styled.div`
   }
 `;
 
-const ActiveTab = styled(_Tab)`
+const ActiveTab = styled(TabWrapper)`
   background-color: #fff;
   color: #333;
   border: 2px solid #333;
@@ -33,10 +33,10 @@ const Tab = props => {
       {props.tab.toUpperCase()}{" "}
     </ActiveTab>
   ) : (
-    <_Tab onClick={() => props.selectTabHandler(props.tab)}>
+    <TabWrapper onClick={() => props.selectTabHandler(props.tab)}>
       {" "}
       {props.tab.toUpperCase()}
-    </_Tab>
+    </TabWrapper>
   );
   // <div
   //   className={props.tab === props.selectedTab ? "tab active-tab" : "tab"}

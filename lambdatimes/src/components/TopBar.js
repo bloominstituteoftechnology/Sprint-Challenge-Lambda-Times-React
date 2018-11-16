@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
@@ -76,28 +77,95 @@ const ContainRight = styled.div`
     cursor: pointer;
   }
 `;
+class TopBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      modal: false,
+      username: "",
+      password: ""
+    };
+  }
 
-const TopBar = () => {
-  return (
-    <Bar>
-      <Container>
-        <ContainLeft>
-          <span>TOPICS</span>
-          <span>SEARCH</span>
-        </ContainLeft>
-        <ContainCenter>
-          <span>GENERAL</span>
-          <span>BROWNBAG</span>
-          <span>RANDOM</span>
-          <span>MUSIC</span>
-          <span>ANNOUNCEMENTS</span>
-        </ContainCenter>
-        <ContainRight>
-          <span>LOG IN</span>
-        </ContainRight>
-      </Container>
-    </Bar>
-  );
-};
+  handleChange = ev => {
+    this.setState({ [ev.target.name]: ev.target.value });
+  };
+
+  toggle = () => {
+    this.setState({ modal: !this.state.modal });
+  };
+
+  onSubmit = ev => {
+    let username = ev.target.value;
+    localStorage.setItem(username, username);
+    console.log(localStorage);
+  };
+
+  render() {
+    let modal;
+    if (this.state.modal) {
+      modal = (
+        <div>
+          <Modal
+            isOpen={this.state.modal}
+            toggle={this.toggle}
+            className={this.props.className}
+          >
+            <ModalHeader>Login Please</ModalHeader>
+            <ModalBody>
+              <form onSubmit={this.onSubmit}>
+                username:
+                <input
+                  type="text"
+                  name="username"
+                  onChange={this.handleChange}
+                  value={this.state.username}
+                  required
+                />
+                <br />
+                password:
+                <input
+                  type="password"
+                  name="password"
+                  onChange={this.handleChange}
+                  value={this.state.password}
+                  required
+                />
+              </form>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="primary" onClick={this.toggle}>
+                Login
+              </Button>
+            </ModalFooter>
+          </Modal>
+        </div>
+      );
+    }
+
+    return (
+      <Bar>
+        <Container>
+          <ContainLeft>
+            <span>TOPICS</span>
+            <span>SEARCH</span>
+          </ContainLeft>
+          <ContainCenter>
+            <span>GENERAL</span>
+            <span>BROWNBAG</span>
+            <span>RANDOM</span>
+            <span>MUSIC</span>
+            <span>ANNOUNCEMENTS</span>
+          </ContainCenter>
+          <ContainRight>
+            <span onClick={this.toggle}>LOG IN</span>
+            {modal}
+          </ContainRight>
+        </Container>
+      </Bar>
+    );
+  }
+}
+// const TopBar = () => {};
 
 export default TopBar;
