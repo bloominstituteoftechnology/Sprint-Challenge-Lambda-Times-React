@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { carouselData } from '../../data'
 // Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      images:[],
     }
   }
   componentDidMount(){
-
+    this.setstate({
+      images:carouselData,
+    })
   }
 
   leftClick = () => {

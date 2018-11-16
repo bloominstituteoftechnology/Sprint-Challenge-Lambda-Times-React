@@ -50,7 +50,7 @@ const HeaderH1 = styled.h1`
 
 const Header = () => {
   return (
-    <HeaderComponent className="header">
+    <HeaderComponent>
       <Span date>SMARCH 32, 2018</Span>
       <HeaderH1>Lambda Times</HeaderH1>
       <Span temp>98°</Span>
