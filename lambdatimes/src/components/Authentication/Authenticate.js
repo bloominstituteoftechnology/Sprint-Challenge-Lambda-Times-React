@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Login from '../Login/Login';
-
 const Authenticate = App  => (
   class extends React.Component {
     constructor(props) {
@@ -22,9 +20,7 @@ const Authenticate = App  => (
 
 
     render () {
-      return this.state.loggedIn ?
-        <App /> :
-        <Login />
+      return this.state.loggedIn && <App />
     }
   }
 )

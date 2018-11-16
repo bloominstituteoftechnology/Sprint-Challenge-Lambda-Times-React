@@ -1,10 +1,8 @@
 // Importing libraries
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 // Importing data
 import { carouselData } from '../../data'
-import { runInThisContext } from 'vm';
 
 // Complete this Carousel 
 export default class Carousel extends Component {

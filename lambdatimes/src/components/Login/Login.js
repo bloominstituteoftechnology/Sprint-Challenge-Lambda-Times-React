@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledLoginForm = styled.div`
-  width: 50rem;
-  margin: 7rem auto;
+  width:30rem;
+  margin: 2rem auto;
 `;
 
 const StyledForm = styled.div`
@@ -13,7 +13,7 @@ const StyledForm = styled.div`
 
 const StyledInput = styled.input`
   all: unset;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 1.4rem;
   border: 1px solid gray;
   border-radius: .5rem;
@@ -26,7 +26,7 @@ const StyledInput = styled.input`
 `;
 
 const StyledButton = styled.button`
-  padding: 2rem;
+  padding: 1rem;
   font-size: 2.4rem;
   font-weight: bold;
   border: 2px solid white;
@@ -46,9 +46,9 @@ const StyledButton = styled.button`
 `;
 
 const Hint = styled.ul`
-  margin: 2rem;
+  margin: 1rem;
   list-style: square inside;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: gray;
 `;
 

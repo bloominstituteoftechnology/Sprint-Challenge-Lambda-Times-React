@@ -2,6 +2,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {Modal, ModalHeader} from 'reactstrap';
+import Login from './Login/Login';
+
 const TopBarComp = styled.div`
   width: 100%;
   display: flex;
@@ -70,27 +73,47 @@ const LeftSpan = styled(RightSpan)`
   font-weight: bold;
 `;
 
-const TopBar = () => {
-  return (
-    <TopBarComp>
-      <Container>
-        <LeftContainer>
-          <LeftSpan>TOPICS</LeftSpan>
-          <LeftSpan>SEARCH</LeftSpan>
-        </LeftContainer>
-        <CenterContainer>
-          <CenterSpan>GENERAL</CenterSpan>
-          <CenterSpan>BROWNBAG</CenterSpan>
-          <CenterSpan>RANDOM</CenterSpan>
-          <CenterSpan>MUSIC</CenterSpan>
-          <CenterSpan>ANNOUNCEMENTS</CenterSpan>
-        </CenterContainer>
-        <RightContainer>
-          <RightSpan>LOG IN</RightSpan>
-        </RightContainer>
-      </Container>
-    </TopBarComp>
-  )
+class TopBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    }
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+    return (
+      <TopBarComp>
+        <Container>
+          <LeftContainer>
+            <LeftSpan>TOPICS</LeftSpan>
+            <LeftSpan>SEARCH</LeftSpan>
+          </LeftContainer>
+          <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Log In</ModalHeader>
+          <Login toggle={this.toggle}/>
+        </Modal>
+          <CenterContainer>
+            <CenterSpan>GENERAL</CenterSpan>
+            <CenterSpan>BROWNBAG</CenterSpan>
+            <CenterSpan>RANDOM</CenterSpan>
+            <CenterSpan>MUSIC</CenterSpan>
+            <CenterSpan>ANNOUNCEMENTS</CenterSpan>
+          </CenterContainer>
+          <RightContainer>
+            <RightSpan onClick={this.toggle}>LOG IN</RightSpan>
+          </RightContainer>
+        </Container>
+      </TopBarComp>
+    )
+  }
 }
 
 export default TopBar;
