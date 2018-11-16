@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import styled from 'styled-components';
 
 // Refactor this component to use styled components and not classNames.
@@ -97,22 +98,88 @@ const TopBarContainerRight = styled.div`
 
 `;
 
-const TopBar = ({username, setUsername, toggleBtnPress}) => {
-  return (
-    <TopBarContainer>
-        <TopBarContainerLeft>
-          <span>TOPICS</span><span>SEARCH</span>
-        </TopBarContainerLeft>
-        <TopBarContainerCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </TopBarContainerCenter>
-        <TopBarContainerRight>
-          <span onClick={() => {
-            username == '' ? toggleBtnPress() : setUsername('');
-          }}>{username === '' ? 'LOG IN' : username.toUpperCase()}</span>
-        </TopBarContainerRight>
-      </TopBarContainer>
-  )
+class TopBar extends React.Component {
+
+  constructor() {
+
+    super();
+
+    this.state = {
+
+      open: false
+
+    }
+
+  }
+
+  toggle = () => {
+
+    this.setState({open: !this.state.open});
+
+  }
+
+  addPost = () => {
+
+    const newPost = {
+
+      headline: document.querySelector('#title').value,
+      tab: document.querySelector('#category').value,
+      img: './assets/sir.jpg',
+      author: this.props.username
+
+    }
+
+    this.props.addCard(newPost, document.querySelector('#category').value);
+    this.toggle();
+
+  }
+
+  render() {
+
+    const {username, setUsername, toggleBtnPress} = this.props;
+
+    return (
+      <TopBarContainer>
+
+        <Modal isOpen={this.state.open} toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle}>New Post</ModalHeader>
+          <ModalBody>
+            <Form style={{display: 'flex', flexDirection: 'column', marginTop: '20px'}} onSubmit={
+              e => e.preventDefault()
+            }>
+              <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                <Label for="articleTitle" className="mr-sm-2">Title</Label>
+                <Input type="text" name="title" id="title" placeholder="title"/>
+              </FormGroup>
+              <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                <Label for="articleCategory" className="mr-sm-2">Category</Label>
+                <Input type="text" name="category" id="category" placeholder="category"/>
+              </FormGroup>
+            </Form>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={this.addPost}>Submit</Button>
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
+
+          <TopBarContainerLeft>
+            <span>TOPICS</span><span>SEARCH</span>
+          </TopBarContainerLeft>
+          <TopBarContainerCenter>
+            <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+            {username !== '' && <span onClick={this.toggle}>NEW POST</span>}
+          </TopBarContainerCenter>
+          <TopBarContainerRight>
+            <span onClick={() => {
+              username == '' ? toggleBtnPress() : setUsername('');
+            }}>{username === '' ? 'LOG IN' : username.toUpperCase()}</span>
+          </TopBarContainerRight>
+        </TopBarContainer>
+    );
+
+  }
+
 }
 
 export default TopBar;
