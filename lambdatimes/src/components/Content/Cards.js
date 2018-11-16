@@ -5,8 +5,8 @@ import Card from './Card';
 const Cards = props => {
   return (
     <div className="cards-container">
-      {props.cards.map(card => {
-        return <Card  card={card} />
+      {props.cards.map( (card, index) => {
+        return <Card  key={index} card={card} />
       })}
       
       {/* Using the cards prop, map over the list creating a 
@@ -18,12 +18,12 @@ const Cards = props => {
 // Make sure you include prop types for all of your incoming props
 
 Cards.propTypes = {
-  cards: PropTypes.shape({
+  cards: PropTypes.arrayOf(PropTypes.shape({
     headline: PropTypes.string,
     tab: PropTypes.string,
     img: PropTypes.string,
     auther: PropTypes.string,
-  }),
+  }),) 
 }
 
 export default Cards;

@@ -13,6 +13,7 @@ const TopBarContainer = styled.div`
 `
 
 const Container = styled.div`
+  max-width: 1280px;
   width: 100%;
   display: flex;
   justify-content: none;
@@ -51,6 +52,27 @@ const ContainerRight = styled.div`
   font-weight: bold;
 `
 
+const SpanLeft = styled.span`
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;`
+
+const SpanCenter = styled.span`
+  cursor: pointer;
+  margin-right: 5%;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  
+`
+
+const SpanRight = styled.span`cursor: pointer;`
+
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
@@ -59,13 +81,13 @@ const TopBar = () => {
     <TopBarContainer>
       <Container>
         <ContainerLeft>
-          <span>TOPICS</span><span>SEARCH</span>
+          <SpanLeft>TOPICS</SpanLeft><SpanLeft>SEARCH</SpanLeft>
         </ContainerLeft>
         <ContainerCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          <SpanCenter>GENERAL</SpanCenter><SpanCenter>BROWNBAG</SpanCenter><SpanCenter>RANDOM</SpanCenter><SpanCenter>MUSIC</SpanCenter><SpanCenter>ANNOUNCEMENTS</SpanCenter>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <SpanRight>LOG IN</SpanRight>
         </ContainerRight>
       </Container>
     </TopBarContainer>

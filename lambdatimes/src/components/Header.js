@@ -8,6 +8,7 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   background-color: #fff;
   border-bottom: 1px solid lightgrey;
+  max-width: 1280px;
   width: 100%;
   height: 120px;
   margin-top: 44px;
@@ -29,6 +30,10 @@ const HeaderContainer = styled.div`
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-left: 25px;
+    flex: 1;
+
+
 
     ${props => props.type === 'date' ? 
     `margin-left: 25px;
@@ -36,7 +41,7 @@ const HeaderContainer = styled.div`
 
     ${props => props.type === 'temp' ? 
     `text-align: right;
-     magin-right: 25px;
+     margin-right: 25px;
      flex: 1;`: null}
   `
 
