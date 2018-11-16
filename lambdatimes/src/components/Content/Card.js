@@ -67,7 +67,7 @@ const CardWrapper = styled.div`
   cursor: pointer;
 
   p {
-    display: ${props => props.expanded === 'true' ? 'inline' : 'none'}
+    display: ${props => props.expanded === 'true' ? 'inline' : 'none'};
     margin: 10px;
   }
 
