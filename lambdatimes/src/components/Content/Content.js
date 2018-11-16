@@ -23,8 +23,10 @@ export default class Content extends Component {
     });
   }
 
-  changeSelected = tab => {
-    // this.state.cards.map(card => )
+  changeSelected = (e, tab) => {
+    console.log("SELECTED TAB", e.target);
+    // e.target.classList.toggle("active-tab");
+    this.setState({ selected: tab });
   };
 
   filterCards = () => {
@@ -40,7 +42,12 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
+
+    let cardsArr = [...this.state.cards];
+    if (this.state.selected === "all") {
+      return this.state.cards;
+    }
+    return cardsArr.filter(card => card.tab === this.state.selected);
   };
 
   render() {
@@ -51,11 +58,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs
-          tabs={this.state.tabs}
-          selectedTab={this.filterCards}
-          selectTabHandler={this.changeSelected}
-        />
+        <Tabs tabs={this.state.tabs} selectedTab={this.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
     );
