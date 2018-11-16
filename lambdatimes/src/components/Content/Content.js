@@ -56,7 +56,7 @@ export default class Content extends Component {
           selectedTab={this.filterCards}
           selectTabHandler={this.changeSelected}
         />
-        <Cards cards={this.filterCards()} cards={this.state.cards} />
+        <Cards cards={this.filterCards()} />
       </div>
     );
   }
