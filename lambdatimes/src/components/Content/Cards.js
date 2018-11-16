@@ -1,15 +1,32 @@
+// libraries impor
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+// components import
 import Card from './Card';
 
 const Cards = props => {
+  // destructuring props for readability
+  const {cards} = {...props};
   return (
     <div className="cards-container">
-      {/* Using the cards prop, map over the list creating a 
-          new Card component for each passing the card as the only prop*/}
+      {
+        // map over the tabs
+        cards.map((card, i) => (
+          <Card key={i} card={card} />
+        ))
+      }
     </div>
   )
 }
 
-// Make sure you include prop types for all of your incoming props
+Cards.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.shape({
+    headline: PropTypes.string,
+    tab: PropTypes.string,
+    img: PropTypes.string,
+    author: PropTypes.string,
+  })).isRequired,
+}
 
 export default Cards;
