@@ -13,7 +13,7 @@ const CardsContainer = styled.div`
   flex-wrap: wrap;
 
   @media (min-width: 1280px) {
-    width: 1200px;
+    width: 1280px;
   }
 `;
 
