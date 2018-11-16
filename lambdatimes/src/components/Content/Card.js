@@ -6,9 +6,9 @@ const Card = props => {
       <div className="headline">{props.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={"" /* image source goes here */} />
+          <img src={props.imgSrc} />
         </div>
-        <span>By {/* author goes here */}</span>
+        <span>By {props.author}</span>
       </div>
     </div>
   );

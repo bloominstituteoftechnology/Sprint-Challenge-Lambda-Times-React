@@ -23,26 +23,17 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
-    tab.preventDefault();
     this.setState({
-      selected: tab.target.tab
+      selected: tab
     });
   };
 
   filterCards = () => {
     if (this.state.selected === "all") {
-      this.setState({
-        cards: Cards
-      });
+      return this.state.cards;
     } else {
-      let filtered = Cards.filter(card =>
-        card.tab.includes(this.state.selected)
-      );
-      this.setState({
-        cards: filtered
-      });
+      return this.state.cards.filter(card => card.tab === this.state.selected);
     }
-    return this.state.cards;
   };
 
   render() {

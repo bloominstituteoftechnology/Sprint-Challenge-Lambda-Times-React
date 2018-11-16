@@ -5,7 +5,12 @@ const Cards = props => {
   return (
     <div className="cards-container">
       {props.cards.map(card => (
-        <Card headline={card.headline} imgSrc={card.img} author={card.author} />
+        <Card
+          headline={card.headline}
+          imgSrc={card.img}
+          author={card.author}
+          key={card.headline}
+        />
       ))}
     </div>
   );
