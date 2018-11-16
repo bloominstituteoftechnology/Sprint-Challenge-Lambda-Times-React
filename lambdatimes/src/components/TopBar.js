@@ -11,6 +11,7 @@ const TopBarComp = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 10;
 `;
 
 const Container = styled.div`
