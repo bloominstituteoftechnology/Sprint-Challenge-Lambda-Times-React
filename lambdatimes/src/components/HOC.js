@@ -27,6 +27,7 @@ const HOC = Content => {
       return (
         <Fragment>
           <TopBar />
+          <Header />
         </Fragment>
       );
     }

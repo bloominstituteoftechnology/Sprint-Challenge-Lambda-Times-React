@@ -99,7 +99,6 @@ class TopBar extends Component {
     ev.preventDefault();
     let username = this.state.username;
     localStorage.setItem("username", username);
-    console.log(localStorage);
     window.location.reload();
   };
 
