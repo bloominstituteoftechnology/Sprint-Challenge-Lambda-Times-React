@@ -77,6 +77,20 @@ const ContainRight = styled.div`
     cursor: pointer;
   }
 `;
+const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+const Username = styled.input`
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1%;
+`;
+const Password = styled(Username)`
+  margin-bottom: 5%;
+`;
+
 class TopBar extends Component {
   constructor() {
     super();
@@ -112,11 +126,11 @@ class TopBar extends Component {
             toggle={this.toggle}
             className={this.props.className}
           >
-            <ModalHeader>Login Please</ModalHeader>
+            <ModalHeader>Login</ModalHeader>
             <ModalBody>
-              <form onSubmit={this.onSubmit}>
+              <LoginForm onSubmit={this.onSubmit}>
                 username:
-                <input
+                <Username
                   type="text"
                   name="username"
                   onChange={this.handleChange}
@@ -125,7 +139,7 @@ class TopBar extends Component {
                 />
                 <br />
                 password:
-                <input
+                <Password
                   type="password"
                   name="password"
                   onChange={this.handleChange}
@@ -133,7 +147,7 @@ class TopBar extends Component {
                   required
                 />
                 <Button color="primary">Login</Button>
-              </form>
+              </LoginForm>
             </ModalBody>
             <ModalFooter />
           </Modal>
