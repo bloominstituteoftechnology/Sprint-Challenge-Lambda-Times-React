@@ -20,23 +20,23 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 
 ## Project Setup
 
-- This project was put together using Create React App so you should be very familiar with the file structure up to this point.
-- From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
+[ x ] - This project was put together using Create React App so you should be very familiar with the file structure up to this point.
+[ x ] - From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps:
 
 ### Part I
 
-- Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
-- Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- You should now be able to filter cards using your tabs!
+[ x ] - Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+[ ] - Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+[ ] - Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+[ ] - You should now be able to filter cards using your tabs!
 
 ### Part II
 
-- Make sure all of your props being passed are validated using PropTypes.
+[ ] - Make sure all of your props being passed are validated using PropTypes.
 
 ### Part III
 
-- Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished. Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components.
+[ ] - Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished. Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components.
 
 ## Stretch Challenge
 
