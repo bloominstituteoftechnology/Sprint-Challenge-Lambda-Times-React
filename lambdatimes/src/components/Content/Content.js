@@ -26,12 +26,13 @@ export default class Content extends Component {
     })
   }
 
-  changeSelected = (event) => {
+  changeSelected = event => {
     // this function should take in the tab and update the state with the new tab.
     console.log('Clicked ', event.target)
     this.setState({
-      selected: event.target, //Not sure about this at all
+      selected: event.target.innerHTML.toLowerCase(), //Not sure about this at all
     })
+    console.log('=>>> Selected state is', this.state.selected)
   };
 
   filterCards = () => {
@@ -48,12 +49,15 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
     if (this.state.selected === 'all') {
-      console.log('Selected', this.state.selected)
+      // console.log('Selected', this.state.selected)
+      console.log('Tabs', this.state.cards.tab)
       return this.state.cards;
-    }  
-    // else {
-    //   return (this.state.cards.tab);
-    // }
+    }  else  {
+      // console.log('Other tab selected', this.state.tab)
+
+      return this.state.cards;
+      // return (this.state.cards.tab === this.state.selected);
+    }
     
   };
 
