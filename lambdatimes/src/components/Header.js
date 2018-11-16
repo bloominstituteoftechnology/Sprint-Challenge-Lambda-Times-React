@@ -7,7 +7,7 @@ import { HeaderDiv, HeaderSpan, HeaderHigh } from "../CSS/Styles";
 const Header = () => {
   return (
     <HeaderDiv>
-      <HeaderSpan date>SMARCH 32, 2018</HeaderSpan>
+      <HeaderSpan date>MARCH 32, 2018</HeaderSpan>
       <HeaderHigh>Lambda Times</HeaderHigh>
       <HeaderSpan temp>98°</HeaderSpan>
     </HeaderDiv>
