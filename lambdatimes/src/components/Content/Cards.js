@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import shortid from 'shortid';
+import { PropTypes } from 'prop-types';
 
 const Cards = (props) => {
     return (
@@ -10,6 +11,10 @@ const Cards = (props) => {
             {props.cards.map((card) => <Card card={card} key={shortid.generate()} />)}
         </div>
     );
+};
+
+Cards.propTypes = {
+    cards : PropTypes.array.isRequired
 };
 
 // Make sure you include prop types for all of your incoming props

@@ -1,6 +1,7 @@
 import React from 'react';
 import Tab from './Tab';
 import shortid from 'shortid';
+import { PropTypes } from 'prop-types';
 const Tabs = (props) => {
     return (
         <div className="tabs">
@@ -19,6 +20,12 @@ const Tabs = (props) => {
             </div>
         </div>
     );
+};
+
+Tabs.propTypes = {
+    selectedTabHandler : PropTypes.func.isRequired,
+    selectedTab        : PropTypes.string.isRequired,
+    tabs               : PropTypes.array.isRequired
 };
 
 // Make sure to use PropTypes to validate your types!
