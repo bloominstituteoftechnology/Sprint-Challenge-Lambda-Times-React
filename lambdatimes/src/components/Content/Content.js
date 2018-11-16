@@ -1,22 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Tabs from './Tabs';
-import Cards from './Cards';
+import Tabs from "./Tabs";
+import Cards from "./Cards";
 
 // Importing our tab and card data. No need to change anything here.
-import { tabData, cardData } from '../../data';
+import { tabData, cardData } from "../../data";
 
 export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'all',
+      selected: "all",
       tabs: [],
       cards: []
     };
   }
 
   componentDidMount() {
+    this.setState({
+      tabs: tabData,
+      cards: cardData
+    });
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
