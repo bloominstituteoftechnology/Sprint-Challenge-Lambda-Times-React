@@ -27,14 +27,11 @@ export default class Content extends Component {
   };
 
   filterCards = () => {
-    console.log(this.state.selected !== "all");
     let filter = this.state.cards;
     if (this.state.selected !== "all") {
       filter = filter.filter(card => {
-        console.log(card.tab);
         return this.state.selected === card.tab;
       });
-      console.log(filter);
       return filter;
       // this.setState({ cards: filter });
     }
