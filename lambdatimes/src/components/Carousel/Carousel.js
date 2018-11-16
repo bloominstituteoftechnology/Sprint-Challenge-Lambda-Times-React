@@ -13,8 +13,8 @@ export default class Carousel extends Component {
     this.setState({images: carouselData})
   }
 
-  leftClick = (ev) => {
-    ev.preventDefault();
+  leftClick = () => {
+    // ev.preventDefault();
     if(this.state.index === 0){
       this.setState({index: this.state.images.length-1})
     }
@@ -23,8 +23,8 @@ export default class Carousel extends Component {
     }
   }
 
-  rightClick = (ev) => {
-    ev.preventDefault();
+  rightClick = () => {
+    // ev.preventDefault();
     if(this.state.index === this.state.images.length-1){
       this.setState({index: 0});
     }
