@@ -2,6 +2,7 @@ import React from "react";
 import TopBar from "./components/TopBar";
 import Header from "./components/Header";
 import Content from "./components/Content/Content";
+import HOC from "./components/HOC";
 import styled from "styled-components";
 
 const AppWrapper = styled.div`
@@ -23,4 +24,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default HOC(App);

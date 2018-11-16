@@ -96,9 +96,11 @@ class TopBar extends Component {
   };
 
   onSubmit = ev => {
-    let username = ev.target.value;
-    localStorage.setItem(username, username);
+    ev.preventDefault();
+    let username = this.state.username;
+    localStorage.setItem("username", username);
     console.log(localStorage);
+    window.location.reload();
   };
 
   render() {
@@ -131,13 +133,10 @@ class TopBar extends Component {
                   value={this.state.password}
                   required
                 />
+                <Button color="primary">Login</Button>
               </form>
             </ModalBody>
-            <ModalFooter>
-              <Button color="primary" onClick={this.toggle}>
-                Login
-              </Button>
-            </ModalFooter>
+            <ModalFooter />
           </Modal>
         </div>
       );
