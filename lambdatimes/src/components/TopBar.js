@@ -14,25 +14,9 @@ const TopBarSection = styled.div`
   height: 44px;
   background-color: #333;
   }
-
   `;
 
   `
-  .top-bar .container {
-    width: 100%;
-    display: flex;
-    justify-content: none;
-    align-items: none;
-    flex-direction: row;
-    color: #fff;
-    letter-spacing: 1px;
-    padding: 0 10px;
-  }
-  @media (min-width: 1280px) {
-    .top-bar .container {
-      width: 1280px;
-    }
-  }
   .top-bar .container .container-left {
     display: flex;
     justify-content: none;
@@ -63,12 +47,6 @@ const TopBarSection = styled.div`
   }
 `;
 
-
-const AllSpans = styled.span``;
-
-const AllSpans = styled.span``;
-
-
 const TopContainerDiv = styled.div`
     width: 100%;
     display: flex;
@@ -85,8 +63,10 @@ const TopContainerDiv = styled.div`
     }
     `;
 
+    
+
 const TopContainerLeft = styled.div`
-  display: flex;
+    display: flex;
     justify-content: none;
     align-items: center;
     flex-direction: row;
@@ -118,21 +98,22 @@ const TopContainerRight = styled.div`
 
 
 
+
 const TopBar = () => {
   return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
+    <TopBarSection>
+      <TopContainerDiv>
+        <TopContainerLeft>
           <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
+        </TopContainerLeft>
+        <TopContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
+        </TopContainerCenter>
+        <TopContainerRight>
           <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
+        </TopContainerRight>
+      </TopContainerDiv>
+    </TopBarSection>
   )
 }
 
