@@ -49,14 +49,9 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
     if (this.state.selected === 'all') {
-      // console.log('Selected', this.state.selected)
-      console.log('Tabs', this.state.cards.tab)
       return this.state.cards;
     }  else  {
-      // console.log('Other tab selected', this.state.tab)
-
-      return this.state.cards;
-      // return (this.state.cards.tab === this.state.selected);
+      return this.state.cards.filter(card => card.tab === this.state.selected);
     }
     
   };
