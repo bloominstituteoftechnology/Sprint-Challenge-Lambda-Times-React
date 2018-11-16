@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Login from './Login';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
@@ -80,22 +81,38 @@ const ContainerRight = styled.div`
   }
 `
 
-const TopBar = () => {
-  return (
-    <TopBarDiv>
-      <Container>
-        <ContainerLeft>
-          <span>TOPICS</span><span>SEARCH</span>
-        </ContainerLeft>
-        <ContainerCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </ContainerCenter>
-        <ContainerRight>
-          <span>LOG IN</span>
-        </ContainerRight>
-      </Container>
-    </TopBarDiv>
-  )
+class TopBar extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      modal: false,
+    }
+  }
+
+  toggleModal = () => {
+    this.setState({
+      modal: true,
+    })
+  }
+
+  render() {
+    return (
+      <TopBarDiv>
+        <Container>
+          <ContainerLeft>
+            <span>TOPICS</span><span>SEARCH</span>
+          </ContainerLeft>
+          <ContainerCenter>
+            <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          </ContainerCenter>
+          <ContainerRight>
+            <span>LOG IN</span>
+          </ContainerRight>
+        </Container>
+      </TopBarDiv>
+    );
+  }
 }
+  
 
 export default TopBar;
