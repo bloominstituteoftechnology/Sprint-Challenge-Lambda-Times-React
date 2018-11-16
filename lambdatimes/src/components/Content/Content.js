@@ -17,15 +17,15 @@ export default class Content extends Component {
 
   componentDidMount() {
     this.setState({
-      tabs: Tabs,
-      cards: Cards
+      tabs: tabData,
+      cards: cardData
     });
   }
 
   changeSelected = tab => {
     tab.preventDefault();
     this.setState({
-      selected: tab.target.value
+      selected: tab.target.tab
     });
   };
 
