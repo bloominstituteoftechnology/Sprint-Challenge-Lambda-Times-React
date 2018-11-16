@@ -46,6 +46,8 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+    // FILTER THAT WILl do set setState
+    
     return this.state.cards;
   };
 
