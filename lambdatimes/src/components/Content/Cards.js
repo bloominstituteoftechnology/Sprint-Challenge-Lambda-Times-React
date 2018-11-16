@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import PropTypes from 'prop-types';
 
 const Cards = props => {
   return (
@@ -9,6 +10,15 @@ const Cards = props => {
           props.cards.map((card,index) => <Card card={card} key={index}/>)}
     </div>
   )
+}
+
+Cards.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.shape({
+    headline: PropTypes.string.isRequired,
+    tab: PropTypes.string.isRequired,
+    img: PropTypes.string,
+    author: PropTypes.string.isRequired
+  }))
 }
 
 // Make sure you include prop types for all of your incoming props

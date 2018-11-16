@@ -32,7 +32,7 @@ Today we are going to revisit an old friend, Lambda Times! This time around, we 
 
 ### Part II
 
-- Make sure all of your props being passed are validated using PropTypes.
+-[x] Make sure all of your props being passed are validated using PropTypes.
 
 ### Part III
 
