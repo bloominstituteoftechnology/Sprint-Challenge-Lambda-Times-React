@@ -3,7 +3,6 @@ import Tab from './Tab';
 import PropTypes from 'prop-types';
 
 const Tabs = props => {
-  
   return (
     <div className="tabs">
       <div className="topics">
@@ -20,7 +19,7 @@ const Tabs = props => {
 Tabs.propTypes = {
   selectTabHandler: PropTypes.func,
   selectedTab: PropTypes.string,
-  tabs: PropTypes.array
+  tabs: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default Tabs;
