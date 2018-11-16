@@ -8,7 +8,7 @@ const Tab = props => {
       
       let selectedClassName = 'tab'
 
-      if(props.selectedTab === 'all') { 
+      if(props.selectedTab === props.tab) { 
         selectedClassName = 'tab active-tab'
       } else {
         selectedClassName = 'tab'
