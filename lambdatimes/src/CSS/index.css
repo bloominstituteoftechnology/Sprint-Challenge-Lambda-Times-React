@@ -59,20 +59,7 @@ body {
   color: #333;
   border: 2px solid #333;
 }
-.cards-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: none;
-  flex-direction: row;
-  width: 100%;
-  margin-top: 16px;
-  flex-wrap: wrap;
-}
-@media (min-width: 1200px) {
-  .cards-container {
-    width: 1200px;
-  }
-}
+
 .cards-container .card {
   border-bottom: 1px solid lightgrey;
   display: flex;
