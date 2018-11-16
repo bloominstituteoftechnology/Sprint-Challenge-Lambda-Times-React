@@ -52,15 +52,3 @@ body {
 #root {
   width: 100%;
 }
-
-@media (min-width: 1280px) {
-  .top-bar .container {
-    width: 1280px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .header {
-    width: 1280px;
-  }
-}
