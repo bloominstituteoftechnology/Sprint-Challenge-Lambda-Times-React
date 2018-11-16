@@ -15,6 +15,7 @@ export default class Content extends Component {
       cards: []
     };
   }
+  
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
