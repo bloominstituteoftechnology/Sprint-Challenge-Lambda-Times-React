@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 const LoginForm = styled.form`
   display: flex;

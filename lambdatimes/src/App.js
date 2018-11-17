@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import TopBar from "./components/TopBar";
 import { injectGlobal } from "styled-components";
 import styled from "styled-components";
-import Login from "./components/Login";
 // import Auth from "./components/Auth/Auth";
 import MainPage from "./components/Content/MainPage";
+import LoginModal from "./components/Modal/LoginModal";
 
 const StyledApp = styled.div`
   display: flex;
@@ -82,7 +82,7 @@ class App extends Component {
   render() {
     return (
       <StyledApp>
-        <Login />
+        <LoginModal />
         <TopBar />
         <MainPage />
       </StyledApp>

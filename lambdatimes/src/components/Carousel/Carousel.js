@@ -31,6 +31,7 @@ const CarouselButton = styled.div`
   width: 50px;
   height: 50px;
   cursor: pointer;
+  line-height: 3.1rem;
 
   &:hover {
     color: #333;

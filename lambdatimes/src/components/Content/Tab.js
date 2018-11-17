@@ -23,10 +23,6 @@ const TabDiv = styled.div`
 `;
 
 class Tab extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <TabDiv
