@@ -88,11 +88,16 @@ const TopbarContainerRight = styled.div`
     background: #333;
     border-radius: 0;
     letter-spacing: 0.05rem;
+
+    ${() => (window.localStorage.getItem('username') ? null : `display: none`)}
   }
 `
 
 const logOut = () => {
-  window.localStorage.removeItem('username');
+  // if (window.localStorage.getItem('username')) {
+  //   window.localStorage.removeItem('username');
+  // } 
+  
 }
 
 const loginCheck = () => {
@@ -115,7 +120,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </TopbarContainerCenter>
         <TopbarContainerRight>
-          <Button color="secondary">{loginCheck()}</Button>{' '}
+          <Button color="secondary" onClick={logOut()}>LOG OUT</Button>{' '}
           <span></span>
         </TopbarContainerRight>
       </TopbarMainContainer>
