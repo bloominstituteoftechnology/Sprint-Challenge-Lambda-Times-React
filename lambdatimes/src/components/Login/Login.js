@@ -34,13 +34,24 @@ const LoginFormContainer = styled.div`
 
     a {
         text-decoration: none;
+        text-align: center;
         margin-top: 40px;
         font-family: Helvetica, sans-serif;
         color: #999999;
 
         .strong {
             font-weight: bold;
+            
+            &:hover {
+            text-decoration: underline;
+            color: #333;
+            } 
         }
+    &:hover {
+        text-decoration: none;
+        color: #999999;
+    }
+        
     }
 `
 const LoginInput = styled.input`
@@ -122,7 +133,7 @@ class Login extends React.Component {
                     required
                 />
                 <LoginButton type="submit" onSubmit={this.login}>LOG IN</LoginButton>
-                <a href="#">Don't have an account? <span className="strong">Subscribe to Lambda Times</span></a>
+                <a href="#">Don't have an account? <br/><span className="strong">Subscribe to Lambda Times</span></a>
             </form>
         </LoginFormContainer>
         )
