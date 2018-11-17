@@ -12,12 +12,6 @@ const LoginForm = styled.form`
   height: 100vh;
 `;
 
-const LoginInputs = styled.input`
-  padding: 1rem;
-  border-radius: 5px;
-  margin: 2rem;
-`;
-
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -41,28 +35,25 @@ class Login extends Component {
   render() {
     return (
       <LoginForm className="text-center">
-        <Form className="pt-5">
-          <FormGroup className="text-left">
-            <Label for="username">Username</Label>
-            <Input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Enter Username..."
-            />
-          </FormGroup>
-          <FormGroup className="text-left">
-            <Label for="password">Password</Label>
-            <Input
-              type="password"
-              name="password"
-              className="mb-4"
-              id="password"
-              placeholder="Enter Password..."
-            />
-          </FormGroup>
-          <Button className="pl-5 pr-5">Submit</Button>
-        </Form>
+        <FormGroup className="text-left">
+          <Label htmlFor="username">Username</Label>
+          <Input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter Username..."
+          />
+        </FormGroup>
+        <FormGroup className="text-left">
+          <Label htmlFor="password">Password</Label>
+          <Input
+            type="password"
+            name="password"
+            className="mb-4"
+            id="password"
+            placeholder="Enter Password..."
+          />
+        </FormGroup>
       </LoginForm>
     );
   }

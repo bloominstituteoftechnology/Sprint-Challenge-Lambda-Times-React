@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import TopBar from "./components/TopBar";
-import Header from "./components/Header";
-import Content from "./components/Content/Content";
 import { injectGlobal } from "styled-components";
 import styled from "styled-components";
 import Login from "./components/Login";
+// import Auth from "./components/Auth/Auth";
+import MainPage from "./components/Content/MainPage";
 
 const StyledApp = styled.div`
   display: flex;
@@ -73,15 +73,21 @@ body {
 
 `;
 
-const App = () => {
-  return (
-    <StyledApp className="App">
-      <Login />
-      <TopBar />
-      <Header />
-      <Content />
-    </StyledApp>
-  );
-};
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <StyledApp>
+        <Login />
+        <TopBar />
+        <MainPage />
+      </StyledApp>
+    );
+  }
+}
 
 export default App;
