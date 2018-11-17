@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const Post = styled.div`
   border-bottom: 1px solid lightgrey;
@@ -45,8 +45,6 @@ const PostAuthorSpan = styled.div`
 `;
 
 const Card = props => {
-  console.log("CARD DATA PROPS", props);
-
   return (
     <Post>
       <PostHeadline>{props.headline}</PostHeadline>
@@ -59,8 +57,6 @@ const Card = props => {
     </Post>
   );
 };
-
-// Make sure to include PropTypes.
 
 Card.propTypes = {
   cards: PropTypes.shape({

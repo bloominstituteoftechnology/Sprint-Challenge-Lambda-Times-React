@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Content from "./components/Content/Content";
 import { injectGlobal } from "styled-components";
 import styled from "styled-components";
+import Login from "./components/Login";
 
 const StyledApp = styled.div`
   display: flex;
@@ -69,11 +70,13 @@ body {
 #root {
   width: 100%;
 }
+
 `;
 
 const App = () => {
   return (
     <StyledApp className="App">
+      <Login />
       <TopBar />
       <Header />
       <Content />
