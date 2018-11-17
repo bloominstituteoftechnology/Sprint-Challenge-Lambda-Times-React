@@ -94,20 +94,10 @@ const TopbarContainerRight = styled.div`
 `
 
 const logOut = () => {
-  // if (window.localStorage.getItem('username')) {
-  //   window.localStorage.removeItem('username');
-  // } 
-  
+    window.localStorage.removeItem('username');
+    window.location.reload();
 }
 
-const loginCheck = () => {
-  if (window.localStorage.getItem('username')) {
-    return 'LOG OUT'
-  } else {
-    window.localStorage.removeItem('username');
-    return 'LOG IN'
-  }
-}
 
 const TopBar = () => {
   return (
@@ -120,7 +110,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </TopbarContainerCenter>
         <TopbarContainerRight>
-          <Button color="secondary" onClick={logOut()}>LOG OUT</Button>{' '}
+          <Button color="secondary" onClick={logOut}>LOG OUT</Button>{' '}
           <span></span>
         </TopbarContainerRight>
       </TopbarMainContainer>
