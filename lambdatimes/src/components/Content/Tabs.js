@@ -32,7 +32,6 @@ const TabsTitle = styled.span`
 `;
 
 const Tabs = props => {
-  console.log("PROPS", props);
   return (
     <TabsContainer>
       <TabsTopics>

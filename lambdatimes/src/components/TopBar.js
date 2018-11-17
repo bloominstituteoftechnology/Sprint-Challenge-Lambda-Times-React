@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { Modal } from "reactstrap";
 
 const TopBarDiv = styled.div`
   width: 100%;
@@ -68,6 +69,10 @@ const Container = styled.div`
           flex: 1;
           font-size: 11px;
           font-weight: bold;
+
+          &:hover {
+            color: aqua;
+          }
         `
       : null}
 `;
@@ -95,7 +100,9 @@ const Span = styled.span`
       : null}
 `;
 
-const TopBar = () => {
+const TopBar = props => {
+  console.log("TOPBARPROPPPPSSS", props);
+
   return (
     <TopBarDiv>
       <TopBarContainer>
@@ -111,7 +118,10 @@ const TopBar = () => {
           <Span center>ANNOUNCEMENTS</Span>
         </Container>
         <Container right>
-          <Span right>LOG IN</Span>
+          <Span right onClick={props.handleLogin} id="logInText">
+            LOG IN
+          </Span>
+          <Modal />
         </Container>
       </TopBarContainer>
     </TopBarDiv>

@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const CardsContainer = styled.div`
@@ -32,14 +31,6 @@ const Cards = props => {
       })}
     </CardsContainer>
   );
-};
-
-Cards.propTypes = {
-  cards: (PropTypes.array.shape = {
-    headline: PropTypes.string,
-    author: PropTypes.string,
-    img: PropTypes.string
-  })
 };
 
 export default Cards;

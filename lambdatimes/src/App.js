@@ -76,14 +76,59 @@ body {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      user: "",
+      pass: "",
+      isLoggedIn: false,
+      modal: false
+    };
   }
 
+  componentDidUpdate(prevState) {
+    let logInText = document.querySelector("#logInText");
+    if (this.state.isLoggedIn !== prevState.isLoggedIn) {
+      logInText.innerHTML = "LOG OUT";
+    }
+  }
+
+  handleLogout = e => {
+    console.log("yeah", this.state);
+
+    localStorage.removeItem("user");
+    this.setState({
+      isLoggedIn: false
+    });
+    // window.location.reload();
+  };
+
+  handleLogin = e => {
+    localStorage.setItem("user", this.state.user);
+    this.setState({
+      modal: !this.state.modal
+    });
+  };
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
   render() {
+    console.log("APP PROPSSSS", this.props);
+
     return (
       <StyledApp>
-        <LoginModal />
-        <TopBar />
+        <LoginModal
+          modal={this.state.modal}
+          handleLogin={this.handleLogin}
+          handleChange={this.handleChange}
+        />
+        <TopBar
+          login={this.state}
+          handleLogout={this.handleLogout}
+          handleLogin={this.handleLogin}
+        />
         <MainPage />
       </StyledApp>
     );

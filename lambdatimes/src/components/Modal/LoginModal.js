@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 // import PropTypes from "prop-types";
 import {
   Button,
@@ -21,6 +21,12 @@ class ModalExample extends Component {
     this.toggle = this.toggle.bind(this);
   }
 
+  componentDidUpdate(prevProps) {
+    this.props.modal !== prevProps.modal
+      ? this.setState({ modal: true })
+      : null;
+  }
+
   toggle() {
     this.setState({
       modal: !this.state.modal
@@ -28,35 +34,36 @@ class ModalExample extends Component {
   }
 
   render() {
+    console.log("MODAL PROPS", this.props);
+
     return (
-      <div className="pt-5">
-        <Button color="danger" onClick={this.toggle}>
-          {this.props.buttonLabel}
-        </Button>
+      <Fragment>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
           className={this.props.className}
         >
-          <ModalHeader toggle={this.toggle}>Login to view Posts</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Login to view posts</ModalHeader>
           <ModalBody>
             <FormGroup className="text-left">
               <Label htmlFor="username">Username</Label>
               <Input
                 type="text"
-                name="username"
+                name="user"
                 id="username"
                 placeholder="Enter Username..."
+                onChange={this.props.handleChange}
               />
             </FormGroup>
             <FormGroup className="text-left">
               <Label htmlFor="password">Password</Label>
               <Input
                 type="password"
-                name="password"
+                name="pass"
                 className="mb-4"
                 id="password"
                 placeholder="Enter Password..."
+                onChange={this.props.handleChange}
               />
             </FormGroup>
           </ModalBody>
@@ -65,11 +72,11 @@ class ModalExample extends Component {
               LOGIN
             </Button>{" "}
             <Button color="secondary" onClick={this.toggle}>
-              CANCELs
+              CANCEL
             </Button>
           </ModalFooter>
         </Modal>
-      </div>
+      </Fragment>
     );
   }
 }
