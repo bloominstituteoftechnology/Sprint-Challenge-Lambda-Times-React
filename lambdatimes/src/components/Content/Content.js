@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-
+// import TobBar from '.TopBar';
 import Tabs from './Tabs';
 import Cards from './Cards';
+import Authenticate from '../../Authentication/Authenticate';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+import Login from '../Login/Login';
 
-export default class Content extends Component {
+class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selected: 'all',
       tabs: [],
-      cards: []
+      cards: [],
+      username: '',
+      password: '',
     };
   }
 
@@ -25,6 +29,11 @@ export default class Content extends Component {
       cards: cardData,
     })
   }
+
+  // logOut = () => {
+  //   window.localStorage.removeItem('username');
+  //   this.forceUpdate()
+  // }
 
   changeSelected = event => {
     // this function should take in the tab and update the state with the new tab.
@@ -67,9 +76,16 @@ export default class Content extends Component {
         <Tabs 
           tabs={this.state.tabs} 
           selectedTab={this.state.selected} selectTabHandler={this.changeSelected}
+          key={this.key}
         />
+        {/* <Login 
+          username={this.props.username}
+          password={this.props.password}
+        /> */}
         <Cards cards={this.filterCards()} />
       </div>
     );
   }
 }
+
+export default Authenticate(Content);

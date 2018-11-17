@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
 
+let nextId = -1;
+
+const getNewId = () => {
+  nextId += 1;
+  return nextId;
+}
+
 const Cards = props => {
-  console.log('props.cards', props.cards)
+  // console.log('props.cards', props.cards)
   return (
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
@@ -13,6 +20,7 @@ const Cards = props => {
             return (
             <Card 
               card={card}
+              key={getNewId()}
             />
             )
           })

@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Button } from 'reactstrap';
+
+import Login from './Login/Login';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const Topbar_outer_wrapper = styled.div`
+const TopbarOuterWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -13,8 +16,9 @@ const Topbar_outer_wrapper = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 1;
 `
-const Topbar_main_container = styled.div`
+const TopbarMainContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: none;
@@ -28,7 +32,7 @@ const Topbar_main_container = styled.div`
     width: 1280px;
   }
 `
-const Topbar_container_left = styled.div`
+const TopbarContainerLeft = styled.div`
   display: flex;
   justify-content: none;
   align-items: center;
@@ -43,7 +47,7 @@ const Topbar_container_left = styled.div`
     }
 `
 
-const Topbar_container_center = styled.div`
+const TopbarContainerCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +69,7 @@ const Topbar_container_center = styled.div`
   }
 `
 
-const Topbar_container_right = styled.div`
+const TopbarContainerRight = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -77,23 +81,45 @@ const Topbar_container_right = styled.div`
   span {
     cursor: pointer;
   }
+
+  button {
+    padding: 2px 10px;
+    font-size: 0.7rem;
+    background: #333;
+    border-radius: 0;
+    letter-spacing: 0.05rem;
+  }
 `
+
+const logOut = () => {
+  window.localStorage.removeItem('username');
+}
+
+const loginCheck = () => {
+  if (window.localStorage.getItem('username')) {
+    return 'LOG OUT'
+  } else {
+    window.localStorage.removeItem('username');
+    return 'LOG IN'
+  }
+}
 
 const TopBar = () => {
   return (
-    <Topbar_outer_wrapper>
-      <Topbar_main_container>
-        <Topbar_container_left>
+    <TopbarOuterWrapper>
+      <TopbarMainContainer>
+        <TopbarContainerLeft>
           <span>TOPICS</span><span>SEARCH</span>
-        </Topbar_container_left>
-        <Topbar_container_center>
+        </TopbarContainerLeft>
+        <TopbarContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </Topbar_container_center>
-        <Topbar_container_right>
-          <span>LOG IN</span>
-        </Topbar_container_right>
-      </Topbar_main_container>
-    </Topbar_outer_wrapper>
+        </TopbarContainerCenter>
+        <TopbarContainerRight>
+          <Button color="secondary">{loginCheck()}</Button>{' '}
+          <span></span>
+        </TopbarContainerRight>
+      </TopbarMainContainer>
+    </TopbarOuterWrapper>
   )
 }
 

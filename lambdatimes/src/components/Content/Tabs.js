@@ -1,6 +1,14 @@
 import React from 'react';
 import Tab from './Tab';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+let nextId = -1;
+
+const getNewId = () => {
+  nextId += 1;
+  return nextId;
+}
 
 const Tabs = props => {
   return (
@@ -16,7 +24,7 @@ const Tabs = props => {
                 selectTabHandler={props.selectTabHandler}
                 selectedTab={props.selected}
                 tab={tab}
-                // key={props.cards.headline}
+                key={getNewId()}
               />)
           })}
       </div>
