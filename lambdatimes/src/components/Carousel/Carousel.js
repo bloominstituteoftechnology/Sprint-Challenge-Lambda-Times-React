@@ -20,50 +20,24 @@ const CarouselContainer = styled.div`
     display: none;
   }
 `;
-const CarouselButtonLeft = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: none;
-  flex-direction: row;
-  color: #fff;
-  background-color: #333;
-  font-size: 40px;
-  border-radius: 50%;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  :hover {
-    color: #333;
-    background-color: #fff;
-    border: 2px solid #333;
-  }
-  top: 50%;
-  left: 25px;
-  transform: translate(0, -50%);
-`;
-const CarouselButtonRight = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: none;
-  flex-direction: row;
-  color: #fff;
-  background-color: #333;
-  font-size: 40px;
-  border-radius: 50%;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  :hover {
-    color: #333;
-    background-color: #fff;
-    border: 2px solid #333;
-  }
-  top: 50%;
-  right: 25px;
-  transform: translate(0, -50%);
-`;
+const CarouselButton = styled.div(props => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "none",
+  flexDirection: "row",
+  color: "#fff",
+  backgroundColor: "#333",
+  fontSize: "40px",
+  borderRadius: "50%",
+  position: "absolute",
+  width: "50px",
+  height: "50px",
+  cursor: "pointer",
+
+  top: "50%",
+  [props.dir]: "25px",
+  transform: "translate(0, -50%)"
+}));
 
 // Complete this Carousel
 export default class Carousel extends Component {
@@ -117,10 +91,12 @@ export default class Carousel extends Component {
     return (
       <CarouselContainer>
         {this.selectedImage()}
-        <CarouselButtonLeft onClick={this.leftClick}>{"<"}</CarouselButtonLeft>
-        <CarouselButtonRight onClick={this.rightClick}>
+        <CarouselButton dir="left" onClick={this.leftClick}>
+          {"<"}
+        </CarouselButton>
+        <CarouselButton dir="right" onClick={this.rightClick}>
           {">"}
-        </CarouselButtonRight>
+        </CarouselButton>
       </CarouselContainer>
     );
   }
