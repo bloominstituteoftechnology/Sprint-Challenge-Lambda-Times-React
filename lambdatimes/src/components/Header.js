@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
+import { HeaderDiv, HeaderSpan, HeaderHigh } from "../CSS/Styles";
 
-// Refactor this component to use styled components and not classNames. 
+// Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
 const Header = () => {
   return (
-    <div className="header">
-      <span className="date">SMARCH 32, 2018</span>
-      <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
-    </div>
-  )
-}
+    <HeaderDiv>
+      <HeaderSpan date>MARCH 32, 2018</HeaderSpan>
+      <HeaderHigh>Lambda Times</HeaderHigh>
+      <HeaderSpan temp>98°</HeaderSpan>
+    </HeaderDiv>
+  );
+};
 
-export default Header
+export default Header;
