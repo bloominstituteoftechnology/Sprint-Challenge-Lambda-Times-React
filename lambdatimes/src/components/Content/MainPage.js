@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Header from "../Header";
 import Content from "./Content";
+import Auth from "../Auth/Auth";
 
 class MainPage extends Component {
   constructor(props) {
@@ -18,4 +19,4 @@ class MainPage extends Component {
   }
 }
 
-export default MainPage;
+export default Auth(MainPage);

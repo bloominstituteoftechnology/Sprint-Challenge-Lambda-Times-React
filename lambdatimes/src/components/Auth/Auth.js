@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Login from "../components/Login/Login";
 
-const Auth = App =>
+const Auth = MainPage =>
   class extends Component {
     constructor(props) {
       super(props);
@@ -15,7 +14,7 @@ const Auth = App =>
         isLoggedIn: true
       });
 
-      if (!localStorage.getItem("username")) {
+      if (!localStorage.getItem("user")) {
         this.setState({
           isLoggedIn: false
         });
@@ -27,9 +26,8 @@ const Auth = App =>
     }
 
     render() {
-      if (this.state.isLoggedIn) return <App />;
-      return <Login />;
-      // return <App />
+      if (this.state.isLoggedIn) return <MainPage />;
+      return <div />;
     }
   };
 

@@ -118,8 +118,16 @@ const TopBar = props => {
           <Span center>ANNOUNCEMENTS</Span>
         </Container>
         <Container right>
-          <Span right onClick={props.handleLogin} id="logInText">
-            LOG IN
+          <Span
+            right
+            onClick={() => {
+              props.login.isLoggedIn === false
+                ? props.handleLogin()
+                : props.handleLogout();
+            }}
+            id="logInText"
+          >
+            {props.logType}
           </Span>
           <Modal />
         </Container>

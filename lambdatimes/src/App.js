@@ -80,14 +80,15 @@ class App extends Component {
       user: "",
       pass: "",
       isLoggedIn: false,
-      modal: false
+      modal: false,
+      logType: "LOG IN"
     };
   }
 
   componentDidUpdate(prevState) {
     let logInText = document.querySelector("#logInText");
     if (this.state.isLoggedIn !== prevState.isLoggedIn) {
-      logInText.innerHTML = "LOG OUT";
+      // logInText.innerHTML = "LOG OUT";
     }
   }
 
@@ -98,14 +99,30 @@ class App extends Component {
     this.setState({
       isLoggedIn: false
     });
-    // window.location.reload();
+    window.location.reload();
   };
 
   handleLogin = e => {
+    if (this.state.logType === "") {
+      this.setState({
+        modal: false,
+        isLoggedIn: true,
+        logType: "LOG OUT"
+      });
+    }
     localStorage.setItem("user", this.state.user);
     this.setState({
-      modal: !this.state.modal
+      modal: true,
+      isLoggedIn: true
     });
+    if (this.state.user !== "") {
+      this.setState({ logType: "LOG OUT" });
+      setTimeout(() => {
+        window.location.reload();
+      }, 0);
+    } else {
+      null;
+    }
   };
 
   handleChange = e => {
@@ -120,12 +137,15 @@ class App extends Component {
     return (
       <StyledApp>
         <LoginModal
+          logType={this.state.logType}
+          isLoggedIn={this.state.isLoggedIn}
           modal={this.state.modal}
           handleLogin={this.handleLogin}
           handleChange={this.handleChange}
         />
         <TopBar
           login={this.state}
+          logType={this.state.logType}
           handleLogout={this.handleLogout}
           handleLogin={this.handleLogin}
         />
