@@ -1,25 +1,12 @@
 import React from 'react';
-import styled from 'styled-components'
 
-// const LoginStatus = () => {
-
-// }
-// Submission = (event) => {
-//     event.preventDefault();
-
-//     console.log(inputHander())
-// }
-
-
-
-//onChange={inputHandler}
 const LoginPage = (props) => {
     return (
         <div>
-            <form action="#" onSubmit={props.sub}>
-                Username: <input name="username" type="text" placeholder="Dan" onChange={props.input}></input>
-                Password: <input name="password" type="password" placeholder="password" onChange={props.input}></input>
-                <button type="submit">Submit</button>
+            <form action="#" >
+                Username: <input name="username" type="text" placeholder="Dan" onChange={props.input} value={props.username}></input>
+                Password: <input name="password" type="password" placeholder="password" onChange={props.input} value={props.password}></input>
+                <button onClick={props.sub}>Submit</button>
             </form>
         </div>
     );
@@ -33,21 +20,28 @@ const Login = (Component) => {
             super();
             this.state = {
                 password: '',
-                username: ''
+                username:'',
+                status:false
               };
         }
-        subHandler = (event) => {
-            event.preventDefault();
-            console.log(this.state.username,this.state.password)
+
+        SubmitButton = (event) => {
             
-            
-        }
-        randTest = () => {
-            return (this.state.username==="Dan" && this.state.password === "password" ? false : true)
+            if(this.state.username==="Dan" && this.state.password==="password"){
+                this.setState({
+                    status:true
+                })
+                
+            } else {
+                event.preventDefault();
+                this.setState({
+                    password:'',
+                    username:'',
+                })
+            }
         }
 
         inputHandler = (event) => {
-            console.log([event.target.name],event.target.value)
             this.setState({
                 [event.target.name]:event.target.value,
                 [event.target.name]:event.target.value
@@ -55,8 +49,12 @@ const Login = (Component) => {
         }
 
        render(){
-           if(this.randTest()){
-               return <LoginPage input={this.inputHandler} sub={this.subHandler}/>
+           if(!this.state.status){
+               return <LoginPage 
+                        input={this.inputHandler} 
+                        sub={this.SubmitButton} 
+                        username={this.state.username} 
+                        password={this.state.password}/>
            } else {
                return <Component />
            } 
