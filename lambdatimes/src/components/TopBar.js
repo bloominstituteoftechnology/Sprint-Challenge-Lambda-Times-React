@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import { Modal } from "reactstrap";
 
@@ -100,40 +100,51 @@ const Span = styled.span`
       : null}
 `;
 
-const TopBar = props => {
-  console.log("TOPBARPROPPPPSSS", props);
+class TopBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      logme: "LOG IN"
+    };
+  }
+  componentDidMount() {
+    let loggedIn = localStorage.getItem("user");
+    if (loggedIn) this.setState({ logme: "LOG OUT" });
+  }
 
-  return (
-    <TopBarDiv>
-      <TopBarContainer>
-        <Container left>
-          <Span left>TOPICS</Span>
-          <Span left>SEARCH</Span>
-        </Container>
-        <Container center>
-          <Span center>GENERAL</Span>
-          <Span center>BROWNBAG</Span>
-          <Span center>RANDOM</Span>
-          <Span center>MUSIC</Span>
-          <Span center>ANNOUNCEMENTS</Span>
-        </Container>
-        <Container right>
-          <Span
-            right
-            onClick={() => {
-              props.login.isLoggedIn === false
-                ? props.handleLogin()
-                : props.handleLogout();
-            }}
-            id="logInText"
-          >
-            {props.logType}
-          </Span>
-          <Modal />
-        </Container>
-      </TopBarContainer>
-    </TopBarDiv>
-  );
-};
+  render() {
+    return (
+      <TopBarDiv>
+        <TopBarContainer>
+          <Container left>
+            <Span left>TOPICS</Span>
+            <Span left>SEARCH</Span>
+          </Container>
+          <Container center>
+            <Span center>GENERAL</Span>
+            <Span center>BROWNBAG</Span>
+            <Span center>RANDOM</Span>
+            <Span center>MUSIC</Span>
+            <Span center>ANNOUNCEMENTS</Span>
+          </Container>
+          <Container right>
+            <Span
+              right
+              onClick={() => {
+                this.state.logme === "LOG IN"
+                  ? this.props.handleLogin()
+                  : this.props.handleLogout();
+              }}
+              id="logInText"
+            >
+              {this.state.logme}
+            </Span>
+            <Modal />
+          </Container>
+        </TopBarContainer>
+      </TopBarDiv>
+    );
+  }
+}
 
 export default TopBar;

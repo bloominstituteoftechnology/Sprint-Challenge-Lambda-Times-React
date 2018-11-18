@@ -103,8 +103,6 @@ export default class Carousel extends Component {
   };
 
   render() {
-    // console.log("SLIDER STATE LENGTH", this.state.slider.length);
-
     return (
       <CarouselSlider>
         <CarouselButton left onClick={this.leftClick}>

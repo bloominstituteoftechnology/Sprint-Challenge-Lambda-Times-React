@@ -6,6 +6,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  Form,
   FormGroup,
   Label,
   Input
@@ -15,16 +16,15 @@ class ModalExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      backdrop: "static"
     };
 
     this.toggle = this.toggle.bind(this);
+    this.changeBackdrop = this.changeBackdrop.bind(this);
   }
 
   componentDidUpdate(prevProps) {
-    // this.props.modal !== prevProps.modal
-    //   ? this.setState({ modal: true })
-    //   : null;
     if (this.props.modal !== prevProps.modal)
       return this.setState({ modal: true });
     return null;
@@ -36,54 +36,63 @@ class ModalExample extends Component {
     });
   }
 
-  render() {
-    console.log("MODAL PROPS", this.props);
+  changeBackdrop(e) {
+    let value = e.target.value;
+    if (value !== "static") {
+      value = JSON.parse(value);
+    }
+    this.setState({ backdrop: value });
+  }
 
+  render() {
     return (
       <Fragment>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
           className={this.props.className}
+          backdrop={this.state.backdrop}
         >
-          <ModalHeader toggle={this.toggle}>Login to view posts</ModalHeader>
-          <ModalBody>
-            <FormGroup className="text-left">
-              <Label htmlFor="username">Username</Label>
-              <Input
-                required
-                type="text"
-                name="user"
-                id="username"
-                placeholder="Enter Username..."
-                onChange={this.props.handleChange}
-              />
-            </FormGroup>
-            <FormGroup className="text-left">
-              <Label htmlFor="password">Password</Label>
-              <Input
-                required
-                type="password"
-                name="pass"
-                className="mb-4"
-                id="password"
-                placeholder="Enter Password..."
-                onChange={this.props.handleChange}
-              />
-            </FormGroup>
-          </ModalBody>
-          <ModalFooter>
-            <Button
-              logtype={this.props.logType}
-              color="primary"
-              onClick={this.props.handleLogin}
-            >
-              LOGIN
-            </Button>{" "}
-            <Button color="secondary" onClick={this.toggle}>
-              CANCEL
-            </Button>
-          </ModalFooter>
+          <Form>
+            <ModalHeader>Login to view posts</ModalHeader>
+            <ModalBody>
+              <FormGroup>
+                <Label htmlFor="username">Username</Label>
+                <Input
+                  required
+                  type="text"
+                  autoComplete="current-username"
+                  name="user"
+                  id="username"
+                  placeholder="Enter Username..."
+                  onChange={this.props.handleChange}
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label htmlFor="password">Password</Label>
+                <Input
+                  required
+                  type="password"
+                  name="pass"
+                  className="mb-4"
+                  autoComplete="current-password"
+                  id="password"
+                  placeholder="Enter Password..."
+                  onChange={this.props.handleChange}
+                />
+              </FormGroup>
+            </ModalBody>
+            <ModalFooter>
+              <Button
+                type="submit"
+                htmlFor="loginForm"
+                color="primary"
+                onClick={this.props.handleLogin}
+              >
+                LOGIN
+              </Button>
+            </ModalFooter>
+          </Form>
         </Modal>
       </Fragment>
     );
@@ -105,7 +114,7 @@ Modal.propTypes = {
   keyboard: PropTypes.bool,
   // control backdrop, see http://v4-alpha.getbootstrap.com/components/modal/#options
   backdrop: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["static"])]),
-  // allows for a node/componet to exist next to the modal (outside of it). Useful for external close buttons
+  // allows for a node/component to exist next to the modal (outside of it). Useful for external close buttons
   // external: PropTypes.node,
   // called on componentDidMount
   onEnter: PropTypes.func,

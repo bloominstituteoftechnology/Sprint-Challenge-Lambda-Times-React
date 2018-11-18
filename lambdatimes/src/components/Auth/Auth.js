@@ -27,7 +27,7 @@ const Auth = MainPage =>
 
     render() {
       if (this.state.isLoggedIn) return <MainPage />;
-      return <div />;
+      return null;
     }
   };
 
