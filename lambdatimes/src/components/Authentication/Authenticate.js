@@ -12,6 +12,7 @@ const Authenticate = App  => (
     componentDidMount(){
       const loginInfo = JSON.parse(localStorage.getItem('timesLogin'));
       if (loginInfo && loginInfo.username) {
+        this.props.loginHandler();
         this.setState({
           loggedIn: true,
         })

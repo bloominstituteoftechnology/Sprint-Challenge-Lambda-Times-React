@@ -77,15 +77,20 @@ class TopBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
     }
     this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
-    this.setState({
-      modal: !this.state.modal
-    });
+    if (this.props.loggedIn) {
+      localStorage.removeItem('timesLogin');
+      window.location.reload();
+    } else {
+      this.setState({
+        modal: !this.state.modal
+      });
+    }
   }
 
   render() {
@@ -108,7 +113,7 @@ class TopBar extends React.Component {
             <CenterSpan>ANNOUNCEMENTS</CenterSpan>
           </CenterContainer>
           <RightContainer>
-            <RightSpan onClick={this.toggle}>LOG IN</RightSpan>
+            <RightSpan onClick={this.toggle}>{`LOG ${this.props.loggedIn ? 'OUT' : 'IN'}`}</RightSpan>
           </RightContainer>
         </Container>
       </TopBarComp>
