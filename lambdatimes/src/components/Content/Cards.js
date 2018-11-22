@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+// , { Component } 
 import Card from './Card';
 import PropTypes from 'prop-types';
 

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const Tabs = props => {
   return (
     <div className="tabs">
-      {/* <h1>Tabs, son!</h1> */}
       
       <div className="topics">
       <span className="title">TRENDING TOPICS:</span>
@@ -13,6 +12,8 @@ const Tabs = props => {
           <Tab 
           key ={propsinTabs.toString()}
           propsinTab = {propsinTabs}
+          selectedTab={props.selectedTab}
+          whatevsJack={props.whatevsJack}
           />
         ))}
       </div>
