@@ -34,11 +34,7 @@ export default class Content extends Component {
    console.log(this.state)
   }
 
-  whatevsJack = () => {
-    if (this.state.tabSelected) {
-      console.log('where do I put this method?!')
-    }
-  }
+ 
 
  
 
@@ -46,7 +42,7 @@ export default class Content extends Component {
   render() {
     return (
       <div className="content-container">
-        <Tabs tabs={this.state.tabs}  selectedTab={this.selectedTab} whatevsJack={this.whatevsJack}/>
+        <Tabs tabs={this.state.tabs}  selectedTab={this.selectedTab}/>
         <Cards cards={this.state.cards}
         // cards={this.filterCards()} 
         />

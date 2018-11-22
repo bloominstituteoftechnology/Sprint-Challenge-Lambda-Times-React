@@ -13,7 +13,7 @@ const Tabs = props => {
           key ={propsinTabs.toString()}
           propsinTab = {propsinTabs}
           selectedTab={props.selectedTab}
-          whatevsJack={props.whatevsJack}
+         
           />
         ))}
       </div>
