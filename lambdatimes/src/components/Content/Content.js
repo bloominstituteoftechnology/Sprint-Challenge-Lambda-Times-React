@@ -15,7 +15,7 @@ export default class Content extends Component {
       selected: 'all',
       tabs: [],
       cards: [],
-      tabSelected: false,
+      
     };
   }
 
@@ -27,25 +27,24 @@ export default class Content extends Component {
       })
   }
 
-  selectedTab = () => {
-    this.setState({
-      tabSelected: true,
+  changeSelected = tab=> {
+    this.setState ({
+      selected: tab,
     })
-   console.log(this.state)
   }
 
- 
+  filterCards = () => {
+    if (this.state.selected === 'all') return this.state.cards;
 
- 
+    return this.state.cards.filter(card => card.tab === this.state.selected);
+  };
 
 
   render() {
     return (
       <div className="content-container">
-        <Tabs tabs={this.state.tabs}  selectedTab={this.selectedTab}/>
-        <Cards cards={this.state.cards}
-        // cards={this.filterCards()} 
-        />
+        <Tabs tabs={this.state.tabs}  selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
+        <Cards cards={this.state.cards} cards={this.filterCards()} />
       </div>
     );
   }

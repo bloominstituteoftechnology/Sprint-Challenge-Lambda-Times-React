@@ -1,19 +1,20 @@
 import React from 'react';
-import './Tab.css'
+
 import PropTypes from 'prop-types';
 
 
 const Tab = props => {
   return <h2 
-  onClick={tab => props.selectedTab(tab)} 
-  className="tab"
+  // style={{color: "red"}}
+  onClick={() => props.selectTabHandler(props.tab)} 
+  className={`tab ${props.tab === props.selectedTab ? 'active-tab' : ''}`}
   >
-  {props.propsinTab.toUpperCase()}</h2>
+  {props.tab.toUpperCase()}</h2>
 };
 
 
 Tab.propTypes = {
-  propsinTab: PropTypes.string.isRequired
+  tab: PropTypes.string.isRequired
 }
 export default Tab;
 
