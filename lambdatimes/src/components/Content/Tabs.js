@@ -10,8 +10,7 @@ const Tabs = props => {
           <Tab key={i}
             tab={t}
             selectTabHandler={props.selectTabHandler}
-            selectedTab={props.selectedTab}
-            
+            selectedTab={props.selectedTab}            
             />)
         
           /* map over the tabs provided on your props, create a new Tab component for each one.
