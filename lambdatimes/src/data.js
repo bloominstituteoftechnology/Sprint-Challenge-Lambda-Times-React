@@ -5,10 +5,10 @@ export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', '
 
 export const cardData = [
   {
-    headline: "ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects",
+    headline: "This is pretty wild im just gonna say lol",
     tab: "javascript",
-    img: "./assets/sir.jpg",
-    author: "SIR RUFF'N'STUFF"
+    img: "./assets/fido.jpg",
+    author: "jrat2950"
   },
   {
     headline: "Type Coercion: Why Does NaN !== NaN? and Other Strange Occurences",
