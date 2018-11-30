@@ -8,7 +8,7 @@ class App extends Component {
     loggedIn: true
   };
 
-  tripLogin = e => {
+  LoginModal = e => {
     if (e.target.innerText === 'LOG IN') {
       this.setState({ loggedIn: false });
     }
@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" onClick={this.tripLogin}>
+      <div className="App" onClick={this.LoginModal}>
         <TopBar loggedIn={this.state.loggedIn} />
         <Header />
         <Content loggedIn={this.state.loggedIn} login={this.login} />
