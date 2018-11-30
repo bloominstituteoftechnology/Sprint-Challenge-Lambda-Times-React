@@ -30,6 +30,8 @@ export default class Content extends Component {
   };
 
   filterCards = () => {
+    
+
    
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
