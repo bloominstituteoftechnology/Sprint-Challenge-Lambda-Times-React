@@ -24,7 +24,8 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-    this.setState({ selectedTab: tabData})
+    //do not know what tab is at this point, this will passed as props to tab
+    this.setState({ selectedTab: tab})
   };
 
   filterCards = () => {
@@ -41,11 +42,11 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
 
-    if(this.state.selectedTab==="all"){
-      return this.state.cards;
-    } else {
-      return (this.state.tabs===this.state.selected)
-    }
+    // if(this.state.selectedTab==="all"){
+    //   return this.state.cards;
+    // } else {
+      return (this.state.cards)
+    
     
   };
 
