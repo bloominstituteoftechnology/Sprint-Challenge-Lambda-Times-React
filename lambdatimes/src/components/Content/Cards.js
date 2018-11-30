@@ -8,12 +8,16 @@ const Cards = props => {
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
       {props.cards.map(c => {
-        return <Card card={c} key={Date.now()} />;
+        return <Card card={c} key={c.headline}/>;
       })}
     </div>
   );
 };
 
 // Make sure you include prop types for all of your incoming props
+
+Cards.propTypes = {
+ cards: PropTypes.arrayOf(PropTypes.object)
+}
 
 export default Cards;
