@@ -4,9 +4,11 @@ import Card from './Card';
 const Cards = props => {
   return (
     <div className="cards-container">
-      {props.cards.map((t, i) =>
-        <Card key={i}
-          
+      {props.cards.map(item =>
+        <Card key={item.headline}
+              person={item}
+         
+         
           
         />)/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
