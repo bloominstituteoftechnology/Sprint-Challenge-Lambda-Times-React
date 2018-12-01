@@ -18,9 +18,9 @@ const Tabs = props => {
 // Make sure to use PropTypes to validate your types!
 
 
-// Tabs.propTypes = {
-//     tabs: PropTypes.string.isRequired,
-// };
+Tabs.propTypes = {
+    tabs: PropTypes.string.isRequired,
+};
 
 
 export default Tabs;
