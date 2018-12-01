@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 const Card = props => {
@@ -8,7 +8,7 @@ const Card = props => {
       <div className="headline">{props.card.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={'', props.card.img} />
+          <img src={props.card.img} alt='img'/>
         </div>
         <span>By {props.card.author}</span>
       </div>
@@ -16,14 +16,8 @@ const Card = props => {
   );
 };
 
-// Card.propTypes = {
-//   card: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       headline: PropTypes.string,
-//       img: PropTypes.string,
-//       author: PropTypes.string
-//     })
-//   )
-// }
+Card.propTypes = {
+  span: PropTypes.string
+}
 
 export default Card;

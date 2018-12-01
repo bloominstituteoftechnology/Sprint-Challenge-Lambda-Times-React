@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 
@@ -7,7 +7,7 @@ const Cards = props => {
     <div className="cards-container">
       {props.cards.map(card =>
         <Card
-          key={props.target}
+          key={card.headline}
           card={card}
         />
       )}
@@ -16,7 +16,7 @@ const Cards = props => {
 }
 
 Cards.propTypes ={
-  cards:PropTypes.arrayOf(PropTypes.string)
+  card:PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Cards;
