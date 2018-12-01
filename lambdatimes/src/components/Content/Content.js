@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import Tabs from './Tabs';
 import Cards from './Cards';
 
+
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+
 
 export default class Content extends Component {
   constructor(props) {
@@ -25,7 +27,8 @@ export default class Content extends Component {
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
     //do not know what tab is at this point, this will passed as props to tab
-    this.setState({ selectedTab: tab})
+    //pay attention to what comes after the colon; I had selectedTab and it messed everything up
+    this.setState({ selected: tab})
   };
 
   filterCards = () => {
@@ -60,7 +63,7 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectedTab={this.state.selectedTab}
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected}
         selectTabHandler={this.changeSelected}
         />
         <Cards cards={this.filterCards()} />
