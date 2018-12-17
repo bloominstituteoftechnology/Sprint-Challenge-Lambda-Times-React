@@ -1,14 +1,16 @@
 import React from 'react';
 
+
+
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{Headline}</div>
+      <div className="headline">{props.card.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={''} />
+          <img src={'props.card.img'} />
         </div>
-        <span>By {"Testing author"}</span>
+        <span>By {card.author}</span>
       </div>
     </div>
   );
