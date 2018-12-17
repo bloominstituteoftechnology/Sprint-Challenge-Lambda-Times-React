@@ -7,8 +7,11 @@ const Cards = props => {
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
-          {props.cards.map((index, card) => <Card key={index} card={card} />)}
-
+          {props.cards.map((card, index ) => {
+            console.log("this is card data", props.cardData);
+            return <Card key={index} cardData={card}/>
+            }
+          )}
     </div>
   )
 }
