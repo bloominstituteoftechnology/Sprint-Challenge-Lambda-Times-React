@@ -76,6 +76,11 @@ export const cardData = [
     img: "./assets/sir.jpg",
     author: "SIR RUFF'N'STUFF"
   },
+  { headline: "Setting Up The Backend",
+  tab: "node",
+  img: "./assets/who.jpg",
+  author: "WHO L. DOGSOUT"
+},
   {
     headline: "Quantum Computing: Where we Are Now, and Where We Will Be Very Soon",
     tab: "technology",
@@ -93,6 +98,11 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
+  },
+    { headline: "Mal Functions",
+    tab: "javascript",
+    img: "./assets/who.jpg",
+    author: "WHO L. DOGSOUT"
   }
 ]
 
