@@ -9,9 +9,10 @@ display: flex;
 justify-content: space-between;
 align-items: none;
 flex-direction: column;
-background-color: orange;
-width: 380px;
-margin-bottom: 16px;
+background-color: white;
+width: 375px;
+height: 250px;
+margin: 10px;
 padding: 24px;
 `
 

@@ -9,7 +9,7 @@ const TabsStyle = styled.div `
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 100%;
+  width: 1260px;
   height: 47px;
   background-color: #fff;
 `
@@ -66,8 +66,8 @@ const Tabs = props => {
     <TabsStyle>
       <Topics>
         <Title>TRENDING TOPICS:</Title>
-    <div className='tab'>{props.tabs.map(tab => <Tab selectedStyle={props.selectedStyle} changeStyle={props.changeStyle} key={tab} tab={tab}
-    changeSelected={props.changeSelected} filterCards={props.filterCards}/>)}</div>
+    <div className='tab'>{props.tabs.map(tab => <Tab selectedTab={props.selectedTab} selectedTabHandler={props.selectedTabHandler} key={tab} tab={tab}
+     filterCards={props.filterCards}/>)}</div>
       </Topics>
     </TabsStyle>
   );

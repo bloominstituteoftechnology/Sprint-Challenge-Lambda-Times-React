@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import {StyledTab} from './Tab'
 const StyledContent = styled.div `
 display: flex; 
+justify-content: center;
 flex-direction: column; 
 align-items: center;
 `
@@ -17,8 +18,7 @@ export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'all',
-      selectedStyle: '',
+      selectedTab: 'all',
       tabs: [],
       cards: []
     };
@@ -28,24 +28,12 @@ export default class Content extends Component {
     this.setState({tabs:tabData, cards:cardData, filtered:cardData})
   }
 
-  changeSelected = tab => {
+  selectedTabHandler = tab => {
     // this.state.tabs.forEach(function (tab) {tab.classList.remove('selected')})
     // const filtered = this.state.tabs.filter( tab => tab === ID)
     // this.setState({selected:filtered});
-    this.setState({selected:tab})
+    this.setState({selectedTab:tab})
   }
-
-  changeStyle = event => {
-    const ID = event.target.getAttribute('id')
-    console.log(ID)
-    this.setState({selected:ID})
-    // this.state.tabs.forEach(function (tab) {tab.classList.remove('selected')})
-    // const filtered = this.state.tabs.filter( tab => tab === ID)
-    // this.setState({selected:filtered});
-    if (ID === this.state.selected) {this.setState({selectedStyle:'selected'})}
-    else {this.setState({selectedStyle:''})
-  }
-}
         // this function should take in the tab and update the state with the new tab.
   
 
@@ -62,7 +50,7 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.selected === 'all' ? this.state.cards : this.state.cards.filter(card => card.tab === this.state.selected)
+    return this.state.selectedTab === 'all' ? this.state.cards : this.state.cards.filter(card => card.tab === this.state.selectedTab)
 
   };
 
@@ -75,7 +63,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         
-        <Tabs tabs={this.state.tabs} selected={this.state.selected} selectedStyle={this.state.selectedStyle} changeStyle={this.changeStyle} changeSelected={this.changeSelected}  />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selectedTab} selectedTabHandler={this.selectedTabHandler}  />
         <Cards cards={this.filterCards()} />
       </StyledContent>
     );
