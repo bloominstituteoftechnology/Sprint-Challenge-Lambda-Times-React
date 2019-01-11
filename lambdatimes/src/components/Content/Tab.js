@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Tab extends React.Component {
   constructor(props){
@@ -20,7 +21,7 @@ class Tab extends React.Component {
     return (
       <div
         
-        className={`${this.state.tabClass} ${this.props.tab}`}
+        className={`${this.state.tabClass}${this.props.tab}`}
         // onClick={() => {
           /* Replace this dummy click handler function with your selectTabHandler function from props 
            you'll need to pass the `tab` in as an argument to this handler. */
@@ -35,5 +36,8 @@ class Tab extends React.Component {
 };
 
 // Make sure you include PropTypes on your props.
-
+Tab.propTypes = {
+  selectedTab: PropTypes.string,
+  tabs: PropTypes.arrayOf(PropTypes.string)
+}
 export default Tab;

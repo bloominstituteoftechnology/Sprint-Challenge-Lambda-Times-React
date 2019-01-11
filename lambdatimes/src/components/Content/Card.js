@@ -15,7 +15,7 @@ const Card = props => {
 };
 
 // Make sure to include PropTypes.
-Card.PropTypes = {
+Card.propTypes = {
   headline: PropTypes.string,
   img: PropTypes.string,
   author: PropTypes.string
