@@ -20,12 +20,7 @@ class Tab extends React.Component {
   render(){
     return (
       <div
-        
         className={`${this.state.tabClass}${this.props.tab}`}
-        // onClick={() => {
-          /* Replace this dummy click handler function with your selectTabHandler function from props 
-           you'll need to pass the `tab` in as an argument to this handler. */
-        // }}
         onClick={this.props.selectTabHandler}
       >
         {this.props.tab.toUpperCase()}
@@ -35,7 +30,6 @@ class Tab extends React.Component {
   
 };
 
-// Make sure you include PropTypes on your props.
 Tab.propTypes = {
   selectedTab: PropTypes.string,
   tabs: PropTypes.arrayOf(PropTypes.string)

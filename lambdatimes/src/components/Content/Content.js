@@ -25,7 +25,6 @@ export default class Content extends Component {
   selectTabHandler = (event,tab) => {
     const selected = event.target.className;
     this.setState({selected: selected});
-    
   };
 
   filterCards = () => {
