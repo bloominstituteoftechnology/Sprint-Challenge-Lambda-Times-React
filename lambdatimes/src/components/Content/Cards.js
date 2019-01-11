@@ -19,7 +19,7 @@ const Cards = props => {
 
 // Make sure you include prop types for all of your incoming props
 
-Card.propTypes = {
+Cards.propTypes = {
   card: PropTypes.shape({
     headline: PropTypes.string,
     author: PropTypes.string
