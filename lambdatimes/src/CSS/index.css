@@ -314,3 +314,6 @@ body {
   width: 100%;
   display: none;
 }
+.topics div {
+  padding: 0 .5rem;
+}
