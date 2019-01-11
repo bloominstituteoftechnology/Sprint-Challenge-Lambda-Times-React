@@ -10,4 +10,4 @@ Sprint Answers
     It is a component that takes in another component as a parameter/argument.
 
 [ ] What are three different ways to style components in React? Explain some of the benefits of each.
-    CSS-traditional, inline-easy to see and keep track of what goes where, and styled components-becomes almost universal because it is consistent, plus you can use props
+    CSS-traditional, inline-easy to see and keep track of what goes where, and styled components-becomes almost universal because it is consistent, plus you can use props.
