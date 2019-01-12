@@ -35,7 +35,7 @@ you'll need to pass the `tab` in as an argument to this handler. */
 // Make sure you include PropTypes on your props.
 
 Tab.propTypes = {
-  selectTabHandler: PropTypes.fuc,
+  selectTabHandler: PropTypes.func,
   selectedTab: PropTypes.string,
   tab:PropTypes.string
 }
