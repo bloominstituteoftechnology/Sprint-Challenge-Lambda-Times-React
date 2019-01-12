@@ -14,7 +14,17 @@ const Cards = props => {
     </div>
   )
 }
+Cards.propTypes={
 
+    card:PropTypes.shape({
+    headline:PropTypes.string.isRequired,
+    tab:PropTypes.number,
+    author:PropTypes.string,
+
+
+
+  })
+}
 // Make sure you include prop types for all of your incoming props
 
 export default Cards;

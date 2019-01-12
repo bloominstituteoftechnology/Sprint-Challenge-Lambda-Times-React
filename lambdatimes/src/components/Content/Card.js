@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import Cards from "./Cards";
 
 const Card = props => {
   return (
@@ -13,7 +15,17 @@ const Card = props => {
     </div>
   );
 };
+Card.propTypes={
 
+    card:PropTypes.shape({
+        headline:PropTypes.string.isRequired,
+        tab:PropTypes.number,
+        author:PropTypes.arrayOf(PropTypes.string),
+
+
+
+    })
+}
 // Make sure to include PropTypes.
 
 export default Card;

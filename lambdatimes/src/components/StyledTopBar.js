@@ -10,6 +10,7 @@ const StyledTopBar = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  
 
 
 
