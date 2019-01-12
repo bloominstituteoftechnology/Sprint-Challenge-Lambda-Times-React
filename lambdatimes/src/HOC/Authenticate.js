@@ -1,5 +1,4 @@
 import React from 'react';
-import Login from '../components/Login/login';
 
 const Authenticate = WrappedComponent => { // Authenticate is taking in a component as an arg.
   return class extends React.Component {
@@ -20,7 +19,6 @@ const Authenticate = WrappedComponent => { // Authenticate is taking in a compon
 
     render() {
       if(this.state.loggedIn) return <WrappedComponent />
-      // else return <Login />
       else return null;
     }
   }
