@@ -95,7 +95,7 @@ const TopBar = () => {
         </StyledCenter>
         <StyledRight>
           <StyledRightSpan>
-            {window.localStorage.getItem("user").length > 0
+            {window.localStorage.getItem("user")
               ? window.localStorage.getItem("user").toUpperCase()
               : "LOG IN"}
           </StyledRightSpan>
