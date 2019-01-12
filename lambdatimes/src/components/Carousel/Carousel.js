@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { carouselData } from '../../data'
+
 // Complete this Carousel
 export default class Carousel extends Component {
   constructor(props){
@@ -7,10 +7,6 @@ export default class Carousel extends Component {
     this.state = {
       index: 0
     }
-  }
-
-  componentDidMount(){
-
   }
 
   leftClick = () => {
@@ -44,11 +40,10 @@ export default class Carousel extends Component {
   selectedImage = () => {
     const current = this.state.index;
 
-    return <img src={this.props.images[current]} style={{display: 'block'}} />
+    return <img src={this.props.images[current]} style={{display: 'block'}} alt="Puppers"/>
   }
 
   render(){
-    console.log(this.props)
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
