@@ -15,7 +15,7 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    if (this.state.selectedCarouselIndex == 0){
+    if (this.state.selectedCarouselIndex === 0){
       this.setState({ selectedCarouselIndex: 3})
     } else {
       this.setState({ selectedCarouselIndex:  this.state.selectedCarouselIndex -1 })
@@ -23,7 +23,7 @@ export default class Carousel extends Component {
   }
 
   rightClick = () => {
-    if (this.state.selectedCarouselIndex == 3){
+    if (this.state.selectedCarouselIndex === 3){
       this.setState({ selectedCarouselIndex: 0})
     } else {
       this.setState({
