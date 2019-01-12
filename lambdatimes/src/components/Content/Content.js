@@ -11,6 +11,11 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+const Welcome = styled.h2`
+  font-family: Didot, serif;
+  margin-bottom: 0;
+`;
 class Content extends Component {
   constructor(props) {
     super(props);
@@ -50,6 +55,7 @@ class Content extends Component {
           selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
         />
+        <Welcome>Welcome Back, {window.localStorage.getItem("user")}</Welcome>
         <Carousel />
         <Cards cards={this.filterCards()} />
       </ContentContainer>

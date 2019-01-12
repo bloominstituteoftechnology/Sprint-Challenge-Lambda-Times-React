@@ -94,7 +94,11 @@ const TopBar = () => {
           <StyledCenterSpan>ANNOUNCEMENTS</StyledCenterSpan>
         </StyledCenter>
         <StyledRight>
-          <StyledRightSpan>LOG IN</StyledRightSpan>
+          <StyledRightSpan>
+            {window.localStorage.getItem("user").length > 0
+              ? window.localStorage.getItem("user").toUpperCase()
+              : "LOG IN"}
+          </StyledRightSpan>
         </StyledRight>
       </StyledContainer>
     </StyledTopBar>

@@ -11,7 +11,6 @@ const StyledCarousel = styled.div`
   height: 500px;
   position: relative;
   overflow: hidden;
-  margin-top: 16px;
 
   @media (min-width: 1200px) {
     width: 1200px;
