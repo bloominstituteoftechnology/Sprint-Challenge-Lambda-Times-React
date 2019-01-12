@@ -8,6 +8,13 @@ const LoginContainer = styled.div`
   text-align: center;
 `;
 
+const Error = styled.div`
+  color: #ff0033;
+  border: 1px solid #ff0033;
+  border-radius: 3px;
+  padding: 0.25rem 0 0.5rem;
+`;
+
 window.localStorage.setItem("loggedIn", false);
 let status = window.localStorage.getItem("loggedIn");
 
@@ -49,16 +56,12 @@ const Authenticate = ReactComponent => {
         <ReactComponent />
       ) : this.state.loggedIn === "false" ? (
         <LoginContainer>
-          <div className={`error ${this.state.errorState}`}>
-            {this.state.error}
-          </div>
+          {this.state.errorState ? <Error>{this.state.error}</Error> : null}
           <Login signIn={this.signIn} />
         </LoginContainer>
       ) : (
         <LoginContainer>
-          <div className={`error ${this.state.errorState}`}>
-            {this.state.error}
-          </div>
+          {this.state.errorState ? <Error>{this.state.error}</Error> : null}
           <Login signIn={this.signIn} />
         </LoginContainer>
       );
