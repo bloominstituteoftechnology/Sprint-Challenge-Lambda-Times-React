@@ -93,7 +93,7 @@ export const cardData = [
     tab: "bootstrap",
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
-  }
+  },
 ]
 
 export const carouselData = [
