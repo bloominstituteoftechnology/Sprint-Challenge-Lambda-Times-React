@@ -43,11 +43,11 @@ export default class Content extends Component {
     let allCards = cardData;
 
     if (this.state.selected === 'all') {
-      this.setState({cards: allCards});
+      this.setState({cards: cardData});
     }
     else {
       let filteredCard = allCards.filter(card =>
-        tab === card.selected
+        tab === card.tab
       )
       this.setState({cards: filteredCard});
     }
