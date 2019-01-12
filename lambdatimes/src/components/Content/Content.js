@@ -29,7 +29,6 @@ export default class Content extends Component {
     this.setState({
       selected: tab
     })
-    console.log(this.state.selected)
   };
 
   filterCards = () => {
@@ -50,7 +49,6 @@ export default class Content extends Component {
     }else {
      return this.state.cards.filter(card => card.tab === this.state.selected)
    }
-    // return this.state.cards;
   };
 
   render() {
