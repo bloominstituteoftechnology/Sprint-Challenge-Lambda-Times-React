@@ -24,8 +24,8 @@ export default class Content extends Component {
     });
   }
 
-  changeSelected = tab => {
-    this.setState({ selected: tab.target.textContent.toLowerCase() });
+  changeSelected = event => {
+    this.setState({ selected: event.target.id });
     // this function should take in the tab and update the state with the new tab.
   };
 
