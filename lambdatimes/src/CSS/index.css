@@ -161,8 +161,8 @@ body {
   flex: 1;
 }
 .content-container {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .tabs {
@@ -313,4 +313,28 @@ body {
 .carousel img {
   width: 100%;
   display: none;
+}
+
+.login-container{
+  width: 400px;
+  height: 600px;
+  padding-top: 120px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.login-label{
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.login-input{
+  width: 200px;
+}
+
+.login-submit{
+  font-size: 1rem;
+  border: 1px solid black;
+  margin-top: 10px;
 }
