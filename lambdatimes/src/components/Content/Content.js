@@ -1,46 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Tabs from './Tabs';
-import Cards from './Cards';
+import Tabs from "./Tabs";
+import Cards from "./Cards";
 
 // Importing our tab and card data. No need to change anything here.
-import { tabData, cardData } from '../../data';
+import { tabData, cardData } from "../../data";
 
 export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'javascript',
+      selected: "javascript",
       tabs: [],
       cards: []
     };
   }
 
   componentDidMount() {
-    this.setState({tabs: tabData})
-    this.setState({cards: cardData})
+    this.setState({ tabs: tabData });
+    this.setState({ cards: cardData });
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
   changeSelected = tab => {
-    this.setState({selected: tab})
+    this.setState({ selected: tab });
   };
 
-  filterCards = e => { 
-    const filteredCards = this.state.cards.filter(card => {
-      if (card.tab === this.state.selected) {
-        return card
-      }
-    })
-      
-    console.log(filteredCards)
-    this.setState({cards: filteredCards})
-    // const filteredCards = this.state.cards.filter(card => {
-    //   if (card.tab === this.state.selected) {
-    //     return card
-    //   }
-    // })
-    // this.setState({cards: filteredCards})
+  filterCards = () => {
+    //return this.state.cards
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
       by using it to filter out our cards for when a tab is selcted
@@ -54,8 +41,18 @@ export default class Content extends Component {
         - else, it should only return those cards whose 'tab' matched this.state.selected.
         return this.state.cards
     */
+    if (this.state.selected === "all") {
+      return this.state.cards;
+    } else {
+        return this.state.cards.filter(card => {
+          if (card.tab === this.state.selected) {
+            console.log(card.tab)
+            return card
+          }
+        });
+    }
   };
- 
+
   render() {
     return (
       <div className="content-container">
@@ -64,9 +61,9 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs 
-          tabs={this.state.tabs} 
-          selectedTab={this.state.selected} 
+        <Tabs
+          tabs={this.state.tabs}
+          selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
         />
         <Cards cards={this.filterCards()} />
