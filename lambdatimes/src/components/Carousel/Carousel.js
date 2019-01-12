@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { carouselData } from '../../data'
+import React, { Component } from "react";
+import { carouselData } from "../../data";
 import styled from "styled-components";
 
 const StyledCarousel = styled.div`
@@ -14,7 +14,7 @@ const StyledCarousel = styled.div`
   margin-top: 16px;
 
   @media (min-width: 1200px) {
-      width: 1200px;
+    width: 1200px;
   }
 `;
 
@@ -33,10 +33,10 @@ const Button = styled.div`
   cursor: pointer;
 
   :hover {
-  color: #333;
-  background-color: #fff;
-  border: 2px solid #333;
-}
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+  }
 `;
 
 const StyledLeft = styled(Button)`
@@ -56,34 +56,49 @@ const StyledImg = styled.img`
   display: none;
 `;
 export default class Carousel extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-
-    }
+      carousel: carouselData,
+      current: 0
+    };
   }
-  componentDidMount(){
-
-  }
+  componentDidMount() {}
 
   leftClick = () => {
-
-  }
+    this.setState(prevState => ({
+      current:
+        prevState.current > 0
+          ? prevState.current - 1
+          : this.state.carousel.length - 1
+    }));
+  };
 
   rightClick = () => {
-
-  }
+    this.setState(prevState => ({
+      current:
+        prevState.current < this.state.carousel.length - 1
+          ? prevState.current + 1
+          : 0
+    }));
+  };
 
   selectedImage = () => {
-    return <StyledImg src={} style={{display: 'block'}} />
-  }
-  
-  render(){
+    return (
+      <StyledImg
+        src={this.state.carousel[this.state.current]}
+        style={{ display: "block" }}
+      />
+    );
+  };
+
+  render() {
     return (
       <StyledCarousel>
         <StyledLeft onClick={this.leftClick}>{"<"}</StyledLeft>
+        {this.selectedImage()}
         <StyledRight onClick={this.rightClick}>{">"}</StyledRight>
       </StyledCarousel>
-    )
+    );
   }
 }

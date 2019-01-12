@@ -3,6 +3,7 @@ import Tabs from "./Tabs";
 import Cards from "./Cards";
 import { tabData, cardData } from "../../data";
 import styled from "styled-components";
+import Carousel from "../Carousel/Carousel";
 
 const ContentContainer = styled.div`
   display: flex;
@@ -48,6 +49,7 @@ export default class Content extends Component {
           selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
         />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </ContentContainer>
     );
