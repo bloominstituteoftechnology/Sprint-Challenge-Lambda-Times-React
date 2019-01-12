@@ -30,6 +30,7 @@ const TopBarMain = styled.div`
   align-items: none;
   flex-direction: row;
   position: fixed;
+  z-index: 1;
   height: 44px;
   background-color: #333;
 `;
