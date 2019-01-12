@@ -17,6 +17,4 @@ const Tab = props => {
   );
 };
 
-// Make sure you include PropTypes on your props.
-
 export default Tab;
