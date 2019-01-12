@@ -1,25 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Tab from './Tab';
 
-const Tab = (props) => {
+const Tabs = (props) => {
 	return (
-		<div
-			id={props.tab}
-			className={props.tab === props.selectedTab ? 'tab active-tab' : 'tab'}
-			onClick={(event) => {
-				props.selectTabHandler(event);
-			}}
-		>
-			{props.tab}
+		<div className="tabs">
+			<div className="topics">
+				<span className="title">TRENDING TOPICS:</span>
+				{props.tabs.map((tab, index) => {
+					return (
+						<Tab
+							tab={tab}
+							key={index}
+							selectTabHandler={(event) => props.selectTabHandler(event)}
+							selectedTab={props.selectedTab}
+						/>
+					);
+				})}
+			</div>
 		</div>
 	);
 };
-
-
-Tab.propTypes = {
-	tab: PropTypes.string.isRequired,
+Tabs.propTypes = {
+	tabs: PropTypes.array.isRequired,
 	selectedTab: PropTypes.string,
 	selectTabHandler: PropTypes.func
 };
-
-export default Tab;
+// Make sure to use PropTypes to validate your types!
+export default Tabs;
