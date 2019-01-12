@@ -3,5 +3,7 @@ PropTypes are used to check the data type of the props being passed into a compo
 
 2.
 
+After a component completes it's mounting phase, componentDidMount() is called, if present within the component. Whatever instructions are included within that method are then carried out. This is useful if setting state with information that might take longer to retrieve than the component will take to render.
+
 3.
 A higher-order component is a composition pattern used to have a re-usable way to extend Component logic to any component passed into the HOC as an argument.
