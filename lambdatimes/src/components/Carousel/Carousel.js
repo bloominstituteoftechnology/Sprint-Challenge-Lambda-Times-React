@@ -31,6 +31,8 @@ const Button = styled.div`
   width: 50px;
   height: 50px;
   cursor: pointer;
+  user-select: none;
+  line-height: 1.2;
 
   :hover {
     color: #333;

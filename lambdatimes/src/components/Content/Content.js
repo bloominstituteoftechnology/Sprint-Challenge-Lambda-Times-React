@@ -4,13 +4,14 @@ import Cards from "./Cards";
 import { tabData, cardData } from "../../data";
 import styled from "styled-components";
 import Carousel from "../Carousel/Carousel";
+import Authenticate from "../Authenticate";
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
-export default class Content extends Component {
+class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,3 +56,5 @@ export default class Content extends Component {
     );
   }
 }
+
+export default Authenticate(Content);
