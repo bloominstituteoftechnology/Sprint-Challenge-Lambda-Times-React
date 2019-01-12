@@ -23,7 +23,7 @@ const Tabs = props => {
 };
 
 // Tabs Proptypes!
-Tab.propType = {
+Tabs.propType = {
   tabs: PropTypes.arrayOf(PropTypes.object)
 }
 export default Tabs;
