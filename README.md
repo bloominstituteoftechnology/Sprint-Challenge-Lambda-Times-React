@@ -47,7 +47,7 @@ Follow these steps to set up your project:
 [x] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
 [x] You should now be able to filter cards using your tabs!
 [x] Make sure all of your props being passed are validated using PropTypes.
-[ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
+[X] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
 [ ] Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components.
 
 ## Stretch Challenge
