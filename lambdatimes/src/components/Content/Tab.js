@@ -1,15 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
-  console.log(props)
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop,
       if they match, the className should be: 'tab active-tab',
       if it is not it should just be 'tab'*/
-  // const TabClassName(props.tab, props.selectedTab){
-  //   if (props.tab !== props.selectedTab){
-  //     return 'tab'
-  //   } else return 'tab active-tab'
-  // }
   return (
     <div
       className={ (props.tab === props.selectedTab ? 'tab active-tab' : 'tab')}
@@ -24,5 +19,9 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tab: PropTypes.string,
+  selectedTab: PropTypes.string
+}
 
 export default Tab;
