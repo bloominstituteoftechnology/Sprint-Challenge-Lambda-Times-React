@@ -7,7 +7,9 @@ import Cards from './Cards';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 
-export default class Content extends Component {
+import Authenticate from '../../HOC/Authenticate';
+
+class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,3 +63,5 @@ export default class Content extends Component {
     );
   }
 }
+
+export default Authenticate(Content);

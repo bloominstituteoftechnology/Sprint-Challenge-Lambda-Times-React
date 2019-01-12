@@ -1,12 +1,8 @@
 import React from 'react';
-import { TopBarWrapper, TopBarContainer, TopBarContainerLeft, TopBarContainerCenter, TopBarContainerRight } from '../styles/TopBarStyles';
+import { InputLabel, InputBox, Button, LoginForm } from '../../styles/LoginStyles';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { InputLabel, InputBox, Button, LoginForm } from '../styles/LoginStyles';
 
-// Refactor this component to use styled components and not classNames. 
-// You can find the corresponding CSS in the CSS/index.css file
-
-class TopBar extends React.Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,21 +33,11 @@ class TopBar extends React.Component {
     if(this.state.username) localStorage.setItem("currentUser", this.state.username);
   }
 
+
+
   render() {
     return (
-      <TopBarWrapper>
-        <TopBarContainer>
-          <TopBarContainerLeft>
-            <span>TOPICS</span><span>SEARCH</span>
-          </TopBarContainerLeft>
-          <TopBarContainerCenter>
-            <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-          </TopBarContainerCenter>
-          <TopBarContainerRight>
-            <span  onClick={this.toggle}>LOG IN</span>
-          </TopBarContainerRight>
-        </TopBarContainer>
-      
+      <div>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Login</ModalHeader>
           <ModalBody>
@@ -71,10 +57,10 @@ class TopBar extends React.Component {
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
-
-      </TopBarWrapper>
-    )
+      </div>
+    );
   }
+
 }
 
-export default TopBar;
+export default Login;
