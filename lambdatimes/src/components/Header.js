@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const HeaderWrapper = style.header`
+const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,12 +18,12 @@ const HeaderWrapper = style.header`
   padding-bottom: 15px;
 `
 
-const Date = style.span`
+const Date = styled.span`
   margin-left: 25px;
   flex: 1;
 `
 
-const Title = style.h1`
+const Title = styled.h1`
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
@@ -32,7 +32,7 @@ const Title = style.h1`
   color: #000;
 `
 
-const Temp = style.span`
+const Temp = styled.span`
   text-align: right;
   margin-right: 25px;
   flex: 1;

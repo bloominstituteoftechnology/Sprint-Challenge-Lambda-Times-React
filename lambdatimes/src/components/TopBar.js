@@ -32,7 +32,7 @@ const TopContainerLeft = styled.div`
   flex: 1;
   font-size: 11px;
 `
-const TopContainerCenter = style.div`
+const TopContainerCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
