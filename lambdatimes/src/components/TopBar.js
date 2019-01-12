@@ -12,7 +12,8 @@ align-items: none;
 flex-direction: row;
 position: fixed;
 height: 44px;
-background-color: #333;`;
+background-color: #333;
+z-index: 10000`;
 
 const TopBarContainerDiv = styled.div`
 width: 100%;
