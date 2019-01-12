@@ -1,12 +1,23 @@
 import React from 'react';
 import Tab from './Tab';
+
+/* Passed as Props from Content.js
+  tabs={this.state.tabs}
+  selectedTab={this.state.selected} 
+  selectedTabHandler={this.changeSelected}
+*/
+
+
+
 const Tabs = props => {
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {/* map over the tabs provided on your props, create a new Tab component for each one.
-            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
+
+        {/* Maps over the tabs array and returns a tab component for each with a unique key identifier using the index */}
+        {props.tabs.map( (t, i) => <Tab key={i} tab={t} selectedTab={props.selectedTab} selectedTabHandler={props.selectedTabHandler} /> )}
+
       </div>
     </div>
   );
