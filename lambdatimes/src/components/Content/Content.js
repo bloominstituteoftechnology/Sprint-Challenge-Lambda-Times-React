@@ -17,6 +17,7 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
+    console.log(data)
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
