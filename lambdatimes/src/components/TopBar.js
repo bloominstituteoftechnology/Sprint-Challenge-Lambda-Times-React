@@ -51,14 +51,14 @@ flex: 3;
 font-size: 9px;`;
 
 const ContainerCenterSpan = styled.span`
-cursor: pointer;
+cursor: pointer
 margin-right: 5%;
 
-::last-child{
+&:last-child{
   margin-right: 0;
 }
 
-::hover{
+&:hover{
   text-decoration: underline;
 }
 `;
