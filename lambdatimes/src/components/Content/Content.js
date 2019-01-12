@@ -21,11 +21,8 @@ class Content extends Component {
     this.setState({tabs: tabData, cards: cardData});// Once the component has mounted, get the data and reflect that data on the state.
   }
 
-  changeSelected = tab => {
-    // this function should take in the tab and update the state with the new tab.
-  };
 
-  SelectTabHandler = tab => {
+  changeSelected = tab => {
     this.setState({selected: tab})
   }
   filterCards = () => {
@@ -60,7 +57,7 @@ class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Carousel />
-        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.selectTabHandler} />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
     );
