@@ -5,7 +5,7 @@ import Carousel from '../Carousel/Carousel';
 import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
-import { tabData, cardData, carouselData } from '../../data';
+import { tabData, cardData} from '../../data';
 
 export default class Content extends Component {
   constructor(props) {
@@ -46,12 +46,12 @@ export default class Content extends Component {
       } else if (this.state.selected === card.tab){
         return card
       }
+      return cards
     });
     return cards;
   };
 
   render() {
-    console.log(this.state.carousel)
     return (
       <div className="content-container">
         {/*
