@@ -40,7 +40,17 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
+
+    if (this.state.selected.toUpperCase() === 'ALL') {
+      return this.state.cards;
+    } else {
+      const newCards = this.state.cards.filter(card => {
+        if (card.tab.toUpperCase() === this.state.selected) {
+          return card;
+        }
+      });
+      return newCards;
+    }
   };
 
   render() {
