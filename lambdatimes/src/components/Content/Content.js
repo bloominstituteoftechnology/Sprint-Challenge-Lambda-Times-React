@@ -10,7 +10,7 @@ export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'all',
+      selected: 'javascript',
       tabs: [],
       cards: []
     };
@@ -26,7 +26,15 @@ export default class Content extends Component {
     this.setState({selected: tab})
   };
 
-  filterCards = () => {
+  filterCards = e => { 
+    const filteredCards = this.state.cards.filter(card => {
+      if (card.tab === this.state.selected) {
+        return card
+      }
+    })
+      
+    console.log(filteredCards)
+    this.setState({cards: filteredCards})
     // const filteredCards = this.state.cards.filter(card => {
     //   if (card.tab === this.state.selected) {
     //     return card
@@ -44,10 +52,10 @@ export default class Content extends Component {
         - if the selected tab is 'all' it should return all 
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
+        return this.state.cards
     */
-    return this.state.cards;
   };
-
+ 
   render() {
     return (
       <div className="content-container">
@@ -61,7 +69,7 @@ export default class Content extends Component {
           selectedTab={this.state.selected} 
           selectTabHandler={this.changeSelected}
         />
-        <Cards cards={this.state.cards} />
+        <Cards cards={this.filterCards()} />
       </div>
     );
   }
