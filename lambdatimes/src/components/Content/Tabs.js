@@ -9,6 +9,7 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
 
         {props.tabs.map((tab, index) => {
+          console.log(props)
           return (
             <Tab 
               selectTabHandler={props.selectTabHandler}
