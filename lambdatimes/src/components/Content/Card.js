@@ -18,7 +18,7 @@ const Card = props => {
 // Make sure to include PropTypes.
 Card.propTypes = {
   headline: PropTypes.string.isRequired,
-  img:PropTypes.object.isRequired,
-  author:PropTypes.object.isRequired
+  img:PropTypes.string.isRequired,
+  author:PropTypes.string.isRequired
 }
 export default Card;
