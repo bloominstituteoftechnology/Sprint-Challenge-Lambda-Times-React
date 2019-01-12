@@ -15,7 +15,7 @@ const Error = styled.div`
   padding: 0.25rem 0 0.5rem;
 `;
 
-window.localStorage.setItem("loggedIn", false);
+// window.localStorage.setItem("loggedIn", false);
 let status = window.localStorage.getItem("loggedIn");
 
 const Authenticate = ReactComponent => {
