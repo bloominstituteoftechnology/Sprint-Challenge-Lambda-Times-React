@@ -32,6 +32,23 @@ const TopContainerLeft = styled.div`
   flex: 1;
   font-size: 11px;
 `
+const TopContainerCenter = style.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+`
+const TopContainerRight = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+`
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
@@ -41,13 +58,14 @@ const TopBar = () => {
     <TopWrapper>
       <TopContainer>
         <TopContainerLeft>
+
           <span>TOPICS</span><span>SEARCH</span>
         </TopContainerLeft>
 
         <TopContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </TopContainerCenter>
-        
+
         <TopContainerRight>
           <span>LOG IN</span>
         </TopContainerRight> 
