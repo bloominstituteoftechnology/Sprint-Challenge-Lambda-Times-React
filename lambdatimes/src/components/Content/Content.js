@@ -5,6 +5,8 @@ import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+// import cardData from '../../data';
+// import tabData from '../../data';
 
 export default class Content extends Component {
   constructor(props) {
@@ -17,6 +19,7 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
+    this.setState( { cards: cardData });
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
