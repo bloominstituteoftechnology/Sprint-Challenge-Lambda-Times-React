@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Card from './Card';
 
 const Cards = props => {
-  console.log(props)
   return (
     <div className="cards-container">
     {props.cards.map((c, i) => (
