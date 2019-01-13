@@ -9,7 +9,6 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        <div>
           {props.tabs.map((tab, i) => {
             return (
               <Tab
@@ -20,7 +19,6 @@ const Tabs = props => {
               />
             );
           })}
-        </div>
       </div>
     </div>
   );
