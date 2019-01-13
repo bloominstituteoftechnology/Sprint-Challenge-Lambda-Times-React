@@ -19,7 +19,7 @@ const Authenticate = WrappedComponent => { // Authenticate is taking in a compon
 
     render() {
       if(this.state.loggedIn) return <WrappedComponent />
-      else return null;
+      else return <h1>Please click on Login</h1>;
     }
   }
 }
