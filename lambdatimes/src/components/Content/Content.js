@@ -10,7 +10,7 @@ export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: "javascript",
+      selected: "all",
       tabs: [],
       cards: []
     };
@@ -46,7 +46,6 @@ export default class Content extends Component {
     } else {
         return this.state.cards.filter(card => {
           if (card.tab === this.state.selected) {
-            console.log(card.tab)
             return card
           }
         });
