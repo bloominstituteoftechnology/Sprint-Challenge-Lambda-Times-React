@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Authenticate from './components/Content/Authenticate'
 import styled from 'styled-components'
 import TopBar from './components/TopBar';
 import Header from './components/Header';
@@ -23,4 +24,5 @@ const App = () => {
   );
 }
 
-export default App;
+//export default App;
+export default Authenticate(App)
