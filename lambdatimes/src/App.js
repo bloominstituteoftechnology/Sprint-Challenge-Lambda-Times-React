@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
+import Authenticate from './components/Content/Authenticate';
 
 const App = () => {
   return (
@@ -9,8 +10,9 @@ const App = () => {
       <TopBar />
       <Header />
       <Content />
+
     </div>
   );
 }
 
-export default App;
+export default Authenticate(App);
