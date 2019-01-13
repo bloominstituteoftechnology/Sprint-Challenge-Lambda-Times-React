@@ -28,27 +28,26 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-[ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-[ ] Describe a life-cycle event in React?
-[ ] Explain the details of a Higher Order Component?
-[ ] What are three different ways to style components in React? Explain some of the benefits of each.
+[X] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+[X] Describe a life-cycle event in React?
+[X] Explain the details of a Higher Order Component?
+[X] What are three different ways to style components in React? Explain some of the benefits of each.
 
 ## Project Setup
 
 Follow these steps to set up your project:
 
-[ ] This project was put together using Create React App so you should be very familiar with the file structure up to this point.
-[ ] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
-[ ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+[X] This project was put together using Create React App so you should be very familiar with the file structure up to this point.
+[X] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
+[X] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
 
 ## Minimum Viable Product
 
-[ ] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-[ ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-[ ] You should now be able to filter cards using your tabs!
-[ ] Make sure all of your props being passed are validated using PropTypes.
+[X] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+[X] You should now be able to filter cards using your tabs!
+[X] Make sure all of your props being passed are validated using PropTypes.
 [ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
-[ ] Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components.
+[X] Once you have finished the `TopBar` and `Header` components, please move on to Part II. If you have time at the end, you may convert all of the components to styled-components.
 
 ## Stretch Challenge
 
