@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const TabWrapper = styled.div`
+const Tab = props => {
+  /* Using your props, determine if the `tab` prop matches the `selectedTab` prop,
+  if they match, the className should be: 'tab active-tab',
+  if it is not it should just be 'tab'*/
+  const TabWrapper = styled.div`
     display: flex;
     justify-content: none;
     align-items: center;
@@ -22,19 +26,15 @@ const TabWrapper = styled.div`
     }
   `;
 
-
-const Tab = props => {
-  /* Using your props, determine if the `tab` prop matches the `selectedTab` prop,
-  if they match, the className should be: 'tab active-tab',
-  if it is not it should just be 'tab'*/
-
   const cName = props.tab === props.selectedTab ? "tab active-tab" : "tab";
 
   return (
     <TabWrapper
+      tab={props.tab}
+      selectedTab={props.selectedTab}
       onClick={() => {
         props.selectTabHandler(props.tab);
-        /* Replace this dummy click handler function with your selectTabHandler function from props 
+        /* Replace this dummy click handler function with your selectTabHandler function from props
          you'll need to pass the `tab` in as an argument to this handler. */
       }}
     >
