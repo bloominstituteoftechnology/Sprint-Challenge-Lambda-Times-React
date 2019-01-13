@@ -27,26 +27,24 @@ export default class Content extends Component {
   };
 
   filterCards = event => {
-    /* 
-      Your algorithim for the logic here is as follows: 
-        - if the selected tab is 'all' it should return all 
-          of the items from cardData. 
+    /*
+      Your algorithim for the logic here is as follows:
+        - if the selected tab is 'all' it should return all
+          of the items from cardData.
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-
-    const crds = this.state.cards.filter(c => {
-      if (this.state.selected.includes(c.tab)) {
-        return c;
-      }
-    });
-    this.setState({ cards: crds });
+    if (this.state.selected === "all") {
+      return this.state.cards;
+    } else {
+      return this.state.cards.filter(c => c.tab === this.state.selected);
+    }
   };
 
   render() {
     return (
       <div className="content-container">
-        {/* 
-          Add 2 props to the Tabs component, 
+        {/*
+          Add 2 props to the Tabs component,
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
@@ -55,11 +53,7 @@ export default class Content extends Component {
           selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
         />
-        <Cards
-          cards={
-            this.state.selected === "all" ? this.state.cards : this.filterCards
-          }
-        />
+        <Cards cards={this.filterCards()} />
       </div>
     );
   }
