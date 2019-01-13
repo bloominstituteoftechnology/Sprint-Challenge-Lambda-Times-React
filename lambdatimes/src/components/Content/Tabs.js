@@ -20,7 +20,7 @@ const Tabs = props => {
 // Make sure to use PropTypes to validate your types!
 Tabs.propTypes = {
 	tabs: PropTypes.array,
-	selecTabHandler: PropTypes.func,
+	selecTabHandler: PropTypes.func.isRequired,
 	selectedTab: PropTypes.string
 }
 
