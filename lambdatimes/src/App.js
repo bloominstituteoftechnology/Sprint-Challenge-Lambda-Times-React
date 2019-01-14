@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
+import Authentication from './components/Content/Authentication';
 
 const StyledApp = styled.div`
   display: flex;
@@ -14,21 +15,15 @@ const StyledApp = styled.div`
 `;
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      loggedIn: false,
-    };
-  }
   render(){
     return (
-      <StyledApp>
-        <TopBar />
-        <Header />
-        <Content />
-      </StyledApp>
-    );
+        <StyledApp>
+          <TopBar />
+          <Header />
+          <Content />
+        </StyledApp>
+      ); 
   }
 }
 
-export default App;
+export default Authentication(App);

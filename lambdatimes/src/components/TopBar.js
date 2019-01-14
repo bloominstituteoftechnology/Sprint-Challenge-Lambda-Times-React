@@ -90,7 +90,11 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <span onClick={() => {
+            localStorage.removeItem('username');
+            localStorage.removeItem('password');
+            window.location.reload();
+          }}>LOG OUT</span>
         </ContainerRight>
       </Container>
     </TopBarGeneral>
