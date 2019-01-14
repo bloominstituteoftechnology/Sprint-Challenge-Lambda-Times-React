@@ -10,7 +10,7 @@ const TopBarGeneral = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const Container = styled.div`
@@ -22,10 +22,7 @@ const Container = styled.div`
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
-
-  @media (min-width: 1280px) {
-    width: 1280px;
-  }
+  max-width: 1280px;
 `;
 
 const ContainerLeft = styled.div`

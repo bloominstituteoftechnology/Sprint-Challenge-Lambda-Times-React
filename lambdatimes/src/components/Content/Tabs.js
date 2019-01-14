@@ -12,10 +12,7 @@ const TabsGeneral = styled.div`
   width: 100%;
   height: 47px;
   background-color: #fff;
-
-  @media (min-width: 1280px) {
-    width: 1280px;
-  }
+  max-width: 1280px;
 `;
 
 const Topics = styled.div`

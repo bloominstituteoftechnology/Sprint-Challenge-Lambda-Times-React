@@ -13,14 +13,22 @@ const StyledApp = styled.div`
   font-family: 'PT Sans', sans-serif;
 `;
 
-const App = () => {
-  return (
-    <StyledApp>
-      <TopBar />
-      <Header />
-      <Content />
-    </StyledApp>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      loggedIn: false,
+    };
+  }
+  render(){
+    return (
+      <StyledApp>
+        <TopBar />
+        <Header />
+        <Content />
+      </StyledApp>
+    );
+  }
 }
 
 export default App;
