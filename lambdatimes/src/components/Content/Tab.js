@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*
 Received as props from Tabs.js
@@ -28,5 +29,9 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
+
+Tab.propTypes = {
+    tab: PropTypes.string
+};
 
 export default Tab;
