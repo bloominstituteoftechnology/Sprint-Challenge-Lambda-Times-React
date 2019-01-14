@@ -74,11 +74,11 @@ const Span = styled.span`
   ${props => (props.type === 'spanCenter' ? `
      margin-right: 5%;
 
-      &::last-child {
+      &:last-child {
         margin-right: 0;
        };
 
-       &::hover {
+       &:hover {
         text-decoration: underline;
        };
   ` : null)}
