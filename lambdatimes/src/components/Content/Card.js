@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 const Card = props => {
   return (
     <div className="card">
@@ -24,6 +23,5 @@ Card.propTypes = {
     author: PropTypes.string,
   }),
 };
-// Make sure to include PropTypes.
 
 export default Card;
