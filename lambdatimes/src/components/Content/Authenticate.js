@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Login from '../Login';
 
 const Authenticate = App =>
@@ -22,6 +23,10 @@ const Authenticate = App =>
       if (this.state.loggedIn) return <App />;
       return <Login />;
     }
+  }
+
+  Authenticate.propTypes = {
+    App: PropTypes.func.isRequired
   }
 
   export default Authenticate;

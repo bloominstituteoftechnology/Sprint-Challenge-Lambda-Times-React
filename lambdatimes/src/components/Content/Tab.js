@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop,
@@ -43,7 +43,7 @@ const Tab = props => {
   );
 };
 
-// Make sure you include PropTypes on your props.
+//Make sure you include PropTypes on your props.
 Tab.propTypes = {
   tab: PropTypes.string,
   selectTabHandler: PropTypes.func,
