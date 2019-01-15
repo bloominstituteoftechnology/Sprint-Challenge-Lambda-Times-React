@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import Card from './Card';
 
 const Cards = props => {
@@ -10,8 +11,6 @@ const Cards = props => {
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
-
-      {/* const { selectedTab, selectedTabHandler } = props */}
       
       {cards.map(card => (
         <Card key={card.headline}
@@ -23,5 +22,19 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
+
+Cards.propTypes = {
+  headline: PropTypes.string.isRequired,
+  tab: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired
+}
+
+// CommentSection.propTypes = {
+//   comments: PropTypes.arrayOf(PropTypes.shape({
+//       username: PropTypes.string,
+//       text: PropTypes.string
+//   }))
+// }
 
 export default Cards;
