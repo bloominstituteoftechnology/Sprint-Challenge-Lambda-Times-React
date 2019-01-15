@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
-import Tab from '../Content/Tab.js';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -24,11 +23,9 @@ export default class Content extends Component {
     }, 1000)
   }
 
-  changeSelected = event => {
+  changeSelected = (tab) => {
     // this function should take in the tab and update the state with the new tab.
-    const selectedTab = event.target.firstChild.nodeValue.toLowerCase();
-    this.setState({tabs: selectedTab})
-
+    this.setState({selected: tab})
   };
 
   filterCards = () => {
@@ -48,13 +45,12 @@ export default class Content extends Component {
       return cardData;
     } 
     else{
-      const filteredCards = this.props.cardData.filter(card => {
+      const filteredCards = cardData.filter(card => {
         if(card.tab === this.state.selected){
           return card;
         }
       })
-      this.setState({cards: filteredCards})
-      return this.state.cards;
+      return filteredCards;
     }
   };
 

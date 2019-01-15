@@ -13,7 +13,7 @@ const Cards = props => {
     </div>
   )
 }
-Cards.PropTypes = {
+Cards.propTypes = {
   cards: PropTypes.array.isRequired,
 }
 

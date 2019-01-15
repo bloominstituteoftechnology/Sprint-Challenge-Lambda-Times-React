@@ -15,7 +15,7 @@ const Card = props => {
   );
 };
 
-Card.PropTypes = {
+Card.propTypes = {
   card: PropTypes.object.isRequired,
 }
 // Make sure to include PropTypes.

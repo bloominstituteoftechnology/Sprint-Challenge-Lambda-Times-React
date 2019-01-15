@@ -17,8 +17,8 @@ const Tabs = props => {
   );
 };
 
-Tabs.PropTypes = {
-  tab: PropTypes.object.isRequired,
+Tabs.propTypes = {
+  tab: PropTypes.string,
   selectedTab: PropTypes.string.isRequired,
   selectTabHandler: PropTypes.func.isRequired,
 }

@@ -4,80 +4,8 @@ import styled from 'styled-components';
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-
-
-/* 
-.top-bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: none;
-  flex-direction: row;
-  position: fixed;
-  height: 44px;
-  background-color: #333;
-}
-.top-bar .container {
-  width: 100%;
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  flex-direction: row;
-  color: #fff;
-  letter-spacing: 1px;
-  padding: 0 10px;
-}
-@media (min-width: 1280px) {
-  .top-bar .container {
-    width: 1280px;
-  }
-}
-.top-bar .container .container-left {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: row;
-  flex: 1;
-  font-size: 11px;
-}
-.top-bar .container .container-left span {
-  cursor: pointer;
-  margin-right: 25%;
-  font-weight: bold;
-}
-.top-bar .container .container-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex: 3;
-  font-size: 9px;
-}
-.top-bar .container .container-center span {
-  cursor: pointer;
-  margin-right: 5%;
-}
-.top-bar .container .container-center span:last-child {
-  margin-right: 0;
-}
-.top-bar .container .container-center span:hover {
-  text-decoration: underline;
-}
-.top-bar .container .container-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-  flex: 1;
-  font-size: 11px;
-  font-weight: bold;
-}
-.top-bar .container .container-right span {
-  cursor: pointer;
-}
-*/
-
 const TopBar = () => {
+
   const TopBarDiv = styled.div`
   width: 100%;
   display: flex;
@@ -88,19 +16,84 @@ const TopBar = () => {
   height: 44px;
   background-color: #333;
 `;
+
+  const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+}
+
+  ${props => (props.type === 'left' ?
+  `display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px; ` : null)}
+
+  ${props => (props.type === 'center' ?
+  `display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px; ` : null)}
+
+
+  ${props => (props.type === 'right' ?
+  `display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;` : null)}
+
+  `;
+  
+
+  const Span = styled.span`
+
+  ${props => (props.type === 'left' ?
+  `cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;` : null)}
+
+  ${props => (props.type === 'center' ?
+  `cursor: pointer;
+  margin-right: 5%;
+  &:hover {
+    text-decoration: underline;
+  }
+  :last-child{
+    margin-right: 0; ;
+  }` : null)}
+
+  ${props => (props.type === 'right' ?
+  `cursor: pointer;` : null)}
+
+  `;
   return (
     <TopBarDiv>
-      <div className="container">
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
-      </div>
+      <Container>
+        <Container type = "left">
+          <Span type = "left">TOPICS</Span><Span type = "left">SEARCH</Span>
+        </Container>
+        <Container type = "center">
+          <Span type = "center">GENERAL</Span><Span type = "center">BROWNBAG</Span><Span type = "center">RANDOM</Span><Span type = "center">MUSIC</Span><Span type = "center">ANNOUNCEMENTS</Span>
+        </Container>
+        <Container type = "right">
+          <Span type = "right">LOG IN</Span>
+        </Container>
+      </Container>
     </TopBarDiv>
   )
 }

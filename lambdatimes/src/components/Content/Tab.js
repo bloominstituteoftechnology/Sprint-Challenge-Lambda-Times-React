@@ -14,7 +14,7 @@ const Tab = props => {
   return (
     <div
       className={className}
-      onClick={props.selectTabHandler}
+      onClick={() => props.selectTabHandler(props.tab)}
     >
     {
         /* Replace this dummy click handler function with your selectTabHandler function from props 
@@ -25,8 +25,8 @@ const Tab = props => {
   );
 };
 
-Tab.PropTypes = {
-  tab: PropTypes.object.isRequired,
+Tab.propTypes = {
+  tab: PropTypes.string.isRequired,
   selectedTab: PropTypes.string.isRequired,
   selectTabHandler: PropTypes.func.isRequired,
 }
