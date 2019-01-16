@@ -8,7 +8,7 @@ const Card = props => {
       <div className="headline">{/* headline goes here */card.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={'card.img' /* image source goes here */} />
+          <img src={card.img /* image source goes here */} />
         </div>
         <span>By {card.author/* author goes here */}</span>
       </div>

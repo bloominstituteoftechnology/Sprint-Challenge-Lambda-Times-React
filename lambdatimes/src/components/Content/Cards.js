@@ -30,11 +30,4 @@ Cards.propTypes = {
   author: PropTypes.string.isRequired
 }
 
-// CommentSection.propTypes = {
-//   comments: PropTypes.arrayOf(PropTypes.shape({
-//       username: PropTypes.string,
-//       text: PropTypes.string
-//   }))
-// }
-
 export default Cards;

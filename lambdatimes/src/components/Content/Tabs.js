@@ -16,13 +16,13 @@ const Tabs = props => {
         {console.log("Tabs: ", props)}
         {props.tabs.map(tab => 
           //  console.log("tab", tab)
-          console.log('selectTabHandler', selectTabHandler)
-          // <Tab
-          //   selectTabHandler={selectTabHandler}
-          //   selectedTab={selectedTab}
-          //   tab={tab}
-          //   key={tab}
-          // />
+          // console.log('selectTabHandler', selectTabHandler)
+          <Tab
+            selectTabHandler={selectTabHandler}
+            selectedTab={selectedTab}
+            tab={tab}
+            key={tab}
+          />
         )}
       </div>
     </div>
