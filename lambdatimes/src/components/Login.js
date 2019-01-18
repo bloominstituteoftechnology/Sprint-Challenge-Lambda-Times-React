@@ -53,7 +53,28 @@ const LoginScreen = styled.div`
                 color: #4591e0;
             }
         }
-    }
+        .register{
+            text-align: center;
+            margin: 15px 0;
+            h2{
+                margin: unset;
+                font-size: 1rem;
+                font-weight: 500;
+                color: ${props => props.color};
+            }
+            i{
+                color: white;
+                width: 40px;
+                height: 40px;
+                padding: 8px;
+                margin: 10px 5px;
+                font-size: 20px;
+                border-radius: 50px;
+                background-color: #333333;
+            }
+            }
+        }
+
 `;
 const LoginButton = styled.button`
     font-size: 17px;
@@ -94,6 +115,17 @@ class Login extends React.Component{
                         <LoginButton color="#4591e0" type="submit">LOG IN</LoginButton>
                         <LoginButton color="#999" onClick={this.props.loginToggle}>CANCEL</LoginButton>
                     </form>
+                    <div className="register">
+                        <h2 color="grey">OR LOG IN WITH:</h2>
+                        <div className="icons">
+                            <i className="fab fa-facebook-f" />
+                            <i className="fab fa-twitter" />
+                            <i className="fab fa-yahoo" />
+                            <i className="fab fa-google-plus-g" />
+                        </div>
+                        <h2 color="grey">DON'T HAVE AN ACCOUNT?</h2>
+                        <h2 color="#4591e0">REGISTER</h2>
+                    </div>
                 </div>
             </LoginScreen>
         )
