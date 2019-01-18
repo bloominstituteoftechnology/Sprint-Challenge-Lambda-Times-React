@@ -7,22 +7,23 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     console.log('in carousel')
-    console.log(props.photos)
+
     this.state = {
-      currentPhoto: props.photos[count]
+      currentPhoto: ""
     }
   }
   componentDidMount(){
-
+      this.setState({currentPhoto: carouselData[count]})
   }
 
   leftClick = () => {
-    this.selectedImage
     if(count>0){
       count-=1;
     }else{
       count = 3;
     }
+    this.setState({currentPhoto:carouselData[count]})
+    this.selectedImage()
   }
 
   rightClick = () => {
@@ -31,6 +32,9 @@ export default class Carousel extends Component {
     }else{
       count += 1;
     }
+    this.setState({currentPhoto:carouselData[count]})
+
+    this.selectedImage()
   }
 
   selectedImage = () => {
