@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -17,6 +16,8 @@ export default class Content extends Component {
   }
 
   componentDidMount() {
+   this.setState ({tabs:tabData,cards:cardData})
+console.log (this.state)
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
