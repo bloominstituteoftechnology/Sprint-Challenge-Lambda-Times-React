@@ -83,7 +83,7 @@ const TopBar = props => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </div>
         <div className="container-right">
-          <span onClick={e => props.login(e)}>LOG IN</span>
+          {localStorage.getItem('loggedIn') ? <i className="fas fa-user" onClick={props.logOut} /> : <span onClick={e => props.login(e)}>LOG IN</span>}
         </div>
       </div>
     </TopBarSC>
