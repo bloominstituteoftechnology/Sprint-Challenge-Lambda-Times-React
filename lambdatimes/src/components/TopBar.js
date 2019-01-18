@@ -72,7 +72,7 @@ const TopBarSC = styled.div`
     }
 `;
 
-const TopBar = () => {
+const TopBar = props => {
   return (
     <TopBarSC>
       <div className="container">
@@ -83,7 +83,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </div>
         <div className="container-right">
-          <span>LOG IN</span>
+          <span onClick={e => props.login(e)}>LOG IN</span>
         </div>
       </div>
     </TopBarSC>
