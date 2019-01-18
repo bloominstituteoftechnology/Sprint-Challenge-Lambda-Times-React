@@ -6,8 +6,8 @@ import { TabsContainer, Topics, Title } from './TabStyles';
 
 const Tabs = props => {
   return (
-    <TabsContainer className="tabs">
-      <Topics className="topics">
+    <TabsContainer>
+      <Topics>
         <Title>TRENDING TOPICS:</Title>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
