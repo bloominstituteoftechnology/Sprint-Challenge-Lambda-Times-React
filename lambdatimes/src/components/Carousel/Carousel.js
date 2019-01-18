@@ -1,35 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { UncontrolledCarousel } from 'reactstrap';
 import { carouselData } from '../../data'
 // Complete this Carousel 
-export default class Carousel extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-
-    }
+const items = [
+  {
+    src: carouselData[0],
+  },
+  {
+    src: carouselData[1],
+  },
+  {
+    src: carouselData[2],
+  },
+  {
+    src: carouselData[3],
   }
-  componentDidMount(){
+];
 
-  }
+const Carousel = () => <UncontrolledCarousel items={items} />;
 
-  leftClick = () => {
-
-  }
-
-  rightClick = () => {
-
-  }
-
-  selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
-  }
-  
-  render(){
-    return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
-    )
-  }
-}
+export default Carousel;
