@@ -52,6 +52,7 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
+/*
 .top-bar {
   width: 100%;
   display: flex;
@@ -77,7 +78,7 @@ body {
     width: 1280px;
   }
 }
-.top-bar .container .container-left {
+/*.top-bar .container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -160,6 +161,7 @@ body {
   margin-right: 25px;
   flex: 1;
 }
+*/
 .content-container {
   display: flex; 
   flex-direction: column; 
