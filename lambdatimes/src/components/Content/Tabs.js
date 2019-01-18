@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Card from "./Cards";
 
 const Tabs = props => {
+    console.log(props)
   return (
     <div className="tabs">
       <div className="topics">
