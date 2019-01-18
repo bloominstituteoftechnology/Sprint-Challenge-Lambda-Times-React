@@ -46,7 +46,14 @@ const CenterContainer = styled.div`
 const CentContSpan = styled.span`
   cursor: pointer;
   margin-right: 5%;
+  &:hover{
+    text-decoration: underline;
+  }
+  &:last-child{
+    margin-right:0;
+  }
 `;
+
 const ContainerRight = styled.div`
   display: flex;
   justify-content: flex-end;
