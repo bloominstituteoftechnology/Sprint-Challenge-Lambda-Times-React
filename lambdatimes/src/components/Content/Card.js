@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Cards, Headline, Author, ImageContainer } from './CardStyles';
+
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{props.card.headline}</div>
-      <div className="author">
-        <div className="img-container">
+    <Cards>
+      <Headline>{props.card.headline}</Headline>
+      <Author>
+        <ImageContainer>
           <img src={props.card.img} alt={props.card.headline}/>
-        </div>
+        </ImageContainer>
         <span>By {props.card.author}</span>
-      </div>
-    </div>
+      </Author>
+    </Cards>
   );
 };
 

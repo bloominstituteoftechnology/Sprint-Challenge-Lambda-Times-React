@@ -2,11 +2,13 @@ import React from 'react';
 import Tab from './Tab';
 import PropTypes from 'prop-types';
 
+import { TabsContainer, Topics, Title } from './TabStyles';
+
 const Tabs = props => {
   return (
-    <div className="tabs">
-      <div className="topics">
-        <span className="title">TRENDING TOPICS:</span>
+    <TabsContainer className="tabs">
+      <Topics className="topics">
+        <Title>TRENDING TOPICS:</Title>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
           {props.tabs.map((e, i) => {
@@ -14,8 +16,8 @@ const Tabs = props => {
               <Tab tab={e}  key={i} changeSelected={props.changeSelected} selectedTab={props.selectedTab} />
             )
           })}
-      </div>
-    </div>
+      </Topics>
+    </TabsContainer>
   );
 };
 
