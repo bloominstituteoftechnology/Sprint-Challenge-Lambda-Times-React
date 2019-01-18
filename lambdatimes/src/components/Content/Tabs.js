@@ -22,6 +22,8 @@ const Tabs = props => {
     </div>
   );
 };
-{/*<Card author={card.author} headline={card.headline} img={card.img} />*/}
 // Make sure to use PropTypes to validate your types!
+Tabs.propTypes = {
+    tabs: PropTypes.array
+}
 export default Tabs;
