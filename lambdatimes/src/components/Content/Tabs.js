@@ -1,6 +1,7 @@
 import React from 'react';
 import Tab from './Tab';
 import PropTypes from 'prop-types'
+import Card from "./Cards";
 
 const Tabs = props => {
   return (
@@ -13,7 +14,7 @@ const Tabs = props => {
               props.tabs.map(tab => {
                   console.log(tab);
                   return (
-                      <Tab tabs={tab.tabs} />
+                      <Tab tab={tab} />
                   )
               })
           }
@@ -21,6 +22,6 @@ const Tabs = props => {
     </div>
   );
 };
-
+{/*<Card author={card.author} headline={card.headline} img={card.img} />*/}
 // Make sure to use PropTypes to validate your types!
 export default Tabs;

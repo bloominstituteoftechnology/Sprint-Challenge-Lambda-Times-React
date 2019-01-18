@@ -9,6 +9,7 @@ const Cards = props => {
           new Card component for each passing the card as the only prop*/}
       {
         props.cards.map(card => {
+          console.log(card)
           return (
               <Card author={card.author} headline={card.headline} img={card.img} />
           )
