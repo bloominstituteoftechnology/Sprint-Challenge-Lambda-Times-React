@@ -7,9 +7,9 @@ const Card = props => {
       <div className="headline">{props.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={'' /* image source goes here */} />
+          <img src={props.data.img} />
         </div>
-        <span>By {/* author goes here */}</span>
+        <span>By {props.data.author}</span>
       </div>
     </div>
   );
@@ -17,8 +17,8 @@ const Card = props => {
 
 Card.propTypes = {
   headline: PropTypes.string,
-  img: PropTypes.object,
-  author: PropTypes.object
+  img: PropTypes.string,
+  author: PropTypes.string
 };
 
 export default Card;
