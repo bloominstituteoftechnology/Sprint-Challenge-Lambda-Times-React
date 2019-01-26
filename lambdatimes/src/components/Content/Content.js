@@ -40,7 +40,7 @@ export default class Content extends Component {
       return cardscopy;
     } else {
     for (let i=0; i<cardscopy.length; i++){
-      if (cardscopy[i].tab == this.state.selectedTab){
+      if (cardscopy[i].tab === this.state.selectedTab){
         selected.push(cardscopy[i])
       }
     }return selected;
