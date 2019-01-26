@@ -14,7 +14,14 @@ const Card = props => {
     </div>
   );
 };
-
+Card.propTypes ={
+  card: PropTypes.shape({
+    headline:PropTypes.string,
+    tab:PropTypes.string,
+    img:PropTypes.string,
+    author:PropTypes.string
+  })
+}
 // Make sure to include PropTypes.
 
 export default Card;
