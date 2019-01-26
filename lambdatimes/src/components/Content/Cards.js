@@ -9,7 +9,10 @@ const Cards = props => {
          {props.cards.map(card => (
         
         <Card
-
+        headline = {card.headline}
+        imgSrc = {card.img}
+        author = {card.author}
+        key = {card.headline}
         />
 
       ))}
