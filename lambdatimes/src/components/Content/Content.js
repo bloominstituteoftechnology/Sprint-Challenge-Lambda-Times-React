@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -72,10 +71,12 @@ export default class Content extends Component {
         selectedTab = {this.state.selected}
         selectTabHandler = {this.changeSelected}
         />
-        
+
         <Cards cards={this.filterCards()} />
 
       </div>
     );
   }
 }
+
+export default Content
