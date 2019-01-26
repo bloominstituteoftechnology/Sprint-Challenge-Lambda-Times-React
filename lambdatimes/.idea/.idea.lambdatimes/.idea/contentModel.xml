@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\seanw\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\seanw\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_lambdatimes.1221778479.00" t="ExcludeRecursive" />
+    <e p="C:\Users\seanw\Desktop\Lambda School\7_Intermediate React\Sprint-Challenge-Lambda-Times-React\lambdatimes" t="IncludeFlat">
+      <e p="node_modules" t="ExcludeRecursive">
+        <e p="prop-types" t="IncludeRecursive" />
+        <e p="react" t="IncludeRecursive" />
+        <e p="react-dom" t="IncludeRecursive" />
+        <e p="react-scripts" t="IncludeRecursive" />
+        <e p="styled-components" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
