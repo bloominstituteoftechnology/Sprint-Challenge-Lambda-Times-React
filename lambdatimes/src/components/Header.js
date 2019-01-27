@@ -7,7 +7,6 @@ import styled from "styled-components";
 
 const HeaderContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   background-color: #fff;
@@ -28,6 +27,7 @@ const HeaderContainer = styled.div`
  const HeaderH1 = styled.h1`
   font-size: 60px;
   font-family: Didot, serif;
+  justify-content: space-between;
   font-weight: bold;
   flex: 8;
   text-align: center;
