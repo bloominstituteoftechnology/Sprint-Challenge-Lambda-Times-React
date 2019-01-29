@@ -43,10 +43,12 @@ export default class Content extends Component {
     */
 
   if (this.state.slected==='all') {
-        this.setState({cards: cardData})
+        return cardData
       } else {
-        this.setState({cards: cardData.filter(cards => cards.tab === this.state.tabs.selected)})
+        const filteredCards = cardData.filter(cards => cards.tab === this.state.selected)
+        return filteredCards
       }
+      
     return this.state.cards;
   };
 
