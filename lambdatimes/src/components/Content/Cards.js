@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import propTypes from 'prop-types';
 
 const Cards = props => {
   return (
@@ -11,6 +12,9 @@ const Cards = props => {
   )
 }
 
+Card.propTypes = {
+  card: propTypes.object.isRequired
+}
 // Make sure you include prop types for all of your incoming props
 
 export default Cards;

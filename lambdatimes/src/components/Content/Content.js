@@ -45,7 +45,7 @@ export default class Content extends Component {
       }
     }return selected;
     };
-    this.setState({selectedCards: selected});
+   // this.setState({selectedCards: selected});
   }
 
   render(){

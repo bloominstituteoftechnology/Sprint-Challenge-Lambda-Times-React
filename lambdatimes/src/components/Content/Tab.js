@@ -1,5 +1,5 @@
 import React from 'react';
-
+import propTypes from 'prop-types';
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
@@ -11,6 +11,11 @@ const Tab = props => {
           {props.tab.toUpperCase()}
         </div>
       )
+    }
+    Tab.propTypes = {
+      tab: propTypes.string.isRequired,
+      changeSelected: propTypes.func.isRequired,
+      
     }
 
 // Make sure you include PropTypes on your props.
