@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types'; // loads PropTypes validation library
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -19,5 +19,9 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
-
+Tab.propTypes = {
+  tab: PropTypes.string,  // validates PropType as string
+  selectedTab: PropTypes.string, // validates PropType as string
+  selectTabHandler: PropTypes.func // validates PropType as function
+}
 export default Tab;

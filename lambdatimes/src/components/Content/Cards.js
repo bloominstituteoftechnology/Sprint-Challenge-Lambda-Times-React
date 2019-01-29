@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'; // loads PropTypes validation library
 import Card from './Card';
 // import PropTypes from 'prop-types';
 
@@ -14,7 +15,9 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
-
+Card.propTypes = {
+  cards: PropTypes.array // validates prop-type is array
+}
 export default Cards;
 // {this.state.instaClonePosts.map((post, i) => {
 //   return (
