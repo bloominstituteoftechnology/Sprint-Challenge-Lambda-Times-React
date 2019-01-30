@@ -9,9 +9,9 @@ const Tabs = props => {
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         
-        { props.tabs.map(tab => 
+        { props.tab.map(tab => 
         	<Tab 
-        		selectTabHandler = {props.selectTabHandler} 
+        		filterCards = {props.filterCards}
         		selectedTab = {props.selectedTab} 
         		tab={tab}
         	/> 
@@ -25,7 +25,6 @@ const Tabs = props => {
 
 // Make sure to use PropTypes to validate your types!
 Tab.propTypes = {
-  selectTabHandler: PropTypes.function,
   selectedTab: PropTypes.string,
   tab:PropTypes.string
 }

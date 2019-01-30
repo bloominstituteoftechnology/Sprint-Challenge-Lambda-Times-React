@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 
 const Tab = props => {
+  console.log(props)
       if(props.tab === props.selectedTab) {
         this.className='tab active-tab';
       } else {
@@ -10,7 +11,11 @@ const Tab = props => {
     }
 
      return (
-     <div className={'tab'} onClick={() => this.props.selectTabHandler(props.tab)}>
+     <div 
+     className={'tab'} 
+     onClick={() => props.filterCards(props.tab)}
+     selectedTab = {props.tab}
+     >
       {props.tab.toUpperCase()}
      </div>
       )}
