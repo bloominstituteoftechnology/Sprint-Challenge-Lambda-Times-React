@@ -17,7 +17,7 @@ const StyledHeader = styled.div`
   border-bottom: 1px solid lightgrey;
   width: 100%;
   height: 120px;
-  margin-top: 44px;
+  margin: 44px auto;
   padding-bottom: 15px;
   @media (min-width: 1280px) {
     width: 1280px;

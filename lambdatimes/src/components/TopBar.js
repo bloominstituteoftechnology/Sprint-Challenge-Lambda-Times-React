@@ -11,6 +11,7 @@ const StyledTopBar = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  
 `;
 
 const TopBarContainer = styled.div`
@@ -24,6 +25,7 @@ const TopBarContainer = styled.div`
   padding: 0 10px;
   @media (min-width: 1280px) {
     width: 1280px;
+
   }
 `;
 
