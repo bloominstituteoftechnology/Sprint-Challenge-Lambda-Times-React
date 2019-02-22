@@ -55,9 +55,9 @@ Follow these steps for completing your project.
 ## Minimum Viable Product
 
 - [x] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- [ ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- [ ] You should now be able to filter cards using your tabs!
-- [ ] Make sure all of your props being passed are validated using PropTypes.
+- [x] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+- [x] You should now be able to filter cards using your tabs!
+- [x] Make sure all of your props being passed are validated using PropTypes.
 - [ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
 
 ## Stretch Challenge
