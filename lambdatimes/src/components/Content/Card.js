@@ -7,7 +7,7 @@ const Card = (props) => {
 			<div className="headline">{props.cardData.headline}</div>
 			<div className="author">
 				<div className="img-container">
-					<img src={props.cardData.img} alt="author" />
+					<img src={props.cardData.img} alt="" />
 				</div>
 				<span>By {props.cardData.author}</span>
 			</div>
@@ -16,7 +16,7 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-	cardData: PropTypes.objectOf({
+	cardData: PropTypes.shape({
 		headline: PropTypes.string,
 		img: PropTypes.string,
 		author: PropTypes.string
