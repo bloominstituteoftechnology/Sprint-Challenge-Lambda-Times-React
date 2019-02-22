@@ -73,7 +73,7 @@ const StyledTopBar = styled.div`
 	}
 `;
 
-const TopBar = () => {
+const TopBar = (props) => {
 	return (
 		<StyledTopBar>
 			<div className="container">
@@ -89,7 +89,7 @@ const TopBar = () => {
 					<span>ANNOUNCEMENTS</span>
 				</div>
 				<div className="container-right">
-					<span>LOG IN</span>
+					<span onClick={(event) => props.login(event)}>LOG IN</span>
 				</div>
 			</div>
 		</StyledTopBar>
