@@ -18,13 +18,14 @@ export default class Carousel extends Component {
 
   leftClick = () => {
     this.setState({
-      indexer: this.state.indexer < this.state.images.length ? this.state.indexer + 1 : 0
+      indexer: this.state.indexer < this.state.images.length - 1 ? this.state.indexer + 1 : 0
     })
+    console.log(this.state.indexer);
   };
 
   rightClick = () => {
     this.setState({
-      indexer: this.state.indexer < 0 ? this.state.images.length : this.state.indexer - 1
+      indexer: this.state.indexer > 0 ? this.state.indexer - 1 : this.state.images.length - 1
     });
   };
 
