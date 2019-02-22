@@ -50,9 +50,10 @@ const LoginScreen = styled.div`
 				border-radius: 5px;
 				background-color: #f5f5f5;
 				font-family: Didot, serif;
+				font-size: 1.5rem;
 
 				&::placeholder {
-					font-size: 15px;
+					font-size: 1.5rem;
 				}
 			}
 		}
@@ -98,10 +99,10 @@ class Login extends React.Component {
 						<input type="text" placeholder="Email" name="email" required />
 						<input type="password" placeholder="Password" name="password" required />
 						<LoginButton color="#4591e0" type="submit">
-							LOG IN
+							Log In
 						</LoginButton>
 						<LoginButton color="#999" onClick={this.props.loginToggle}>
-							CANCEL
+							Cancel
 						</LoginButton>
 					</form>
 				</div>
