@@ -1,0 +1,4 @@
+[build]
+base = "lambdatimes/"
+publish = "lambdatimes/build"
+command = "yarn build"
