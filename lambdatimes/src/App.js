@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
+import LoginPage from './components/Login'
+import Authenticate from './components/Authentication/Authenticate';
 import Content from './components/Content/Content';
 
 const App = () => {
@@ -13,4 +15,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Authenticate(App)(LoginPage)
