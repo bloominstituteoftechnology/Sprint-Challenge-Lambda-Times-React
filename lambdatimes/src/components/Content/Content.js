@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       // Set this to an initial value
-      selected: '',
+      selected: 'all',
       tabs: [],
       cards: []
     }
