@@ -12,12 +12,12 @@ const LoginPage = styled.div`
     font-weight: bold;
     flex: 8;
     text-align: center;
-    color: #000;
+    // color: #000;
   }
   p {
     font-size: 20px;
   }
-  
+
   ${props => (props.subH1 ? `font-size:55px;` : null)}
 `;
 const LoginForm = styled.form`

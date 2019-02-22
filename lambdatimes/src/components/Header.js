@@ -13,12 +13,13 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: #fff;
+  // background-color: #fff;
   border-bottom: 1px solid lightgrey;
   width: 100%;
   height: 120px;
   margin: 44px auto;
   padding-bottom: 15px;
+  color: crimson;
   @media (min-width: 1280px) {
     width: 1280px;
   }
@@ -28,7 +29,6 @@ const StyledHeader = styled.div`
     font-weight: bold;
     flex: 8;
     text-align: center;
-    color: #000;
   }
 `;
 
@@ -45,7 +45,7 @@ const StyledHeaderText = styled.span`
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderText timeStamp>{moment().format('MMM DD YYYY, h:mm A')}</StyledHeaderText>
+      <StyledHeaderText timeStamp>Last Updated:<br></br><br></br>{moment().format('MMM DD YYYY, h:mm A')}</StyledHeaderText>
       <h1>Lambda Times</h1>
       <StyledHeaderText temp>98°</StyledHeaderText>
     </StyledHeader>

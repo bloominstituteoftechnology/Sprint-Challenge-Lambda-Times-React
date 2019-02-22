@@ -20,7 +20,7 @@ const TopBarContainer = styled.div`
   justify-content: none;
   align-items: none;
   flex-direction: row;
-  color: #fff;
+  color: crimson;
   letter-spacing: 1px;
   padding: 0 10px;
   @media (min-width: 1280px) {
@@ -85,7 +85,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <span onClick={() => {localStorage.removeItem('user'); window.location.reload()}}>LOG IN</span>
         </ContainerRight>
       </TopBarContainer>
     </StyledTopBar>
