@@ -1,15 +1,20 @@
 import React from 'react';
+import{
+  StyledHeader,
+  StyledHeaderText
+} from './TopStyling'
+import moment from 'moment'
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
 const Header = () => {
   return (
-    <div className="header">
-      <span className="date">SMARCH 32, 2018</span>
+    <StyledHeader>
+      <StyledHeaderText timeStamp>Last Update:<br></br><br></br>{moment().format('MMM DD YYYY, h:mm A')}</StyledHeaderText>
       <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
-    </div>
+      <StyledHeaderText temp>98°</StyledHeaderText>
+    </StyledHeader>
   )
 }
 
