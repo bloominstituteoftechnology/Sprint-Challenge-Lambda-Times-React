@@ -10,8 +10,8 @@ const StyledTopBar = styled.div`
   flex-direction: row;
   position: fixed;
   height: 44px;
-  background-color: #333;
-  
+  background-color: rgb(12, 11, 11);
+  z-index: 1000000;
 `;
 
 const TopBarContainer = styled.div`

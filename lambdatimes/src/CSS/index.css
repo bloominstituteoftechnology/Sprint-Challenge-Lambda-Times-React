@@ -234,7 +234,7 @@ body {
   justify-content: space-between;
   align-items: none;
   flex-direction: column;
-  background-color: #333;
+  background-color: rgb(12, 11, 11);
   width: 380px;
   margin-bottom: 16px;
   padding: 24px;
