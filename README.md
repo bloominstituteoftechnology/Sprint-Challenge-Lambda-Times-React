@@ -29,9 +29,28 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes is used to type-check data as it is passed around the Application. It is important to type-check data in JavaScript specifically because it is not a "strongly typed" language, meaning that it will try to accept any type of data as an arguement regardless of what is intended. This feature of JavaScript is powerful, but can produce unexpected results if additional type checking is not used.
+
 - [ ] Describe a life-cycle event in React?
+
+A life-cycle event in React can occur at each specific part of the React life-cycle. A component starts life in the constructor function, where initial data and other instructions are computed. Once constructed, a component usually mounts itself to the DOM with the render() method. The componentDidMount() method can be used to carry out another set of instructions once the mounting event is complete. The component then awaits updates and state changes, which trigger another render(), and so on until the component is unmounted.
+
 - [ ] Explain the details of a Higher Order Component?
+
+A Higher Order Component is a React adaptation of JavaScript Higher Order Functions. A Higher Order Component is a component that receives other components as arguements and also returns a component. 
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+Vanilla CSS / Inline Styles.
+Components can be altered using plain old CSS, with the external style sheet being imported into the component.js file. Inline styles can also be hard coded into the JSX which renders the component. It is the most simple and direct way to style components.
+
+Pre-Processing.
+Vanilla CSS can be expanded by using a pre-processor such as SASS or LESS. This gives an added benefit of using variables, mixins, and the other syntactical advantages which pre-processing offers.
+
+CSS in JS.
+Using the Styled Components library, CSS can be written directly into the component.js file, eliminating the need for an external file to hold the styling properties. This method may help reduce typos and other syntax errors which can easily occur when editing multiple files for a single component.
+
 
 ## Project Setup
 
