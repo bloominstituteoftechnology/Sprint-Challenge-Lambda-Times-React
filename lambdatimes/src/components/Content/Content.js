@@ -7,27 +7,23 @@ import Cards from './Cards';
 import { tabData, cardData } from '../../data';
 
 export default class Content extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
+    state = {
       // Set this to an initial value
       selected: 'all',
       tabs: [],
-      cards: [],
-      changeSelected: (tab) => {
-        return () => {
-       // Finish this function, reflecting the new selected tab in the state
-         this.setState({ selected: tab });
-       };
-     }
+      cards: []
     }
-  }
+  
 
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
     this.setState({ tabs: tabData, cards: cardData });
     
-  };
+  }
+
+  changeSelected = tab => {
+    this.setState({ selected: tab })
+  }
 
   /* Complete this function, if the selected tab is 'all' it should return all 
      of the items from cardData. If it is something else, it shoudl only return 
