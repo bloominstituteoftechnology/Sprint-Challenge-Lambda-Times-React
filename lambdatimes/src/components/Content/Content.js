@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -20,13 +19,16 @@ export default class Content extends Component {
 		// Once the component has mounted, get the data and reflect that data on the state.
 		this.setState({
 			tabs: tabData,
-			cards: cardData,
-			selectedTab: 'all'
+			cards: cardData
 		});
 	}
 
-	changeSelected = (tab) => {
+	changeSelected = (event, tab) => {
 		// this function should take in the tab and update the state with the new tab.
+		console.log(event.target);
+		this.setState({
+			selected: tab
+		});
 	};
 
 	filterCards = () => {
