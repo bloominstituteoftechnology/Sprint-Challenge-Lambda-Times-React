@@ -16,7 +16,11 @@ const authenticate = (Content) => (Login) => {
 		}
 
 		render() {
-			return this.state.loggedIn ? <Content /> : <h1>Login to see the news</h1>;
+			return this.state.loggedIn ? (
+				<Content />
+			) : (
+				<h1 className="authenticate">Login to Lambda Times for the latest news</h1>
+			);
 		}
 	};
 };

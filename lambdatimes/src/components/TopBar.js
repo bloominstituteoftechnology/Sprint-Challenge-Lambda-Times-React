@@ -65,6 +65,13 @@ const StyledTopBar = styled.div`
 				cursor: pointer;
 			}
 		}
+		.container-login {
+			color: #ec0;
+			&:hover {
+				color: goldenrod;
+				transform: scale(1.1);
+			}
+		}
 	}
 	@media (min-width: 1280px) {
 		.container {
@@ -89,7 +96,13 @@ const TopBar = (props) => {
 					<span>ANNOUNCEMENTS</span>
 				</div>
 				<div className="container-right">
-					<span onClick={(event) => props.login(event)}>LOG IN</span>
+					{localStorage.getItem('loggedIn') ? (
+						<i className="fas fa-user" onClick={props.logOut} />
+					) : (
+						<div className="container-login">
+							<span onClick={(event) => props.login(event)}>LOG IN</span>
+						</div>
+					)}
 				</div>
 			</div>
 		</StyledTopBar>

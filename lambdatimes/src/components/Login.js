@@ -49,6 +49,8 @@ const LoginScreen = styled.div`
 				border: none;
 				border-radius: 5px;
 				background-color: #f5f5f5;
+				font-family: Didot, serif;
+
 				&::placeholder {
 					font-size: 15px;
 				}
@@ -58,6 +60,7 @@ const LoginScreen = styled.div`
 `;
 const LoginButton = styled.button`
 	font-size: 1.6rem;
+	font-family: Didot, serif;
 	background-color: #444;
 	border: unset;
 	color: #eefffe;
@@ -65,6 +68,10 @@ const LoginButton = styled.button`
 	border-radius: 5px;
 	margin-bottom: 1.5rem;
 	padding: 0.5rem 1rem;
+	&:hover {
+		cursor: pointer;
+		background-color: #555;
+	}
 `;
 
 class Login extends React.Component {

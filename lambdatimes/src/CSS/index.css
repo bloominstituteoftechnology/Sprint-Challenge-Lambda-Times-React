@@ -323,3 +323,9 @@ body {
 	width: 100%;
 	display: none;
 }
+
+.authenticate {
+	padding: 3rem;
+	font-size: 3rem;
+	font-family: Didot, serif;
+}

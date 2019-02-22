@@ -13,10 +13,17 @@ class App extends React.Component {
 		};
 	}
 
-	login = (e) => {
+	login = () => {
 		this.setState({
 			toggleLogin: !this.state.toggleLogin
 		});
+	};
+
+	logOut = () => {
+		localStorage.removeItem('email');
+		localStorage.removeItem('password');
+		localStorage.removeItem('loggedIn');
+		this.setState({ toggleLogin: false });
 	};
 
 	render() {
@@ -24,7 +31,7 @@ class App extends React.Component {
 			<div className="App">
 				<TopBar login={this.login} />
 				<Header />
-				<Login loginState={this.state.toggleLogin} loginToggle={this.login} />
+				<Login loginState={this.state.toggleLogin} loginToggle={this.login} logOut={this.logOut} />
 				<ConditionalView />
 			</div>
 		);
