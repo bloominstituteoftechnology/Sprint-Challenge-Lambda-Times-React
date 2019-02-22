@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TopBar from './TopBar';
 import Header from './Header';
-import './LoginPage.css'
+
 class Login extends Component {
   constructor() {
     super();
@@ -23,7 +23,7 @@ class Login extends Component {
 
   render() {
     return (
-      <>
+    <div>
        <TopBar />
        <Header />
         <form className="login-form">
@@ -45,7 +45,7 @@ class Login extends Component {
             />
             <button onClick={this.handleLogin}>Log In</button>
         </form>
-      </>
+    </div>
     );
   }
 }
