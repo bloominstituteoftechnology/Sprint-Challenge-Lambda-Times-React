@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 const Card = props => {
   return (
     <div className="card">
@@ -15,5 +17,14 @@ const Card = props => {
 };
 
 // Make sure to include PropTypes.
+Card.proptypes = {
+  card : PropTypes.shape({
+      headline: PropTypes.string.required,
+      img: PropTypes.string.required,
+      author: PropTypes.string.required,
+      tab: PropTypes.string
+  })
+}
+
 
 export default Card;
