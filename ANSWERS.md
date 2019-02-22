@@ -10,9 +10,9 @@ A React life-cycle event is the "birth, growth and death" of a component/state. 
 
 ### Explain the details of a Higher Order Component?
 
-The HOC pattern takes a component and returns a component. It is a pattern that helps 
+The HOC pattern takes a component and returns a component. It is a pattern that helps with scaling components and minimizes repetitive components that can become tedious to maintain as an application grows. 
 
 
 ### What are three different ways to style components in React? Explain some of the benefits of each.
 
-3 different ways of styling a component are using "vanilla" CSS, a pre-process, or a styled-component. Pre-Processors offer the ability to use CSS similarly to a coding language, it allows to the user to "code" out CSS so that makes scaffolding out css markup faster and more functionally, It also allows the coder to compartimentalize their style sheets to only their components. Styled-Components are similar to Pre-processors but allow the coder to actually turn them into components. Using them as components makes updating, styling, and making changes to a component easier. It also allows the porting or inhertiance of a component into every other component. After using pre-processing and styled-components, I really dont see the benefit in vanilla CSS other than habit. 
+3 different ways of styling a component are using "vanilla" CSS, a pre-process, or a styled-component. Pre-Processors offer the ability to use CSS similarly to a coding language, it allows to the user to "code" out CSS so that makes scaffolding out css markup faster and more functionally, It also allows the coder to compartimentalize their style sheets to only their components. Styled-Components are similar to Pre-processors but allow the coder to actually turn them into components. Using them as components makes updating, styling, and making changes to a component easier. It also allows the porting or inhertiance of a component into every other component. After using pre-processing and styled-components, I really dont see the benefit in vanilla CSS other than habit.
