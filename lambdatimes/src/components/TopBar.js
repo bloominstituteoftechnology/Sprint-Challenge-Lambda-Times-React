@@ -14,7 +14,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </div>
         <div className="container-right">
-          <span>LOG IN</span>
+          <span onClick={() => {localStorage.removeItem('user'); window.location.reload()}}>LOG IN</span>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ import moment from 'moment'
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderText timeStamp>{moment().format('MMM DD YYYY, h:mm A')}</StyledHeaderText>
+      <StyledHeaderText timeStamp>Last Update:<br></br><br></br>{moment().format('MMM DD YYYY, h:mm A')}</StyledHeaderText>
       <h1>Lambda Times</h1>
       <StyledHeaderText temp>98°</StyledHeaderText>
     </StyledHeader>
