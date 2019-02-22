@@ -29,8 +29,14 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+    ~ Proptypes are used to determine the dataType of properties passed to Components. This helps when debugging. 
+
 - [ ] Describe a life-cycle event in React?
+    The LifeCycle events are Mount Update and UnMount. Mounting is about it the initial data a component has. Updateing is about setting State/ updating inital data. UnMount is about cleaning up  processes removing unNeeded data.  
+
 - [ ] Explain the details of a Higher Order Component?
+        HOC's are way to reuse component logic. It is a fucntional component that takes in a function as it's argument. 
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
 
 ## Project Setup
