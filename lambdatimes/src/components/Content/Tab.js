@@ -5,17 +5,18 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   
-  function classy(props){
-    let tabClass = 'tab';
-    if(props.tab === props.selectedTab){
-      tabClass = 'tab active-tab';
-    }
-    return tabClass;
-  }
+  // function classy(props){
+  //   let tabClass = 'tab';
+  //   if(props.tab === props.selectedTab){
+  //     tabClass = 'tab active-tab';
+  //   }
+  //   return tabClass;
+  // }
 
   return (
+    console.log(props),
     <div 
-      className={classy} 
+      className={props.tab === props.selectedTab ? 'tab active-tab': 'tab'} 
       onClick={()=> props.tabHandler(props.tab)}
         /* Replace this dummy click handler function with your selectTabHandler function from props 
          you'll need to pass the `tab` in as an argument to this handler. */
