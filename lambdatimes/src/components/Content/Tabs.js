@@ -22,4 +22,6 @@ Tabs.propTypes = {
   selectTabHandler: PropTypes.func
 }
 
+// 
+
 export default Tabs;

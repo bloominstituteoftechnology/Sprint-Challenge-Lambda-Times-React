@@ -13,15 +13,12 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
-Cards.propTypes = {
-  cards: PropTypes.arrayOf(
-    PropTypes.shape(  //May be using wrong braces here. 
-
-    )
-  ),
+Card.propTypes = {
+  card: PropTypes.object,
+  key: PropTypes.number,
 }
 
-
+// 
 
 export default Cards;
 

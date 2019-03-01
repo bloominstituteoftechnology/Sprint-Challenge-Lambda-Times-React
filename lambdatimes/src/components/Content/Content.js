@@ -5,6 +5,7 @@ import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+import PropTypes from 'prop-types';
 
 export default class Content extends Component {
   constructor(props) {
@@ -65,3 +66,47 @@ export default class Content extends Component {
     );
   }
 }
+
+Tabs.propTypes= {
+  tabData: PropTypes.array,
+  selectedTab: PropTypes.string,
+};
+
+Cards.propTypes = {
+  cards: PropTypes.array,
+}
+
+// Pokemon.propTypes = {
+//   pokemon: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.number.isRequired,
+//       img: PropTypes.string.isRequired,
+//       name: PropTypes.string.isRequired,
+//       type: PropTypes.arrayOf(
+//         PropTypes.oneOf([
+//           'Grass',
+//           'Poison',
+//           'Fire',
+//           'Flying',
+//           'Water',
+//           'Bug',
+//           'Normal',
+//           'Electric',
+//           'Psychic',
+//           'Ground',
+//           'Fighting',
+//           'Rock',
+//           'Ice',
+//           'Ghost',
+//           'Dragon'
+//         ])
+//       ),
+//       next_evolution: PropTypes.arrayOf(
+//         PropTypes.shape({
+//           num: PropTypes.string,
+//           name: PropTypes.string
+//         })
+//       )
+//     })
+//   )
+// };

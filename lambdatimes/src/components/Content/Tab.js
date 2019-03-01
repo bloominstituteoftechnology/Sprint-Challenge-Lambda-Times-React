@@ -35,4 +35,5 @@ Tab.propTypes = {
   tabHandler: PropTypes.func
 }
 
+// 
 export default Tab;
