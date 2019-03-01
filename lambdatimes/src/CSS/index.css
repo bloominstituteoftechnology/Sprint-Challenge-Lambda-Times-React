@@ -120,7 +120,7 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,7 +131,7 @@ body {
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-}
+} */
 @media (min-width: 1280px) {
   .header {
     width: 1280px;
@@ -151,15 +151,15 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
 }
-.header .date {
+/* .header .date {
   margin-left: 25px;
   flex: 1;
-}
-.header .temp {
+} */
+/* .header .temp {
   text-align: right;
   margin-right: 25px;
   flex: 1;
-}
+} */
 .content-container {
   display: flex; 
   flex-direction: column; 
