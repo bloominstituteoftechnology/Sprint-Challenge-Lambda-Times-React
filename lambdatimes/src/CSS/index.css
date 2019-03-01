@@ -52,6 +52,7 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
+/*
 .top-bar {
   width: 100%;
   display: flex;
@@ -120,6 +121,7 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
+*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -137,6 +139,7 @@ body {
     width: 1280px;
   }
 }
+/*
 .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
@@ -160,6 +163,7 @@ body {
   margin-right: 25px;
   flex: 1;
 }
+*/
 .content-container {
   display: flex; 
   flex-direction: column; 
