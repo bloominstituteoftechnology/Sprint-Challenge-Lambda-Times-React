@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './CSS/index.css';
-import App from './App';
+import GateKeeper from './GateKeeper';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<GateKeeper />, document.getElementById('root'));
