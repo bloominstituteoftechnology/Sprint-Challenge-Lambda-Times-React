@@ -12,7 +12,7 @@ const Tab = props => {
          you'll need to pass the `tab` in as an argument to this handler. */
       }}
     >
-      {props.tab.toUpperCase()}
+      {/* {props.tab.toUpperCase()} */}
     </div>
   );
 };
