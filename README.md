@@ -29,9 +29,20 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+[PropTypes are used to help the developer find issues with their code before they arise. It's important to type check our data in JS because as we keep building on to our applications we create more instances of creating errors, therefore by type checking each component we decrease the overall likelihood of getting errors]
+
 - [ ] Describe a life-cycle event in React?
+
+[]
+
 - [ ] Explain the details of a Higher Order Component?
+
+[]
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+[]
 
 ## Project Setup
 
