@@ -56,11 +56,11 @@ const TopBarContainerCenter = styled.div`
 const TopBarContainerCenterSpan = styled.span`
   cursor: pointer;
   margin-right: 5%;
-  &: text-decoration: underline;
-`;
-
-const TopBarContainerCenterSpanLast = styled.span`
-  margin-right: 0;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:last-child {margin-right: 0;
+  }
 `;
 
 const TopBarContainerRight = styled.div`
@@ -85,7 +85,7 @@ const TopBar = () => {
           <TopBarContainerLeftSpan>TOPICS</TopBarContainerLeftSpan><TopBarContainerLeftSpan>SEARCH</TopBarContainerLeftSpan>
         </TopBarContainerLeft>
         <TopBarContainerCenter >
-          <TopBarContainerCenterSpan>GENERAL</TopBarContainerCenterSpan><TopBarContainerCenterSpan>BROWNBAG</TopBarContainerCenterSpan><TopBarContainerCenterSpan>RANDOM</TopBarContainerCenterSpan><TopBarContainerCenterSpan>MUSIC</TopBarContainerCenterSpan><TopBarContainerCenterSpanLast>ANNOUNCEMENTS</TopBarContainerCenterSpanLast>
+          <TopBarContainerCenterSpan>GENERAL</TopBarContainerCenterSpan><TopBarContainerCenterSpan>BROWNBAG</TopBarContainerCenterSpan><TopBarContainerCenterSpan>RANDOM</TopBarContainerCenterSpan><TopBarContainerCenterSpan>MUSIC</TopBarContainerCenterSpan><TopBarContainerCenterSpan>ANNOUNCEMENTS</TopBarContainerCenterSpan>
         </TopBarContainerCenter >
         <TopBarContainerRight>
           <TopBarContainerRightSpan>LOG IN</TopBarContainerRightSpan>
