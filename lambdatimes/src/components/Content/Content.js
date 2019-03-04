@@ -50,7 +50,7 @@ export default class Content extends Component {
     }
       return this.state.cards.filter(card => card.tab.includes(this.state.selected))
   }
-
+  
   render() {
     return (
       <div className="content-container">
@@ -60,6 +60,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} /> 
+        <Tabs tabs={this.state.tabs} 
         selectedTab={this.state.selected}
         selectTabHandler={this.state.changeSelected} />
         <Cards cards={this.filterCards()} />

@@ -34,7 +34,7 @@ const Tabs = props => {
           'technology ',
           'node ',
           'React.js ',
-          'bootstrap '
+          'bootstrap ',
         ])
       )
     })
