@@ -1,7 +1,7 @@
 import React from 'react';
 import Tab from './Tab';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 const Tabs = props => {
   return (
@@ -20,39 +20,24 @@ const Tabs = props => {
     </div>
   )
 }
-  selectTabHandler = event => {
-    const tabs = this.state.data.filter( tab => {
-      if (tab.select.(event.target.value)) {
-        return tab.setState({
-      tab: event.target.value
-    })
-  }
-
-  selectedTab = event => {
-    this.setState({
-      tab: event.target.value
-    })
-  }
 
   // Make sure to use PropTypes to validate your types!
   Tabs.propTypes = {
-    tabs: PropTypes.arrayOf(
-      PropTypes.shape({
-        headline: PropTypes.string.isRequired,
-        img: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired, 
-        type: PropTypes.arrayOf( 
-          PropTypes.oneOf([
-            'all',
-            'javascript',
-            'technology',
-            'node',
-            'React.js',
-            'bootstrap'
-          ])
-        )
-      })
-    )
+    tabs: PropTypes.shape({
+      headline: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired, 
+      type: PropTypes.arrayOf( 
+        PropTypes.oneOf([
+          'all ',
+          'javascript ',
+          'technology ',
+          'node ',
+          'React.js ',
+          'bootstrap '
+        ])
+      )
+    })
   };
 
 export default Tabs;
