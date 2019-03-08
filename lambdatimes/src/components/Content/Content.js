@@ -18,19 +18,18 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
-    this.setState ({
-    tabs: tabData,
-    cards: cardData
-  })
+    this.setState({
+      tabs: tabData,
+      cards: cardData
+    })
   };
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab. check over
-    return () => (
+    return () => {
       this.setState({
-        selected: tab
-      })
-    )
+        selected: tab})
+      }
   };
 
   filterCards = () => {
@@ -46,10 +45,17 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    (this.state.selected === 'all') ? 
-    this.state.cards: 
-    this.state.cards.filter(card => card.tab === this.state.selected)
-  };
+  //   (this.state.selected === 'all' ? 
+  //   this.state.cards : 
+  //   this.state.cards.filter(card => card.tab === this.state.selected));
+  // };
+
+  if (this.state.selected === 'all') {
+    return this.state.cards
+  } else {
+    return this.state.cards.filter(card => card.tab === this.state.selected)
+  }
+};
 
   render() {
     return (
@@ -60,8 +66,8 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} 
-        selectedTab={this.state.selectedTab} 
-        selectTabHandler={this.state.selectTabHandler} />
+        selectedTab={this.state.selected} 
+        selectTabHandler={this.state.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
     );
