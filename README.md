@@ -34,7 +34,7 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 - [ ] Describe a life-cycle event in React?
 
-[the ife cycle event in React is simply the stages a component goes through in its life, so they are set up as mounting (birth), updating (growth), and unmounting (death)]
+[the life cycle event in React is simply the stages a component goes through in its life, so they are set up as mounting (birth), updating (growth), and unmounting (death)]
 
 - [ ] Explain the details of a Higher Order Component?
 
