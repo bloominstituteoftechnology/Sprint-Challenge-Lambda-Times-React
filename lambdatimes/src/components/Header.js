@@ -43,7 +43,7 @@ const WrapH1 = styled.h1`
 const Header = () => {
   return (
     <WrapperDiv>
-      <DateSpan>SMARCH 32, 2018</DateSpan>
+      <DateSpan>MARCH 30, 2018</DateSpan>
       <WrapH1>Lambda Times</WrapH1>
       <TempSpan>98°</TempSpan>
     </WrapperDiv>
