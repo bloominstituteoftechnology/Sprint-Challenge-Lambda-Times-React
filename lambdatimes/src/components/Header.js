@@ -23,7 +23,7 @@ const WrapperDiv = styled.div`
 const DateSpan = styled.span`
   margin-left: 25px;
   flex: 1;
-`;
+0`;
 
 const TempSpan = styled.span`
   text-align: right;
@@ -50,4 +50,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
