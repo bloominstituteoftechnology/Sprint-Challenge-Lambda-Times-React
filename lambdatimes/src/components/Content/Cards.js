@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import PropTypes from 'prop-types';
 
-const Cards = props => {
+class Cards extends Component{
+  constructor(props){
+  super(props);
+  this.state={
+    cards: props.cards
+  }
+}
+render() {
   return (
     <div className="cards-container">
-      {/* Using the cards prop, map over the list creating a 
-          new Card component for each passing the card as the only prop*/}
+      {this.props.cards.map((card, index) => <Card key={index} card={card} />)}
     </div>
   )
+  }
 }
 
-// Make sure you include prop types for all of your incoming props
+Cards.propTypes = {
+  cards: PropTypes.array
+}
 
 export default Cards;
