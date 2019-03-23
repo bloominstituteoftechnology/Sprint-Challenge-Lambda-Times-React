@@ -9,6 +9,7 @@ export const TopBarDiv = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  padding: 1.5rem;
 `;
 
 export const TopBarDivContainer = styled.div`
@@ -89,6 +90,7 @@ export const HeaderDiv = styled.div`
   width: 100%;
   height: 120px;
   margin-top: 44px;
+  padding: 0 2rem;
   padding-bottom: 15px;
 `;
 
