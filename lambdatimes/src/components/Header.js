@@ -12,6 +12,10 @@ const StyledHeader = styled.div`
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
 `;
 
 const StyledHeaderDate = styled.span`

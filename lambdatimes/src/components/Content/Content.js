@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Tabs from "./Tabs";
 import Cards from "./Cards";
+import Carousel from "../Carousel/Carousel";
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from "../../data";
@@ -62,7 +63,7 @@ export default class Content extends Component {
       <StyledContentContainer>
         {/* 
           Add 2 props to the Tabs component, 
-          `selectedTab` that includes the currently selected tab
+          `selectedTab` that  includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs
@@ -70,6 +71,7 @@ export default class Content extends Component {
           selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
         />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </StyledContentContainer>
     );
