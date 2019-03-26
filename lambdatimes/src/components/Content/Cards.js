@@ -7,13 +7,13 @@ const Cards = props => {
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
-      {props.cards.map(card => <Card card={card} />)}
+      {props.cards.map(card => <Card card={card} key={card.headline} />)}
     </div>
   )
 }
 
 // Make sure you include prop types for all of your incoming props
-Cards.PropTypes = {
+Cards.propTypes = {
   cards: PropTypes.array.isRequired,
 }
 

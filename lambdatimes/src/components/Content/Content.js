@@ -47,13 +47,19 @@ export default class Content extends Component {
     switch (this.state.selected) {
       case "all":
         return this.state.cards;
-        break;
-      case "":
-
+      case "javascript":
+        return this.state.cards.filter(card => card.tab === this.state.selected)
+      case "technology":
+        return this.state.cards.filter(card => card.tab === this.state.selected)
+      case "node":
+        return this.state.cards.filter(card => card.tab === this.state.selected)
+      case "React.js":
+        return this.state.cards.filter(card => card.tab === this.state.selected)
+      case "bootstrap":
+        return this.state.cards.filter(card => card.tab === this.state.selected)
       default:
-        break;
+        return this.state.cards;
     }
-    return this.state.cards;
   };
 
   render() {
