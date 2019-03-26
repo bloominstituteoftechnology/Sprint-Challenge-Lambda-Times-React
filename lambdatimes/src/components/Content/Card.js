@@ -16,5 +16,8 @@ const Card = props => {
 };
 
 // Make sure to include PropTypes.
+Card.propTypes = {
+  card: PropTypes.object.isRequired,
+}
 
 export default Card;

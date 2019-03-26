@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Tab from './Tab';
 
 const Tabs = props => {
-  console.log("Tabs", props)
   return (
     <div className="tabs">
       <div className="topics">
@@ -21,7 +20,7 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
-Tabs.PropTypes = {
+Tabs.propTypes = {
   tabs: PropTypes.array.isRequired,
 }
 
