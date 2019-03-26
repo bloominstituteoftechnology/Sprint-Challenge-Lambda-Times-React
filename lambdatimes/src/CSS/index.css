@@ -271,12 +271,13 @@ body {
   flex-direction: row;
   height: 500px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-top: 16px;
 }
 @media (min-width: 1200px) {
   .carousel {
     width: 1200px;
+    /* overflow: hidden; */
   }
 }
 .carousel .left-button,
@@ -313,4 +314,13 @@ body {
 .carousel img {
   width: 100%;
   display: none;
+}
+
+.tabs-wrapper {
+  display: flex;
+}
+
+.temp {
+  display: flex;
+  align-items: flex-end;
 }
