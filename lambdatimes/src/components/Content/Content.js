@@ -48,15 +48,15 @@ export default class Content extends Component {
       case "all":
         return this.state.cards;
       case "javascript":
-        return this.state.cards.filter(card => card.tab == this.state.selected)
+        return this.state.cards.filter(card => card.tab === this.state.selected)
       case "technology":
-        return this.state.cards.filter(card => card.tab == this.state.selected)
+        return this.state.cards.filter(card => card.tab === this.state.selected)
       case "node":
-        return this.state.cards.filter(card => card.tab == this.state.selected)
+        return this.state.cards.filter(card => card.tab === this.state.selected)
       case "React.js":
-        return this.state.cards.filter(card => card.tab == this.state.selected)
+        return this.state.cards.filter(card => card.tab === this.state.selected)
       case "bootstrap":
-        return this.state.cards.filter(card => card.tab == this.state.selected)
+        return this.state.cards.filter(card => card.tab === this.state.selected)
       default:
         return this.state.cards;
     }

@@ -9,7 +9,7 @@ const Tab = props => {
     <div
       className={classNames({
         [`tab`]: true,
-        [`active-tab`]: props.tab == props.selectedTab,
+        [`active-tab`]: props.tab === props.selectedTab,
       })
       }
       onClick={() => props.selectTabHandler(props.tab)}
