@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import Card from './Card';
 
 const Cards = ({ cards }) => {
-  console.log('TCL: Cards -> cards', cards);
-
   return (
     <div className="cards-container">
       {cards.map((card, i) => (

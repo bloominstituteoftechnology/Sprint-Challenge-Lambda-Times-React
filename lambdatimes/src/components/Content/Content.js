@@ -28,7 +28,6 @@ export default class Content extends Component {
 
   filterCards = () => {
     const { selected, cards } = this.state;
-    console.log('TCL: Content -> filterCards -> selected', selected);
     if (selected === 'all') return cardData;
     else return cards.filter(card => card.tab === selected);
   };
