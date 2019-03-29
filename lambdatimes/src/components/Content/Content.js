@@ -29,9 +29,9 @@ export default class Content extends Component {
     // IS THIS NEXT BIT RIGHT???
     this.setState({
       selected:
-        tab.target.innerText.toLowerCase() === "react.js"
+        tab.target.textContent.toLowerCase() === "react.js"
           ? "React.js"
-          : tab.target.innerText.toLowerCase()
+          : tab.target.textContent.toLowerCase()
     });
   };
 
