@@ -81,10 +81,6 @@ const TopBarContainerRight = styled.div`
   }
 `;
 
-const TopBarContainerRightSpan = styled.span`
-  cursor: pointer;
-`;
-
 const TopBar = () => {
   return (
     <TopBarWrapper>
