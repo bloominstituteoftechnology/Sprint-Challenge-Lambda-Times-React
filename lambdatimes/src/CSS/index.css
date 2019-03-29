@@ -118,7 +118,13 @@ body {
   font-weight: bold;
 }
 .top-bar .container .container-right span {
-  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
 }
 .header {
   display: flex;
