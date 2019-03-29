@@ -1,7 +1,7 @@
 import React from 'react';
 import Tab from './Tab';
 import PropTypes from 'prop-types';
-//import styled from 'styled-components';
+import styled from 'styled-components';
 
 
 const TabsGeneral = styled.div`
