@@ -16,7 +16,6 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    console.log(this.state.images);
     if (this.state.index === 0) {
       this.setState({
         index: 3
@@ -29,7 +28,6 @@ export default class Carousel extends Component {
   };
 
   rightClick = () => {
-    console.log(this.state.images);
     if (this.state.index === 3) {
       this.setState({
         index: 0
