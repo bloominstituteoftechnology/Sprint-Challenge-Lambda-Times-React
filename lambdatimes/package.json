@@ -1,7 +1,8 @@
 {
-  "name": "lambdatimes",
-  "version": "0.1.0",
-  "private": true,
+  "name": "lambdatimes-react",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -14,5 +15,22 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glweems/Sprint-Challenge-Lambda-Times-React.git"
+  },
+  "keywords": [
+    "lambda",
+    "lambdaschool",
+    "sprint",
+    "react",
+    "components"
+  ],
+  "author": "Garrett Weems <gwgraphicdesign@gmail.com> (https://glweems.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glweems/Sprint-Challenge-Lambda-Times-React/issues"
+  },
+  "homepage": "https://github.com/glweems/Sprint-Challenge-Lambda-Times-React#readme"
 }
