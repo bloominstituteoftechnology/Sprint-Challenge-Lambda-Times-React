@@ -1,5 +1,9 @@
 import React from "react";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+
 import styled from "styled-components";
+
+import LoginModal from "./Login";
 
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
@@ -81,27 +85,97 @@ const TopBarContainerRight = styled.div`
   }
 `;
 
-const TopBar = () => {
-  return (
-    <TopBarWrapper>
-      <TopBarContainer>
-        <TopBarContainerLeft>
-          <span>TOPICS</span>
-          <span>SEARCH</span>
-        </TopBarContainerLeft>
-        <TopBarContainerCenter>
-          <span>GENERAL</span>
-          <span>BROWNBAG</span>
-          <span>RANDOM</span>
-          <span>MUSIC</span>
-          <span>ANNOUNCEMENTS</span>
-        </TopBarContainerCenter>
-        <TopBarContainerRight>
-          <span>LOG IN</span>
-        </TopBarContainerRight>
-      </TopBarContainer>
-    </TopBarWrapper>
-  );
-};
+const ModalInput = styled.input`
+  display: block;
+  width: 80%;
+  padding-left: 10px;
+  margin-bottom: 10px;
+`;
+
+class TopBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+      username: "",
+      password: ""
+    };
+  }
+
+  toggle = () => {
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
+  };
+
+  handleChanges = event => {
+    let value = event.target.value;
+    this.setState({
+      [event.target.name]: value
+    });
+  };
+
+  submitInfo = event => {
+    localStorage.username = this.state.username;
+    localStorage.password = this.state.password;
+    window.location.reload();
+  };
+
+  render() {
+    return (
+      <TopBarWrapper>
+        <TopBarContainer>
+          <TopBarContainerLeft>
+            <span>TOPICS</span>
+            <span>SEARCH</span>
+          </TopBarContainerLeft>
+          <TopBarContainerCenter>
+            <span>GENERAL</span>
+            <span>BROWNBAG</span>
+            <span>RANDOM</span>
+            <span>MUSIC</span>
+            <span>ANNOUNCEMENTS</span>
+          </TopBarContainerCenter>
+          <TopBarContainerRight>
+            <div>
+              <span onClick={this.toggle}>LOG IN</span>
+              <Modal
+                isOpen={this.state.modal}
+                toggle={this.toggle}
+                className={this.props.className}
+              >
+                <ModalHeader toggle={this.toggle}>Login</ModalHeader>
+                <ModalBody>
+                  <ModalInput
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    onChange={this.handleChanges}
+                    onSubmit={this.submitInfo}
+                  />
+                  <ModalInput
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    onChange={this.handleChanges}
+                    onSubmit={this.submitInfo}
+                  />
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="primary" onClick={this.submitInfo}>
+                    Login
+                  </Button>{" "}
+                  <Button color="secondary" onClick={this.toggle}>
+                    Cancel
+                  </Button>
+                </ModalFooter>
+              </Modal>
+            </div>
+          </TopBarContainerRight>
+        </TopBarContainer>
+      </TopBarWrapper>
+    );
+  }
+}
 
 export default TopBar;

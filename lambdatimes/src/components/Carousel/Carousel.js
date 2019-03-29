@@ -21,9 +21,9 @@ export default class Carousel extends Component {
         index: 3
       });
     } else {
-      this.setState({
-        index: this.state.index - 1
-      });
+      this.setState(prevState => ({
+        index: prevState.index - 1
+      }));
     }
   };
 
@@ -33,9 +33,9 @@ export default class Carousel extends Component {
         index: 0
       });
     } else {
-      this.setState({
-        index: this.state.index + 1
-      });
+      this.setState(prevState => ({
+        index: prevState.index + 1
+      }));
     }
   };
 
