@@ -3,14 +3,30 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
 
-const App = () => {
-  return (
-    <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
-    </div>
-  );
+class App extends Component {
+  state = {
+    loggedIn: true
+  };
+
+  LoginModal = e => {
+    if (e.target.innerText === 'LOG IN') {
+      this.setState({ loggedIn: false });
+    }
+  };
+
+  login = () => {
+    this.setState({ loggedIn: true });
+  };
+
+  render() {
+    return (
+      <div className="App" onClick={this.LoginModal}>
+        <TopBar loggedIn={this.state.loggedIn} />
+        <Header />
+        <Content loggedIn={this.state.loggedIn} login={this.login} />
+      </div>
+    );
+  }
 }
 
 export default App;
