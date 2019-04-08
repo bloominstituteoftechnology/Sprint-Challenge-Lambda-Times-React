@@ -120,8 +120,8 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
-.header {
-  display: flex;
+/* .header {
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -131,19 +131,26 @@ body {
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
-}
+  background: linear-gradient(245deg, #244f44, #57989a, #63d1bc, #8563d1);
+background-size: 800% 800%;
+
+-webkit-animation: Gradient 15s ease infinite;
+-moz-animation: Gradient 15s ease infinite;
+animation: Gradient 15s ease infinite; */
+
+/* }
 @media (min-width: 1280px) {
   .header {
     width: 1280px;
   }
-}
+} */ */
 .header h1 {
   font-size: 60px;
   font-family: Didot, serif;
   font-weight: bold;
   flex: 8;
   text-align: center;
-  color: #000;
+  /* color: #000; */
 }
 .header span {
   align-self: flex-end;
@@ -174,6 +181,13 @@ body {
   width: 100%;
   height: 47px;
   background-color: #fff;
+  background: linear-gradient(66deg, #020504, #76f9cd);
+background-size: 400% 400%;
+
+-webkit-animation: tabs 1s ease infinite;
+-moz-animation: tabs 1s ease infinite;
+animation: tabs 1s ease infinite;
+
 }
 @media (min-width: 1280px) {
   .tabs {
