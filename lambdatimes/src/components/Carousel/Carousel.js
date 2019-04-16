@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { carouselData } from "../../data";
 import styled, { css } from "styled-components";
+import { carouselData } from "../../data";
 
 const CarouselSlider = styled.div`
   width: 100%;
@@ -116,3 +116,5 @@ export default class Carousel extends Component {
     );
   }
 }
+
+// comment here
