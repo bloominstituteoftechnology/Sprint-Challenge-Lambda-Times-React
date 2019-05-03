@@ -1,5 +1,6 @@
 import React from 'react'
 import Tab from './Tab'
+import PropTypes from 'prop-types'
 
 
 export default function Tabs(props) {
@@ -19,6 +20,11 @@ export default function Tabs(props) {
   )
 }
 
+
+Tabs.propTypes = {
+  selectedTab: PropTypes.element.isRequired,
+  selectTabHandler: PropTypes.func.isRequired
+}
 
 // ---- Instructions ----
 
