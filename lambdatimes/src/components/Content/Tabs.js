@@ -22,7 +22,8 @@ export default function Tabs(props) {
 
 
 Tabs.propTypes = {
-  selectedTab: PropTypes.element.isRequired,
+  tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selectedTab: PropTypes.string.isRequired,
   selectTabHandler: PropTypes.func.isRequired
 }
 
