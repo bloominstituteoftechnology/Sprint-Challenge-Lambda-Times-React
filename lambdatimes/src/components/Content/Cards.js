@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import PropTypes from 'prop-types'
 
 
 export default function Cards (props) {
@@ -10,6 +11,15 @@ export default function Cards (props) {
       }
     </div>
   )
+}
+
+Cards.PropTypes = {
+  cards: PropTypes.arrayOf(PropTypes.shape({
+    headline: PropTypes.string.isRequired,
+    tab: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired
+  })).isRequired
 }
 
 
