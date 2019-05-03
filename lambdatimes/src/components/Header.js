@@ -41,7 +41,7 @@ const HeaderDate = styled.div`
   flex: 1;
 `;
 
-const HeadeTemp = styled.div`
+const HeaderTemp = styled.div`
   text-align: right;
   margin-right: 25px;
   flex: 1;
@@ -55,12 +55,16 @@ const Header = () => {
     //   <span className="temp">98°</span>
     // </div>
     <HeaderDiv>
+      <HeaderH1>Lambda Times</HeaderH1>
       <HeaderSpan>
-        <HeaderH1>Lambda Times</HeaderH1>
         <HeaderDate>SMARCH 32, 2018</HeaderDate>
-        {/* <HeaderTemp>98</HeaderTemp> */}
-      </HeaderSpan>      
+         <HeaderTemp>98</HeaderTemp> 
+      </HeaderSpan>     
     </HeaderDiv>
+      
+        
+        
+      
   )
 }
 export default Header;
