@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Card({ img:imgSrc, author, headline }) {
   return (
@@ -11,8 +12,14 @@ export default function Card({ img:imgSrc, author, headline }) {
         <span>By{author}</span>
       </div>
     </div>
-  );
-};
+  )
+}
+
+Card.propTypes = {
+  img: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired
+}
 
 // Make sure to include PropTypes.
 
