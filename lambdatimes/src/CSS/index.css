@@ -52,54 +52,7 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
-.top-bar {
- 
-}
-.top-bar .container {
-  
-}
-@media (min-width: 1280px) {
-  .top-bar .container {
-    width: 1280px;
-  }
-}
-.top-bar .container .container-left {
-  
-}
-.top-bar .container .container-left span {
- 
-}
-.top-bar .container .container-center {
-  
-}
-.top-bar .container .container-center span {
- 
-}
-.top-bar .container .container-center span:last-child {
-}
-.top-bar .container .container-center span:hover {
-  
-}
-.top-bar .container .container-right {
-}
-.top-bar .container .container-right span {
-}
-.header {
-}
-@media (min-width: 1280px) {
-  .header {
-    width: 1280px;
-  }
-}
-.header h1 {
-}
-.header span {
-}
-.header .date {
-}
-.header .temp {
 
-}
 .content-container {
   display: flex; 
   flex-direction: column; 
