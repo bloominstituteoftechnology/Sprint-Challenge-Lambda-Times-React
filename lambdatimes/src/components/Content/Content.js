@@ -11,17 +11,25 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
-      tabs: [],
-      cards: []
+      tabs: tabData,
+      cards: cardData
     };
+    //this.content = {tabs: [], cards: []}; //object that we use to render
   }
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    /*This would be stupid to do, cuz the data is on the client already so
+    why would would double refresh the state?
+    
+    If we where preforming a fetch we would use this to fetch, but because 
+    the data is already stored we only need to render once.*/
+
   }
 
-  changeSelected = tab => {
+  changeSelected = str => {
     // this function should take in the tab and update the state with the new tab.
+    this.setState({selected: str, tabs: this.state.tabs, cards: this.state.cards})
   };
 
   filterCards = () => {
@@ -37,7 +45,9 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
+   return this.state.selected === "all" ? 
+        this.state.cards : 
+        this.state.cards.map(x=>x).filter(x=> x.tab===this.state.selected);
   };
 
   render() {
@@ -47,8 +57,9 @@ export default class Content extends Component {
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
-        */}
-        <Tabs tabs={this.state.tabs} />
+        */
+       }
+        <Tabs tabs={this.state.tabs} selectTabHandler={(s)=>this.changeSelected(s)} selectedTab={this.state.tabs.find(x=> x===this.state.selected)} />
         <Cards cards={this.filterCards()} />
       </div>
     );
