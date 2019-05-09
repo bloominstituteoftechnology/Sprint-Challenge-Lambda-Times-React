@@ -4,16 +4,16 @@ const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-  const tabSelector = (arr) =>{
+  const tabSelector = (str) =>{
       if (props.tab.toLowerCase() == props.selectedTab.toLowerCase()){
         return 'active-tab'
       
   }
-  else{
-    return null
-  }
+  else return '';
+
 }
-  
+
+ 
   console.log(tabSelector(props.tabs))
   return (
     <div

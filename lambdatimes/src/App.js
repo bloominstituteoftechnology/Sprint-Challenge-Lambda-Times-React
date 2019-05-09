@@ -13,4 +13,4 @@ const App = () => {
   );
 }
 
-export default Authenticate(App);
+export default App;
