@@ -1,16 +1,7 @@
-import React, { Component } from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import React from 'react';
+import { HomePage } from './HomePage';
+import Authenticate from './components/Authenticate/Authenticate';
 
-const App = () => {
-  return (
-    <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
-    </div>
-  );
-}
+const App = () => <HomePage />
 
-export default App;
+export default Authenticate(App);
