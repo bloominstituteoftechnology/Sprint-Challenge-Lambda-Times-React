@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card from './Card';
-
+/* Using the cards prop, map over the list creating a
+  new Card component for each passing the card as the only prop*/
 const Cards = props => {
   return (
     <div className="cards-container">
-      {/* Using the cards prop, map over the list creating a 
-          new Card component for each passing the card as the only prop*/}
+      {props.card.map(card => new <Card cards={card}/>)}
     </div>
   )
 }
