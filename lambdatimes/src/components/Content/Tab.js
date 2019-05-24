@@ -1,6 +1,13 @@
 import React from 'react';
 import Tabs from './Tabs';
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+
+
+
+
+
 
 
 const Tab = props => {
