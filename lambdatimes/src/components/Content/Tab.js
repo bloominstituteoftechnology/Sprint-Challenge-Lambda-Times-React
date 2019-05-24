@@ -1,5 +1,7 @@
 import React from 'react';
 import Tabs from './Tabs';
+import PropTypes from 'prop-types'
+
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -20,6 +22,14 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 
+Tab.propTypes = {
+  tab: PropTypes.string,
+  selectedTab: PropTypes.string,
+  selectedTabHandler: PropTypes.func,
+}
+
+
+
 export default Tab;
 
 // When we map through Tabs, we return one Tab. 
@@ -30,6 +40,7 @@ export default Tab;
 // props.selectedTabHandler = sets state... tab is whatever is selected)
 
 {/* <className = if props.tab is equal to the selected 'tab active-tab' else 'tab' */}
+// if you inspect console, you can see the div className change when clicked
 
 
 
