@@ -1,4 +1,5 @@
 import React from 'react';
+import Tabs from './Tabs';
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -7,7 +8,7 @@ const Tab = props => {
   return (
     <div
       className={props.tab === props.selectedTab ? 'tab active-tab' : 'tab'}
-      onClick={() => {
+      onClick={() => {props.selectTabHandler(props.tab)
         /* Replace this dummy click handler function with your selectTabHandler function from props 
          you'll need to pass the `tab` in as an argument to this handler. */
       }}
@@ -20,3 +21,15 @@ const Tab = props => {
 // Make sure you include PropTypes on your props.
 
 export default Tab;
+
+// When we map through Tabs, we return one Tab. 
+// We pass in Tabs, selectedTab, and selectedTabHandler from Tabs. 
+
+// (props.tabs = this.state.tabs
+// props.selectedtab = this.state.selected... which is selected: 'all'
+// props.selectedTabHandler = sets state... tab is whatever is selected)
+
+{/* <className = if props.tab is equal to the selected 'tab active-tab' else 'tab' */}
+
+
+
