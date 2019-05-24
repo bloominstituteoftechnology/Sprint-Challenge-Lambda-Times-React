@@ -29,9 +29,15 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+    PropTypes are used to type check our props. It’s important to type check our data in Javascript so we know that we are importing the correct type of data, and it helps other developers do the same in the future. 
 - [ ] Describe a life-cycle event in React?
+    A lifecycle event in react: Mounting (constructor, render, updates DOM, componentDidMount), Updating (shouldComponentUpdate, render, updates DOM, componentDidUpdate), Unmounting (componentwillunmount)
+
 - [ ] Explain the details of a Higher Order Component?
+    Higher Order Component: an HOC is a function that receives a component as an argument and returns a new component. 
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+    Style Components, CSS, React Strap
 
 ## Project Setup
 
@@ -69,3 +75,6 @@ There are multiple stretch challenges available to you, you may attempt these in
 - [ ] You will find a `Carousel` component in your Content folder. Complete this component, rendering a functional carousel. Add this component between your `Tabs` and `Cards` components within the `Content` component. Added challenge: make it so that there is infinite scroll to the right and the left.
 
 - [ ] Add a login and an HOC. Make it so that when a user clicks on the login button at the top, a login modal is shown (Use React-strap). Have a user login, validating the login credentials on the `localStorage`. Add a Higher Order Component that wraps the `Content` component, only allowing it to render once a user has logged in. For more instructions see this README: [React-Insta-Clone: Day III](https://github.com/LambdaSchool/React-Insta-Clone/blob/master/DAY_THREE_README.md#tasks-day-iii)
+
+
+test...
