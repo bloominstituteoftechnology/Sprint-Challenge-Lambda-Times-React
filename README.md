@@ -28,10 +28,17 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-- [ ] Describe a life-cycle event in React?
-- [ ] Explain the details of a Higher Order Component?
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+- [Q] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+- [A] Makes sure you don't get any errors that can be to find because you don't have the propper data type being passed through your props
+
+- [Q] Describe a life-cycle event in React?
+- [A] React life-cycle event's have three phases: mounting, updating and unmounting. These life-cycles are important for rendering and updating data on the screen.
+
+- [Q] Explain the details of a Higher Order Component?
+- [A] HOC's are components that take in components, runs it through a function and returns a new component.
+
+- [Q] What are three different ways to style components in React? Explain some of the benefits of each.
+- [A] 1) Use external styling libraries such as reactstrap or styled components. 2) Vainilla CSS. 3) Use preprocessors such as LESS.
 
 ## Project Setup
 
