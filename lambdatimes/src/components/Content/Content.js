@@ -18,7 +18,7 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
-    this.setState({tabs: tabData, cards: cardData})
+    this.setState({tabs: tabData, cards: cardData});
   }
 
   changeSelected = tab => {
@@ -42,7 +42,7 @@ export default class Content extends Component {
     if (this.state.selected === "all") {
       return this.state.cards;
    } else {
-      const filteredCards = this.state.cards.filter(card => {
+      const filteredCards = this.state.cards.filter( card => {
         return card.tab === this.state.selected;
       });
       return filteredCards;
