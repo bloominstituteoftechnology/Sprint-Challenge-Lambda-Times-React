@@ -8,7 +8,14 @@ const InnaDivStylee = styled.div `
   width: 100%;
   flex-direction: row;
   justify-content: space-evenly;
+  &hover: background: blue;
+
+  span {
+    hover: background: blue;
+   }
+
   `
+
 
 
 
