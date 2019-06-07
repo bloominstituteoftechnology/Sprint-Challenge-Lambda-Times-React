@@ -6,9 +6,14 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
+          
           {props.tabs.map(tab => {
             return (
-              <Tab tab={tab} selectTabHandler={props.selectTabHandler} key={Math.random()} />
+              <Tab 
+              tab={tab} 
+              selectTabHandler={props.selectTabHandler} 
+              key={Math.random()}
+               />
             )
           })}
 
