@@ -29,9 +29,24 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+  Prop types are an important bug-preventing device we put in our code. We use it to check that the props that are being passed are of the right datatype (boolean, string, number, function etc). It prevents you, or another developer from accidentally putting in the wrong datatype and getting errors.
+
 - [ ] Describe a life-cycle event in React?
+
+  A life-cycle event is an event that is designated to take place at a specific point in the react life-cycle. The lifecycle contains the stages that react components go through as a page is loading (mounting), updating (growth), unmounting (death) and rendering.
+
 - [ ] Explain the details of a Higher Order Component?
+
+  Higher Order Components are a way to link components that share data or functionality beyond the state -> props pattern. Using HOC's we are able to reuse component logic. An HOC is a function that receives a component as an argument and returns a new component.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+Firstly, you could just use a stylesheet and style your components using CSS or a preprocessor like Less or SCSS. It can be a little long, but I like it and I don't understand why everyone is so down on CSS.
+
+You could use a library like Bootstrap that provides pre-styled components for you to put on your page. It is a little limiting in how much you can personalize the styles each component comes with, but it's a great way to quickly get a page looking nice.
+
+You can also use a more flexible library like Styled Components - it lets you build your own style components to use in your react. You have control over what the styling looks like, but you're able to make use of components in React.
 
 ## Project Setup
 
@@ -54,11 +69,11 @@ Follow these steps for completing your project.
 
 ## Minimum Viable Product
 
-- [ ] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- [ ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- [ ] You should now be able to filter cards using your tabs!
-- [ ] Make sure all of your props being passed are validated using PropTypes.
-- [ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
+- [ X] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+- [ X] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+- [ X] You should now be able to filter cards using your tabs!
+- [ X] Make sure all of your props being passed are validated using PropTypes.
+- [X] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
 
 ## Stretch Challenge
 
