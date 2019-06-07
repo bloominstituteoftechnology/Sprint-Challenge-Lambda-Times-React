@@ -28,23 +28,41 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-- [ ] Describe a life-cycle event in React?
-- [ ] Explain the details of a Higher Order Component?
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+- [X] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+  -propTypes are used for checking the type of data being passed down in a react app. its important to type check so that the wrog type of data isnt provided, causing errors. its a fallback as well in case other developers work on the same project
+
+- [x] Describe a life-cycle event in React? 
+
+  -Life cycle methods are preconfigured methods in react that are used to handl data changes or rendering changes, API requests, etc at certain points in a component's life cycle, from rendering to updating, to unmounting.
+
+- [x] Explain the details of a Higher Order Component?
+
+  -a HOC is a component that takes a component as an argument and returns a new component based on some condition to invoke the HOC, and renders the original component that was passed as an argument 
+
+- [x] What are three different ways to style components in React? Explain some of the benefits of each.
+
+  -inline styles
+    benefits: fast and simple for single styles on one component
+
+  -Styled Components
+    benefits: creates a variable that is reusable across one component and eliminated the need for classType prop
+
+  -External CSS/Styling Library
+    benefit: consistency and reusability across your entire app
 
 ## Project Setup
 
 Follow these steps to set up your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your project manager as collaborator on Github.
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 - [ ] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
-- [ ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+- [x] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
 
 Follow these steps for completing your project.
 
