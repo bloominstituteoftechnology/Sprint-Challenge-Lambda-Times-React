@@ -29,9 +29,25 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+    We check PropTypes of props being passed down into our components to make sure that we're using them the way that their data type is intended to be used. Sometimes using a prop incorrectly will mess up our code but WILL NOT throw an error. Checking PropTypes will always throw an error if we are wrong about what type a prop is.
+
 - [ ] Describe a life-cycle event in React?
+
+    Life-cycle events are moments in the react life cycle which we can place our code into if we want it to be done at that specific time. 
+    'componentDidMount', for example can be used to run code after a component has been read and rendered but before it updates the virtual DOM based on any new state it receieved during the mounting process.
+
 - [ ] Explain the details of a Higher Order Component?
+
+    A higher order component is a component which takes another component as an argument. It's a necessary part of any language built for flexibility. If we can iterate over elements to make components, why would we stop there? We use HOC's to iterate over whole components, thus having a blueprint to make a bunch of different but similar components from the original. Of course, we can have HHOC's to build custom blueprints as well and on and on ad infinitum.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+    Vanilla CSS: Nothin' wrong with using vanilla CSS. Same as we learned on day one. The main benefit here is how powerful it is. Write one CSS object applying to divs and every div in your 20 page app will be changed.
+
+    Inline JS Styling: I love inline JS styling for its convenience. If I just want to change a thing or two while I'm making my components in react, this is the quickest way to make a change.
+    
+    styled-components: It sounded like most of our PM group wasn't a huge fan of these yesterday, but I'm with Cai here. Styled components were awesome and easy to use. I love the idea of writing everything as a react component, blurring the line between what's been cut out for me and what I've created myself. For example, rather than making an image with the properties I have set for images of className icon, "<img className = 'icon'>", I'll make a freakin' icon! "<Icon>"
 
 ## Project Setup
 
