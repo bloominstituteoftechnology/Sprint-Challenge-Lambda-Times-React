@@ -4,63 +4,35 @@ import styled, { css } from 'styled-components';
 // about 2 hours for TopBar alone, another hour for Header - I just
 //  don't have the time to screw around with this
 
-export const HeaderStyle = styled.header`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: none;
-  flex-direction: row;
-  position: fixed;
-  height: 44px;
-  background-color: #333;
+export const SpanStyle = styled.span`
+margin-right: 5%;
+font-size: 12px;
+  `;
 
-  ${props => (props.type === "container" ? 
-  `
-  letter-spacing: 1px;
-  padding: 0 10px;
-  color: #fff;
- ` : null
-  )}
-
-  ${props => (props.type === "container-left" ? 
-  `
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: row;
-  flex: 1;
-  font-size: 11px;
- ` : null
-  )}
-
-  ${props => (props.type === "container-left-span" ? 
-  `
-  cursor: pointer;
-  margin-right: 25%;
-  font-weight: bold;
- ` : null
-  )}
-
-  ${props => (props.type === "container-center" ? 
-  `
+export const ContainerCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex: 3;
   font-size: 9px;
- ` : null
-  )}
+ `;
 
-  ${props => (props.type === "container-center-span" ? 
-  `
-  cursor: pointer;
-  margin-right: 5%;
- ` : null
-  )}
+ export const ContainerLeftSpan = styled.div`
+ margin-right: 25%;
+  font-weight: bold;
+  `;
 
-  ${props => (props.type === "container-right" ? 
-  `
+  export const ContainerLeft = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  `;
+
+  export const ContainerRightSpan = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -68,9 +40,31 @@ export const HeaderStyle = styled.header`
   flex: 1;
   font-size: 11px;
   font-weight: bold;
- ` : null
-  )}
+  `;
 
+  export const Container = styled.div`
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 0 10px;
+  width: 1280px;
+  `;
 
-
-`;
+  export const Top = styled.div`
+  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: none;
+    flex-direction: row;
+    position: fixed;
+    height: 44px;
+    background-color: #333;
+  `;
