@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+//  Couldn't get it to render right in the given time frame.  Need 
+// about 2 hours for TopBar alone, another hour for Header - I just
+//  don't have the time to screw around with this
+
 export const HeaderStyle = styled.header`
   width: 100%;
   display: flex;

@@ -20,3 +20,12 @@ const Card = props => {
 
 export default Card;
 
+// Cards.propTypes={
+//   props: propTypes.arrayOf(PropTypes.shape({
+ // headline: propTypes.string.isRequired
+  // tab: propTypes.string.isRequired
+  // img: propTypes.string.isRequired
+  // author: propTypes.string.isRequired
+// }))
+// }
+

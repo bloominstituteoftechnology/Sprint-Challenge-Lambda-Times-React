@@ -8,7 +8,7 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
           {props.tabs.map(tab => {
             return (
-              <Tab tab={tab} selectTabHandler={props.selectTabHandler} />
+              <Tab tab={tab} selectTabHandler={props.selectTabHandler} key={Math.random()} />
             )
           })}
 
@@ -23,4 +23,7 @@ const Tabs = props => {
 // Make sure to use PropTypes to validate your types!
 export default Tabs;
 
+// Tabs.propTypes={
+//   props: propTypes.arrayOf(PropTypes.string)
+// }
 

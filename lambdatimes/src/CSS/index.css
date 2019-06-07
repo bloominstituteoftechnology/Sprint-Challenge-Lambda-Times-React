@@ -86,9 +86,9 @@ body {
   font-size: 11px; */
 }
 .top-bar .container .container-left span {
-  /* cursor: pointer;
+  cursor: pointer;
   margin-right: 25%;
-  font-weight: bold; */
+  font-weight: bold;
 }
 .top-bar .container .container-center {
   /* display: flex;

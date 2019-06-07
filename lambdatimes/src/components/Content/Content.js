@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Tabs from "./Tabs";
 import Cards from "./Cards";
+import propTypes from "prop-types"
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from "../../data";
@@ -14,6 +15,8 @@ export default class Content extends Component {
       cards: []
     };
   }
+
+ 
 
   componentDidMount() {
     this.setState({
@@ -35,6 +38,14 @@ export default class Content extends Component {
       If cardData has 'selected' state on it, display, otherwise display: none
       */
 
+    // if (this.state.tabData === this.state.tabData[0]) {
+    //   return this.state.tabs
+    // }
+
+    //   else if (this.state.tabs.includes(this.state.selected)) {
+    //     return this.state.tabs.selected
+    //   }
+
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
       by using it to filter out our cards for when a tab is selcted
@@ -51,6 +62,7 @@ export default class Content extends Component {
   };
 
   render() {
+   
     return (
       <div className="content-container">
         {/* 
@@ -58,11 +70,28 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} selectTabHandler={this.changeSelected} />
-        <Cards cards={this.filterCards()} />
+        <Tabs key={Math.random()} tabs={this.state.tabs} selectTabHandler={this.changeSelected} selectedTab={this.state.selected} />
+        <Cards key={Math.random()} cards={this.filterCards()} />
       </div>
     );
   }
 }
 
+// Proptypes not working, don't have time to screw with it while
+// the deadline is approaching.
+
+// Content.propTypes={
+
+//   tabData: PropTypes.array,
+
+  // cardData: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     headline: propTypes.string.isRequired
+  // tab: propTypes.string.isRequired
+  // img: propTypes.string.isRequired
+  // author: propTypes.string.isRequired
+  //   })
+  // )
+  //}
+  
 
