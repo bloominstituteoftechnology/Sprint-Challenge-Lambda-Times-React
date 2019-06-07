@@ -9,13 +9,13 @@ const TopBar = () => {
     <TopDivStyle>
       <DivContainer>
         <Left>
-          <ContainerLeftSpan>TOPICS</ContainerLeftSpan><ContainerLeftSpan>SEARCH</ContainerLeftSpan>
+          <LeftSpan>TOPICS</LeftSpan><LeftSpan>SEARCH</LeftSpan>
         </Left>
         <Center>
-          <ContainerCenterSpan>GENERAL</ContainerCenterSpan><ContainerCenterSpan>BROWNBAG</ContainerCenterSpan><ContainerCenterSpan>RANDOM</ContainerCenterSpan><ContainerCenterSpan>MUSIC</ContainerCenterSpan><ContainerCenterSpan>ANNOUNCEMENTS</ContainerCenterSpan>
+          <CenterSpan>GENERAL</CenterSpan><CenterSpan>BROWNBAG</CenterSpan><CenterSpan>RANDOM</CenterSpan><CenterSpan>MUSIC</CenterSpan><CenterSpan>ANNOUNCEMENTS</CenterSpan>
         </Center>
         <Right>
-          <ContainerRightSpan>LOG IN</ContainerRightSpan>
+          <RightSpan>LOG IN</RightSpan>
         </Right>
       </DivContainer>
     </TopDivStyle>
@@ -52,7 +52,7 @@ const Left = styled.div`
   flex: 1;
   font-size: 11px;
 `;
-const ContainerLeftSpan = styled.span`
+const LeftSpan = styled.span`
   cursor: pointer;
   margin-right: 25%;
   font-weight: bold;
@@ -65,7 +65,7 @@ const Center = styled.div`
   flex: 3;
   font-size: 9px;
 `;
-const ContainerCenterSpan = styled.span`
+const CenterSpan = styled.span`
   cursor: pointer;
   margin-right: 5%;
   &:hover {text-decoration: underline;}
@@ -83,7 +83,7 @@ const Right = styled.div`
   font-size: 11px;
   font-weight: bold;
 `;
-const ContainerRightSpan = styled.span`
+const RightSpan = styled.span`
   cursor: pointer;
 `;
 

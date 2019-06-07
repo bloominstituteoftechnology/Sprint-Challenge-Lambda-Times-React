@@ -33,8 +33,10 @@ A: propTypes is an object which contains key-value pairs, where the key is the n
 
 - [ ] Describe a life-cycle event in React?
 A: A life-cycle event can be broken down into two main categories being when it's mounted to the DOM and when it's unmounted. Also, when a component receives new data.
+
 - [ ] Explain the details of a Higher Order Component?
-A: A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React's compositional nature. Concretely, a higher-order component is a function that takes a component and returns a new component.
+A: A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React's compositional nature. A higher-order component is a function that takes a component and returns a new component.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
 1. Inline CSS - This is setup in the js files and created with const styleName = { then in this section you pass in your styling arguments. you'd do this with something like borderRadius: '50%', <--- You'd only need this comma if you're using more than 1 argument}
 2. Styled Components - This is a library that you can install and import that will allow you to style your components in various ways. It actually allows you to treat a java script component or argument as if it were css. Example being const Button = styled.button` font-size: 1rem;
