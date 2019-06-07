@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import Content from "../Content/Content"
+import Tabs from "./Tabs";
+
+// Importing our tab and card data. No need to change anything here.
+import { tabData, cardData } from "../../data";
 
 const Cards = props => {
   return (
     <div className="cards-container">
-        {this.props.cards.map(card=> {return(<Card card={card} />) 
+        {props.cards.map(card=> {return(<Card card={card} />) 
         })}
 
       {/* Using the cards prop, map over the list creating a 

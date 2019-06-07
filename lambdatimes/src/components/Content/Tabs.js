@@ -1,13 +1,16 @@
 import React from 'react';
 import Tab from './Tab';
+import Card from './Card';
 import Content from "../Content/Content"
+
+import Cards from "./Cards";
 
 const Tabs = props => {
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-          {this.props.tabs.map(tab => {
+          {props.tabs.map(tab => {
             return (
               <Tab tab={tab} />
             )

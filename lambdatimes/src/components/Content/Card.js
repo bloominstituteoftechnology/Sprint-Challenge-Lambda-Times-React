@@ -1,15 +1,18 @@
-import React from 'react';
-import Cards from "./Cards"
+import React, { Component } from 'react';
+
+import Content from "../Content/Content"
+import Tabs from "./Tabs";
+import Cards from "./Cards";
 
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{this.props.headliine}</div>
+      <div className="headline">{props.headliine}</div>
       <div className="author">
         <div className="img-container">
-          <img src={this.props.img} />
+          <img src={props.img} />
         </div>
-        <span>By {this.props.author}</span>
+        <span>By {props.author}</span>
       </div>
     </div>
   );
