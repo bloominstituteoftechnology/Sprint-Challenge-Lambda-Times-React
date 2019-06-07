@@ -13,6 +13,7 @@ const Tabs = props => {
               tab={tab} 
               selectTabHandler={props.selectTabHandler} 
               key={Math.random()}
+              selectedTab={props.selectedTab} 
                />
             )
           })}

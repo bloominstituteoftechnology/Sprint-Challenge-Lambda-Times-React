@@ -28,7 +28,6 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     this.setState({selected: tab})
-
     // this function should take in the tab and update the state with the new tab.
   };
 
@@ -69,13 +68,17 @@ export default class Content extends Component {
         selectedTab={this.state.selected} />
         <Cards key={Math.random()} cards={
           //Is the selector "all" on the card?
-          this.state.selected !== "all" ? 
+          this.state.selected !== "all" ? this.state.cards.filter(
           //if not, filter it
-            this.state.cards.filter(
-              //select all with cards.tab (which change selector attached when click)
-              card => this.state.cards.tab === card.tab) : 
+            
+             //Run thru this.state.cards, filter it.
+             //if this.state.cards.tab is equal to the selected tab, return it,
+             //otherwise return all the cards
+
+             //card.tab is wrong, problem is, not sure how the changehandler is even working
+              card => this.state.cards.tab === card.tab) : this.state.cards}
               //otherwise return all cards
-          this.state.cards} />
+           />
       </div>
     );
   }
