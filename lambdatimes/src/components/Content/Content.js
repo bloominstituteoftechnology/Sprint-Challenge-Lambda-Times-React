@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
+import PropTypes from "prop-types";
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -27,25 +28,22 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     this.setState ({
-      tabs: tab,
+      selected: tab,
     })
     // this function should take in the tab and update the state with the new tab.
   };
 
-  filterCards = (tab) => {
+  filterCards = () => {
       if (this.state.selected === "all") {
-        this.setState ({
-          cards: cardData
-        })
+        return cardData;
+        // this.setState ({
+        //   cards: cardData
+        // })
       } else {
-        this.setState ({
-          cards: cardData.filter((card) => {
-            return card.tab.includes(this.state.tabs)
-          })
+        return cardData.filter((card) => {
+          return card.tab.includes(this.state.selected)
         })
       }
-
-    // this.state.cards.filter() card => this.state.selected === props.cards.tab
 
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
@@ -59,34 +57,13 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
-
   };
-
-
-    // //function to filter datas with an argument
-    // filterData = (searchInput) => {
-    //   //props.datas.filter() data => this.prevState.searchInput === props.datas.username)
-    //   this.setState({
-    //     datas: dummyData.filter((data) => {
-    //       return (
-    //         data.username.includes(searchInput)
-    //       )
-    //     })
-    //   })
-    // }
-
 
   render() {
     return (
       <div className="content-container">
-        {/* 
-          Add 2 props to the Tabs component, 
-          `selectedTab` that includes the currently selected tab
-          and `selectTabHandler` that includes the function to change the selected tab
-        */}
         <Tabs
-          selectTabHandler={this.changeSelected()}
+          selectTabHandler={this.changeSelected}
           selectedTab={this.state.selected}
           tabs={this.state.tabs}
         />
@@ -95,3 +72,15 @@ export default class Content extends Component {
     );
   }
 }
+
+Content.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      headline: PropTypes.string.isRequired,
+      tab: PropTypes.string.isRequired,
+      img:PropTypes.string.isRequired,
+      author:PropTypes.string.isRequired,
+    })
+  )
+}
+  
