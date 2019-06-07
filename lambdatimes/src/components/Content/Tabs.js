@@ -1,9 +1,5 @@
 import React from 'react';
 import Tab from './Tab';
-import Card from './Card';
-import Content from "../Content/Content"
-
-import Cards from "./Cards";
 
 const Tabs = props => {
   return (

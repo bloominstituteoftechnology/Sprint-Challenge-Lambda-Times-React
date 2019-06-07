@@ -1,8 +1,5 @@
 import React from 'react';
-import Card from './Card';
-import Content from "../Content/Content"
-import Tabs from "./Tabs";
-import Cards from "./Cards";
+
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 

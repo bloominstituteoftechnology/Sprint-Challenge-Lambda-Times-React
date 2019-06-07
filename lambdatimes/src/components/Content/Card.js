@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 
-import Content from "../Content/Content"
-import Tabs from "./Tabs";
-import Cards from "./Cards";
+
 
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{props.headliine}</div>
+      <div className="headline">{props.card.headliine}</div>
       <div className="author">
         <div className="img-container">
-          <img src={props.img} />
+          <img src={props.card.img} />
         </div>
-        <span>By {props.author}</span>
+        <span>By {props.card.author}</span>
       </div>
     </div>
   );
@@ -21,3 +19,4 @@ const Card = props => {
 // Make sure to include PropTypes.
 
 export default Card;
+
