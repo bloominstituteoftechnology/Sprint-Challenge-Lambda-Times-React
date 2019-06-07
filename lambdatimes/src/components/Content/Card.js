@@ -1,14 +1,15 @@
 import React from 'react';
+import Cards from "./Cards"
 
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
+      <div className="headline">{this.props.headliine}</div>
       <div className="author">
         <div className="img-container">
-          <img src={'' /* image source goes here */} />
+          <img src={this.props.img} />
         </div>
-        <span>By {/* author goes here */}</span>
+        <span>By {this.props.author}</span>
       </div>
     </div>
   );

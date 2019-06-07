@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Tabs from './Tabs';
-import Cards from './Cards';
+import Tabs from "./Tabs";
+import Cards from "./Cards";
 
 // Importing our tab and card data. No need to change anything here.
-import { tabData, cardData } from '../../data';
+import { tabData, cardData } from "../../data";
 
 export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'all',
+      selected: "all",
       tabs: [],
       cards: []
     };
   }
 
   componentDidMount() {
+    this.setState({
+      tabs: tabData,
+      cards: cardData
+    });
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
   changeSelected = tab => {
+  //  this.setState({tab: tab})
+  
     // this function should take in the tab and update the state with the new tab.
   };
 
@@ -49,8 +55,10 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Cards cards={this.state.cards} />
       </div>
     );
   }
 }
+
+// put this as Cards' prop    cards={this.filterCards()}
