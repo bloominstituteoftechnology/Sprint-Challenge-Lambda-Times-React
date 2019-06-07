@@ -1,6 +1,12 @@
 import React from 'react';
 
 const Tab = props => {
+  // if (props.tab === props.selectedTab) {
+  // props.tab.classList.add('tab active-tab')
+  // } else {
+  //   props.tab.classList.add('tab')
+  // }
+  
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
