@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-
+import PropTypes from "prop-types";
 
 
 const Card = props => {
   return (
+    console.log(props.card),
     <div className="card">
       <div className="headline">{props.card.headline}</div>
       <div className="author">
@@ -20,12 +21,6 @@ const Card = props => {
 
 export default Card;
 
-// Cards.propTypes={
-//   props: propTypes.arrayOf(PropTypes.shape({
- // headline: propTypes.string.isRequired
-  // tab: propTypes.string.isRequired
-  // img: propTypes.string.isRequired
-  // author: propTypes.string.isRequired
-// }))
-// }
+Card.propTypes = {
+  card: PropTypes.object.isRequired}
 
