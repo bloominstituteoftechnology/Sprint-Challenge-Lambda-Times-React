@@ -84,22 +84,20 @@ export default class Content extends Component {
   }
 }
 
-// Proptypes not working, don't have time to screw with it while
-// the deadline is approaching.
+Content.propTypes = {
+  tabData: PropTypes.arrayOf(PropTypes.string).isRequired}
+  
+Content.propTypes = {
+  cardData: PropTypes.arrayOf(
 
-Content.propTypes={
+    PropTypes.shape({
+    headline: PropTypes.string.isRequired,
+    tab: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired
+    })
+  )
+  }
 
-  tabData: PropTypes.array}
-  //.isRequired}
-
-  // cardData: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     headline: propTypes.string.isRequired,
-  //   tab: propTypes.string.isRequired,
-  //   img: propTypes.string.isRequired,
-  //   author: propTypes.string.isRequired
-  //   })
-  // )
-  // }
   
 

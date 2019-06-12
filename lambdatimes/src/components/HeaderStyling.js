@@ -9,17 +9,7 @@ text-align: center;
 color: #000;
  `;
 
- export const HeaderSpan = styled.span`
- align-self: flex-end;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  ${props => (props.type === "date" ? `margin-left: 25px;
-  flex: 1;` : null)}
-  ${props => (props.type === "temp" ? `text-align: right;
-  margin-right: 25px;
-  flex: 1;` : null)}
-  `;
+
 
   export const HeaderEnd = styled.span`
   display: flex;
