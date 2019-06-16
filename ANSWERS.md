@@ -1,9 +1,12 @@
-## Self-Study/Essay Questions
+What are PropTypes used for? Please describe why it's important to type check our data in JavaScript. 
+A: PropTypes are used to check whether the correct props are passed between components. The developer state before beforehand the composition of the props (example: an array of objects with pieces that are strings) as well as whether a piece of the component isRequired. If the props does not have the correct composition or a particular component is not there (when isRequired is set), it will throw an error, allowing the developer to debug before pushing the app to production.
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+ Describe a life-cycle event in React? 
+ A: The life-cycle is a series of events that happen chronologically within each component. This follows a mounting, updating, and unmounting phase. Within the mounting phase, data (if available) will be defined on the constructor, render will be invoked (adding things to DOM), and then componentDidMount will be called. If there are new props or setState() is called, our component will enter the updating phase where data is manipulated and render will be called again to update the DOM. After that, componentDidUpdate will be invoked. If you need to remove the component, componentWillUnmount will be called, removing the component and any debris of it.
+ 
 
-- [ ] Describe a life-cycle event in React?
+ Explain the details of a Higher Order Component? 
+ A: A higher ordered component is basically just a component that returns a new component that has been modified in some way. A HOC can take in a number of props which can be functions.
 
-- [ ] Explain the details of a Higher Order Component?
-
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+ What are three different ways to style components in React? Explain some of the benefits of each. 
+ A: You can style components using vanilla CSS (with/without Preprocessor), Reactstrap/Bootstrap component library, or using styled-components. Vanilla CSS with Preprocessor is great for styling components with large number of nested elements. CSS is easily accessible and readily available and includes more styling possibilities that are not specifically focused within libraries. Reactstrap/Bootstrap is great for building quick UI components using a template, but is limited in what's available. Styled-components allow you to write CSS within your JS files. These style components are reusable and can be imported to any file that needs them as well as pass specific props to acquire a specific style.
