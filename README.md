@@ -28,6 +28,8 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
+Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
+
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
 - [ ] Describe a life-cycle event in React?
 - [ ] Explain the details of a Higher Order Component?
