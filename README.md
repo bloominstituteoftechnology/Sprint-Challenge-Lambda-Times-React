@@ -31,7 +31,13 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes is used to to debug and check that we are passing in the correct types when we need to. It tells us if we are passing in functions, numbers, objects or other types instead of the type we want. It is important because when a component passes in the wrong kind of data, the entire React app will probably stop working. If that happened and we weren't using PropTypes, it would be much harder to find out why. 
+
 - [ ] Describe a life-cycle event in React?
+
+
+
 - [ ] Explain the details of a Higher Order Component?
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
 
