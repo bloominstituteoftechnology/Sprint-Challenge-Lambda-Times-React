@@ -31,9 +31,18 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+A: propTypes is an object which contains key-value pairs, where the key is the name of the prop and the value is the type of the prop that can be passed to the component. The reason why it's important to check our data in JavaScript is to create a reliable amount of tests that can assert that data is functioning and/or being passed to what we want it to be passed to. You'd do this with things like console.logs to make sure that you are getting your data in expected locations (like this.props or something).
+
 - [ ] Describe a life-cycle event in React?
+A: A life-cycle event can be broken down into two main categories being when it's mounted to the DOM and when it's unmounted. Also, when a component receives new data.
+
 - [ ] Explain the details of a Higher Order Component?
+A: A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React's compositional nature. A higher-order component is a function that takes a component and returns a new component.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+1. Inline CSS - This is setup in the js files and created with const styleName = { then in this section you pass in your styling arguments. you'd do this with something like borderRadius: '50%', <--- You'd only need this comma if you're using more than 1 argument}
+2. Styled Components - This is a library that you can install and import that will allow you to style your components in various ways. It actually allows you to treat a java script component or argument as if it were css. Example being const Button = styled.button` font-size: 1rem;
+3. CSS in a CSS file - the basic and vanilla way of doing things. It's no better or worse than doing the other methods but it's a more traditional method. It takes classes, ids, or calling a div or tag name within the js file to work.
 
 ## Project Setup
 
