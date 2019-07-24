@@ -1,4 +1,74 @@
 import React from 'react';
+import styled from 'styled-components'
+import Header from './Header'
+
+const Title = styled.h1`
+  display: block;
+  margin: 0 auto 10%;
+  font-size: 90px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`
+
+const BarWrapper = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: none;
+flex-direction: row;
+position: fixed;
+height: 44px;
+background-color: #333;
+position: absolute;
+top: 0;
+`
+
+const IntroMessage = styled.h2`
+  display: block;
+  margin: 3% auto 4%;
+  font-size: 40px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`
+const Input = styled.input`
+  display: block;
+  margin: 2% auto 0;
+  font-size: 20px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`
+
+const Button = styled.button`
+  display: block;
+  border-radius: 3px;
+  padding: 0.5rem 0.7rem;
+  margin: 4% auto 0;
+  width: 11rem;
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  `
+
+const SubMessage = styled.p`
+  display: block;
+  margin: 6% auto 0;
+  font-size: 20px;
+  font-family: Didot, serif;
+  font-weight: bold;
+  flex: 8;
+  text-align: center;
+  color: #000;
+`
+
 
 class Login extends React.Component{
   constructor() {
@@ -10,8 +80,10 @@ class Login extends React.Component{
   }
 
     handleChange = e =>{
+      console.log(e.target)
+      console.log(e.placeholder)
     this.setState({
-      [e.target.className] : e.target.value
+      [e.target.name] : e.target.value
     })
   }
 
@@ -26,21 +98,29 @@ class Login extends React.Component{
     }
   render() {
     return(
-      <form onSubmit={this.login}>
-        <input
-          type="text"
-          value={this.state.username}
-          placeholder="username"
-          className="username"
-          onChange={this.handleChange} ></input>
-        <input
-          type="text"
-          value={this.state.password}
-          placeholder="password"
-          className="password"
-          onChange={this.handleChange}></input>
-          <button>Submit</button>
-      </form>
+      <div>
+        <BarWrapper></BarWrapper>
+          <Header></Header>
+          <IntroMessage> Please create a username and password to log in </IntroMessage>
+          <form onSubmit={this.login}>
+            <Input
+              type="text"
+              name="username"
+              value={this.state.username}
+              placeholder="username"
+              className="username"
+              onChange={this.handleChange} ></Input>
+            <Input
+              type="password"
+              name="password"
+              value={this.state.password}
+              placeholder="password"
+              className="password"
+              onChange={this.handleChange}></Input>
+              <Button>Submit</Button>
+          </form>
+          <SubMessage> No need to sign up or have an account </SubMessage>
+      </div>
     )
   }
 }
