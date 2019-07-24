@@ -70,7 +70,7 @@ class Header extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://api.openweathermap.org/data/2.5/weather?id=${cityId}&APPID=${APIkey}`)
+      .get(`https://api.openweathermap.org/data/2.5/weather?id=${cityId}&APPID=${APIkey}`)
       .then(response => {
         this.setState({ 
           temperature: parseInt((response.data.main.temp - 273.15) * 9/5 + 32),
