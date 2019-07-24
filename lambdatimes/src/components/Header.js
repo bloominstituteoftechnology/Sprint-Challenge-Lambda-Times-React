@@ -46,7 +46,19 @@ flex: 1;
 
 `
 
-const APIkey = "1da2e29772ce6e50353a9941cc3bed10"
+const APIkey = "1da2e29772ce6e50353a9941cc3bed10";
+const date = new Date();
+const monthNames = [
+  "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" 
+  ];
+const month = date.getMonth()
+const day = date.getDate()
+const year = date.getFullYear()
+
+console.log(day)
+
+const dateString = `${monthNames[month].toUpperCase()} ${day}, ${year}`
+
 
 class Header extends Component {
   constructor(props) {
@@ -71,7 +83,7 @@ class Header extends Component {
   render() {
     return (
       <HeaderWrapper>
-        <HeaderDate>MARCH 32, 2018</HeaderDate>
+        <HeaderDate>{dateString}</HeaderDate>
         <HeaderTitle>Lambda Times</HeaderTitle>
         <Temperature>{this.state.cityName}: {this.state.temperature}°F</Temperature>
       </HeaderWrapper>
