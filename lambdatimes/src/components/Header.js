@@ -47,6 +47,7 @@ flex: 1;
 `
 
 const APIkey = "1da2e29772ce6e50353a9941cc3bed10";
+const cityId = "5391997"
 const date = new Date();
 const monthNames = [
   "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" 
@@ -54,8 +55,6 @@ const monthNames = [
 const month = date.getMonth()
 const day = date.getDate()
 const year = date.getFullYear()
-
-console.log(day)
 
 const dateString = `${monthNames[month].toUpperCase()} ${day}, ${year}`
 
@@ -71,7 +70,7 @@ class Header extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://api.openweathermap.org/data/2.5/weather?id=2152797&APPID=${APIkey}`)
+      .get(`http://api.openweathermap.org/data/2.5/weather?id=${cityId}&APPID=${APIkey}`)
       .then(response => {
         this.setState({ 
           temperature: parseInt((response.data.main.temp - 273.15) * 9/5 + 32),
