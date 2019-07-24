@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components'
+import axios from 'axios';
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
@@ -45,14 +46,37 @@ flex: 1;
 
 `
 
-const Header = () => {
-  return (
-    <HeaderWrapper>
-      <HeaderDate>MARCH 32, 2018</HeaderDate>
-      <HeaderTitle>Lambda Times</HeaderTitle>
-      <Temperature>98°</Temperature>
-    </HeaderWrapper>
-  )
+const APIkey = "1da2e29772ce6e50353a9941cc3bed10"
+
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      temperature: 98,
+      cityName: "San Francisco"
+    }
+  }
+
+  componentDidMount() {
+    axios
+      .get(`http://api.openweathermap.org/data/2.5/weather?id=2152797&APPID=${APIkey}`)
+      .then(response => {
+        this.setState({ 
+          temperature: parseInt((response.data.main.temp - 273.15) * 9/5 + 32),
+        cityName: response.data.name})
+      })
+      .catch(error => console.log(error))
+  }
+
+  render() {
+    return (
+      <HeaderWrapper>
+        <HeaderDate>MARCH 32, 2018</HeaderDate>
+        <HeaderTitle>Lambda Times</HeaderTitle>
+        <Temperature>{this.state.cityName}: {this.state.temperature}°F</Temperature>
+      </HeaderWrapper>
+    )
+  }
 }
 
 export default Header
