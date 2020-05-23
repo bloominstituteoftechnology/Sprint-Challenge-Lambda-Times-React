@@ -128,7 +128,7 @@ body {
   align-items: none;
   flex-direction: column;
   background-color: #fff;
-  width: 380px;
+  max-width: 380px;
   margin-bottom: 16px;
   padding: 24px;
 }

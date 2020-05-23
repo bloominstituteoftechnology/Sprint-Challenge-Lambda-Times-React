@@ -29,7 +29,7 @@ const Head = styled.div`
     }
   
 `
-const Date = styled.span`
+const DateWrap = styled.span`
   align-self: flex-end;
   font-size: 11px;
   font-weight: bold;
@@ -47,15 +47,21 @@ const Temp = styled.span`
   flex: 1;
 `
 
+const months = ['January', 'February', 'March', 'April', 
+'May', 'June', 'July', 'August', 'September', 'October', 
+'November', 'December'];
 
-const Header = () => {
+export default function Header() {
+  const D = new Date();
+  const month = D.getMonth();
+  const day = D.getDate();
+  const year = D.getFullYear();
+
   return (
     <Head>
-      <Date>SMARCH 32, 2018</Date>
+      <DateWrap>{months[month]} {day}, {year}</DateWrap>
       <h1>Lambda Times</h1>
       <Temp>98°</Temp>
     </Head>
   )
 }
-
-export default Header

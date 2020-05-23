@@ -6,6 +6,7 @@ import Cards from './Cards';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 import Authenticate from '../Authenticate';
+import Carousel from '../Carousel/Carousel';
 
 class Content extends Component {
   constructor(props){
@@ -21,8 +22,8 @@ class Content extends Component {
   componentDidMount(){
     // Once the component has mounted, get the data and reflect that data on the state
     this.setState ({
-    tabs: tabData,
-    cards: cardData
+      tabs: tabData,
+      cards: cardData
     })
   }
 
@@ -62,6 +63,7 @@ class Content extends Component {
           selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
         />
+        <Carousel />
         <Cards cards={this.filterCards()}/>
       </div>
     )
