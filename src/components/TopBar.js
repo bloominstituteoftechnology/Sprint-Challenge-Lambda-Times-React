@@ -81,6 +81,22 @@ const ContainerRight = styled.div`
 
 
 const TopBar = () => {
+  let action;
+  if(!localStorage.getItem("user")) {
+    action = 'LOG IN'
+  } else {
+    action = 'LOG OUT'
+  }
+
+  const logout = () => {
+    if(localStorage.getItem("user")) {
+      localStorage.removeItem("user");
+      window.location.reload(true);
+    } else {
+      return;
+    }
+  }
+
   return (
     <BarTop>
       <Container>
@@ -91,7 +107,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <span onClick={logout}>{action}</span>
         </ContainerRight>
       </Container>
     </BarTop>

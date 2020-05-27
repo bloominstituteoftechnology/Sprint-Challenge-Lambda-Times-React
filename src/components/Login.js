@@ -30,8 +30,8 @@ class Login extends Component {
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
-                <FormGroup>
+            <Form onSubmit={this.handleSubmit} style={{marginTop: '40px', padding: '20px', border: '1px dotted black'}}>
+                <FormGroup style={{padding: '10px 0'}}>
                     <Label
                         for="Email"
                     >Username</Label>
@@ -41,22 +41,24 @@ class Login extends Component {
                         placeholder="Username"
                         onChange={this.handleChange}
                         value={this.state.user}
+                        style={{maxWidth: '400px', width: '100%', padding: '5px'}}
                     />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup style={{padding: '10px 0'}}>
                     <Label
                         for="Password"
                     >Password</Label>
 
                 <Input
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="Password"
                     onChange={this.handleChange}
                     value={this.state.password}
+                    style={{maxWidth: '400px', width: '100%', padding: '5px'}}
                 />    
                 </FormGroup>
-                <Button color="primary">Submit</Button>
+                <Button color="primary">LOG IN</Button>
             </Form>
         )
     }
