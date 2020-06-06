@@ -31,9 +31,44 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes is one of React’s most useful accessories. It provides clear, enduring assertions as to the type of data a React component needs to render properly.
+
+The tool is built-in and ready to use without wading through complicated set-up procedures.PropTypes are used to check the type of the props being passed through. With JavaScript being a dynamically typed language, there are no built in type-check systems as in other languages. We use the package prop-types to add this functionality to our app. There are other implementations that we can use including Flow or Typescript also.
+
+Type checking involves making runtime assertions about the correct type of data a component requires in order to render properly. It’s independent of build time type checking.
+
+The most common tools for type checking are Microsoft’s TypeScript and Facebook’s Flow. However, when working in React there’s already a low-maintenance, easy to learn tool for type checking built into the code base: PropTypes.
+
+PropTypes validates the data types of values as they’re passed through types. It can also flag types as mandatory or set default values to reduce the workload.
+
+Technical and structural fitness - PropTypes help catch bugs by validating data types as they pass through. This is useful as an application scales and the codebase grows
+
+Efficient teamwork - In Agile development, using PropTypes enables better coordination between teams working on different part of the same project. They serve as documentation of how a component has to be used in terms of passing props.
+
+This helps people who use the component later know what they can and can’t do and how to use it effectively.
+
+Practicality - Finally, using PropTypes is simply good business sense. They reduce the amount of time spent on debugging and testing.
+
+Less time and higher developer productivity translate into lower ongoing maintenance costs for complex applications.
+
 - [ ] Describe a life-cycle event in React?
+
+A life cycle event is base React method provided with React for us to initiate code during the life of our components. There are different periods such as mounting, updating, and unmounting which some different methods can span. These events allow us to pull data from APIs, mount UI components, and force re-renders.
+
 - [ ] Explain the details of a Higher Order Component?
+
+A higher order component is a function that takes in a component and returns a new modified component. It can be used in authentication, routing, or connecting components.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+Three ways you can style in React is using regular CSS, Reactstrap, or Styled-Components. With this, and so much more that we can learn from the styled-components docs, we can move styling into our JS, create a lot of dynamic reusable components, and we could even create our own style library, simply and quickly, full of components that can be plugged in anywhere!
+
+CSS benefits include: All our code is loaded incrementally as the user navigates to different pages, which improves the experience of loading and using the app. When we do a production build, webpack prunes out dead code.
+
+Reactstrap is similar to Bootstrap, but as self-contained components of marking <div /> with class names. Basically, all required components are imported as a bunch of elements you need to start building UI.  Less messy to use than, all seld contained components.
+
+Styled-components is a library for React and React Native that allows you to use component-level styles in your application that are written with a mixture of JavaScript and CSS
 
 ## Project Setup
 
