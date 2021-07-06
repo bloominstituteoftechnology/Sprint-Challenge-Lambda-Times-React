@@ -31,9 +31,20 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+[PropTypes are used to help the developer find issues with their code before they arise. It's important to type check our data in JS because as we keep building on to our applications we create more instances of creating errors, therefore by type checking each component we decrease the overall likelihood of getting errors]
+
 - [ ] Describe a life-cycle event in React?
+
+[the ife cycle event in React is simply the stages a component goes through in its life, so they are set up as mounting (birth), updating (growth), and unmounting (death).]
+
 - [ ] Explain the details of a Higher Order Component?
+
+[HOCs aree simply functions that take in a component as an argument and returns it as a new component, in others words we can use them to create a new component with added features implemented to the start component, in which we can then use to encapsulate other components that share functionality]
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+[we can create a separate css file with css features and import the file into your js file (this is great because if you have a bug you can simply go to that file and correct it), secoundly, we can also write inline css into the js file (these are great because they can set up an overall feature that superimposes itself above other syling options), lastly, we can make a library of css styles that we can apply towards a component (this is similar to the css file however these libraries can be used with greater functionality because we can wrap components or sections, divs, whatever it is and add in the features of the particular styling component to it. This creates the greatest control and flexibility of adding styles as you can use it towards any project as the other two are set towards the particular project you are working on) ]
 
 ## Project Setup
 
